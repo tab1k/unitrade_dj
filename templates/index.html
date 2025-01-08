@@ -1,0 +1,841 @@
+{% extends 'base.html' %}
+{% load static %}
+
+{% block content %}
+<main class="page-index">
+
+    <section class="hero">
+        <div class="hero__video">
+            <video class="lazy" autoplay="" loop="" muted="" playsinline poster="/static/video/hero-poster.webp">
+                <source data-src="{% static 'video/hero.mp4' %}" type="video/mp4">
+            </video>
+
+        </div>
+        <button class="hero__video-control" aria-label="video control"></button>
+        <div class="hero__box">
+            <div class="hero__box-inner container">
+                <div class="hero__wrapper-title">
+                    <h1 class="hero__title">Металлопродукция по всему СНГ</h1>
+                </div>
+                <div class="hero__bottom">
+                    <div class="hero__application">
+                        <div class="hero__application-title">Заявка в один клик!</div>
+                        <form class="hero__application-form need-validate" method="post"
+                              onsubmit="ym(window.isteels.ym_id, 'reachGoal', 'click_slider')"
+                              data-need-notification="true" data-action="/informer/form_send/speed-click-request/">
+                            <fieldset>
+                                <label for="hero-product">Я ищу</label>
+                                <input class="input__input" id="hero-product" name="product"
+                                       placeholder="Труба НКТ 73x10">
+                            </fieldset>
+                            <fieldset>
+                                <label for="hero-contacts">Мои контакты</label>
+                                <input class="input__input" id="hero-contacts" name="contacts" required=""
+                                       placeholder="+7 (999) 123-45-67 или zakaz@firma.ru">
+                            </fieldset>
+                            <button class="btn click_slider" type="submit">
+                                <div class="btn-content">
+                                    <span>Отправить</span>
+                                    <svg class="icon icon_arrow-right">
+                                        <use xlink:href="images/sprite.svg#arrow-right"></use>
+                                    </svg>
+                                </div>
+                            </button>
+                        </form>
+                    </div>
+                    <div class="hero__contacts">
+                        <div class="hero__contacts-title"><span>Наши контакты</span><span>Связаться с нами</span></div>
+                        <div class="hero__contacts-links">
+                            <a class="contacts-item mgo-number" target="_blank" href="tel:+77172640297">
+                                <svg class="icon icon_call-contacts">
+                                    <use xlink:href="images/sprite.svg#call-contacts"></use>
+                                </svg>
+                                <span class="mgo-number__target">+7 (717) 264 02 97</span>
+                            </a>
+
+                            <a class="contacts-item" target="_blank" href="https://wa.me/77005330150">
+                                <svg class="icon icon_whatsapp">
+                                    <use xlink:href="images/sprite.svg#whatsapp"></use>
+                                </svg>
+                                <span>WhatsApp</span>
+                            </a>
+
+                            <a class="contacts-item mgo-email" href="mailto:astana@isteels.kz">
+                                <svg class="icon icon_email">
+                                    <use xlink:href="images/sprite.svg#email"></use>
+                                </svg>
+                                <span class="mgo-email">astana@isteels.kz</span>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="section-container mt-4 mt-lg-5">
+        <div class="container" data-toggle-to="">
+
+            <div class="row row-cols-1 row-cols-md-2 row-cols-xl-4 pt-2 pt-lg-3 catalog__container active"
+                 data-toggle-first=" ">
+
+                {% for category in categories|slice:":8" %}
+                <div class="catalog">
+                    <div class="col catalog__item">
+                        <div class="catalog__item-head">
+                            <div class="catalog__item-img">
+                                <img loading="lazy"
+                                     src="/images/black-metall.jpg"
+                                     alt="Черный металлопрокат">
+                            </div>
+                            <a class="catalog__item-link stretched-link" href="{{ category.get_absolute_url }}">
+                                {{ category.name }}
+                            </a>
+                        </div>
+                        {% if category.children.exists %}
+                        <ul class="catalog__list" aria-expanded="false">
+                            {% for subcategory in category.children.all|slice:":5" %}
+                                <li class="catalog__list-item">
+                                    <a href="{{ subcategory.get_absolute_url }}">{{ subcategory.name }}</a>
+                                </li>
+                            {% endfor %}
+
+                            {% if category.children.count > 5 %}
+                                <li><a href="#">Показать все</a></li>
+                            {% endif %}
+
+                        </ul>
+                        {% endif %}
+                    </div>
+                    <!-- Повторите карточки тут -->
+                </div>
+                {% endfor %}
+
+
+                <style>
+                    .catalog {
+                      display: flex; /* Используем Flexbox */
+                      flex-wrap: wrap; /* Позволяем карточкам переноситься на следующую строку */
+                      gap: 20px; /* Задаем отступы между карточками */
+                    }
+
+                    .catalog__item {
+                      flex: 1 1 calc(25% - 20px); /* Каждая карточка занимает 25% ширины, учитывая отступы */
+                      box-sizing: border-box; /* Учитываем padding и border в ширину элемента */
+                    }
+
+                    @media (max-width: 768px) {
+                      .catalog__item {
+                        flex: 1 1 calc(50% - 10px); /* 2 карточки в ряд на планшетах */
+                      }
+                    }
+
+                    @media (max-width: 480px) {
+                      .catalog__item {
+                        flex: 1 1 100%; /* 1 карточка в ряд на мобильных */
+                      }
+                    }
+
+                </style>
+            </div>
+
+        </div>
+    </section>
+
+    <section class="about">
+        <div class="about__top" style="border-radius: 15px 15px 0px 0px;">
+            <div class="container about__top-content">
+                <p class="about__suptitle aos-init aos-animate" data-aos="fade-up" data-aos-delay="100">
+                    О компании
+                </p>
+                <div class="row align-items-center">
+                    <!-- Заменяем видео изображением с текстом -->
+                    <div class="col-lg-6 col-xl-6 about__image">
+                        <div class="image-box aos-init aos-animate" data-aos="fade-up" data-aos-delay="50">
+                            <img style="border-radius: 10px;" src="/images/black-metall.jpg" alt="О компании"
+                                 class="img-fluid rounded">
+                        </div>
+                    </div>
+                    <!-- Описание компании -->
+                    <div class="col-lg-6 col-xl-6">
+                        <h2 class="about__title title aos-init aos-animate" data-aos="fade-up" data-aos-delay="50">
+                            Группа Компаний «Интерстилс»
+                        </h2>
+                        <div class="about__desc aos-init aos-animate" data-aos="fade-up" data-aos-delay="100">
+                            <p>Группа компаний «Интерстилс» - надёжный поставщик металлопроката и сопутствующих товаров:
+                                оборудования для пищевой, горнодобывающей, автомобильной, химической и нефтегазовой
+                                промышленности, сферы строительства, авиа- и судостроения, а также кабельной продукции,
+                                сварочных материалов, метизов, металлургического сырья, бурового и рентгенозащитного
+                                оборудования.</p>
+                            <p>Мы работаем только с оптовыми покупателями – коммерческими и государственными
+                                организациями. Высококвалифицированные эксперты коммерческого отдела помогают клиентам
+                                собрать заказ любой сложности.</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="row mt-4">
+                    <!-- Информация о сотрудничестве -->
+                    <div class="col-lg-6 col-xl-6">
+                        <div class="about__box">
+                            <h3 class="about__box-title aos-init aos-animate" data-aos="fade-up" data-aos-delay="50">
+                                Сотрудничество с командой ГК «Интерстилс»
+                            </h3>
+                            <div class="about__box-desc aos-init aos-animate" data-aos="fade-up" data-aos-delay="100">
+                                <p>Благодаря широкой сети филиалов в крупнейших городах Казахстана мы доставляем заказы
+                                    до любого производственного или складского объекта точно в срок и с соблюдением всех
+                                    условий перевозки данного вида груза.</p>
+                                <p>У нас в наличии всегда имеется широкий ассортимент готовой продукции – всего более 6
+                                    млн наименований. Весь товар произведен в строгом соответствии с отраслевыми
+                                    стандартами и имеет сертификаты качества.</p>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- Изображение, заменяющее видео -->
+                    <div class="col-lg-6 col-xl-6 about__image">
+                        <div class="image-box aos-init aos-animate" data-aos="fade-up" data-aos-delay="50">
+                            <img style="border-radius: 10px;" src="{% static 'images/nerzhaveyuschiy.jpg' %}"
+                                 alt="Склад" class="img-fluid rounded">
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <div class="container section-container">
+        <div class="slider">
+            <div class="slider__head">
+                <div class="slider__head-row">
+                    <div class="slider__title">Специальные предложения</div>
+                    <div class="slider__controls">
+                        <button class="btn-control slider-prev">
+                            <svg class="icon icon_prev">
+                                <use xlink:href="images/sprite.svg#prev"></use>
+                            </svg>
+                        </button>
+                        <button class="btn-control slider-next">
+                            <svg class="icon icon_next">
+                                <use xlink:href="images/sprite.svg#next"></use>
+                            </svg>
+                        </button>
+                    </div>
+                </div>
+                <div>
+                    <a class="link-more" href="/spec/">Посмотреть все
+                        <svg class="icon icon_arrow-right">
+                            <use xlink:href="images/sprite.svg#arrow-right"></use>
+                        </svg>
+                    </a>
+                </div>
+            </div>
+            <div class="swiper">
+                <div class="swiper-wrapper">
+
+                    <div class="swiper-slide">
+                        <div class="sentence-card">
+                            <div class="sentence-card__top">
+                                <a class="sentence-card__img"
+                                   href="/product/pretsizionnyj-krug-s-vysokim-elektricheskim-soprotivleniem-10-mm-h27ju5t-gost-12766-4-90/">
+                                    <img src="images/precizionnye-krugi_zpnZSaU.webp"
+                                         alt="Прецизионный круг с высоким электрическим сопротивлением 10 мм Х27Ю5Т ГОСТ 12766.4-90"
+                                         loading="lazy">
+                                </a>
+                                <button class="sentence-card__info-btn" data-tippy-content="<p>
+            Внешний вид изделия может отличаться от изображения, представленного на сайте
+
+            </p>
+        ">
+                                    <svg class="icon icon_warning">
+                                        <use xlink:href="images/sprite.svg#warning"></use>
+                                    </svg>
+                                </button>
+                            </div>
+                            <a class="sentence-card__info"
+                               href="/product/pretsizionnyj-krug-s-vysokim-elektricheskim-soprotivleniem-10-mm-h27ju5t-gost-12766-4-90/">
+                                <span class="sentence-card__title ellipsis-js-50">Прецизионный круг с высоким электрическим сопротивлением 10 мм Х27Ю5Т ГОСТ 12766.4-90</span>
+
+                            </a>
+                            <a class="sentence-card__characteristics">
+                                <table>
+
+                                    <tbody>
+                                    <tr>
+                                        <td>Диаметр</td>
+                                        <td>10 мм</td>
+                                    </tr>
+
+                                    <tr>
+                                        <td>ГОСТ</td>
+                                        <td>ГОСТ 12766.4-90</td>
+                                    </tr>
+
+                                    <tr>
+                                        <td>Тип сплава</td>
+                                        <td>с высоким электрическим сопротивлением</td>
+                                    </tr>
+
+                                    <tr>
+                                        <td>Марка</td>
+                                        <td>Х27Ю5Т</td>
+                                    </tr>
+
+                                    </tbody>
+                                </table>
+                            </a>
+                            <div class="sentence-card__price">
+                            <span class="sentence-card__price-link">
+                                <span class="sentence-card__price-label">
+                                    Цена
+                                </span>
+                                <b class="sentence-card__price-price">
+                                    По уточнению
+                                </b>
+                                <span class="sentence-card__price-info"
+                                      data-tippy-content="Не является публичной офертой">
+                                    <svg class="icon icon_question">
+                                      <use xlink:href="images/sprite.svg#question"></use>
+                                    </svg>
+                                </span>
+                            </span>
+                            </div>
+                            <div class="sentence-card__footer">
+                                <button class="sentence-card__add btn-slide" data-call-modal="cart"
+                                        data-product-id="3509450">
+                                <span class="btn btn-slide__box">Купить
+                                    <span class="btn-slide__box-icons">
+                                        <svg class="icon icon_add">
+                                            <use xlink:href="images/sprite.svg#add"></use>
+                                        </svg>
+                                        <svg class="btn-slide__box-preload icon icon_preload">
+                                            <use xlink:href="images/sprite.svg#preload"></use>
+                                        </svg>
+                                    </span>
+                                </span>
+                                    <span class="btn btn-slide__box">Добавлено
+                                    <span class="btn-slide__box-icons">
+                                      <svg class="icon icon_add-ok">
+                                        <use xlink:href="images/sprite.svg#add-ok"></use>
+                                      </svg>
+                                    </span>
+                                </span>
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="swiper-slide">
+                        <div class="sentence-card">
+                            <div class="sentence-card__top">
+                                <a class="sentence-card__img"
+                                   href="/product/polirovannaja-svarochnaja-provoloka-3-mm-sv-06h19n9t-gost-2246-70/">
+                                    <img src="images/polirovannaya-svarochnaya-provoloka_EMHJmMK.webp"
+                                         alt="Полированная сварочная проволока 3 мм Св-06Х19Н9Т ГОСТ 2246-70"
+                                         loading="lazy">
+                                </a>
+                                <button class="sentence-card__info-btn" data-tippy-content="<p>
+            Внешний вид изделия может отличаться от изображения, представленного на сайте
+
+            </p>
+        ">
+                                    <svg class="icon icon_warning">
+                                        <use xlink:href="images/sprite.svg#warning"></use>
+                                    </svg>
+                                </button>
+                            </div>
+                            <a class="sentence-card__info"
+                               href="/product/polirovannaja-svarochnaja-provoloka-3-mm-sv-06h19n9t-gost-2246-70/">
+                                <span class="sentence-card__title ellipsis-js-50">Полированная сварочная проволока 3 мм Св-06Х19Н9Т ГОСТ 2246-70</span>
+
+                            </a>
+                            <a class="sentence-card__characteristics">
+                                <table>
+
+                                    <tbody>
+                                    <tr>
+                                        <td>Диаметр</td>
+                                        <td>3 мм</td>
+                                    </tr>
+
+                                    <tr>
+                                        <td>ГОСТ</td>
+                                        <td>ГОСТ 2246-70</td>
+                                    </tr>
+
+                                    <tr>
+                                        <td>Марка</td>
+                                        <td>Св-06Х19Н9Т</td>
+                                    </tr>
+
+                                    </tbody>
+                                </table>
+                            </a>
+                            <div class="sentence-card__price">
+                            <span class="sentence-card__price-link">
+                                <span class="sentence-card__price-label">
+                                    Цена
+                                </span>
+                                <b class="sentence-card__price-price">
+                                    По уточнению
+                                </b>
+                                <span class="sentence-card__price-info"
+                                      data-tippy-content="Не является публичной офертой">
+                                    <svg class="icon icon_question">
+                                      <use xlink:href="images/sprite.svg#question"></use>
+                                    </svg>
+                                </span>
+                            </span>
+                            </div>
+                            <div class="sentence-card__footer">
+                                <button class="sentence-card__add btn-slide" data-call-modal="cart"
+                                        data-product-id="3487255">
+                                <span class="btn btn-slide__box">Купить
+                                    <span class="btn-slide__box-icons">
+                                        <svg class="icon icon_add">
+                                            <use xlink:href="images/sprite.svg#add"></use>
+                                        </svg>
+                                        <svg class="btn-slide__box-preload icon icon_preload">
+                                            <use xlink:href="images/sprite.svg#preload"></use>
+                                        </svg>
+                                    </span>
+                                </span>
+                                    <span class="btn btn-slide__box">Добавлено
+                                    <span class="btn-slide__box-icons">
+                                      <svg class="icon icon_add-ok">
+                                        <use xlink:href="images/sprite.svg#add-ok"></use>
+                                      </svg>
+                                    </span>
+                                </span>
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="swiper-slide">
+                        <div class="sentence-card">
+                            <div class="sentence-card__top">
+                                <a class="sentence-card__img" href="/product/nikelevaya-truba-05h005-np2/">
+                                    <img src="images/nikelevye-truby_Av9lo35.webp" alt="Никелевая труба 0,5х0,05 мм НП2"
+                                         loading="lazy">
+                                </a>
+                                <button class="sentence-card__info-btn" data-tippy-content="<p>
+            Внешний вид изделия может отличаться от изображения, представленного на сайте
+
+            </p>
+        ">
+                                    <svg class="icon icon_warning">
+                                        <use xlink:href="images/sprite.svg#warning"></use>
+                                    </svg>
+                                </button>
+                            </div>
+                            <a class="sentence-card__info" href="/product/nikelevaya-truba-05h005-np2/">
+                                <span class="sentence-card__title ellipsis-js-50">Никелевая труба 0,5х0,05 мм НП2</span>
+
+                            </a>
+                            <a class="sentence-card__characteristics">
+                                <table>
+
+                                    <tbody>
+                                    <tr>
+                                        <td>Наружный диаметр</td>
+                                        <td>0.5 мм</td>
+                                    </tr>
+
+                                    <tr>
+                                        <td>Марка</td>
+                                        <td>НП2</td>
+                                    </tr>
+
+                                    </tbody>
+                                </table>
+                            </a>
+                            <div class="sentence-card__price">
+                            <span class="sentence-card__price-link">
+                                <span class="sentence-card__price-label">
+                                    Цена
+                                </span>
+                                <b class="sentence-card__price-price">
+                                    По уточнению
+                                </b>
+                                <span class="sentence-card__price-info"
+                                      data-tippy-content="Не является публичной офертой">
+                                    <svg class="icon icon_question">
+                                      <use xlink:href="images/sprite.svg#question"></use>
+                                    </svg>
+                                </span>
+                            </span>
+                            </div>
+                            <div class="sentence-card__footer">
+                                <button class="sentence-card__add btn-slide" data-call-modal="cart"
+                                        data-product-id="2972578">
+                                <span class="btn btn-slide__box">Купить
+                                    <span class="btn-slide__box-icons">
+                                        <svg class="icon icon_add">
+                                            <use xlink:href="images/sprite.svg#add"></use>
+                                        </svg>
+                                        <svg class="btn-slide__box-preload icon icon_preload">
+                                            <use xlink:href="images/sprite.svg#preload"></use>
+                                        </svg>
+                                    </span>
+                                </span>
+                                    <span class="btn btn-slide__box">Добавлено
+                                    <span class="btn-slide__box-icons">
+                                      <svg class="icon icon_add-ok">
+                                        <use xlink:href="images/sprite.svg#add-ok"></use>
+                                      </svg>
+                                    </span>
+                                </span>
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="swiper-slide">
+                        <div class="sentence-card">
+                            <div class="sentence-card__top">
+                                <a class="sentence-card__img" href="/product/sudovoj-list-5-mm-rsv/">
+                                    <img src="images/%D0%91%D1%80%D0%BE%D0%BD%D0%B5%D0%BB%D0%B8%D1%81%D1%82%D1%8B_e2w1mB1.png"
+                                         alt="Судовой лист 5 мм РСВ" loading="lazy">
+                                </a>
+                                <button class="sentence-card__info-btn" data-tippy-content="<p>
+            Внешний вид изделия может отличаться от изображения, представленного на сайте
+
+            </p>
+        ">
+                                    <svg class="icon icon_warning">
+                                        <use xlink:href="images/sprite.svg#warning"></use>
+                                    </svg>
+                                </button>
+                            </div>
+                            <a class="sentence-card__info" href="/product/sudovoj-list-5-mm-rsv/">
+                                <span class="sentence-card__title ellipsis-js-50">Судовой лист 5 мм РСВ</span>
+
+                            </a>
+                            <a class="sentence-card__characteristics">
+                                <table>
+
+                                    <tbody>
+                                    <tr>
+                                        <td>Толщина</td>
+                                        <td>5 мм</td>
+                                    </tr>
+
+                                    <tr>
+                                        <td>Марка</td>
+                                        <td>РСВ</td>
+                                    </tr>
+
+                                    </tbody>
+                                </table>
+                            </a>
+                            <div class="sentence-card__price">
+                            <span class="sentence-card__price-link">
+                                <span class="sentence-card__price-label">
+                                    Цена
+                                </span>
+                                <b class="sentence-card__price-price">
+                                    По уточнению
+                                </b>
+                                <span class="sentence-card__price-info"
+                                      data-tippy-content="Не является публичной офертой">
+                                    <svg class="icon icon_question">
+                                      <use xlink:href="images/sprite.svg#question"></use>
+                                    </svg>
+                                </span>
+                            </span>
+                            </div>
+                            <div class="sentence-card__footer">
+                                <button class="sentence-card__add btn-slide" data-call-modal="cart"
+                                        data-product-id="7434014">
+                                <span class="btn btn-slide__box">Купить
+                                    <span class="btn-slide__box-icons">
+                                        <svg class="icon icon_add">
+                                            <use xlink:href="images/sprite.svg#add"></use>
+                                        </svg>
+                                        <svg class="btn-slide__box-preload icon icon_preload">
+                                            <use xlink:href="images/sprite.svg#preload"></use>
+                                        </svg>
+                                    </span>
+                                </span>
+                                    <span class="btn btn-slide__box">Добавлено
+                                    <span class="btn-slide__box-icons">
+                                      <svg class="icon icon_add-ok">
+                                        <use xlink:href="images/sprite.svg#add-ok"></use>
+                                      </svg>
+                                    </span>
+                                </span>
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="swiper-slide">
+                        <div class="sentence-card">
+                            <div class="sentence-card__top">
+                                <a class="sentence-card__img"
+                                   href="/product/elektrod-dlja-svarki-stali-3-mm-uoni-1355-gost-9467-75/">
+                                    <img src="images/elektrody-dlya-svarki-stali_U8lGG66.webp"
+                                         alt="Электрод для сварки стали 3 мм УОНИ-13/55 ГОСТ 9467-75" loading="lazy">
+                                </a>
+                                <button class="sentence-card__info-btn" data-tippy-content="<p>
+            Внешний вид изделия может отличаться от изображения, представленного на сайте
+
+            </p>
+        ">
+                                    <svg class="icon icon_warning">
+                                        <use xlink:href="images/sprite.svg#warning"></use>
+                                    </svg>
+                                </button>
+                            </div>
+                            <a class="sentence-card__info"
+                               href="/product/elektrod-dlja-svarki-stali-3-mm-uoni-1355-gost-9467-75/">
+                                <span class="sentence-card__title ellipsis-js-50">Электрод для сварки стали 3 мм УОНИ-13/55 ГОСТ 9467-75</span>
+
+                            </a>
+                            <a class="sentence-card__characteristics">
+                                <table>
+
+                                    <tbody>
+                                    <tr>
+                                        <td>Диаметр</td>
+                                        <td>3 мм</td>
+                                    </tr>
+
+                                    <tr>
+                                        <td>ГОСТ</td>
+                                        <td>ГОСТ 9467-75</td>
+                                    </tr>
+
+                                    <tr>
+                                        <td>Марка</td>
+                                        <td>УОНИ-13/55</td>
+                                    </tr>
+
+                                    </tbody>
+                                </table>
+                            </a>
+                            <div class="sentence-card__price">
+                            <span class="sentence-card__price-link">
+                                <span class="sentence-card__price-label">
+                                    Цена
+                                </span>
+                                <b class="sentence-card__price-price">
+                                    По уточнению
+                                </b>
+                                <span class="sentence-card__price-info"
+                                      data-tippy-content="Не является публичной офертой">
+                                    <svg class="icon icon_question">
+                                      <use xlink:href="images/sprite.svg#question"></use>
+                                    </svg>
+                                </span>
+                            </span>
+                            </div>
+                            <div class="sentence-card__footer">
+                                <button class="sentence-card__add btn-slide" data-call-modal="cart"
+                                        data-product-id="6151204">
+                                <span class="btn btn-slide__box">Купить
+                                    <span class="btn-slide__box-icons">
+                                        <svg class="icon icon_add">
+                                            <use xlink:href="images/sprite.svg#add"></use>
+                                        </svg>
+                                        <svg class="btn-slide__box-preload icon icon_preload">
+                                            <use xlink:href="images/sprite.svg#preload"></use>
+                                        </svg>
+                                    </span>
+                                </span>
+                                    <span class="btn btn-slide__box">Добавлено
+                                    <span class="btn-slide__box-icons">
+                                      <svg class="icon icon_add-ok">
+                                        <use xlink:href="images/sprite.svg#add-ok"></use>
+                                      </svg>
+                                    </span>
+                                </span>
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="swiper-slide">
+                        <div class="sentence-card">
+                            <div class="sentence-card__top">
+                                <a class="sentence-card__img"
+                                   href="/product/djuralevaja-kruglaja-truba-120-mm-d16t-gost-18482-2018/">
+                                    <img src="images/dyuralyuminievye-truby_1T2ydXY_Bw5SA6T.webp"
+                                         alt="Дюралевая круглая труба 120 мм Д16Т ГОСТ 18482-2018" loading="lazy">
+                                </a>
+                                <button class="sentence-card__info-btn" data-tippy-content="<p>
+            Внешний вид изделия может отличаться от изображения, представленного на сайте
+
+            </p>
+        ">
+                                    <svg class="icon icon_warning">
+                                        <use xlink:href="images/sprite.svg#warning"></use>
+                                    </svg>
+                                </button>
+                            </div>
+                            <a class="sentence-card__info"
+                               href="/product/djuralevaja-kruglaja-truba-120-mm-d16t-gost-18482-2018/">
+                                <span class="sentence-card__title ellipsis-js-50">Дюралевая круглая труба 120 мм Д16Т ГОСТ 18482-2018</span>
+
+                            </a>
+                            <a class="sentence-card__characteristics">
+                                <table>
+
+                                    <tbody>
+                                    <tr>
+                                        <td>Наружный диаметр</td>
+                                        <td>120 мм</td>
+                                    </tr>
+
+                                    <tr>
+                                        <td>ГОСТ</td>
+                                        <td>ГОСТ 18482-2018</td>
+                                    </tr>
+
+                                    <tr>
+                                        <td>Марка</td>
+                                        <td>Д16Т</td>
+                                    </tr>
+
+                                    </tbody>
+                                </table>
+                            </a>
+                            <div class="sentence-card__price">
+                            <span class="sentence-card__price-link">
+                                <span class="sentence-card__price-label">
+                                    Цена
+                                </span>
+                                <b class="sentence-card__price-price">
+                                    По уточнению
+                                </b>
+                                <span class="sentence-card__price-info"
+                                      data-tippy-content="Не является публичной офертой">
+                                    <svg class="icon icon_question">
+                                      <use xlink:href="images/sprite.svg#question"></use>
+                                    </svg>
+                                </span>
+                            </span>
+                            </div>
+                            <div class="sentence-card__footer">
+                                <button class="sentence-card__add btn-slide" data-call-modal="cart"
+                                        data-product-id="1644967">
+                                <span class="btn btn-slide__box">Купить
+                                    <span class="btn-slide__box-icons">
+                                        <svg class="icon icon_add">
+                                            <use xlink:href="images/sprite.svg#add"></use>
+                                        </svg>
+                                        <svg class="btn-slide__box-preload icon icon_preload">
+                                            <use xlink:href="images/sprite.svg#preload"></use>
+                                        </svg>
+                                    </span>
+                                </span>
+                                    <span class="btn btn-slide__box">Добавлено
+                                    <span class="btn-slide__box-icons">
+                                      <svg class="icon icon_add-ok">
+                                        <use xlink:href="images/sprite.svg#add-ok"></use>
+                                      </svg>
+                                    </span>
+                                </span>
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="swiper-slide">
+                        <div class="sentence-card">
+                            <div class="sentence-card__top">
+                                <a class="sentence-card__img"
+                                   href="/product/otsinkovannyj-list-0_8x1250-mm-08ps-gost-14918-2020/">
+                                    <img src="images/ocinkovannye-listy_TYWU7oN.webp"
+                                         alt="Оцинкованный лист 0.8x1250 мм 08пс ГОСТ 14918-2020" loading="lazy">
+                                </a>
+                                <button class="sentence-card__info-btn" data-tippy-content="<p>
+            Внешний вид изделия может отличаться от изображения, представленного на сайте
+
+            </p>
+        ">
+                                    <svg class="icon icon_warning">
+                                        <use xlink:href="images/sprite.svg#warning"></use>
+                                    </svg>
+                                </button>
+                            </div>
+                            <a class="sentence-card__info"
+                               href="/product/otsinkovannyj-list-0_8x1250-mm-08ps-gost-14918-2020/">
+                                <span class="sentence-card__title ellipsis-js-50">Оцинкованный лист 0.8x1250 мм 08пс ГОСТ 14918-2020</span>
+
+                            </a>
+                            <a class="sentence-card__characteristics">
+                                <table>
+
+                                    <tbody>
+                                    <tr>
+                                        <td>Толщина</td>
+                                        <td>0.8 мм</td>
+                                    </tr>
+
+                                    <tr>
+                                        <td>Марка</td>
+                                        <td>08пс</td>
+                                    </tr>
+
+                                    <tr>
+                                        <td>Ширина</td>
+                                        <td>1250 мм</td>
+                                    </tr>
+
+                                    <tr>
+                                        <td>ГОСТ</td>
+                                        <td>ГОСТ 14918-2020</td>
+                                    </tr>
+
+                                    </tbody>
+                                </table>
+                            </a>
+                            <div class="sentence-card__price">
+                            <span class="sentence-card__price-link">
+                                <span class="sentence-card__price-label">
+                                    Цена
+                                </span>
+                                <b class="sentence-card__price-price">
+                                    По уточнению
+                                </b>
+                                <span class="sentence-card__price-info"
+                                      data-tippy-content="Не является публичной офертой">
+                                    <svg class="icon icon_question">
+                                      <use xlink:href="images/sprite.svg#question"></use>
+                                    </svg>
+                                </span>
+                            </span>
+                            </div>
+                            <div class="sentence-card__footer">
+                                <button class="sentence-card__add btn-slide" data-call-modal="cart"
+                                        data-product-id="15316940">
+                                <span class="btn btn-slide__box">Купить
+                                    <span class="btn-slide__box-icons">
+                                        <svg class="icon icon_add">
+                                            <use xlink:href="images/sprite.svg#add"></use>
+                                        </svg>
+                                        <svg class="btn-slide__box-preload icon icon_preload">
+                                            <use xlink:href="images/sprite.svg#preload"></use>
+                                        </svg>
+                                    </span>
+                                </span>
+                                    <span class="btn btn-slide__box">Добавлено
+                                    <span class="btn-slide__box-icons">
+                                      <svg class="icon icon_add-ok">
+                                        <use xlink:href="images/sprite.svg#add-ok"></use>
+                                      </svg>
+                                    </span>
+                                </span>
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+</main>
+{% endblock %}

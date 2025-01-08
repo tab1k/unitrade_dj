@@ -1,0 +1,294 @@
+{% extends 'base.html' %}
+{% load static %}
+
+{% block content %}
+<main>
+
+
+    <div class="catalog container">
+        <div class="row">
+            <div class="col-lg-12">
+
+                <div class="bread-crumbs">
+                    <div class="container">
+                        <ul class="bread-crumbs__list" itemscope="" itemtype="https://schema.org/BreadcrumbList">
+
+
+                            <li class="bread-crumbs__item" itemprop="itemListElement" itemscope=""
+                                itemtype="https://schema.org/ListItem">
+                                <a class="bread-crumbs__link" href="/" itemprop="item">
+                      <span itemprop="name">
+                          Главная
+                      </span>
+                                </a>
+                                <meta itemprop="position" content="1">
+                            </li>
+
+
+                            <li class="bread-crumbs__item" itemprop="itemListElement" itemscope=""
+                                itemtype="https://schema.org/ListItem">
+                                <div class="bread-crumbs__link" itemprop="item"><span itemprop="name">Услуги</span>
+                                </div>
+                                <meta itemprop="position" content="2">
+                            </li>
+
+
+                        </ul>
+                    </div>
+                </div>
+
+                <h1 class="title title_page">Услуги в Астане</h1>
+                <a class="link-back link-back-mb d-lg-none" href="/services/">Услуги</a>
+                <div class="row row-cols-1 row-cols-md-2 row-cols-xl-3 catalog__container active">
+
+                    <div class="col catalog__item">
+                        <div class="catalog__item-head">
+                            <div class="catalog__item-img">
+                                <img loading="lazy"
+                                     src="/media/uploads/catalog/product/proizvodstvo-metallokonstrukcij.png"
+                                     alt="Производство металлоконструкций">
+                            </div>
+                            <a class="catalog__item-link stretched-link"
+                               href="/service/proizvodstvo-metallokonstrukcij/">
+                                Производство металлоконструкций
+                            </a>
+                        </div>
+                        <ul class="catalog__list" aria-expanded="false">
+                        </ul>
+                    </div>
+
+                    <div class="col catalog__item">
+                        <div class="catalog__item-head">
+                            <div class="catalog__item-img">
+                                <img loading="lazy" src="/media/uploads/catalog/product/fundamentnyh-boltov.jpg"
+                                     alt="Производство фундаментных болтов">
+                            </div>
+                            <a class="catalog__item-link stretched-link"
+                               href="/service/proizvodstvo-fundamentnyh-boltov/">
+                                Производство фундаментных болтов
+                            </a>
+                        </div>
+                        <ul class="catalog__list" aria-expanded="false">
+                        </ul>
+                    </div>
+
+                    <div class="col catalog__item">
+                        <div class="catalog__item-head">
+                            <div class="catalog__item-img">
+                                <img loading="lazy" src="/media/uploads/catalog/product/armaturnye-karkai.jpg"
+                                     alt="Производство арматурных каркасов">
+                            </div>
+                            <a class="catalog__item-link stretched-link"
+                               href="/service/proizvodstvo-armaturnyh-karkasov/">
+                                Производство арматурных каркасов
+                            </a>
+                        </div>
+                        <ul class="catalog__list" aria-expanded="false">
+                        </ul>
+                    </div>
+
+                    <div class="col catalog__item">
+                        <div class="catalog__item-head">
+                            <div class="catalog__item-img">
+                                <img loading="lazy" src="/media/uploads/catalog/product/sendvich-panel.jpg"
+                                     alt="Производство сэндвич-панелей">
+                            </div>
+                            <a class="catalog__item-link stretched-link" href="/service/proizvodstvo-sendvich-panelej/">
+                                Производство сэндвич-панелей
+                            </a>
+                        </div>
+                        <ul class="catalog__list" aria-expanded="false">
+                        </ul>
+                    </div>
+
+                    <div class="col catalog__item">
+                        <div class="catalog__item-head">
+                            <div class="catalog__item-img">
+                                <img loading="lazy"
+                                     src="/media/uploads/catalog/product/vzryvozashishenny-elektronagrevatel.jpg"
+                                     alt="Производство взрывозащищенных электронагревателей">
+                            </div>
+                            <a class="catalog__item-link stretched-link"
+                               href="/service/proizvodstvo-vzryvozashishennyh-elektronagrevatelej/">
+                                Производство взрывозащищенных электронагревателей
+                            </a>
+                        </div>
+                        <ul class="catalog__list" aria-expanded="false">
+                        </ul>
+                    </div>
+
+                    <div class="col catalog__item">
+                        <div class="catalog__item-head">
+                            <div class="catalog__item-img">
+                                <img loading="lazy" src="/media/uploads/catalog/product/protivopozharnyh-sistem.jpg"
+                                     alt="Производство противопожарных систем">
+                            </div>
+                            <a class="catalog__item-link stretched-link"
+                               href="/service/proizvodstvo-protivopozharnyh-sistem/">
+                                Производство противопожарных систем
+                            </a>
+                        </div>
+                        <ul class="catalog__list" aria-expanded="false">
+                        </ul>
+                    </div>
+
+                    <div class="col catalog__item">
+                        <div class="catalog__item-head">
+                            <div class="catalog__item-img">
+                                <img loading="lazy" src="/media/uploads/catalog/product/cinkovanie.jpg"
+                                     alt="Цинкование металлоконструкций">
+                            </div>
+                            <a class="catalog__item-link stretched-link" href="/service/cinkovanie-metallokonstrukcij/">
+                                Цинкование металлоконструкций
+                            </a>
+                        </div>
+                        <ul class="catalog__list" aria-expanded="false">
+                        </ul>
+                    </div>
+
+                    <div class="col catalog__item">
+                        <div class="catalog__item-head">
+                            <div class="catalog__item-img">
+                                <img loading="lazy" src="/media/uploads/catalog/product/trubchatyh-svaj.jpg"
+                                     alt="Производство свай из трубы">
+                            </div>
+                            <a class="catalog__item-link stretched-link" href="/service/proizvodstvo-trubchatyh-svaj/">
+                                Производство свай из трубы
+                            </a>
+                        </div>
+                        <ul class="catalog__list" aria-expanded="false">
+                        </ul>
+                    </div>
+
+                    <div class="col catalog__item">
+                        <div class="catalog__item-head">
+                            <div class="catalog__item-img">
+                                <img loading="lazy" src="/media/uploads/catalog/product/rezka_metal.png"
+                                     alt="Резка металла">
+                            </div>
+                            <a class="catalog__item-link stretched-link" href="/service/rezka-metalla/">
+                                Резка металла
+                            </a>
+                        </div>
+                        <ul class="catalog__list" aria-expanded="false">
+                        </ul>
+                    </div>
+
+                    <div class="col catalog__item">
+                        <div class="catalog__item-head">
+                            <div class="catalog__item-img">
+                                <img loading="lazy" src="/media/uploads/catalog/product/Plasma-metal.jpg"
+                                     alt="Плазменная резка">
+                            </div>
+                            <a class="catalog__item-link stretched-link" href="/service/plazmennaya-rezka/">
+                                Плазменная резка
+                            </a>
+                        </div>
+                        <ul class="catalog__list" aria-expanded="false">
+                        </ul>
+                    </div>
+
+                    <div class="col catalog__item">
+                        <div class="catalog__item-head">
+                            <div class="catalog__item-img">
+                                <img loading="lazy" src="/media/uploads/catalog/product/plamij-metal.jpg"
+                                     alt="Газовая резка">
+                            </div>
+                            <a class="catalog__item-link stretched-link" href="/service/gazovaya-rezka/">
+                                Газовая резка
+                            </a>
+                        </div>
+                        <ul class="catalog__list" aria-expanded="false">
+                        </ul>
+                    </div>
+
+                    <div class="col catalog__item">
+                        <div class="catalog__item-head">
+                            <div class="catalog__item-img">
+                                <img loading="lazy" src="/media/uploads/catalog/product/laser-metal.jpg"
+                                     alt="Лазерная резка">
+                            </div>
+                            <a class="catalog__item-link stretched-link" href="/service/lazernaya-rezka/">
+                                Лазерная резка
+                            </a>
+                        </div>
+                        <ul class="catalog__list" aria-expanded="false">
+                        </ul>
+                    </div>
+
+                    <div class="col catalog__item">
+                        <div class="catalog__item-head">
+                            <div class="catalog__item-img">
+                                <img loading="lazy" src="/media/uploads/catalog/product/gibka-metal.jpeg"
+                                     alt="Гибка металла">
+                            </div>
+                            <a class="catalog__item-link stretched-link" href="/service/gibka-metalla/">
+                                Гибка металла
+                            </a>
+                        </div>
+                        <ul class="catalog__list" aria-expanded="false">
+                        </ul>
+                    </div>
+
+                    <div class="col catalog__item">
+                        <div class="catalog__item-head">
+                            <div class="catalog__item-img">
+                                <img loading="lazy" src="/media/uploads/catalog/product/izgotovlenie-detalej.jpg"
+                                     alt="Изготовление деталей по чертежам">
+                            </div>
+                            <a class="catalog__item-link stretched-link"
+                               href="/service/izgotovlenie-detalej-po-chertezham/">
+                                Изготовление деталей по чертежам
+                            </a>
+                        </div>
+                        <ul class="catalog__list" aria-expanded="false">
+                        </ul>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+    </div>
+    <section class="catalog__purchase-details purchase-details">
+        <div class="container">
+            <div class="purchase-details__inner row tab-product-content product-tab-show justify-content-center"
+                 id="product-desc">
+                <div class="col-lg-12">
+                    <div class="purchase-details__section">
+
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <div class="container section-container">
+        <div class="catalog__promo-help-white promo-help-white"
+             style="background-image: url(/static/img/content/promo-help-white.webp);">
+            <div class="promo-help-white__inner">
+                <div class="promo-help-white__title">Нужна помощь?</div>
+                <div class="promo-help-white__desc">
+                    <p>Обсудить все вопросы, рассчитать стоимость доставки и договориться о способе оплаты вы можете с
+                        нашими специалистами.</p>
+                </div>
+                <div class="promo-help-white__controls">
+                    <button class="promo-help-white__order btn" data-modal-toggle="#modal-request">
+                        Оставить заявку
+                        <svg class="icon icon_arrow-right">
+                            <use xlink:href="/static/img/svg/symbol/sprite.svg#arrow-right"></use>
+                        </svg>
+                    </button>
+                    <a class="promo-help-white__consultant btn btn_outline" href="javascript:void(0);"
+                       onclick="jivo_api.open()">
+                        Онлайн консультант
+                        <svg class="icon icon_chat">
+                            <use xlink:href="/static/img/svg/symbol/sprite.svg#chat"></use>
+                        </svg>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+</main>
+{% endblock %}
