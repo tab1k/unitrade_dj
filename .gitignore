@@ -3,6 +3,9 @@ venv/
 __pycache__/
 *.pyc
 
+# Игнорирование файла базы данных Django (если используется SQLite)
+db.sqlite3
+
 # Игнорирование файлов конфигурации IDE
 .idea/
 .vscode/
