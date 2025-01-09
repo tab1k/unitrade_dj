@@ -1,3 +1,4 @@
+from django.db.models import Prefetch
 from django.shortcuts import render
 from django.views.generic import TemplateView
 from .models import *
@@ -5,7 +6,7 @@ from django.views.generic import DetailView
 
 
 class IndexViewPage(TemplateView):
-    template_name = 'index.html'
+    template_name = 'delivery.html'
 
     def get_context_data(self, **kwargs):
         context = super().get_context_data(**kwargs)
@@ -19,6 +20,50 @@ class IndexViewPage(TemplateView):
 
 class ServiceViewPage(TemplateView):
     template_name ='services.html'
+
+class AboutViewPage(TemplateView):
+    template_name ='about.html'
+
+
+class DeliveryViewPage(TemplateView):
+    template_name ='delivery.html'
+
+
+class PaymentViewPage(TemplateView):
+    template_name ='payment.html'
+
+
+class RefundViewPage(TemplateView):
+    template_name ='refund.html'
+
+
+class CategoryViewPage(TemplateView):
+    template_name = 'category/delivery.html'
+
+    def get_context_data(self, **kwargs):
+        context = super().get_context_data(**kwargs)
+        # Передаем категории и их продукты
+        context['categories'] = (
+            Category.objects.filter(parent__isnull=True)
+            .order_by('id')
+            .only('id', 'name', 'slug')  # Загрузите только нужные поля
+            .prefetch_related(
+                Prefetch(
+                    'children',
+                    queryset=Category.objects.only('id', 'name', 'slug')
+                ),
+                Prefetch(
+                    'children__children',
+                    queryset=Category.objects.only('id', 'name', 'slug')
+                ),
+                Prefetch(
+                    'products',
+                    queryset=Product.objects.only('id', 'name', 'price')
+                )
+            )
+        )
+
+        return context
 
 
 

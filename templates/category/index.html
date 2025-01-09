@@ -1,0 +1,3174 @@
+{% extends 'base.html' %}
+{% load static %}
+
+{% block content %}
+<main>
+
+
+    <div class="catalog container">
+        <div class="row">
+            <div class="col-lg-3">
+                <a class="link-back link-back-mb d-none d-lg-inline-flex" href="/">Назад</a>
+                <!--noindex-->
+                <ul class="category-sidebar">
+
+                    <li class="category-sidebar__item">
+
+                        <div class="category-sidebar__title accordion">
+                            <div class="click-block-sidebar"></div>
+                            <a href="/catalog/chernyj-metalloprokat/">
+                                Черный металлопрокат
+                            </a>
+                            <div class="accordion-svg accordion-img">
+                                <svg class="icon icon_arrow-down">
+                                    <use xlink:href="/static/img/svg/symbol/sprite.svg#arrow-down"></use>
+                                </svg>
+                            </div>
+                        </div>
+
+
+                        <ul class="category-sidebar__submenu accordion-content
+                    ">
+
+                            <li class="category-sidebar__submenu-item">
+
+                                <a class="category-sidebar__submenu-link" href="/catalog/trubnyj-prokat/">
+                                    Трубный прокат
+                                </a>
+
+                            </li>
+
+                            <li class="category-sidebar__submenu-item">
+
+                                <a class="category-sidebar__submenu-link" href="/catalog/ploskiy-stalnoy-prokat/">
+                                    Плоский прокат
+                                </a>
+
+                            </li>
+
+                            <li class="category-sidebar__submenu-item">
+
+                                <a class="category-sidebar__submenu-link" href="/catalog/fasonnyj-prokat/">
+                                    Фасонный прокат
+                                </a>
+
+                            </li>
+
+                            <li class="category-sidebar__submenu-item">
+
+                                <a class="category-sidebar__submenu-link" href="/catalog/sortovoj-prokat/">
+                                    Сортовой прокат
+                                </a>
+
+                            </li>
+
+                            <li class="category-sidebar__submenu-item">
+
+                                <a class="category-sidebar__submenu-link" href="/catalog/chugunnyj-prokat/">
+                                    Чугунный прокат
+                                </a>
+
+                            </li>
+
+                        </ul>
+
+
+                    </li>
+
+                    <li class="category-sidebar__item">
+
+                        <div class="category-sidebar__title accordion">
+                            <div class="click-block-sidebar"></div>
+                            <a href="/catalog/specialnye-stali/">
+                                Специальные стали
+                            </a>
+                            <div class="accordion-svg accordion-img">
+                                <svg class="icon icon_arrow-down">
+                                    <use xlink:href="/static/img/svg/symbol/sprite.svg#arrow-down"></use>
+                                </svg>
+                            </div>
+                        </div>
+
+
+                        <ul class="category-sidebar__submenu accordion-content
+                    ">
+
+                            <li class="category-sidebar__submenu-item">
+
+                                <a class="category-sidebar__submenu-link" href="/catalog/precizionnye-stali/">
+                                    Прецизионные стали
+                                </a>
+
+                            </li>
+
+                            <li class="category-sidebar__submenu-item">
+
+                                <a class="category-sidebar__submenu-link" href="/catalog/instrumentalnaya-stal/">
+                                    Инструментальные стали
+                                </a>
+
+                            </li>
+
+                            <li class="category-sidebar__submenu-item">
+
+                                <a class="category-sidebar__submenu-link" href="/catalog/konstrukcionnaya-stal/">
+                                    Конструкционные стали
+                                </a>
+
+                            </li>
+
+                            <li class="category-sidebar__submenu-item">
+
+                                <a class="category-sidebar__submenu-link" href="/catalog/bystrorezhushaya-stal/">
+                                    Быстрорежущие стали
+                                </a>
+
+                            </li>
+
+                            <li class="category-sidebar__submenu-item">
+
+                                <a class="category-sidebar__submenu-link" href="/catalog/pishevaya-stal/">
+                                    Пищевые стали
+                                </a>
+
+                            </li>
+
+                            <li><a class="show-more">Показать ещё</a></li>
+                            <li class="category-sidebar__submenu-item display-none">
+
+                                <a class="category-sidebar__submenu-link" href="/catalog/elektrotehnicheskaya-stal/">
+                                    Электротехнические стали
+                                </a>
+
+                            </li>
+
+                            <li class="category-sidebar__submenu-item display-none">
+
+                                <a class="category-sidebar__submenu-link" href="/catalog/zharoprochnye-stali/">
+                                    Жаропрочные стали
+                                </a>
+
+                            </li>
+
+                            <li class="category-sidebar__submenu-item display-none">
+
+                                <a class="category-sidebar__submenu-link" href="/catalog/ressorno-pruzhinnye-stali/">
+                                    Рессорно-пружинные стали
+                                </a>
+
+                            </li>
+
+                            <li class="category-sidebar__submenu-item display-none">
+
+                                <a class="category-sidebar__submenu-link" href="/catalog/kriogennyj-prokat/">
+                                    Криогенный прокат
+                                </a>
+
+                            </li>
+
+                            <li class="category-sidebar__submenu-item display-none">
+
+                                <a class="category-sidebar__submenu-link" href="/catalog/avtomatnye-stali/">
+                                    Автоматные стали
+                                </a>
+
+                            </li>
+
+                            <li class="category-sidebar__submenu-item display-none">
+
+                                <a class="category-sidebar__submenu-link" href="/catalog/bimetallicheskij-prokat/">
+                                    Биметаллический прокат
+                                </a>
+
+                            </li>
+
+                            <li class="category-sidebar__submenu-item display-none">
+
+                                <a class="category-sidebar__submenu-link" href="/catalog/kislotostojkie-stali/">
+                                    Кислотостойкие стали
+                                </a>
+
+                            </li>
+
+                            <li class="category-sidebar__submenu-item display-none">
+
+                                <a class="category-sidebar__submenu-link" href="/catalog/shtampovaya-stal/">
+                                    Штамповые стали
+                                </a>
+
+                            </li>
+
+                            <li class="category-sidebar__submenu-item display-none">
+
+                                <a class="category-sidebar__submenu-link" href="/catalog/sudostroitelnaya-stal/">
+                                    Судостроительные стали
+                                </a>
+
+                            </li>
+
+                            <li class="category-sidebar__submenu-item display-none">
+
+                                <a class="category-sidebar__submenu-link" href="/catalog/nihromovyj-prokat/">
+                                    Нихром
+                                </a>
+
+                            </li>
+
+                            <li class="category-sidebar__submenu-item display-none">
+
+                                <a class="category-sidebar__submenu-link" href="/catalog/fehral/">
+                                    Фехраль
+                                </a>
+
+                            </li>
+
+                            <li class="category-sidebar__submenu-item display-none">
+
+                                <a class="category-sidebar__submenu-link" href="/catalog/list-hardox/">
+                                    Листы Hardox
+                                </a>
+
+                            </li>
+                            <li><a class="hide-more">Cкрыть</a></li>
+
+                        </ul>
+
+
+                    </li>
+
+                    <li class="category-sidebar__item">
+
+                        <div class="category-sidebar__title accordion">
+                            <div class="click-block-sidebar"></div>
+                            <a href="/catalog/nerzhaveyushij-prokat/">
+                                Нержавеющий прокат
+                            </a>
+                            <div class="accordion-svg accordion-img">
+                                <svg class="icon icon_arrow-down">
+                                    <use xlink:href="/static/img/svg/symbol/sprite.svg#arrow-down"></use>
+                                </svg>
+                            </div>
+                        </div>
+
+
+                        <ul class="category-sidebar__submenu accordion-content
+                    ">
+
+                            <li class="category-sidebar__submenu-item">
+
+                                <a class="category-sidebar__submenu-link"
+                                   href="/catalog/truby-iz-nerzhaveyushej-stali/">
+                                    Нержавеющий трубопрокат
+                                </a>
+
+                            </li>
+
+                            <li class="category-sidebar__submenu-item">
+
+                                <a class="category-sidebar__submenu-link"
+                                   href="/catalog/ploskiy-nerzhaveyushij-prokat/">
+                                    Плоский нержавеющий прокат
+                                </a>
+
+                            </li>
+
+                            <li class="category-sidebar__submenu-item">
+
+                                <a class="category-sidebar__submenu-link"
+                                   href="/catalog/fasonnyi-nerzhaveyushij-prokat/">
+                                    Фасонный нержавеющий прокат
+                                </a>
+
+                            </li>
+
+                            <li class="category-sidebar__submenu-item">
+
+                                <a class="category-sidebar__submenu-link"
+                                   href="/catalog/sortovoj-nerzhaveyushij-prokat/">
+                                    Сортовой нержавеющий прокат
+                                </a>
+
+                            </li>
+
+                            <li class="category-sidebar__submenu-item">
+
+                                <a class="category-sidebar__submenu-link" href="/catalog/nerzhaveyushij-krepezh/">
+                                    Нержавеющий крепеж
+                                </a>
+
+                            </li>
+
+                        </ul>
+
+
+                    </li>
+
+                    <li class="category-sidebar__item">
+
+                        <div class="category-sidebar__title accordion">
+                            <div class="click-block-sidebar"></div>
+                            <a href="/catalog/cvetnoj-metalloprokat/">
+                                Цветной металлопрокат
+                            </a>
+                            <div class="accordion-svg accordion-img">
+                                <svg class="icon icon_arrow-down">
+                                    <use xlink:href="/static/img/svg/symbol/sprite.svg#arrow-down"></use>
+                                </svg>
+                            </div>
+                        </div>
+
+
+                        <ul class="category-sidebar__submenu accordion-content
+                    ">
+
+                            <li class="category-sidebar__submenu-item">
+
+                                <a class="category-sidebar__submenu-link" href="/catalog/alyuminievyj-prokat/">
+                                    Алюминиевый прокат
+                                </a>
+
+                            </li>
+
+                            <li class="category-sidebar__submenu-item">
+
+                                <a class="category-sidebar__submenu-link" href="/catalog/berillij/">
+                                    Бериллиевый прокат
+                                </a>
+
+                            </li>
+
+                            <li class="category-sidebar__submenu-item">
+
+                                <a class="category-sidebar__submenu-link" href="/catalog/bronzovyj-prokat/">
+                                    Бронзовый прокат
+                                </a>
+
+                            </li>
+
+                            <li class="category-sidebar__submenu-item">
+
+                                <a class="category-sidebar__submenu-link" href="/catalog/vanadievyj-prokat/">
+                                    Ванадиевый прокат
+                                </a>
+
+                            </li>
+
+                            <li class="category-sidebar__submenu-item">
+
+                                <a class="category-sidebar__submenu-link" href="/catalog/volframovyj-prokat/">
+                                    Вольфрамовый прокат
+                                </a>
+
+                            </li>
+
+                            <li><a class="show-more">Показать ещё</a></li>
+                            <li class="category-sidebar__submenu-item display-none">
+
+                                <a class="category-sidebar__submenu-link" href="/catalog/gafnievyj-prokat/">
+                                    Гафниевый прокат
+                                </a>
+
+                            </li>
+
+                            <li class="category-sidebar__submenu-item display-none">
+
+                                <a class="category-sidebar__submenu-link" href="/catalog/dyuralevyj-prokat/">
+                                    Дюралевый прокат
+                                </a>
+
+                            </li>
+
+                            <li class="category-sidebar__submenu-item display-none">
+
+                                <a class="category-sidebar__submenu-link" href="/catalog/kobaltovyj-prokat/">
+                                    Кобальтовый прокат
+                                </a>
+
+                            </li>
+
+                            <li class="category-sidebar__submenu-item display-none">
+
+                                <a class="category-sidebar__submenu-link" href="/catalog/latunnyj-prokat/">
+                                    Латунный прокат
+                                </a>
+
+                            </li>
+
+                            <li class="category-sidebar__submenu-item display-none">
+
+                                <a class="category-sidebar__submenu-link" href="/catalog/magnievyj-prokat/">
+                                    Магниевый прокат
+                                </a>
+
+                            </li>
+
+                            <li class="category-sidebar__submenu-item display-none">
+
+                                <a class="category-sidebar__submenu-link" href="/catalog/mednyj-prokat/">
+                                    Медный прокат
+                                </a>
+
+                            </li>
+
+                            <li class="category-sidebar__submenu-item display-none">
+
+                                <a class="category-sidebar__submenu-link" href="/catalog/medno-nikelevyj-prokat/">
+                                    Медно-никелевый прокат
+                                </a>
+
+                            </li>
+
+                            <li class="category-sidebar__submenu-item display-none">
+
+                                <a class="category-sidebar__submenu-link" href="/catalog/molibdenovyj-prokat/">
+                                    Молибденовый прокат
+                                </a>
+
+                            </li>
+
+                            <li class="category-sidebar__submenu-item display-none">
+
+                                <a class="category-sidebar__submenu-link" href="/catalog/nikelevyj-prokat/">
+                                    Никелевый прокат
+                                </a>
+
+                            </li>
+
+                            <li class="category-sidebar__submenu-item display-none">
+
+                                <a class="category-sidebar__submenu-link" href="/catalog/niobievyj-prokat/">
+                                    Ниобиевый прокат
+                                </a>
+
+                            </li>
+
+                            <li class="category-sidebar__submenu-item display-none">
+
+                                <a class="category-sidebar__submenu-link" href="/catalog/olovyannyj-prokat/">
+                                    Оловянный прокат
+                                </a>
+
+                            </li>
+
+                            <li class="category-sidebar__submenu-item display-none">
+
+                                <a class="category-sidebar__submenu-link" href="/catalog/renievyj-prokat/">
+                                    Рениевый прокат
+                                </a>
+
+                            </li>
+
+                            <li class="category-sidebar__submenu-item display-none">
+
+                                <a class="category-sidebar__submenu-link" href="/catalog/svincovyj-prokat/">
+                                    Свинцовый прокат
+                                </a>
+
+                            </li>
+
+                            <li class="category-sidebar__submenu-item display-none">
+
+                                <a class="category-sidebar__submenu-link" href="/catalog/tantalovyj-prokat/">
+                                    Танталовый прокат
+                                </a>
+
+                            </li>
+
+                            <li class="category-sidebar__submenu-item display-none">
+
+                                <a class="category-sidebar__submenu-link" href="/catalog/titanovyj-prokat/">
+                                    Титановый прокат
+                                </a>
+
+                            </li>
+
+                            <li class="category-sidebar__submenu-item display-none">
+
+                                <a class="category-sidebar__submenu-link" href="/catalog/cinkovyj-prokat/">
+                                    Цинковый прокат
+                                </a>
+
+                            </li>
+                            <li><a class="hide-more">Cкрыть</a></li>
+
+                        </ul>
+
+
+                    </li>
+
+                    <li class="category-sidebar__item">
+
+                        <div class="category-sidebar__title accordion">
+                            <div class="click-block-sidebar"></div>
+                            <a href="/catalog/blagorodnye-metally/">
+                                Благородные металлы
+                            </a>
+                            <div class="accordion-svg accordion-img">
+                                <svg class="icon icon_arrow-down">
+                                    <use xlink:href="/static/img/svg/symbol/sprite.svg#arrow-down"></use>
+                                </svg>
+                            </div>
+                        </div>
+
+
+                        <ul class="category-sidebar__submenu accordion-content
+                    ">
+
+                            <li class="category-sidebar__submenu-item">
+
+                                <a class="category-sidebar__submenu-link" href="/catalog/zolotoj-prokat/">
+                                    Золото
+                                </a>
+
+                            </li>
+
+                            <li class="category-sidebar__submenu-item">
+
+                                <a class="category-sidebar__submenu-link" href="/catalog/izdeliya-iz-serebra/">
+                                    Серебро
+                                </a>
+
+                            </li>
+
+                            <li class="category-sidebar__submenu-item">
+
+                                <a class="category-sidebar__submenu-link" href="/catalog/izdeliya-iz-platiny/">
+                                    Платина
+                                </a>
+
+                            </li>
+
+                            <li class="category-sidebar__submenu-item">
+
+                                <a class="category-sidebar__submenu-link" href="/catalog/izdeliya-iz-palladiya/">
+                                    Палладий
+                                </a>
+
+                            </li>
+
+                            <li class="category-sidebar__submenu-item">
+
+                                <a class="category-sidebar__submenu-link" href="/catalog/osmij/">
+                                    Осмий
+                                </a>
+
+                            </li>
+
+                            <li><a class="show-more">Показать ещё</a></li>
+                            <li class="category-sidebar__submenu-item display-none">
+
+                                <a class="category-sidebar__submenu-link" href="/catalog/rodij/">
+                                    Родий
+                                </a>
+
+                            </li>
+
+                            <li class="category-sidebar__submenu-item display-none">
+
+                                <a class="category-sidebar__submenu-link" href="/catalog/iridievyj-prokat/">
+                                    Иридий
+                                </a>
+
+                            </li>
+
+                            <li class="category-sidebar__submenu-item display-none">
+
+                                <a class="category-sidebar__submenu-link" href="/catalog/rutenij/">
+                                    Рутений
+                                </a>
+
+                            </li>
+                            <li><a class="hide-more">Cкрыть</a></li>
+
+                        </ul>
+
+
+                    </li>
+
+                    <li class="category-sidebar__item">
+
+                        <div class="category-sidebar__title accordion">
+                            <div class="click-block-sidebar"></div>
+                            <a href="/catalog/redkozemelnye-metally/">
+                                Редкоземельные металлы
+                            </a>
+                            <div class="accordion-svg accordion-img">
+                                <svg class="icon icon_arrow-down">
+                                    <use xlink:href="/static/img/svg/symbol/sprite.svg#arrow-down"></use>
+                                </svg>
+                            </div>
+                        </div>
+
+
+                        <ul class="category-sidebar__submenu accordion-content
+                    ">
+
+                            <li class="category-sidebar__submenu-item">
+
+                                <a class="category-sidebar__submenu-link" href="/catalog/cirkonievyj-prokat/">
+                                    Цирконий
+                                </a>
+
+                            </li>
+
+                            <li class="category-sidebar__submenu-item">
+
+                                <a class="category-sidebar__submenu-link" href="/catalog/skandij/">
+                                    Скандий
+                                </a>
+
+                            </li>
+
+                            <li class="category-sidebar__submenu-item">
+
+                                <a class="category-sidebar__submenu-link" href="/catalog/lantan/">
+                                    Лантан
+                                </a>
+
+                            </li>
+
+                            <li class="category-sidebar__submenu-item">
+
+                                <a class="category-sidebar__submenu-link" href="/catalog/cerij/">
+                                    Церий
+                                </a>
+
+                            </li>
+
+                            <li class="category-sidebar__submenu-item">
+
+                                <a class="category-sidebar__submenu-link" href="/catalog/samarij/">
+                                    Самарий
+                                </a>
+
+                            </li>
+
+                            <li><a class="show-more">Показать ещё</a></li>
+                            <li class="category-sidebar__submenu-item display-none">
+
+                                <a class="category-sidebar__submenu-link" href="/catalog/tulij/">
+                                    Тулий
+                                </a>
+
+                            </li>
+
+                            <li class="category-sidebar__submenu-item display-none">
+
+                                <a class="category-sidebar__submenu-link" href="/catalog/ittrij/">
+                                    Иттрий
+                                </a>
+
+                            </li>
+
+                            <li class="category-sidebar__submenu-item display-none">
+
+                                <a class="category-sidebar__submenu-link" href="/catalog/gadolinij/">
+                                    Гадолиний
+                                </a>
+
+                            </li>
+
+                            <li class="category-sidebar__submenu-item display-none">
+
+                                <a class="category-sidebar__submenu-link" href="/catalog/neodim/">
+                                    Неодим
+                                </a>
+
+                            </li>
+
+                            <li class="category-sidebar__submenu-item display-none">
+
+                                <a class="category-sidebar__submenu-link" href="/catalog/lyutecij/">
+                                    Лютеций
+                                </a>
+
+                            </li>
+
+                            <li class="category-sidebar__submenu-item display-none">
+
+                                <a class="category-sidebar__submenu-link" href="/catalog/germanij/">
+                                    Германий
+                                </a>
+
+                            </li>
+
+                            <li class="category-sidebar__submenu-item display-none">
+
+                                <a class="category-sidebar__submenu-link" href="/catalog/evropij/">
+                                    Европий
+                                </a>
+
+                            </li>
+
+                            <li class="category-sidebar__submenu-item display-none">
+
+                                <a class="category-sidebar__submenu-link" href="/catalog/erbij/">
+                                    Эрбий
+                                </a>
+
+                            </li>
+
+                            <li class="category-sidebar__submenu-item display-none">
+
+                                <a class="category-sidebar__submenu-link" href="/catalog/itterbij/">
+                                    Иттербий
+                                </a>
+
+                            </li>
+
+                            <li class="category-sidebar__submenu-item display-none">
+
+                                <a class="category-sidebar__submenu-link" href="/catalog/terbij/">
+                                    Тербий
+                                </a>
+
+                            </li>
+
+                            <li class="category-sidebar__submenu-item display-none">
+
+                                <a class="category-sidebar__submenu-link" href="/catalog/disprozij/">
+                                    Диспрозий
+                                </a>
+
+                            </li>
+
+                            <li class="category-sidebar__submenu-item display-none">
+
+                                <a class="category-sidebar__submenu-link" href="/catalog/prazeodim/">
+                                    Празеодим
+                                </a>
+
+                            </li>
+                            <li><a class="hide-more">Cкрыть</a></li>
+
+                        </ul>
+
+
+                    </li>
+
+                    <li class="category-sidebar__item">
+
+                        <div class="category-sidebar__title accordion">
+                            <div class="click-block-sidebar"></div>
+                            <a href="/catalog/kabelnaya-produkciya/">
+                                Кабельная продукция
+                            </a>
+                            <div class="accordion-svg accordion-img">
+                                <svg class="icon icon_arrow-down">
+                                    <use xlink:href="/static/img/svg/symbol/sprite.svg#arrow-down"></use>
+                                </svg>
+                            </div>
+                        </div>
+
+
+                        <ul class="category-sidebar__submenu accordion-content
+                    ">
+
+                            <li class="category-sidebar__submenu-item">
+
+                                <a class="category-sidebar__submenu-link" href="/catalog/kabeli-i-provoda-svyazi/">
+                                    Связь
+                                </a>
+
+                            </li>
+
+                            <li class="category-sidebar__submenu-item">
+
+                                <a class="category-sidebar__submenu-link" href="/catalog/provoda/">
+                                    Провода
+                                </a>
+
+                            </li>
+
+                            <li class="category-sidebar__submenu-item">
+
+                                <a class="category-sidebar__submenu-link"
+                                   href="/catalog/sip-samonesushij-izolirovannyj-provod/">
+                                    СИП
+                                </a>
+
+                            </li>
+
+                            <li class="category-sidebar__submenu-item">
+
+                                <a class="category-sidebar__submenu-link"
+                                   href="/catalog/vitaya-para-informacionnyj-kabel/">
+                                    Витая пара
+                                </a>
+
+                            </li>
+
+                            <li class="category-sidebar__submenu-item">
+
+                                <a class="category-sidebar__submenu-link" href="/catalog/kabel-silovoj/">
+                                    Силовые кабели
+                                </a>
+
+                            </li>
+
+                            <li><a class="show-more">Показать ещё</a></li>
+                            <li class="category-sidebar__submenu-item display-none">
+
+                                <a class="category-sidebar__submenu-link" href="/catalog/kabeli-opticheskie/">
+                                    Оптические кабели
+                                </a>
+
+                            </li>
+
+                            <li class="category-sidebar__submenu-item display-none">
+
+                                <a class="category-sidebar__submenu-link" href="/catalog/koaksialnyj-kabel/">
+                                    Коаксиальные кабели
+                                </a>
+
+                            </li>
+
+                            <li class="category-sidebar__submenu-item display-none">
+
+                                <a class="category-sidebar__submenu-link"
+                                   href="/catalog/samoreguliruyushiesya-greyushie-kabeli/">
+                                    Греющие саморегулирующиеся кабели
+                                </a>
+
+                            </li>
+
+                            <li class="category-sidebar__submenu-item display-none">
+
+                                <a class="category-sidebar__submenu-link" href="/catalog/akusticheskij-kabel/">
+                                    Акустические кабели
+                                </a>
+
+                            </li>
+
+                            <li class="category-sidebar__submenu-item display-none">
+
+                                <a class="category-sidebar__submenu-link" href="/catalog/kabel-gibkij/">
+                                    Гибкие кабели
+                                </a>
+
+                            </li>
+
+                            <li class="category-sidebar__submenu-item display-none">
+
+                                <a class="category-sidebar__submenu-link" href="/catalog/soedinitelnye-provoda/">
+                                    Соединительные провода
+                                </a>
+
+                            </li>
+
+                            <li class="category-sidebar__submenu-item display-none">
+
+                                <a class="category-sidebar__submenu-link" href="/catalog/telefonnyj-kabel/">
+                                    Телефонные кабели
+                                </a>
+
+                            </li>
+
+                            <li class="category-sidebar__submenu-item display-none">
+
+                                <a class="category-sidebar__submenu-link" href="/catalog/bronirovannyj-kabel/">
+                                    Бронированные кабели
+                                </a>
+
+                            </li>
+
+                            <li class="category-sidebar__submenu-item display-none">
+
+                                <a class="category-sidebar__submenu-link" href="/catalog/shnury/">
+                                    Шнуры электрические
+                                </a>
+
+                            </li>
+
+                            <li class="category-sidebar__submenu-item display-none">
+
+                                <a class="category-sidebar__submenu-link" href="/catalog/kabel-kontrolnyj/">
+                                    Контрольные кабели
+                                </a>
+
+                            </li>
+
+                            <li class="category-sidebar__submenu-item display-none">
+
+                                <a class="category-sidebar__submenu-link" href="/catalog/kabeli-i-provoda-montazhnye/">
+                                    Провод монтажный
+                                </a>
+
+                            </li>
+
+                            <li class="category-sidebar__submenu-item display-none">
+
+                                <a class="category-sidebar__submenu-link" href="/catalog/kabel-dlya-videonablyudeniya/">
+                                    Кабели для видеонаблюдения
+                                </a>
+
+                            </li>
+
+                            <li class="category-sidebar__submenu-item display-none">
+
+                                <a class="category-sidebar__submenu-link" href="/catalog/montazhnyj-kabel/">
+                                    Монтажные кабели
+                                </a>
+
+                            </li>
+
+                            <li class="category-sidebar__submenu-item display-none">
+
+                                <a class="category-sidebar__submenu-link" href="/catalog/kabel-vysokovoltnyj/">
+                                    Высоковольтные кабели
+                                </a>
+
+                            </li>
+
+                            <li class="category-sidebar__submenu-item display-none">
+
+                                <a class="category-sidebar__submenu-link" href="/catalog/kabeli-universalnye/">
+                                    Универсальные кабели
+                                </a>
+
+                            </li>
+
+                            <li class="category-sidebar__submenu-item display-none">
+
+                                <a class="category-sidebar__submenu-link" href="/catalog/provod-ustanovochnyj/">
+                                    Установочные провода
+                                </a>
+
+                            </li>
+
+                            <li class="category-sidebar__submenu-item display-none">
+
+                                <a class="category-sidebar__submenu-link" href="/catalog/kabeli-magistralnye/">
+                                    Магистральные кабели
+                                </a>
+
+                            </li>
+
+                            <li class="category-sidebar__submenu-item display-none">
+
+                                <a class="category-sidebar__submenu-link" href="/catalog/neizolirovannye-provoda/">
+                                    Неизолированные провода
+                                </a>
+
+                            </li>
+
+                            <li class="category-sidebar__submenu-item display-none">
+
+                                <a class="category-sidebar__submenu-link"
+                                   href="/catalog/kabeli-dlya-kompyuternyh-setej/">
+                                    Кабели для компьютерных сетей
+                                </a>
+
+                            </li>
+
+                            <li class="category-sidebar__submenu-item display-none">
+
+                                <a class="category-sidebar__submenu-link" href="/catalog/kabeli-sudovye/">
+                                    Судовые кабели
+                                </a>
+
+                            </li>
+
+                            <li class="category-sidebar__submenu-item display-none">
+
+                                <a class="category-sidebar__submenu-link" href="/catalog/kabeli-vysokochastotnye/">
+                                    Высокочастотные кабели
+                                </a>
+
+                            </li>
+
+                            <li class="category-sidebar__submenu-item display-none">
+
+                                <a class="category-sidebar__submenu-link" href="/catalog/kabeli-upravleniya/">
+                                    Кабели систем управления
+                                </a>
+
+                            </li>
+
+                            <li class="category-sidebar__submenu-item display-none">
+
+                                <a class="category-sidebar__submenu-link" href="/catalog/kabeli-neftepogruzhnye/">
+                                    Нефтепогружные кабели
+                                </a>
+
+                            </li>
+
+                            <li class="category-sidebar__submenu-item display-none">
+
+                                <a class="category-sidebar__submenu-link" href="/catalog/vodopogruzhnoj-kabel/">
+                                    Водопогружные кабели
+                                </a>
+
+                            </li>
+
+                            <li class="category-sidebar__submenu-item display-none">
+
+                                <a class="category-sidebar__submenu-link"
+                                   href="/catalog/kabel-ohranno-pozharnoj-signalizacii/">
+                                    Охранно-пожарные кабели
+                                </a>
+
+                            </li>
+
+                            <li class="category-sidebar__submenu-item display-none">
+
+                                <a class="category-sidebar__submenu-link" href="/catalog/kabeli-stancionnye/">
+                                    Станционные кабели
+                                </a>
+
+                            </li>
+
+                            <li class="category-sidebar__submenu-item display-none">
+
+                                <a class="category-sidebar__submenu-link" href="/catalog/kabeli-antivibracionnye/">
+                                    Антивибрационные кабели
+                                </a>
+
+                            </li>
+
+                            <li class="category-sidebar__submenu-item display-none">
+
+                                <a class="category-sidebar__submenu-link" href="/catalog/kabeli-triaksialnye/">
+                                    Триаксиальные кабели
+                                </a>
+
+                            </li>
+
+                            <li class="category-sidebar__submenu-item display-none">
+
+                                <a class="category-sidebar__submenu-link" href="/catalog/kabeli-termoelektrodnye/">
+                                    Термоэлектродные кабели
+                                </a>
+
+                            </li>
+
+                            <li class="category-sidebar__submenu-item display-none">
+
+                                <a class="category-sidebar__submenu-link"
+                                   href="/catalog/kabeli-i-provoda-dlya-podvizhnogo-sostava/">
+                                    Кабели и провода для подвижного состава
+                                </a>
+
+                            </li>
+
+                            <li class="category-sidebar__submenu-item display-none">
+
+                                <a class="category-sidebar__submenu-link"
+                                   href="/catalog/kabeli-i-provoda-termostojkie/">
+                                    Термостойкие провода и кабели
+                                </a>
+
+                            </li>
+
+                            <li class="category-sidebar__submenu-item display-none">
+
+                                <a class="category-sidebar__submenu-link" href="/catalog/kabeli-provodnogo-veshaniya/">
+                                    Кабели проводного вещания
+                                </a>
+
+                            </li>
+
+                            <li class="category-sidebar__submenu-item display-none">
+
+                                <a class="category-sidebar__submenu-link"
+                                   href="/catalog/kabeli-i-provoda-geofizicheskie/">
+                                    Геофизические кабели и провода
+                                </a>
+
+                            </li>
+
+                            <li class="category-sidebar__submenu-item display-none">
+
+                                <a class="category-sidebar__submenu-link"
+                                   href="/catalog/kabeli-dlya-aerodromnyh-ognej/">
+                                    Кабели для аэродромных огней
+                                </a>
+
+                            </li>
+
+                            <li class="category-sidebar__submenu-item display-none">
+
+                                <a class="category-sidebar__submenu-link"
+                                   href="/catalog/kabeli-i-provoda-dlya-medicinskih-priborov/">
+                                    Кабели и провода для медицинских приборов
+                                </a>
+
+                            </li>
+
+                            <li class="category-sidebar__submenu-item display-none">
+
+                                <a class="category-sidebar__submenu-link" href="/catalog/pnevmokabeli/">
+                                    Пневмокабели
+                                </a>
+
+                            </li>
+
+                            <li class="category-sidebar__submenu-item display-none">
+
+                                <a class="category-sidebar__submenu-link"
+                                   href="/catalog/kabeli-vysokovoltnye-maloj-moshnosti/">
+                                    Высоковольтные кабели малой мощности
+                                </a>
+
+                            </li>
+
+                            <li class="category-sidebar__submenu-item display-none">
+
+                                <a class="category-sidebar__submenu-link"
+                                   href="/catalog/kabeli-dlya-gornorudnoj-promyshlennosti/">
+                                    Кабели для горнорудной промышленности
+                                </a>
+
+                            </li>
+
+                            <li class="category-sidebar__submenu-item display-none">
+
+                                <a class="category-sidebar__submenu-link"
+                                   href="/catalog/kabeli-nagrevatelnye-i-provoda-termoparnye/">
+                                    Нагревательные, термопарные кабели и провода
+                                </a>
+
+                            </li>
+                            <li><a class="hide-more">Cкрыть</a></li>
+
+                        </ul>
+
+
+                    </li>
+
+                    <li class="category-sidebar__item">
+
+                        <div class="category-sidebar__title accordion">
+                            <div class="click-block-sidebar"></div>
+                            <a href="/catalog/svarochnye-materialy/">
+                                Сварочные материалы
+                            </a>
+                            <div class="accordion-svg accordion-img">
+                                <svg class="icon icon_arrow-down">
+                                    <use xlink:href="/static/img/svg/symbol/sprite.svg#arrow-down"></use>
+                                </svg>
+                            </div>
+                        </div>
+
+
+                        <ul class="category-sidebar__submenu accordion-content
+                    ">
+
+                            <li class="category-sidebar__submenu-item">
+
+                                <a class="category-sidebar__submenu-link" href="/catalog/svarochnaya-provoloka/">
+                                    Проволоки сварочные
+                                </a>
+
+                            </li>
+
+                            <li class="category-sidebar__submenu-item">
+
+                                <a class="category-sidebar__submenu-link" href="/catalog/svarochnye-elektrody/">
+                                    Электроды сварочные
+                                </a>
+
+                            </li>
+
+                            <li class="category-sidebar__submenu-item">
+
+                                <a class="category-sidebar__submenu-link" href="/catalog/svarochnyj-flyus/">
+                                    Флюс сварочный
+                                </a>
+
+                            </li>
+
+                            <li class="category-sidebar__submenu-item">
+
+                                <a class="category-sidebar__submenu-link" href="/catalog/prisadochnye-prutki/">
+                                    Присадочные прутки
+                                </a>
+
+                            </li>
+
+                            <li class="category-sidebar__submenu-item">
+
+                                <a class="category-sidebar__submenu-link" href="/catalog/pripoi/">
+                                    Припои для пайки
+                                </a>
+
+                            </li>
+
+                            <li><a class="show-more">Показать ещё</a></li>
+                            <li class="category-sidebar__submenu-item display-none">
+
+                                <a class="category-sidebar__submenu-link" href="/catalog/naplavochnye-poroshki/">
+                                    Наплавочные порошки
+                                </a>
+
+                            </li>
+
+                            <li class="category-sidebar__submenu-item display-none">
+
+                                <a class="category-sidebar__submenu-link"
+                                   href="/catalog/poroshkovaya-naplavochnaya-lenta/">
+                                    Порошковые наплавочные ленты
+                                </a>
+
+                            </li>
+
+                            <li class="category-sidebar__submenu-item display-none">
+
+                                <a class="category-sidebar__submenu-link" href="/catalog/vannochka-dlya-svarki/">
+                                    Ванночка для сварки
+                                </a>
+
+                            </li>
+                            <li><a class="hide-more">Cкрыть</a></li>
+
+                        </ul>
+
+
+                    </li>
+
+                    <li class="category-sidebar__item">
+
+                        <div class="category-sidebar__title accordion">
+                            <div class="click-block-sidebar"></div>
+                            <a href="/catalog/truboprovodnaya-armatura/">
+                                Трубопроводная арматура
+                            </a>
+                            <div class="accordion-svg accordion-img">
+                                <svg class="icon icon_arrow-down">
+                                    <use xlink:href="/static/img/svg/symbol/sprite.svg#arrow-down"></use>
+                                </svg>
+                            </div>
+                        </div>
+
+
+                        <ul class="category-sidebar__submenu accordion-content
+                    ">
+
+                            <li class="category-sidebar__submenu-item">
+
+                                <a class="category-sidebar__submenu-link"
+                                   href="/catalog/zapornaya-truboprovodnaya-armatura/">
+                                    Запорная арматура
+                                </a>
+
+                            </li>
+
+                            <li class="category-sidebar__submenu-item">
+
+                                <a class="category-sidebar__submenu-link" href="/catalog/trubnye-soedineniya/">
+                                    Соединительная арматура
+                                </a>
+
+                            </li>
+
+                            <li class="category-sidebar__submenu-item">
+
+                                <a class="category-sidebar__submenu-link"
+                                   href="/catalog/truboprovodnaya-armatura-v-vus-izolyacii/">
+                                    Трубопроводная арматура в ВУС изоляции
+                                </a>
+
+                            </li>
+
+                            <li class="category-sidebar__submenu-item">
+
+                                <a class="category-sidebar__submenu-link"
+                                   href="/catalog/truboprovodnaya-armatura-v-ppm-izolyacii/">
+                                    Трубопроводная арматура в ППМ изоляции
+                                </a>
+
+                            </li>
+
+                            <li class="category-sidebar__submenu-item">
+
+                                <a class="category-sidebar__submenu-link"
+                                   href="/catalog/truboprovodnaya-armatura-v-ppu-izolyacii/">
+                                    Трубопроводная арматура в ППУ изоляции
+                                </a>
+
+                            </li>
+
+                            <li><a class="show-more">Показать ещё</a></li>
+                            <li class="category-sidebar__submenu-item display-none">
+
+                                <a class="category-sidebar__submenu-link"
+                                   href="/catalog/truboprovodnaya-armatura-v-cpp-izolyacii/">
+                                    Трубопроводная арматура в ЦПП изоляции
+                                </a>
+
+                            </li>
+
+                            <li class="category-sidebar__submenu-item display-none">
+
+                                <a class="category-sidebar__submenu-link"
+                                   href="/catalog/truboprovodnaya-armatura-s-epoksidnym-pokrytiem/">
+                                    Трубопроводная арматура с эпоксидным покрытием
+                                </a>
+
+                            </li>
+
+                            <li class="category-sidebar__submenu-item display-none">
+
+                                <a class="category-sidebar__submenu-link" href="/catalog/chugunnaya-armatura/">
+                                    Чугунная арматура
+                                </a>
+
+                            </li>
+                            <li><a class="hide-more">Cкрыть</a></li>
+
+                        </ul>
+
+
+                    </li>
+
+                    <li class="category-sidebar__item">
+
+                        <div class="category-sidebar__title accordion">
+                            <div class="click-block-sidebar"></div>
+                            <a href="/catalog/teploizolyacii-dlya-trub/">
+                                Теплоизоляция для труб
+                            </a>
+                            <div class="accordion-svg accordion-img">
+                                <svg class="icon icon_arrow-down">
+                                    <use xlink:href="/static/img/svg/symbol/sprite.svg#arrow-down"></use>
+                                </svg>
+                            </div>
+                        </div>
+
+
+                        <ul class="category-sidebar__submenu accordion-content
+                    ">
+
+                            <li class="category-sidebar__submenu-item">
+
+                                <a class="category-sidebar__submenu-link" href="/catalog/mineralovatnye-cilindry/">
+                                    Минераловатные цилиндры
+                                </a>
+
+                            </li>
+
+                            <li class="category-sidebar__submenu-item">
+
+                                <a class="category-sidebar__submenu-link" href="/catalog/okozhushka/">
+                                    Окожушка
+                                </a>
+
+                            </li>
+
+                        </ul>
+
+
+                    </li>
+
+                    <li class="category-sidebar__item">
+
+                        <div class="category-sidebar__title accordion">
+                            <div class="click-block-sidebar"></div>
+                            <a href="/catalog/metizy-i-krepezh/">
+                                Метизы и крепеж
+                            </a>
+                            <div class="accordion-svg accordion-img">
+                                <svg class="icon icon_arrow-down">
+                                    <use xlink:href="/static/img/svg/symbol/sprite.svg#arrow-down"></use>
+                                </svg>
+                            </div>
+                        </div>
+
+
+                        <ul class="category-sidebar__submenu accordion-content
+                    ">
+
+                            <li class="category-sidebar__submenu-item">
+
+                                <a class="category-sidebar__submenu-link" href="/catalog/bolty/">
+                                    Болты
+                                </a>
+
+                            </li>
+
+                            <li class="category-sidebar__submenu-item">
+
+                                <a class="category-sidebar__submenu-link" href="/catalog/gajki/">
+                                    Гайки
+                                </a>
+
+                            </li>
+
+                            <li class="category-sidebar__submenu-item">
+
+                                <a class="category-sidebar__submenu-link" href="/catalog/provoloki/">
+                                    Проволоки
+                                </a>
+
+                            </li>
+
+                            <li class="category-sidebar__submenu-item">
+
+                                <a class="category-sidebar__submenu-link" href="/catalog/shajby/">
+                                    Шайбы
+                                </a>
+
+                            </li>
+
+                            <li class="category-sidebar__submenu-item">
+
+                                <a class="category-sidebar__submenu-link" href="/catalog/vinty/">
+                                    Винты
+                                </a>
+
+                            </li>
+
+                            <li><a class="show-more">Показать ещё</a></li>
+                            <li class="category-sidebar__submenu-item display-none">
+
+                                <a class="category-sidebar__submenu-link" href="/catalog/vtulki/">
+                                    Втулки
+                                </a>
+
+                            </li>
+
+                            <li class="category-sidebar__submenu-item display-none">
+
+                                <a class="category-sidebar__submenu-link" href="/catalog/homuty/">
+                                    Хомуты
+                                </a>
+
+                            </li>
+
+                            <li class="category-sidebar__submenu-item display-none">
+
+                                <a class="category-sidebar__submenu-link" href="/catalog/shpilki/">
+                                    Шпильки
+                                </a>
+
+                            </li>
+
+                            <li class="category-sidebar__submenu-item display-none">
+
+                                <a class="category-sidebar__submenu-link" href="/catalog/samorezy/">
+                                    Саморезы
+                                </a>
+
+                            </li>
+
+                            <li class="category-sidebar__submenu-item display-none">
+
+                                <a class="category-sidebar__submenu-link" href="/catalog/ankery/">
+                                    Анкеры
+                                </a>
+
+                            </li>
+
+                            <li class="category-sidebar__submenu-item display-none">
+
+                                <a class="category-sidebar__submenu-link" href="/catalog/stropy/">
+                                    Стропы
+                                </a>
+
+                            </li>
+
+                            <li class="category-sidebar__submenu-item display-none">
+
+                                <a class="category-sidebar__submenu-link" href="/catalog/stalnye-kanaty/">
+                                    Стальные канаты
+                                </a>
+
+                            </li>
+
+                            <li class="category-sidebar__submenu-item display-none">
+
+                                <a class="category-sidebar__submenu-link" href="/catalog/zaklepki/">
+                                    Заклепки
+                                </a>
+
+                            </li>
+
+                            <li class="category-sidebar__submenu-item display-none">
+
+                                <a class="category-sidebar__submenu-link" href="/catalog/shurupy/">
+                                    Шурупы
+                                </a>
+
+                            </li>
+
+                            <li class="category-sidebar__submenu-item display-none">
+
+                                <a class="category-sidebar__submenu-link" href="/catalog/shtifty/">
+                                    Штифты
+                                </a>
+
+                            </li>
+
+                            <li class="category-sidebar__submenu-item display-none">
+
+                                <a class="category-sidebar__submenu-link" href="/catalog/kolca-stopornye/">
+                                    Кольца стопорные
+                                </a>
+
+                            </li>
+
+                            <li class="category-sidebar__submenu-item display-none">
+
+                                <a class="category-sidebar__submenu-link" href="/catalog/setki/">
+                                    Сетки металлические
+                                </a>
+
+                            </li>
+
+                            <li class="category-sidebar__submenu-item display-none">
+
+                                <a class="category-sidebar__submenu-link" href="/catalog/shplinty/">
+                                    Шплинты
+                                </a>
+
+                            </li>
+
+                            <li class="category-sidebar__submenu-item display-none">
+
+                                <a class="category-sidebar__submenu-link" href="/catalog/reshetchatye-nastily/">
+                                    Решетчатые настилы
+                                </a>
+
+                            </li>
+
+                            <li class="category-sidebar__submenu-item display-none">
+
+                                <a class="category-sidebar__submenu-link" href="/catalog/krepezhnye-skoby/">
+                                    Крепежные скобы
+                                </a>
+
+                            </li>
+
+                            <li class="category-sidebar__submenu-item display-none">
+
+                                <a class="category-sidebar__submenu-link" href="/catalog/melyushie-shary/">
+                                    Мелющие шары
+                                </a>
+
+                            </li>
+
+                            <li class="category-sidebar__submenu-item display-none">
+
+                                <a class="category-sidebar__submenu-link" href="/catalog/trubnye-zazhimy/">
+                                    Трубные зажимы
+                                </a>
+
+                            </li>
+
+                            <li class="category-sidebar__submenu-item display-none">
+
+                                <a class="category-sidebar__submenu-link" href="/catalog/shponki/">
+                                    Шпонки металлические
+                                </a>
+
+                            </li>
+                            <li><a class="hide-more">Cкрыть</a></li>
+
+                        </ul>
+
+
+                    </li>
+
+                    <li class="category-sidebar__item">
+
+                        <div class="category-sidebar__title accordion">
+                            <div class="click-block-sidebar"></div>
+                            <a href="/catalog/ocinkovannyj-prokat/">
+                                Оцинкованный прокат
+                            </a>
+                            <div class="accordion-svg accordion-img">
+                                <svg class="icon icon_arrow-down">
+                                    <use xlink:href="/static/img/svg/symbol/sprite.svg#arrow-down"></use>
+                                </svg>
+                            </div>
+                        </div>
+
+
+                        <ul class="category-sidebar__submenu accordion-content
+                    ">
+
+                            <li class="category-sidebar__submenu-item">
+
+                                <a class="category-sidebar__submenu-link" href="/catalog/ocinkovannye-listy/">
+                                    Листы оцинкованные
+                                </a>
+
+                            </li>
+
+                            <li class="category-sidebar__submenu-item">
+
+                                <a class="category-sidebar__submenu-link" href="/catalog/ocinkovannye-setki/">
+                                    Сетки оцинкованные
+                                </a>
+
+                            </li>
+
+                            <li class="category-sidebar__submenu-item">
+
+                                <a class="category-sidebar__submenu-link" href="/catalog/ocinkovannye-ugolki/">
+                                    Уголки оцинкованные
+                                </a>
+
+                            </li>
+
+                            <li class="category-sidebar__submenu-item">
+
+                                <a class="category-sidebar__submenu-link" href="/catalog/ocinkovannye-provoloki/">
+                                    Проволоки оцинкованные
+                                </a>
+
+                            </li>
+
+                            <li class="category-sidebar__submenu-item">
+
+                                <a class="category-sidebar__submenu-link" href="/catalog/ocinkovannye-polosy/">
+                                    Полосы оцинкованные
+                                </a>
+
+                            </li>
+
+                            <li><a class="show-more">Показать ещё</a></li>
+                            <li class="category-sidebar__submenu-item display-none">
+
+                                <a class="category-sidebar__submenu-link" href="/catalog/ocinkovannye-rulony/">
+                                    Рулоны оцинкованные
+                                </a>
+
+                            </li>
+
+                            <li class="category-sidebar__submenu-item display-none">
+
+                                <a class="category-sidebar__submenu-link" href="/catalog/truby-iz-ocinkovannoj-stali/">
+                                    Трубы из оцинкованной стали
+                                </a>
+
+                            </li>
+
+                            <li class="category-sidebar__submenu-item display-none">
+
+                                <a class="category-sidebar__submenu-link" href="/catalog/ocinkovannyj-krug/">
+                                    Оцинкованные круги
+                                </a>
+
+                            </li>
+
+                            <li class="category-sidebar__submenu-item display-none">
+
+                                <a class="category-sidebar__submenu-link" href="/catalog/ocinkovannye-shvellery/">
+                                    Швеллеры оцинкованные
+                                </a>
+
+                            </li>
+
+                            <li class="category-sidebar__submenu-item display-none">
+
+                                <a class="category-sidebar__submenu-link"
+                                   href="/catalog/ocinkovannye-upakovochnye-lenty/">
+                                    Оцинкованные упаковочные ленты
+                                </a>
+
+                            </li>
+                            <li><a class="hide-more">Cкрыть</a></li>
+
+                        </ul>
+
+
+                    </li>
+
+                    <li class="category-sidebar__item">
+
+                        <div class="category-sidebar__title accordion">
+                            <div class="click-block-sidebar"></div>
+                            <a href="/catalog/oborudovanie/">
+                                Промышленное оборудование
+                            </a>
+                            <div class="accordion-svg accordion-img">
+                                <svg class="icon icon_arrow-down">
+                                    <use xlink:href="/static/img/svg/symbol/sprite.svg#arrow-down"></use>
+                                </svg>
+                            </div>
+                        </div>
+
+
+                        <ul class="category-sidebar__submenu accordion-content
+                    ">
+
+                            <li class="category-sidebar__submenu-item">
+
+                                <a class="category-sidebar__submenu-link" href="/catalog/reduktory/">
+                                    Редукторы
+                                </a>
+
+                            </li>
+
+                            <li class="category-sidebar__submenu-item">
+
+                                <a class="category-sidebar__submenu-link" href="/catalog/elektrogeneratory/">
+                                    Электрогенераторы
+                                </a>
+
+                            </li>
+
+                            <li class="category-sidebar__submenu-item">
+
+                                <a class="category-sidebar__submenu-link" href="/catalog/teplovoe-oborudovanie/">
+                                    Тепловое оборудование
+                                </a>
+
+                            </li>
+
+                            <li class="category-sidebar__submenu-item">
+
+                                <a class="category-sidebar__submenu-link" href="/catalog/ventilyacionnoe-oborudovanie/">
+                                    Вентиляционное оборудование
+                                </a>
+
+                            </li>
+
+                            <li class="category-sidebar__submenu-item">
+
+                                <a class="category-sidebar__submenu-link" href="/catalog/podshipnikovye-uzly/">
+                                    Подшипниковые узлы
+                                </a>
+
+                            </li>
+
+                            <li><a class="show-more">Показать ещё</a></li>
+                            <li class="category-sidebar__submenu-item display-none">
+
+                                <a class="category-sidebar__submenu-link" href="/catalog/elektrodvigateli/">
+                                    Электродвигатели
+                                </a>
+
+                            </li>
+
+                            <li class="category-sidebar__submenu-item display-none">
+
+                                <a class="category-sidebar__submenu-link" href="/catalog/motopompy/">
+                                    Мотопомпы
+                                </a>
+
+                            </li>
+
+                            <li class="category-sidebar__submenu-item display-none">
+
+                                <a class="category-sidebar__submenu-link" href="/catalog/konvejernye-lenty/">
+                                    Конвейерные ленты
+                                </a>
+
+                            </li>
+
+                            <li class="category-sidebar__submenu-item display-none">
+
+                                <a class="category-sidebar__submenu-link" href="/catalog/burovoe-oborudovanie/">
+                                    Буровое оборудование
+                                </a>
+
+                            </li>
+
+                            <li class="category-sidebar__submenu-item display-none">
+
+                                <a class="category-sidebar__submenu-link" href="/catalog/nasosy/">
+                                    Насосы
+                                </a>
+
+                            </li>
+
+                            <li class="category-sidebar__submenu-item display-none">
+
+                                <a class="category-sidebar__submenu-link" href="/catalog/molochnoe-oborudovanie/">
+                                    Молочное оборудование
+                                </a>
+
+                            </li>
+
+                            <li class="category-sidebar__submenu-item display-none">
+
+                                <a class="category-sidebar__submenu-link" href="/catalog/rezervuary/">
+                                    Резервуары
+                                </a>
+
+                            </li>
+
+                            <li class="category-sidebar__submenu-item display-none">
+
+                                <a class="category-sidebar__submenu-link" href="/catalog/chastotnye-preobrazovateli/">
+                                    Частотные преобразователи
+                                </a>
+
+                            </li>
+
+                            <li class="category-sidebar__submenu-item display-none">
+
+                                <a class="category-sidebar__submenu-link"
+                                   href="/catalog/oborudovanie-dlya-dobychi-nefti-i-gaza/">
+                                    Оборудование для добычи нефти и газа
+                                </a>
+
+                            </li>
+
+                            <li class="category-sidebar__submenu-item display-none">
+
+                                <a class="category-sidebar__submenu-link" href="/catalog/podemnoe-oborudovanie/">
+                                    Подъемное оборудование
+                                </a>
+
+                            </li>
+
+                            <li class="category-sidebar__submenu-item display-none">
+
+                                <a class="category-sidebar__submenu-link" href="/catalog/teploobmennoe-oborudovanie/">
+                                    Теплообменное оборудование
+                                </a>
+
+                            </li>
+
+                            <li class="category-sidebar__submenu-item display-none">
+
+                                <a class="category-sidebar__submenu-link"
+                                   href="/catalog/rentgenozashitnoe-oborudovanie/">
+                                    Рентгенозащитное оборудование
+                                </a>
+
+                            </li>
+                            <li><a class="hide-more">Cкрыть</a></li>
+
+                        </ul>
+
+
+                    </li>
+
+                    <li class="category-sidebar__item">
+
+                        <div class="category-sidebar__title accordion">
+                            <div class="click-block-sidebar"></div>
+                            <a href="/catalog/dorozhnoe-oborudovanie/">
+                                Дорожное оборудование
+                            </a>
+                            <div class="accordion-svg accordion-img">
+                                <svg class="icon icon_arrow-down">
+                                    <use xlink:href="/static/img/svg/symbol/sprite.svg#arrow-down"></use>
+                                </svg>
+                            </div>
+                        </div>
+
+
+                        <ul class="category-sidebar__submenu accordion-content
+                    ">
+
+                            <li class="category-sidebar__submenu-item">
+
+                                <a class="category-sidebar__submenu-link" href="/catalog/kronshtejn-opor-osvesheniya/">
+                                    Кронштейны опор освещения
+                                </a>
+
+                            </li>
+
+                            <li class="category-sidebar__submenu-item">
+
+                                <a class="category-sidebar__submenu-link" href="/catalog/dorozhnye-ograzhdeniya/">
+                                    Дорожные ограждения
+                                </a>
+
+                            </li>
+
+                            <li class="category-sidebar__submenu-item">
+
+                                <a class="category-sidebar__submenu-link" href="/catalog/stolbik-signalnyj/">
+                                    Столбики сигнальные
+                                </a>
+
+                            </li>
+
+                            <li class="category-sidebar__submenu-item">
+
+                                <a class="category-sidebar__submenu-link" href="/catalog/opora-osvesheniya/">
+                                    Опоры освещения
+                                </a>
+
+                            </li>
+
+                            <li class="category-sidebar__submenu-item">
+
+                                <a class="category-sidebar__submenu-link" href="/catalog/machta-osvesheniya/">
+                                    Мачты освещения
+                                </a>
+
+                            </li>
+
+                            <li><a class="show-more">Показать ещё</a></li>
+                            <li class="category-sidebar__submenu-item display-none">
+
+                                <a class="category-sidebar__submenu-link" href="/catalog/shumozashitnye-ekrany/">
+                                    Шумозащитные экраны
+                                </a>
+
+                            </li>
+                            <li><a class="hide-more">Cкрыть</a></li>
+
+                        </ul>
+
+
+                    </li>
+
+                    <li class="category-sidebar__item">
+
+                        <div class="category-sidebar__title accordion">
+                            <div class="click-block-sidebar"></div>
+                            <a href="/catalog/zheleznodorozhnoe-oborudovanie/">
+                                Железнодорожное оборудование
+                            </a>
+                            <div class="accordion-svg accordion-img">
+                                <svg class="icon icon_arrow-down">
+                                    <use xlink:href="/static/img/svg/symbol/sprite.svg#arrow-down"></use>
+                                </svg>
+                            </div>
+                        </div>
+
+
+                        <ul class="category-sidebar__submenu accordion-content
+                    ">
+
+                            <li class="category-sidebar__submenu-item">
+
+                                <a class="category-sidebar__submenu-link" href="/catalog/bolt-stykovoj/">
+                                    Болты стыковые
+                                </a>
+
+                            </li>
+
+                            <li class="category-sidebar__submenu-item">
+
+                                <a class="category-sidebar__submenu-link" href="/catalog/bolt-zakladnoj/">
+                                    Болты закладные
+                                </a>
+
+                            </li>
+
+                            <li class="category-sidebar__submenu-item">
+
+                                <a class="category-sidebar__submenu-link" href="/catalog/bolt-klemmnyj/">
+                                    Болты клеммные
+                                </a>
+
+                            </li>
+
+                            <li class="category-sidebar__submenu-item">
+
+                                <a class="category-sidebar__submenu-link" href="/catalog/nakladka-relsovaya/">
+                                    Накладки рельсовые
+                                </a>
+
+                            </li>
+
+                            <li class="category-sidebar__submenu-item">
+
+                                <a class="category-sidebar__submenu-link" href="/catalog/kostyl-putevoy/">
+                                    Костыли путевые
+                                </a>
+
+                            </li>
+
+                            <li><a class="show-more">Показать ещё</a></li>
+                            <li class="category-sidebar__submenu-item display-none">
+
+                                <a class="category-sidebar__submenu-link" href="/catalog/podkladka-pod-rels/">
+                                    Подкладки под рельс
+                                </a>
+
+                            </li>
+
+                            <li class="category-sidebar__submenu-item display-none">
+
+                                <a class="category-sidebar__submenu-link" href="/catalog/shpala/">
+                                    Шпалы
+                                </a>
+
+                            </li>
+
+                            <li class="category-sidebar__submenu-item display-none">
+
+                                <a class="category-sidebar__submenu-link" href="/catalog/kolodka-tormoznaya/">
+                                    Колодки тормозные железнодорожные
+                                </a>
+
+                            </li>
+
+                            <li class="category-sidebar__submenu-item display-none">
+
+                                <a class="category-sidebar__submenu-link" href="/catalog/izolyaciya-dlya-relsov/">
+                                    Изоляция для рельсов
+                                </a>
+
+                            </li>
+
+                            <li class="category-sidebar__submenu-item display-none">
+
+                                <a class="category-sidebar__submenu-link" href="/catalog/bashmak-zheleznodorozhnyj/">
+                                    Башмаки железнодорожные
+                                </a>
+
+                            </li>
+
+                            <li class="category-sidebar__submenu-item display-none">
+
+                                <a class="category-sidebar__submenu-link" href="/catalog/gajka-klemmnaya-i-stykovaya/">
+                                    Гайки клеммные и стыковые
+                                </a>
+
+                            </li>
+
+                            <li class="category-sidebar__submenu-item display-none">
+
+                                <a class="category-sidebar__submenu-link" href="/catalog/shajba-klemmnaya-i-stykovaya/">
+                                    Шайбы клеммные и стыковые
+                                </a>
+
+                            </li>
+
+                            <li class="category-sidebar__submenu-item display-none">
+
+                                <a class="category-sidebar__submenu-link" href="/catalog/klemma-pk/">
+                                    Клеммы ПК
+                                </a>
+
+                            </li>
+
+                            <li class="category-sidebar__submenu-item display-none">
+
+                                <a class="category-sidebar__submenu-link" href="/catalog/strelochnyj-perevod/">
+                                    Стрелочные переводы
+                                </a>
+
+                            </li>
+
+                            <li class="category-sidebar__submenu-item display-none">
+
+                                <a class="category-sidebar__submenu-link" href="/catalog/zheleznodorozhnye-relsy/">
+                                    Железнодорожные рельсы
+                                </a>
+
+                            </li>
+                            <li><a class="hide-more">Cкрыть</a></li>
+
+                        </ul>
+
+
+                    </li>
+
+                    <li class="category-sidebar__item">
+
+                        <div class="category-sidebar__title accordion">
+                            <div class="click-block-sidebar"></div>
+                            <a href="/catalog/syryo/">
+                                Металлургическое сырьё
+                            </a>
+                            <div class="accordion-svg accordion-img">
+                                <svg class="icon icon_arrow-down">
+                                    <use xlink:href="/static/img/svg/symbol/sprite.svg#arrow-down"></use>
+                                </svg>
+                            </div>
+                        </div>
+
+
+                        <ul class="category-sidebar__submenu accordion-content
+                    ">
+
+                            <li class="category-sidebar__submenu-item">
+
+                                <a class="category-sidebar__submenu-link" href="/catalog/chushki/">
+                                    Чушки
+                                </a>
+
+                            </li>
+
+                            <li class="category-sidebar__submenu-item">
+
+                                <a class="category-sidebar__submenu-link" href="/catalog/ligatura/">
+                                    Лигатуры
+                                </a>
+
+                            </li>
+
+                            <li class="category-sidebar__submenu-item">
+
+                                <a class="category-sidebar__submenu-link" href="/catalog/ferrosplavy/">
+                                    Ферросплавы
+                                </a>
+
+                            </li>
+
+                            <li class="category-sidebar__submenu-item">
+
+                                <a class="category-sidebar__submenu-link" href="/catalog/metallicheskie-struzhki/">
+                                    Стружки металлические
+                                </a>
+
+                            </li>
+
+                            <li class="category-sidebar__submenu-item">
+
+                                <a class="category-sidebar__submenu-link" href="/catalog/metallicheskie-poroshki/">
+                                    Порошки металлические
+                                </a>
+
+                            </li>
+
+                            <li><a class="show-more">Показать ещё</a></li>
+                            <li class="category-sidebar__submenu-item display-none">
+
+                                <a class="category-sidebar__submenu-link" href="/catalog/metallicheskie-pudry/">
+                                    Пудры металлические
+                                </a>
+
+                            </li>
+
+                            <li class="category-sidebar__submenu-item display-none">
+
+                                <a class="category-sidebar__submenu-link" href="/catalog/metallicheskie-granuly/">
+                                    Гранулы металлические
+                                </a>
+
+                            </li>
+
+                            <li class="category-sidebar__submenu-item display-none">
+
+                                <a class="category-sidebar__submenu-link" href="/catalog/metallicheskie-krupki/">
+                                    Крупки металлические
+                                </a>
+
+                            </li>
+                            <li><a class="hide-more">Cкрыть</a></li>
+
+                        </ul>
+
+
+                    </li>
+
+                    <li class="category-sidebar__item">
+
+                        <div class="category-sidebar__title accordion">
+                            <div class="click-block-sidebar"></div>
+                            <a href="/catalog/polimery/">
+                                Полимеры
+                            </a>
+                            <div class="accordion-svg accordion-img">
+                                <svg class="icon icon_arrow-down">
+                                    <use xlink:href="/static/img/svg/symbol/sprite.svg#arrow-down"></use>
+                                </svg>
+                            </div>
+                        </div>
+
+
+                        <ul class="category-sidebar__submenu accordion-content
+                    ">
+
+                            <li class="category-sidebar__submenu-item">
+
+                                <a class="category-sidebar__submenu-link"
+                                   href="/catalog/kompozitnye-materialy-kompozity/">
+                                    Композитные материалы (композиты)
+                                </a>
+
+                            </li>
+
+                            <li class="category-sidebar__submenu-item">
+
+                                <a class="category-sidebar__submenu-link"
+                                   href="/catalog/elektroizolyacionnye-materialy/">
+                                    Электроизоляционные материалы
+                                </a>
+
+                            </li>
+
+                            <li class="category-sidebar__submenu-item">
+
+                                <a class="category-sidebar__submenu-link" href="/catalog/konstrukcionnye-polimery/">
+                                    Конструкционные полимеры
+                                </a>
+
+                            </li>
+
+                        </ul>
+
+
+                    </li>
+
+                    <li class="category-sidebar__item">
+
+                        <div class="category-sidebar__title accordion">
+                            <div class="click-block-sidebar"></div>
+                            <a href="/catalog/prochee/">
+                                Прочее
+                            </a>
+                            <div class="accordion-svg accordion-img">
+                                <svg class="icon icon_arrow-down">
+                                    <use xlink:href="/static/img/svg/symbol/sprite.svg#arrow-down"></use>
+                                </svg>
+                            </div>
+                        </div>
+
+
+                        <ul class="category-sidebar__submenu accordion-content
+                    ">
+
+                            <li class="category-sidebar__submenu-item">
+
+                                <a class="category-sidebar__submenu-link" href="/catalog/stroitelstvo/">
+                                    Строительство
+                                </a>
+
+                            </li>
+
+                            <li class="category-sidebar__submenu-item">
+
+                                <a class="category-sidebar__submenu-link" href="/catalog/himicheskaya-promyshlennost/">
+                                    Химическая промышленность
+                                </a>
+
+                            </li>
+
+                            <li class="category-sidebar__submenu-item">
+
+                                <a class="category-sidebar__submenu-link" href="/catalog/sudostroenie/">
+                                    Судостроение
+                                </a>
+
+                            </li>
+
+                            <li class="category-sidebar__submenu-item">
+
+                                <a class="category-sidebar__submenu-link" href="/catalog/zheleznodorozhnyj-transport/">
+                                    Материалы ВСП
+                                </a>
+
+                            </li>
+
+                            <li class="category-sidebar__submenu-item">
+
+                                <a class="category-sidebar__submenu-link"
+                                   href="/catalog/gornodobyvayushaya-promyshlennost/">
+                                    Горнодобывающая промышленность
+                                </a>
+
+                            </li>
+
+                            <li><a class="show-more">Показать ещё</a></li>
+                            <li class="category-sidebar__submenu-item display-none">
+
+                                <a class="category-sidebar__submenu-link" href="/catalog/neftegazovaya-promyshlennost/">
+                                    Нефтегазовая промышленность
+                                </a>
+
+                            </li>
+
+                            <li class="category-sidebar__submenu-item display-none">
+
+                                <a class="category-sidebar__submenu-link" href="/catalog/pishevaya-promyshlennost/">
+                                    Пищевая промышленность
+                                </a>
+
+                            </li>
+                            <li><a class="hide-more">Cкрыть</a></li>
+
+                        </ul>
+
+
+                    </li>
+
+                </ul>
+                <!--/noindex-->
+            </div>
+            <div class="col-lg-9">
+
+                <div class="bread-crumbs">
+                    <div class="container">
+                        <ul class="bread-crumbs__list" itemscope="" itemtype="https://schema.org/BreadcrumbList">
+
+
+                            <li class="bread-crumbs__item" itemprop="itemListElement" itemscope=""
+                                itemtype="https://schema.org/ListItem">
+                                <a class="bread-crumbs__link" href="/" itemprop="item">
+                      <span itemprop="name">
+                          Главная
+                      </span>
+                                </a>
+                                <meta itemprop="position" content="1">
+                            </li>
+
+
+                            <li class="bread-crumbs__item" itemprop="itemListElement" itemscope=""
+                                itemtype="https://schema.org/ListItem">
+                                <div class="bread-crumbs__link" itemprop="item"><span itemprop="name">Каталог металлопроката</span>
+                                </div>
+                                <meta itemprop="position" content="2">
+                            </li>
+
+
+                        </ul>
+                    </div>
+                </div>
+
+                <h1 class="title title_page">Каталог металлопроката</h1>
+                <a class="link-back link-back-mb d-lg-none" href="/catalog/">Каталог</a>
+                <div class="row row-cols-1 row-cols-md-2 row-cols-xl-3 catalog__container active">
+                    {% for category in categories %}
+                    <div class="col catalog__item">
+                        <div class="catalog__item-head">
+                            <div class="catalog__item-img">
+                                <img loading="lazy"
+                                     src="/resize/200/media/uploads/catalog/category/chernyj-prokat_s5bNeeE.webp"
+                                     alt="Черный металлопрокат купить в Астане"
+                                     title="Черный металлопрокат купить в Астане">
+                            </div>
+                            <a class="catalog__item-link stretched-link" href="{{ category.get_absolute_url }}">
+                                {{ category.name }}
+                            </a>
+                        </div>
+                        {% if category.children.exists %}
+                        <ul class="catalog__list" aria-expanded="false">
+
+                            {% for subcategory in category.children.all|slice:":5" %}
+                            <li class="catalog__list-item">
+                                <a href="{{ subcategory.get_absolute_url }}">{{ subcategory.name }}</a>
+                            </li>
+                            {% endfor %}
+
+                            <li class="show-more-wrapper">
+                                <button class="show-more-btn" aria-expanded="false" aria-label="expand" tabindex="0">
+                                    Показать ещё
+                                </button>
+                            </li>
+                        </ul>
+                        {% endif %}
+                    </div>
+                    {% endfor %}
+
+                </div>
+            </div>
+        </div>
+        <div class="section-container">
+            <div class="slider">
+                <div class="slider__head">
+                    <div class="slider__head-row">
+                        <div class="slider__title">Специальные предложения</div>
+                        <div class="slider__controls" style="right: -2px;">
+                            <button class="btn-control slider-prev swiper-button-disabled" disabled="">
+                                <svg class="icon icon_prev">
+                                    <use xlink:href="/static/img/svg/symbol/sprite.svg#prev"></use>
+                                </svg>
+                            </button>
+                            <button class="btn-control slider-next">
+                                <svg class="icon icon_next">
+                                    <use xlink:href="/static/img/svg/symbol/sprite.svg#next"></use>
+                                </svg>
+                            </button>
+                        </div>
+                    </div>
+                    <div>
+                        <a class="link-more" href="/spec/">Посмотреть все
+                            <svg class="icon icon_arrow-right">
+                                <use xlink:href="/static/img/svg/symbol/sprite.svg#arrow-right"></use>
+                            </svg>
+                        </a>
+                    </div>
+                </div>
+                <div class="swiper swiper-container-initialized swiper-container-horizontal swiper-container-pointer-events">
+                    <div class="swiper-wrapper" style="transform: translate3d(0px, 0px, 0px);">
+
+                        <div class="swiper-slide swiper-slide-active" style="width: 289px; margin-right: 24px;">
+                            <div class="sentence-card">
+                                <div class="sentence-card__top">
+                                    <a class="sentence-card__img"
+                                       href="/product/pretsizionnyj-krug-s-vysokim-elektricheskim-soprotivleniem-10-mm-h27ju5t-gost-12766-4-90/">
+                                        <img src="/resize/350/media/uploads/catalog/category/precizionnye-krugi_zpnZSaU.webp"
+                                             alt="Прецизионный круг с высоким электрическим сопротивлением 10 мм Х27Ю5Т ГОСТ 12766.4-90"
+                                             loading="lazy">
+                                    </a>
+                                    <button class="sentence-card__info-btn" data-tippy-content="<p>
+            Внешний вид изделия может отличаться от изображения, представленного на сайте
+
+            </p>
+        ">
+                                        <svg class="icon icon_warning">
+                                            <use xlink:href="/static/img/svg/symbol/sprite.svg#warning"></use>
+                                        </svg>
+                                    </button>
+                                </div>
+                                <a class="sentence-card__info"
+                                   href="/product/pretsizionnyj-krug-s-vysokim-elektricheskim-soprotivleniem-10-mm-h27ju5t-gost-12766-4-90/"
+                                   style="height: 73px;">
+                                    <span class="sentence-card__title ellipsis-js-50">Прецизионный круг с высоким электрическим сопротив...</span>
+
+                                </a>
+                                <a class="sentence-card__characteristics">
+                                    <table>
+
+                                        <tbody>
+                                        <tr>
+                                            <td>Диаметр</td>
+                                            <td>10 мм</td>
+                                        </tr>
+
+                                        <tr>
+                                            <td>ГОСТ</td>
+                                            <td>ГОСТ 12766.4-90</td>
+                                        </tr>
+
+                                        <tr>
+                                            <td>Тип сплава</td>
+                                            <td>с высоким электрическим сопротивлением</td>
+                                        </tr>
+
+                                        <tr>
+                                            <td>Марка</td>
+                                            <td>Х27Ю5Т</td>
+                                        </tr>
+
+                                        </tbody>
+                                    </table>
+                                </a>
+                                <div class="sentence-card__price">
+                            <span class="sentence-card__price-link">
+                                <span class="sentence-card__price-label">
+                                    Цена
+                                </span>
+                                <b class="sentence-card__price-price">
+                                    По уточнению
+                                </b>
+                                <span class="sentence-card__price-info"
+                                      data-tippy-content="Не является публичной офертой">
+                                    <svg class="icon icon_question">
+                                      <use xlink:href="/static/img/svg/symbol/sprite.svg#question"></use>
+                                    </svg>
+                                </span>
+                            </span>
+                                </div>
+                                <div class="sentence-card__footer">
+                                    <button class="sentence-card__add btn-slide" data-call-modal="cart"
+                                            data-product-id="3509450">
+                                <span class="btn btn-slide__box">Купить
+                                    <span class="btn-slide__box-icons">
+                                        <svg class="icon icon_add">
+                                            <use xlink:href="/static/img/svg/symbol/sprite.svg#add"></use>
+                                        </svg>
+                                        <svg class="btn-slide__box-preload icon icon_preload">
+                                            <use xlink:href="/static/img/svg/symbol/sprite.svg#preload"></use>
+                                        </svg>
+                                    </span>
+                                </span>
+                                        <span class="btn btn-slide__box">Добавлено
+                                    <span class="btn-slide__box-icons">
+                                      <svg class="icon icon_add-ok">
+                                        <use xlink:href="/static/img/svg/symbol/sprite.svg#add-ok"></use>
+                                      </svg>
+                                    </span>
+                                </span>
+                                    </button>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="swiper-slide swiper-slide-next" style="width: 289px; margin-right: 24px;">
+                            <div class="sentence-card">
+                                <div class="sentence-card__top">
+                                    <a class="sentence-card__img"
+                                       href="/product/polirovannaja-svarochnaja-provoloka-3-mm-sv-06h19n9t-gost-2246-70/">
+                                        <img src="/resize/350/media/uploads/catalog/category/polirovannaya-svarochnaya-provoloka_EMHJmMK.webp"
+                                             alt="Полированная сварочная проволока 3 мм Св-06Х19Н9Т ГОСТ 2246-70"
+                                             loading="lazy">
+                                    </a>
+                                    <button class="sentence-card__info-btn" data-tippy-content="<p>
+            Внешний вид изделия может отличаться от изображения, представленного на сайте
+
+            </p>
+        ">
+                                        <svg class="icon icon_warning">
+                                            <use xlink:href="/static/img/svg/symbol/sprite.svg#warning"></use>
+                                        </svg>
+                                    </button>
+                                </div>
+                                <a class="sentence-card__info"
+                                   href="/product/polirovannaja-svarochnaja-provoloka-3-mm-sv-06h19n9t-gost-2246-70/"
+                                   style="height: 73px;">
+                                    <span class="sentence-card__title ellipsis-js-50">Полированная сварочная проволока 3 мм Св-06Х19Н9Т ...</span>
+
+                                </a>
+                                <a class="sentence-card__characteristics">
+                                    <table>
+
+                                        <tbody>
+                                        <tr>
+                                            <td>Диаметр</td>
+                                            <td>3 мм</td>
+                                        </tr>
+
+                                        <tr>
+                                            <td>ГОСТ</td>
+                                            <td>ГОСТ 2246-70</td>
+                                        </tr>
+
+                                        <tr>
+                                            <td>Марка</td>
+                                            <td>Св-06Х19Н9Т</td>
+                                        </tr>
+
+                                        </tbody>
+                                    </table>
+                                </a>
+                                <div class="sentence-card__price">
+                            <span class="sentence-card__price-link">
+                                <span class="sentence-card__price-label">
+                                    Цена
+                                </span>
+                                <b class="sentence-card__price-price">
+                                    По уточнению
+                                </b>
+                                <span class="sentence-card__price-info"
+                                      data-tippy-content="Не является публичной офертой">
+                                    <svg class="icon icon_question">
+                                      <use xlink:href="/static/img/svg/symbol/sprite.svg#question"></use>
+                                    </svg>
+                                </span>
+                            </span>
+                                </div>
+                                <div class="sentence-card__footer">
+                                    <button class="sentence-card__add btn-slide" data-call-modal="cart"
+                                            data-product-id="3487255">
+                                <span class="btn btn-slide__box">Купить
+                                    <span class="btn-slide__box-icons">
+                                        <svg class="icon icon_add">
+                                            <use xlink:href="/static/img/svg/symbol/sprite.svg#add"></use>
+                                        </svg>
+                                        <svg class="btn-slide__box-preload icon icon_preload">
+                                            <use xlink:href="/static/img/svg/symbol/sprite.svg#preload"></use>
+                                        </svg>
+                                    </span>
+                                </span>
+                                        <span class="btn btn-slide__box">Добавлено
+                                    <span class="btn-slide__box-icons">
+                                      <svg class="icon icon_add-ok">
+                                        <use xlink:href="/static/img/svg/symbol/sprite.svg#add-ok"></use>
+                                      </svg>
+                                    </span>
+                                </span>
+                                    </button>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="swiper-slide" style="width: 289px; margin-right: 24px;">
+                            <div class="sentence-card">
+                                <div class="sentence-card__top">
+                                    <a class="sentence-card__img" href="/product/nikelevaya-truba-05h005-np2/">
+                                        <img src="/resize/350/media/uploads/catalog/category/nikelevye-truby_Av9lo35.webp"
+                                             alt="Никелевая труба 0,5х0,05 мм НП2" loading="lazy">
+                                    </a>
+                                    <button class="sentence-card__info-btn" data-tippy-content="<p>
+            Внешний вид изделия может отличаться от изображения, представленного на сайте
+
+            </p>
+        ">
+                                        <svg class="icon icon_warning">
+                                            <use xlink:href="/static/img/svg/symbol/sprite.svg#warning"></use>
+                                        </svg>
+                                    </button>
+                                </div>
+                                <a class="sentence-card__info" href="/product/nikelevaya-truba-05h005-np2/"
+                                   style="height: 73px;">
+                                    <span class="sentence-card__title ellipsis-js-50">Никелевая труба 0,5х0,05 мм НП2</span>
+
+                                </a>
+                                <a class="sentence-card__characteristics">
+                                    <table>
+
+                                        <tbody>
+                                        <tr>
+                                            <td>Наружный диаметр</td>
+                                            <td>0.5 мм</td>
+                                        </tr>
+
+                                        <tr>
+                                            <td>Марка</td>
+                                            <td>НП2</td>
+                                        </tr>
+
+                                        </tbody>
+                                    </table>
+                                </a>
+                                <div class="sentence-card__price">
+                            <span class="sentence-card__price-link">
+                                <span class="sentence-card__price-label">
+                                    Цена
+                                </span>
+                                <b class="sentence-card__price-price">
+                                    По уточнению
+                                </b>
+                                <span class="sentence-card__price-info"
+                                      data-tippy-content="Не является публичной офертой">
+                                    <svg class="icon icon_question">
+                                      <use xlink:href="/static/img/svg/symbol/sprite.svg#question"></use>
+                                    </svg>
+                                </span>
+                            </span>
+                                </div>
+                                <div class="sentence-card__footer">
+                                    <button class="sentence-card__add btn-slide" data-call-modal="cart"
+                                            data-product-id="2972578">
+                                <span class="btn btn-slide__box">Купить
+                                    <span class="btn-slide__box-icons">
+                                        <svg class="icon icon_add">
+                                            <use xlink:href="/static/img/svg/symbol/sprite.svg#add"></use>
+                                        </svg>
+                                        <svg class="btn-slide__box-preload icon icon_preload">
+                                            <use xlink:href="/static/img/svg/symbol/sprite.svg#preload"></use>
+                                        </svg>
+                                    </span>
+                                </span>
+                                        <span class="btn btn-slide__box">Добавлено
+                                    <span class="btn-slide__box-icons">
+                                      <svg class="icon icon_add-ok">
+                                        <use xlink:href="/static/img/svg/symbol/sprite.svg#add-ok"></use>
+                                      </svg>
+                                    </span>
+                                </span>
+                                    </button>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="swiper-slide" style="width: 289px; margin-right: 24px;">
+                            <div class="sentence-card">
+                                <div class="sentence-card__top">
+                                    <a class="sentence-card__img" href="/product/sudovoj-list-5-mm-rsv/">
+                                        <img src="/resize/350/media/uploads/catalog/category/%D0%91%D1%80%D0%BE%D0%BD%D0%B5%D0%BB%D0%B8%D1%81%D1%82%D1%8B_e2w1mB1.png"
+                                             alt="Судовой лист 5 мм РСВ" loading="lazy">
+                                    </a>
+                                    <button class="sentence-card__info-btn" data-tippy-content="<p>
+            Внешний вид изделия может отличаться от изображения, представленного на сайте
+
+            </p>
+        ">
+                                        <svg class="icon icon_warning">
+                                            <use xlink:href="/static/img/svg/symbol/sprite.svg#warning"></use>
+                                        </svg>
+                                    </button>
+                                </div>
+                                <a class="sentence-card__info" href="/product/sudovoj-list-5-mm-rsv/"
+                                   style="height: 73px;">
+                                    <span class="sentence-card__title ellipsis-js-50">Судовой лист 5 мм РСВ</span>
+
+                                </a>
+                                <a class="sentence-card__characteristics">
+                                    <table>
+
+                                        <tbody>
+                                        <tr>
+                                            <td>Толщина</td>
+                                            <td>5 мм</td>
+                                        </tr>
+
+                                        <tr>
+                                            <td>Марка</td>
+                                            <td>РСВ</td>
+                                        </tr>
+
+                                        </tbody>
+                                    </table>
+                                </a>
+                                <div class="sentence-card__price">
+                            <span class="sentence-card__price-link">
+                                <span class="sentence-card__price-label">
+                                    Цена
+                                </span>
+                                <b class="sentence-card__price-price">
+                                    По уточнению
+                                </b>
+                                <span class="sentence-card__price-info"
+                                      data-tippy-content="Не является публичной офертой">
+                                    <svg class="icon icon_question">
+                                      <use xlink:href="/static/img/svg/symbol/sprite.svg#question"></use>
+                                    </svg>
+                                </span>
+                            </span>
+                                </div>
+                                <div class="sentence-card__footer">
+                                    <button class="sentence-card__add btn-slide" data-call-modal="cart"
+                                            data-product-id="7434014">
+                                <span class="btn btn-slide__box">Купить
+                                    <span class="btn-slide__box-icons">
+                                        <svg class="icon icon_add">
+                                            <use xlink:href="/static/img/svg/symbol/sprite.svg#add"></use>
+                                        </svg>
+                                        <svg class="btn-slide__box-preload icon icon_preload">
+                                            <use xlink:href="/static/img/svg/symbol/sprite.svg#preload"></use>
+                                        </svg>
+                                    </span>
+                                </span>
+                                        <span class="btn btn-slide__box">Добавлено
+                                    <span class="btn-slide__box-icons">
+                                      <svg class="icon icon_add-ok">
+                                        <use xlink:href="/static/img/svg/symbol/sprite.svg#add-ok"></use>
+                                      </svg>
+                                    </span>
+                                </span>
+                                    </button>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="swiper-slide" style="width: 289px; margin-right: 24px;">
+                            <div class="sentence-card">
+                                <div class="sentence-card__top">
+                                    <a class="sentence-card__img"
+                                       href="/product/elektrod-dlja-svarki-stali-3-mm-uoni-1355-gost-9467-75/">
+                                        <img src="/resize/350/media/uploads/catalog/category/elektrody-dlya-svarki-stali_U8lGG66.webp"
+                                             alt="Электрод для сварки стали 3 мм УОНИ-13/55 ГОСТ 9467-75"
+                                             loading="lazy">
+                                    </a>
+                                    <button class="sentence-card__info-btn" data-tippy-content="<p>
+            Внешний вид изделия может отличаться от изображения, представленного на сайте
+
+            </p>
+        ">
+                                        <svg class="icon icon_warning">
+                                            <use xlink:href="/static/img/svg/symbol/sprite.svg#warning"></use>
+                                        </svg>
+                                    </button>
+                                </div>
+                                <a class="sentence-card__info"
+                                   href="/product/elektrod-dlja-svarki-stali-3-mm-uoni-1355-gost-9467-75/"
+                                   style="height: 73px;">
+                                    <span class="sentence-card__title ellipsis-js-50">Электрод для сварки стали 3 мм УОНИ-13/55 ГОСТ 946...</span>
+
+                                </a>
+                                <a class="sentence-card__characteristics">
+                                    <table>
+
+                                        <tbody>
+                                        <tr>
+                                            <td>Диаметр</td>
+                                            <td>3 мм</td>
+                                        </tr>
+
+                                        <tr>
+                                            <td>ГОСТ</td>
+                                            <td>ГОСТ 9467-75</td>
+                                        </tr>
+
+                                        <tr>
+                                            <td>Марка</td>
+                                            <td>УОНИ-13/55</td>
+                                        </tr>
+
+                                        </tbody>
+                                    </table>
+                                </a>
+                                <div class="sentence-card__price">
+                            <span class="sentence-card__price-link">
+                                <span class="sentence-card__price-label">
+                                    Цена
+                                </span>
+                                <b class="sentence-card__price-price">
+                                    По уточнению
+                                </b>
+                                <span class="sentence-card__price-info"
+                                      data-tippy-content="Не является публичной офертой">
+                                    <svg class="icon icon_question">
+                                      <use xlink:href="/static/img/svg/symbol/sprite.svg#question"></use>
+                                    </svg>
+                                </span>
+                            </span>
+                                </div>
+                                <div class="sentence-card__footer">
+                                    <button class="sentence-card__add btn-slide" data-call-modal="cart"
+                                            data-product-id="6151204">
+                                <span class="btn btn-slide__box">Купить
+                                    <span class="btn-slide__box-icons">
+                                        <svg class="icon icon_add">
+                                            <use xlink:href="/static/img/svg/symbol/sprite.svg#add"></use>
+                                        </svg>
+                                        <svg class="btn-slide__box-preload icon icon_preload">
+                                            <use xlink:href="/static/img/svg/symbol/sprite.svg#preload"></use>
+                                        </svg>
+                                    </span>
+                                </span>
+                                        <span class="btn btn-slide__box">Добавлено
+                                    <span class="btn-slide__box-icons">
+                                      <svg class="icon icon_add-ok">
+                                        <use xlink:href="/static/img/svg/symbol/sprite.svg#add-ok"></use>
+                                      </svg>
+                                    </span>
+                                </span>
+                                    </button>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="swiper-slide" style="width: 289px; margin-right: 24px;">
+                            <div class="sentence-card">
+                                <div class="sentence-card__top">
+                                    <a class="sentence-card__img"
+                                       href="/product/djuralevaja-kruglaja-truba-120-mm-d16t-gost-18482-2018/">
+                                        <img src="/resize/350/media/uploads/catalog/category/dyuralyuminievye-truby_1T2ydXY_Bw5SA6T.webp"
+                                             alt="Дюралевая круглая труба 120 мм Д16Т ГОСТ 18482-2018" loading="lazy">
+                                    </a>
+                                    <button class="sentence-card__info-btn" data-tippy-content="<p>
+            Внешний вид изделия может отличаться от изображения, представленного на сайте
+
+            </p>
+        ">
+                                        <svg class="icon icon_warning">
+                                            <use xlink:href="/static/img/svg/symbol/sprite.svg#warning"></use>
+                                        </svg>
+                                    </button>
+                                </div>
+                                <a class="sentence-card__info"
+                                   href="/product/djuralevaja-kruglaja-truba-120-mm-d16t-gost-18482-2018/"
+                                   style="height: 73px;">
+                                    <span class="sentence-card__title ellipsis-js-50">Дюралевая круглая труба 120 мм Д16Т ГОСТ 18482-201...</span>
+
+                                </a>
+                                <a class="sentence-card__characteristics">
+                                    <table>
+
+                                        <tbody>
+                                        <tr>
+                                            <td>Наружный диаметр</td>
+                                            <td>120 мм</td>
+                                        </tr>
+
+                                        <tr>
+                                            <td>ГОСТ</td>
+                                            <td>ГОСТ 18482-2018</td>
+                                        </tr>
+
+                                        <tr>
+                                            <td>Марка</td>
+                                            <td>Д16Т</td>
+                                        </tr>
+
+                                        </tbody>
+                                    </table>
+                                </a>
+                                <div class="sentence-card__price">
+                            <span class="sentence-card__price-link">
+                                <span class="sentence-card__price-label">
+                                    Цена
+                                </span>
+                                <b class="sentence-card__price-price">
+                                    По уточнению
+                                </b>
+                                <span class="sentence-card__price-info"
+                                      data-tippy-content="Не является публичной офертой">
+                                    <svg class="icon icon_question">
+                                      <use xlink:href="/static/img/svg/symbol/sprite.svg#question"></use>
+                                    </svg>
+                                </span>
+                            </span>
+                                </div>
+                                <div class="sentence-card__footer">
+                                    <button class="sentence-card__add btn-slide" data-call-modal="cart"
+                                            data-product-id="1644967">
+                                <span class="btn btn-slide__box">Купить
+                                    <span class="btn-slide__box-icons">
+                                        <svg class="icon icon_add">
+                                            <use xlink:href="/static/img/svg/symbol/sprite.svg#add"></use>
+                                        </svg>
+                                        <svg class="btn-slide__box-preload icon icon_preload">
+                                            <use xlink:href="/static/img/svg/symbol/sprite.svg#preload"></use>
+                                        </svg>
+                                    </span>
+                                </span>
+                                        <span class="btn btn-slide__box">Добавлено
+                                    <span class="btn-slide__box-icons">
+                                      <svg class="icon icon_add-ok">
+                                        <use xlink:href="/static/img/svg/symbol/sprite.svg#add-ok"></use>
+                                      </svg>
+                                    </span>
+                                </span>
+                                    </button>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="swiper-slide" style="width: 289px; margin-right: 24px;">
+                            <div class="sentence-card">
+                                <div class="sentence-card__top">
+                                    <a class="sentence-card__img"
+                                       href="/product/otsinkovannyj-list-0_8x1250-mm-08ps-gost-14918-2020/">
+                                        <img src="/resize/350/media/uploads/catalog/category/ocinkovannye-listy_TYWU7oN.webp"
+                                             alt="Оцинкованный лист 0.8x1250 мм 08пс ГОСТ 14918-2020" loading="lazy">
+                                    </a>
+                                    <button class="sentence-card__info-btn" data-tippy-content="<p>
+            Внешний вид изделия может отличаться от изображения, представленного на сайте
+
+            </p>
+        ">
+                                        <svg class="icon icon_warning">
+                                            <use xlink:href="/static/img/svg/symbol/sprite.svg#warning"></use>
+                                        </svg>
+                                    </button>
+                                </div>
+                                <a class="sentence-card__info"
+                                   href="/product/otsinkovannyj-list-0_8x1250-mm-08ps-gost-14918-2020/"
+                                   style="height: 73px;">
+                                    <span class="sentence-card__title ellipsis-js-50">Оцинкованный лист 0.8x1250 мм 08пс ГОСТ 14918-2020</span>
+
+                                </a>
+                                <a class="sentence-card__characteristics">
+                                    <table>
+
+                                        <tbody>
+                                        <tr>
+                                            <td>Толщина</td>
+                                            <td>0.8 мм</td>
+                                        </tr>
+
+                                        <tr>
+                                            <td>Марка</td>
+                                            <td>08пс</td>
+                                        </tr>
+
+                                        <tr>
+                                            <td>Ширина</td>
+                                            <td>1250 мм</td>
+                                        </tr>
+
+                                        <tr>
+                                            <td>ГОСТ</td>
+                                            <td>ГОСТ 14918-2020</td>
+                                        </tr>
+
+                                        </tbody>
+                                    </table>
+                                </a>
+                                <div class="sentence-card__price">
+                            <span class="sentence-card__price-link">
+                                <span class="sentence-card__price-label">
+                                    Цена
+                                </span>
+                                <b class="sentence-card__price-price">
+                                    По уточнению
+                                </b>
+                                <span class="sentence-card__price-info"
+                                      data-tippy-content="Не является публичной офертой">
+                                    <svg class="icon icon_question">
+                                      <use xlink:href="/static/img/svg/symbol/sprite.svg#question"></use>
+                                    </svg>
+                                </span>
+                            </span>
+                                </div>
+                                <div class="sentence-card__footer">
+                                    <button class="sentence-card__add btn-slide" data-call-modal="cart"
+                                            data-product-id="15316940">
+                                <span class="btn btn-slide__box">Купить
+                                    <span class="btn-slide__box-icons">
+                                        <svg class="icon icon_add">
+                                            <use xlink:href="/static/img/svg/symbol/sprite.svg#add"></use>
+                                        </svg>
+                                        <svg class="btn-slide__box-preload icon icon_preload">
+                                            <use xlink:href="/static/img/svg/symbol/sprite.svg#preload"></use>
+                                        </svg>
+                                    </span>
+                                </span>
+                                        <span class="btn btn-slide__box">Добавлено
+                                    <span class="btn-slide__box-icons">
+                                      <svg class="icon icon_add-ok">
+                                        <use xlink:href="/static/img/svg/symbol/sprite.svg#add-ok"></use>
+                                      </svg>
+                                    </span>
+                                </span>
+                                    </button>
+                                </div>
+                            </div>
+                        </div>
+
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <section class="catalog__purchase-details purchase-details">
+        <div class="container">
+            <div class="purchase-details__inner row tab-product-content product-tab-show justify-content-center"
+                 id="product-desc">
+                <div class="col-lg-8 order-lg-1 order-2">
+                    <div class="purchase-details__section mb-5">
+                        <div class="purchase-details__section-title">Вопрос ответ</div>
+
+                        <a class="tabs__question-elem accordion__low">
+                            Как сделать заказ?
+                            <div class="accordion-svg-plus">
+                                <div class="circle-plus active-side-bar">
+                                    <div class="circle">
+                                        <div class="horizontal transform-horizontal"></div>
+                                        <div class="vertical transform-vertical"></div>
+                                    </div>
+                                </div>
+                            </div>
+                        </a>
+                        <div class="tabs__answer-elem accordion-content__low">По телефону коммерческого отдела или через
+                            заявку на почту, указанную на сайте. В течение дня мы подготовим и вышлем предложение с
+                            наилучшими ценами и условиями поставки по Вашему заказу.
+                        </div>
+
+                        <a class="tabs__question-elem accordion__low">
+                            Могу я приобрести товар как физическое лицо?
+                            <div class="accordion-svg-plus">
+                                <div class="circle-plus active-side-bar">
+                                    <div class="circle">
+                                        <div class="horizontal transform-horizontal"></div>
+                                        <div class="vertical transform-vertical"></div>
+                                    </div>
+                                </div>
+                            </div>
+                        </a>
+                        <div class="tabs__answer-elem accordion-content__low">Да, мы работаем как с юридическими, так и
+                            физическими лицами. Однако обратите внимание, что минимальная сумма заказа составляет 50 000
+                            рублей.
+                        </div>
+
+                        <a class="tabs__question-elem accordion__low">
+                            Я могу купить один экземпляр товара?
+                            <div class="accordion-svg-plus">
+                                <div class="circle-plus active-side-bar">
+                                    <div class="circle">
+                                        <div class="horizontal transform-horizontal"></div>
+                                        <div class="vertical transform-vertical"></div>
+                                    </div>
+                                </div>
+                            </div>
+                        </a>
+                        <div class="tabs__answer-elem accordion-content__low">Все зависит от стоимости товара. Мы
+                            работаем с крупными заказами. Если Ваша заявка примерно соответствует минимальному порогу в
+                            30 000 - 50 000 рублей (в зависимости от города заказа, подробности уточняйте у менеджера),
+                            позвоните нам или отправьте письмо с номенклатурой. Наш эксперт рассчитает индивидуальную
+                            стоимость конкретно под объем Вашей заявки.
+                        </div>
+
+                        <a class="tabs__question-elem accordion__low">
+                            У меня срочный заказ. Можно ли получить товар в день оплаты или на следующий день?
+                            <div class="accordion-svg-plus">
+                                <div class="circle-plus active-side-bar">
+                                    <div class="circle">
+                                        <div class="horizontal transform-horizontal"></div>
+                                        <div class="vertical transform-vertical"></div>
+                                    </div>
+                                </div>
+                            </div>
+                        </a>
+                        <div class="tabs__answer-elem accordion-content__low">При наличии продукции на складе в Вашем
+                            городе, мы, конечно же, постараемся организовать срочную доставку. Если товара нет, мы
+                            найдем его на других региональных базах «UniTrade» и предложим Вам минимально возможные
+                            сроки поставки. Если нужная Вам номенклатура в принципе изготавливается под заказ, в таком
+                            случае все решается индивидуально, в зависимости от очереди и наличия на производстве
+                            исходного сырья.
+                        </div>
+
+                        <a class="tabs__question-elem accordion__low">
+                            Вы доставляете в любые регионы? А в небольшие, отдаленные города?
+                            <div class="accordion-svg-plus">
+                                <div class="circle-plus active-side-bar">
+                                    <div class="circle">
+                                        <div class="horizontal transform-horizontal"></div>
+                                        <div class="vertical transform-vertical"></div>
+                                    </div>
+                                </div>
+                            </div>
+                        </a>
+                        <div class="tabs__answer-elem accordion-content__low">Мы поставляем металлопрокат по всей
+                            территории России и Казахстана. Межтерминальные перевозки осуществляются надежными
+                            транспортными компаниями, с которыми заключены долгосрочные контракты. Также Вы можете
+                            самостоятельно забрать товар со склада по предварительной договоренности.
+                        </div>
+
+                        <a class="tabs__question-elem accordion__low">
+                            Почему на сайте не указана цена на товар? Или стоит явно устаревшая цифра?
+                            <div class="accordion-svg-plus">
+                                <div class="circle-plus active-side-bar">
+                                    <div class="circle">
+                                        <div class="horizontal transform-horizontal"></div>
+                                        <div class="vertical transform-vertical"></div>
+                                    </div>
+                                </div>
+                            </div>
+                        </a>
+                        <div class="tabs__answer-elem accordion-content__low">Наш каталог насчитывает более 6 миллионов
+                            товаров. Мы стремимся к поддержанию актуальных цен на все позиции. Но, в зависимости от
+                            тенденций мирового рынка сырья и загруженности производства, влияющих на конечную стоимость
+                            продукции, не представляется возможным ежедневно актуализировать абсолютно все цены.
+                            Кроме того, мы всегда стараемся предложить нашим клиентам индивидуальную цену, исходя из
+                            условий поставки: количества, схемы оплаты и места отгрузки. Поэтому информация на сайте
+                            носит исключительно ознакомительный характер и ни при каких обстоятельствах не является
+                            публичной офертой, определяемой ч. 2 ст. 437 Гражданского кодекса Российской Федерации.
+                        </div>
+
+                        <a class="tabs__question-elem accordion__low">
+                            Мне нужна металлообработка для моего металла – сколько это стоит?
+                            <div class="accordion-svg-plus">
+                                <div class="circle-plus active-side-bar">
+                                    <div class="circle">
+                                        <div class="horizontal transform-horizontal"></div>
+                                        <div class="vertical transform-vertical"></div>
+                                    </div>
+                                </div>
+                            </div>
+                        </a>
+                        <div class="tabs__answer-elem accordion-content__low">Сожалеем, но все услуги по обработке
+                            оказываются только при покупке нашего проката и сопутствующих товаров. Производство не
+                            принимает сторонние изделия.
+                        </div>
+
+
+                    </div>
+                    <div class="purchase-details__section">
+
+                    </div>
+                </div>
+                <div class="col-lg-3 ml-auto order-lg-2 order-1">
+                    <a class="purchase-details__special-offer" href="/spec/"
+                       style="background-image: url(/static/img/content/special-offer.webp);">
+        <span class="purchase-details__special-offer-title">
+            Спецпредложения на ограниченное количество<br>продукции
+        </span>
+                        <img class="purchase-details__special-offer-logo" src="/static/img/logo_img.svg"
+                             alt="UniTrade">
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <div class="container section-container">
+        <div class="catalog__promo-help-white promo-help-white"
+             style="background-image: url(/static/img/content/promo-help-white.webp);">
+            <div class="promo-help-white__inner">
+                <div class="promo-help-white__title">Нужна помощь?</div>
+                <div class="promo-help-white__desc">
+                    <p>Обсудить все вопросы, рассчитать стоимость доставки и договориться о способе оплаты вы можете с
+                        нашими специалистами.</p>
+                </div>
+                <div class="promo-help-white__controls">
+                    <button class="promo-help-white__order btn" data-modal-toggle="#modal-request">
+                        Оставить заявку
+                        <svg class="icon icon_arrow-right">
+                            <use xlink:href="/static/img/svg/symbol/sprite.svg#arrow-right"></use>
+                        </svg>
+                    </button>
+                    <a class="promo-help-white__consultant btn btn_outline" href="javascript:void(0);"
+                       onclick="jivo_api.open()">
+                        Онлайн консультант
+                        <svg class="icon icon_chat">
+                            <use xlink:href="/static/img/svg/symbol/sprite.svg#chat"></use>
+                        </svg>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+</main>
+{% endblock %}
