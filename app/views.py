@@ -6,7 +6,7 @@ from django.views.generic import DetailView
 
 
 class IndexViewPage(TemplateView):
-    template_name = 'delivery.html'
+    template_name = 'index.html'
 
     def get_context_data(self, **kwargs):
         context = super().get_context_data(**kwargs)
@@ -24,21 +24,20 @@ class ServiceViewPage(TemplateView):
 class AboutViewPage(TemplateView):
     template_name ='about.html'
 
-
 class DeliveryViewPage(TemplateView):
-    template_name ='delivery.html'
+    template_name ='buyers/delivery.html'
 
 
 class PaymentViewPage(TemplateView):
-    template_name ='payment.html'
+    template_name ='buyers/payment.html'
 
 
 class RefundViewPage(TemplateView):
-    template_name ='refund.html'
+    template_name ='buyers/refund.html'
 
 
 class CategoryViewPage(TemplateView):
-    template_name = 'category/delivery.html'
+    template_name = 'category/index.html'
 
     def get_context_data(self, **kwargs):
         context = super().get_context_data(**kwargs)

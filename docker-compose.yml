@@ -1,0 +1,19 @@
+version: '3'
+
+volumes:
+  static_data:
+  media_data:
+
+services:
+  web:
+    build: .
+    tty: true
+    command: >
+      bash -c "python manage.py migrate && python manage.py runserver 0.0.0.0:8000"
+    restart: always
+    volumes:
+      - .:/code
+      - static_data:/code/static
+      - media_data:/code/media
+    ports:
+      - "8000:8000"
