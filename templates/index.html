@@ -3,8 +3,10 @@
 
 {% block content %}
 
-<main class="page-index">
+<main class="page-index" style="background-color: black;">
 
+
+    <!-- БЛОК ВИДЕО -->
     <section class="hero">
         <div class="hero__video">
             <video class="lazy" autoplay="" loop="" muted="" playsinline poster="/static/video/hero-poster.webp">
@@ -45,134 +47,294 @@
             </div>
         </div>
     </section>
+    <!-- КОНЕЦ БЛОК ВИДЕО -->
 
+
+     <!-- БЛОК КАТЕГОРИЙ -->
     <section class="section-container mt-4 mt-lg-5">
         <div class="container" data-toggle-to="">
+            <div class="about-company-bottom__sub-title" style="color: #f44336;">Что на практике</div>
+            <h2 class="about-company-bottom__title" style="color: white;">ФАКТОРЫ УСПЕХА</h2>
+            <div class="about-company-bottom__card row">
 
-            <div class="row row-cols-1 row-cols-md-2 row-cols-xl-4 pt-2 pt-lg-3 catalog__container active"
-                 data-toggle-first=" ">
-
-                {% for category in categories|slice:":8" %}
-                <div class="catalog">
-                    <div class="col catalog__item">
-                        <div class="catalog__item-head">
-                            <div class="catalog__item-img">
-                                <img loading="lazy"
-                                     src="/images/black-metall.jpg"
-                                     alt="Черный металлопрокат">
+                <div class="news-container">
+                    <div class="news-list">
+                        {% for category in categories|slice:":8" %}
+                        <a class="news-list__item" href="{{ category.get_absolute_url }}">
+                            <div class="news-list__photo"
+                                 style="background-image: url({% if category.image %}{{ category.image.url }}{% else %}{% static 'images/first.jpg' %}{% endif %})">
+                                <div class="news-list__info">
+                                    <h2 class="news-list__title">{{ category.name }}</h2>
+                                </div>
                             </div>
-                            <a class="catalog__item-link stretched-link" href="{{ category.get_absolute_url }}">
-                                {{ category.name }}
-                            </a>
-                        </div>
-                        {% if category.children.exists %}
-                        <ul class="catalog__list" aria-expanded="false">
-                            {% for subcategory in category.children.all|slice:":5" %}
-                            <li class="catalog__list-item">
-                                <a href="{{ subcategory.get_absolute_url }}">{{ subcategory.name }}</a>
-                            </li>
-                            {% endfor %}
-
-                            {% if category.children.count > 5 %}
-                            <li><a href="#">Показать все</a></li>
-                            {% endif %}
-
-                        </ul>
-                        {% endif %}
+                        </a>
+                        {% endfor %}
                     </div>
-                    <!-- Повторите карточки тут -->
                 </div>
-                {% endfor %}
-
 
                 <style>
-                    .catalog {
-                      display: flex; /* Используем Flexbox */
-                      flex-wrap: wrap; /* Позволяем карточкам переноситься на следующую строку */
-                      gap: 20px; /* Задаем отступы между карточками */
+                    .news-container {
+                        width: 100%;
+                        max-width: 1200px;
+                        margin: 0 auto;
+                        padding: 16px;
                     }
 
-                    .catalog__item {
-                      flex: 1 1 calc(25% - 20px); /* Каждая карточка занимает 25% ширины, учитывая отступы */
-                      box-sizing: border-box; /* Учитываем padding и border в ширину элемента */
+                    .news-list {
+                        display: grid;
+                        grid-template-columns: repeat(4, 1fr); /* 4 карточки на строку */
+                        gap: 16px; /* Отступы между карточками */
+                    }
+
+                    .news-list__item {
+                        background-color: #f9f9f9;
+                        border-radius: 8px;
+                        text-decoration: none;
+                        color: inherit;
+                        display: flex;
+                        flex-direction: column;
+                        justify-content: space-between;
+                        align-items: center;
+                        box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+                        aspect-ratio: 1; /* Квадратные карточки */
+                        overflow: hidden;
+                    }
+
+                    .news-list__photo {
+                        position: relative; /* Для абсолютного позиционирования текста */
+                        width: 100%;
+                        height: 100%;
+                        background-size: cover;
+                        background-position: center;
+                    }
+
+                    .news-list__info {
+                        position: absolute; /* Абсолютное позиционирование для текста */
+                        top: 0; /* Текст будет в верхнем левом углу */
+                        left: 0;
+                        padding: 22px;
+                        color: #fff; /* Белый цвет текста для контраста */
+                        border-radius: 4px; /* Скругление для фона */
+                    }
+
+                    .news-list__title {
+                        font-size: 25px;
+                        font-weight: bold;
+                        margin: 0;
+                        color: white;
+                    }
+
+                    @media (max-width: 992px) {
+                        .news-list {
+                            grid-template-columns: repeat(3, 1fr); /* 3 карточки на строку на планшетах */
+                        }
                     }
 
                     @media (max-width: 768px) {
-                      .catalog__item {
-                        flex: 1 1 calc(50% - 10px); /* 2 карточки в ряд на планшетах */
-                      }
+                        .news-list {
+                            grid-template-columns: repeat(2, 1fr); /* 2 карточки на строку на мобильных */
+                        }
                     }
 
                     @media (max-width: 480px) {
-                      .catalog__item {
-                        flex: 1 1 100%; /* 1 карточка в ряд на мобильных */
-                      }
-                    }
+                        .news-list {
+                            grid-template-columns: repeat(2, 1fr); /* 2 карточки на строку на очень маленьких экранах */
+                        }
 
+                        .news-list__title {
+                            font-size: 16px; /* Уменьшаем текст на маленьких экранах */
+                        }
+                    }
                 </style>
+
+            </div>
+    </section>
+     <!-- КОНЕЦ БЛОК КАТЕГОРИЙ -->
+
+
+    <!-- БЛОК О НАС -->
+    <section class="about" style=" padding: 50px 0; position: relative;">
+        <div class="container about__top-content">
+            <div class="row">
+                <!-- Видео блок -->
+                <div class="col-12">
+                    <div class="about__video">
+                        <video autoplay loop muted playsinline poster="{% static 'video/hero-poster.webp' %}"
+                               style="width: 100%; height: 100vh; object-fit: cover; border-radius: 8px; position: absolute; top: 0; left: 0; z-index: -1;">
+                            <source src="{% static 'video/hero.mp4' %}" type="video/mp4">
+                        </video>
+                    </div>
+                </div>
             </div>
 
+            <div class="row" style="position: relative; z-index: 1;">
+                <div class="col-lg-6 col-xl-6">
+                    <!-- О компании -->
+                    <p class="about__suptitle aos-init aos-animate" data-aos="fade-up" data-aos-delay="100"
+                       style="color: #f44336;">О компании</p>
+                    <h2 class="about__title title aos-init aos-animate" data-aos="fade-up" data-aos-delay="50"
+                        style="color: white;">
+                        Группа Компаний «Интерстилс»
+                    </h2>
+                    <div class="about__desc aos-init aos-animate" data-aos="fade-up" data-aos-delay="100"
+                         style="color: #ddd;">
+                        <p>Группа компаний «Интерстилс» - надёжный поставщик металлопроката и сопутствующих товаров:
+                            оборудования для пищевой, горнодобывающей, автомобильной, химической и нефтегазовой
+                            промышленности, сферы строительства, авиа- и судостроения, а также кабельной продукции,
+                            сварочных материалов, метизов, металлургического сырья, бурового и рентгенозащитного
+                            оборудования.</p>
+                        <br>
+                        <p>Мы работаем только с оптовыми покупателями – коммерческими и государственными организациями.
+                            Высококвалифицированные эксперты коммерческого отдела помогают клиентам собрать заказ любой
+                            сложности.</p>
+                    </div>
+                </div>
+
+                <div class="col-lg-6 col-xl-6">
+                    <!-- Сотрудничество -->
+                    <div class="about__box" style="background-color: #1f1f1f; border-radius: 8px; padding: 25px;">
+                        <h3 class="about__box-title aos-init aos-animate" data-aos="fade-up" data-aos-delay="50"
+                            style="color: white;">
+                            Сотрудничество с командой ГК «Интерстилс»
+                        </h3>
+                        <div class="about__box-desc aos-init aos-animate" data-aos="fade-up" data-aos-delay="100"
+                             style="color: #ddd;">
+                            <p>Благодаря широкой сети филиалов в крупнейших городах Казахстана мы доставляем заказы до
+                                любого производственного или складского объекта точно в срок и с соблюдением всех
+                                условий перевозки данного вида груза.</p>
+                            <br>
+                            <p>У нас в наличии всегда имеется широкий ассортимент готовой продукции – всего более 6 млн
+                                наименований. Весь товар произведен в строгом соответствии с отраслевыми стандартами и
+                                имеет сертификаты качества.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
         </div>
     </section>
 
+    <style>
+        .about-company-bottom {
+            color: #fff; /* Белый цвет текста */
+            padding: 30px;
+            border-radius: 10px; /* Мягкие углы */
+            position: relative;
+            z-index: 1;
+        }
+
+        .about-company-bottom__card-item {
+            position: relative;
+            background-color: #212121; /* Темный фон карточки */
+            color: #fff;
+            border-radius: 10px; /* Мягкие углы карточки */
+            margin: 10px;
+            padding: 20px;
+            text-align: center;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+            z-index: 2;
+        }
+
+        .about-company-bottom__card-item-title {
+            font-size: 18px;
+            font-weight: bold;
+            margin-top: 10px;
+            color: white;
+        }
+
+        .about-company-bottom__card-item-desc {
+            font-size: 14px;
+            margin-top: 10px;
+            color: #ddd; /* Серый текст */
+        }
+
+        .about-company-bottom__sub-title, .about-company-bottom__title {
+            font-weight: bold;
+            margin: 20px 0;
+        }
+    </style>
+
+    <!-- КОНЕЦ БЛОК О НАС -->
+
+
     <section class="container about-company__bottom">
-        <div class="about-company-bottom">
-            <div class="about-company-bottom__sub-title">Что на практике</div>
-            <h2 class="about-company-bottom__title">ФАКТОРЫ УСПЕХА</h2>
+        <div class="about-company-bottom"> <!-- Темный фон без серого -->
+            <div class="about-company-bottom__sub-title" style="color: #f44336;">Что на практике</div>
+            <!-- Красный текст для подзаголовка -->
+            <h2 class="about-company-bottom__title" style="color: white;">ФАКТОРЫ УСПЕХА</h2>
+            <!-- Заголовок красного цвета -->
+
             <div class="about-company-bottom__card row">
 
                 <div class="col-lg-4">
                     <div class="about-company-bottom__card-item"
-                         style="background-image: url(/static/img/company-bottom-1.webp);">
+                         style="background-image: url(/static/img/company-bottom-1.webp); background-size: cover;">
                         <div class="about-company-bottom__card-item-title">Команда ГК «UniTrade»</div>
                         <div class="about-company-bottom__card-item-desc">
-                            Наши сотрудники - эксперты в области проката металла, сталей и сплавов,
-                            производства кабельной продукции,
-                            сварочных материалов, обработки благородных и редких металлов, а также
-                            изготовления промышленного оборудования.
-                            <br><br>
-                            Менеджеры, логисты, операторы ОТК всегда на связи с клиентами и владеют
-                            информацией по каждому
-                            этапу заказа – от первой сметы до приемки товара.
+                            Наши сотрудники - эксперты в области проката металла, сталей и сплавов...
                         </div>
                     </div>
                 </div>
 
                 <div class="col-lg-4">
                     <div class="about-company-bottom__card-item"
-                         style="background-image: url(/static/img/company-bottom-2.webp);">
+                         style="background-image: url(/static/img/company-bottom-2.webp); background-size: cover;">
                         <div class="about-company-bottom__card-item-title">Быстрая и бережная доставка</div>
                         <div class="about-company-bottom__card-item-desc">
-                            Сеть региональных складов и партнёрство с крупнейшими транспортными компаниями
-                            позволяют
-                            доставлять заказы в любую точку России, Казахстана, Узбекистана и других стран
-                            СНГ точно в срок и с
-                            соблюдением требований к перевозке данного вида груза.
-                            <br><br>На всех этапах доставки мы предоставляем заказчикам полную информацию о
-                            местонахождении и
-                            состоянии товара.
+                            Сеть региональных складов и партнёрство с крупнейшими транспортными компаниями...
                         </div>
                     </div>
                 </div>
+
                 <div class="col-lg-4">
                     <div class="about-company-bottom__card-item"
-                         style="background-image: url(/static/img/company-bottom-3.webp);">
-                        <div class="about-company-bottom__card-item-title">
-                            Уникальная база поставщиков
-                        </div>
+                         style="background-image: url(/static/img/company-bottom-3.webp); background-size: cover;">
+                        <div class="about-company-bottom__card-item-title">Уникальная база поставщиков</div>
                         <div class="about-company-bottom__card-item-desc">
-                            Мы производим широкий спектр изделий из черного, цветного и нержавеющего
-                            проката. Кроме того,
-                            у нас наработаны прямые контакты с поставщиками редких позиций – от
-                            металлургических комбинатов до
-                            небольших мануфактур, от федеральных складских хабов до региональных металлобаз.
-                            <br><br>Каталог нашей продукции превышает 6 млн единиц товара.
+                            Мы производим широкий спектр изделий из черного, цветного и нержавеющего проката...
                         </div>
                     </div>
                 </div>
             </div>
         </div>
     </section>
+
+    <style>
+        .about-company-bottom {
+            color: #fff; /* Белый цвет текста */
+            padding: 30px;
+            border-radius: 10px; /* Мягкие углы */
+        }
+
+        .about-company-bottom__card-item {
+            position: relative;
+            background-color: #212121; /* Темный фон карточки */
+            color: #fff;
+            border-radius: 10px; /* Мягкие углы карточки */
+            margin: 10px;
+            padding: 20px;
+            text-align: center;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+        }
+
+        .about-company-bottom__card-item-title {
+            font-size: 18px;
+            font-weight: bold;
+            margin-top: 10px;
+            color: white;
+        }
+
+        .about-company-bottom__card-item-desc {
+            font-size: 14px;
+            margin-top: 10px;
+            color: #ddd; /* Серый текст */
+        }
+
+        .about-company-bottom__sub-title, .about-company-bottom__title {
+            font-weight: bold;
+            margin: 20px 0;
+        }
+    </style>
+
 
     <div class="container">
         <h1 class="title title_page">Спецпредложения в городе Астана</h1>
@@ -925,7 +1087,7 @@
             </div>
 
         </section>
-        <div class="catalog__promo-help-white promo-help-white"
+        <div class="catalog__promo-help-white promo-help-white "
              style="background-image: url(/static/img/content/promo-help-white.webp);">
             <div class="promo-help-white__inner">
                 <div class="promo-help-white__title">Нужна помощь?</div>
