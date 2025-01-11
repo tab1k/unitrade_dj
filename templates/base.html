@@ -12,6 +12,7 @@
     <link rel="canonical" href="https://uni-trade.kz/">
     <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css"/>
     <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.css" />
 
 
     <meta itemprop="description" name="description"
@@ -46,7 +47,12 @@
         input.search__input.main-search {
             background-color: #1f1f1f;
         }
+        .cart-modal .my-modal__content {
+            background: #1f1f1f;
+            height: 103vh;
+        }
     </style>
+
 </head>
 <body style="background-color: black;">
 
@@ -58,7 +64,7 @@
 <header class="header">
     <div class="header__inner" style="background-color: black;">
         <div class="header__middle-inner container">
-            <div class="header__middle" style="background-color: black;">
+            <div class="header__middle" style="background-color: black; border-bottom: 1px solid #1f1f1f;">
 
                 <span class="header__logo logo" style="width: 50px;" href="/">
                         <a href="/"><img src="{% static 'images/logo.png' %}" style="height: 50px; width: 50px;"
@@ -276,7 +282,7 @@
         </div>
 
         <div class="modal header-modal search-modal" id="modal-search">
-            <div class="modal__dialog">
+            <div class="modal__dialog" style="margin-top: 30px;">
                 <div class="modal__content">
                     <div class="search-modal__search search" data-action="/search/">
                         <div class="search__inner">
@@ -380,634 +386,40 @@
                 </div>
             </div>
         </div>
-        <!-- Каталог-->
-        <!--        <div class="modal header-modal header-catalog-modal modal_show"-->
-        <!--             id="modal-header-catalog" style="margin-top: 32px;">-->
-        <!--            <div class="modal__overlay" style="">-->
-        <!--                <div class="modal__content animate__animated animate__slideInDown">-->
-        <!--                    <div class="header-catalog-modal__inner" data-toggle-to=" ">-->
-        <!--                        <div class="header-modal__back active" data-toggle-first-add=" ">-->
-        <!--                            <div class="container d-flex justify-content-between">-->
-        <!--                                <button class="header-modal__back-btn" type="button"-->
-        <!--                                        data-modal-toggle="#modal-mobile-menu">-->
-        <!--                                    <svg class="icon icon_prev">-->
-        <!--                                        <use xlink:href="/static/img/svg/symbol/sprite.svg#prev"></use>-->
-        <!--                                    </svg>-->
-        <!--                                    каталог продукции-->
-        <!--                                </button>-->
-        <!--                                &lt;!&ndash;                                &lt;!&ndash; Крестик для закрытия &ndash;&gt;&ndash;&gt;-->
-        <!--                                &lt;!&ndash;                                <button class="modal__close-btn" type="button"&ndash;&gt;-->
-        <!--                                &lt;!&ndash;                                        aria-label="Close modal"&ndash;&gt;-->
-        <!--                                &lt;!&ndash;                                        onclick="document.getElementById('modal-header-catalog').style.display='none';"&ndash;&gt;-->
-        <!--                                &lt;!&ndash;                                        style="background: none; border: none; font-size: 18px; cursor: pointer;">&ndash;&gt;-->
-        <!--                                &lt;!&ndash;                                    ✖&ndash;&gt;-->
-        <!--                                &lt;!&ndash;                                </button>&ndash;&gt;-->
 
-        <!--                            </div>-->
-        <!--                        </div>-->
-        <!--                        <div class="header-modal__back" data-toggle-second-add=" ">-->
-        <!--                            <div class="container d-flex">-->
-        <!--                                <button class="header-modal__back-btn" type="button"-->
-        <!--                                        data-modal-toggle="#modal-mobile-menu">-->
-        <!--                                    <svg class="icon icon_prev">-->
-        <!--                                        <use xlink:href="/static/img/svg/symbol/sprite.svg#prev"></use>-->
-        <!--                                    </svg>-->
-        <!--                                    доп меню-->
-        <!--                                </button>-->
-        <!--                            </div>-->
-        <!--                        </div>-->
-        <!--                        <div class="container-xl header-catalog-menu-container">-->
-        <!--                            <div class="header-catalog-menu-holder" style="max-width: 324px;">-->
-        <!--&lt;!&ndash;                                <div class="toggle toggle_reverse d-lg-flex" style="padding-left: 40px;">&ndash;&gt;-->
-        <!--&lt;!&ndash;                                    <label for="catalog-checkbox"></label>&ndash;&gt;-->
-        <!--&lt;!&ndash;                                    <input type="checkbox" name="name-234" id="catalog-checkbox">&ndash;&gt;-->
-        <!--&lt;!&ndash;                                    <label class="toggle_label" for="catalog-checkbox">По сфере деятельности</label>&ndash;&gt;-->
-        <!--&lt;!&ndash;                                </div>&ndash;&gt;-->
-        <!--                                <ul class="header-catalog-menu active mobile-catalog mt-3" data-toggle-first=" ">-->
-        <!--                                    {% for category in categories %}-->
-        <!--                                    <li class="header-catalog-menu__item" style="padding-left: 40px;"-->
-        <!--                                        data-id-category="260">-->
-        <!--                                        <a class="header-catalog-menu__item-link mobile-category"-->
-        <!--                                           href="{{ category.get_absolute_url }}" data-id-category="260">-->
-        <!--                                            {{ category.name }}-->
-        <!--                                        </a>-->
-
-        <!--                                        {% if category.children.exists %}-->
-        <!--                                        <div class="lvl-holder-1">-->
-        <!--                                            <ul class="header-catalog-menu__submenu lvl-1">-->
-        <!--                                                {% for subcategory in category.children.all %}-->
-        <!--                                                <li class="header-catalog-menu__submenu-item" data-id-category="379"-->
-        <!--                                                    style="padding-left: 40px;">-->
-        <!--                                                    <a class="header-catalog-menu__submenu-link mobile-category"-->
-        <!--                                                       href="{{ subcategory.get_absolute_url }}" data-id-category="379">-->
-        <!--                                                        {{ subcategory.name }}-->
-        <!--                                                    </a>-->
-        <!--                                                    {% if subcategory.children.exists %}-->
-        <!--                                                    <div class="lvl-holder-2">-->
-        <!--                                                        <ul class="header-catalog-menu__submenu lvl-2">-->
-        <!--                                                            {% for child in subcategory.children.all %}-->
-        <!--                                                            <li class="header-catalog-menu__submenu-item"-->
-        <!--                                                                style="padding-left: 40px;">-->
-        <!--                                                                <a class="header-catalog-menu__submenu-link mobile-category"-->
-        <!--                                                                   href="{{ child.get_absolute_url }}">-->
-        <!--                                                                    {{ child.name }}-->
-        <!--                                                                </a>-->
-        <!--                                                                {% if child.children.exists %}-->
-        <!--                                                                <div class="lvl-holder-3">-->
-        <!--                                                                    <ul class="header-catalog-menu__submenu lvl-3">-->
-        <!--                                                                        {% for grandchild in child.children.all %}-->
-        <!--                                                                        <li class="header-catalog-menu__submenu-item"-->
-        <!--                                                                            style="padding-left: 40px;">-->
-        <!--                                                                            <a class="header-catalog-menu__submenu-link mobile-category"-->
-        <!--                                                                               href="{{ grandchild.get_absolute_url }}">-->
-        <!--                                                                                {{ grandchild.name }}-->
-        <!--                                                                            </a>-->
-        <!--                                                                        </li>-->
-        <!--                                                                        {% endfor %}-->
-        <!--                                                                    </ul>-->
-        <!--                                                                    <a href="{{ child.get_absolute_url }}"-->
-        <!--                                                                       class="header-catalog-menu__view-all">Посмотреть-->
-        <!--                                                                        всё</a>-->
-        <!--                                                                </div>-->
-        <!--                                                                {% else %}-->
-        <!--                                                                <div class="lvl-holder-3">-->
-        <!--                                                                    <ul class="header-catalog-menu__submenu lvl-3">-->
-        <!--                                                                        {% for product in child.products.all %}-->
-        <!--                                                                        <li class="header-catalog-menu__submenu-item"-->
-        <!--                                                                            style="padding-left: 40px;">-->
-        <!--                                                                            <a class="header-catalog-menu__submenu-link mobile-category"-->
-        <!--                                                                               href="{{ product.get_absolute_url }}">-->
-        <!--                                                                                {{ product.name }}-->
-        <!--                                                                            </a>-->
-        <!--                                                                        </li>-->
-        <!--                                                                        {% endfor %}-->
-        <!--                                                                    </ul>-->
-        <!--                                                                    <a href="{{ child.get_absolute_url }}"-->
-        <!--                                                                       class="header-catalog-menu__view-all">Посмотреть-->
-        <!--                                                                        всё</a>-->
-        <!--                                                                </div>-->
-        <!--                                                                {% endif %}-->
-
-        <!--                                                            </li>-->
-        <!--                                                            {% endfor %}-->
-        <!--                                                        </ul>-->
-        <!--                                                        <a href="/catalog/instrumentalnaya-stal/"-->
-        <!--                                                           class="header-catalog-menu__view-all">Посмотреть всё</a>-->
-        <!--                                                    </div>-->
-        <!--                                                    {% endif %}-->
-        <!--                                                </li>-->
-        <!--                                                {% endfor %}-->
-        <!--                                            </ul>-->
-        <!--                                            <a href="/catalog/specialnye-stali/" class="header-catalog-menu__view-all">Посмотреть-->
-        <!--                                                всё</a>-->
-        <!--                                        </div>-->
-        <!--                                        {% endif %}-->
-        <!--                                    </li>-->
-        <!--                                    {% endfor %}-->
-        <!--                                </ul>-->
-
-        <!--                                <style>-->
-        <!--                                    .header-catalog-menu {-->
-        <!--                                        max-height: 70vh; /* Ограничиваем высоту до 80% видимой высоты экрана */-->
-        <!--                                        overflow-y: auto; /* Включаем вертикальный скролл */-->
-        <!--                                        scrollbar-width: thin; /* Тонкий скролл для Firefox */-->
-        <!--                                        scrollbar-color: #ccc transparent; /* Цвет скролла */-->
-        <!--                                    }-->
-
-        <!--                                        /* Стилизация скроллбара для Chrome/Edge */-->
-        <!--                                        .header-catalog-menu::-webkit-scrollbar {-->
-        <!--                                            width: 7px;-->
-        <!--                                        }-->
-
-        <!--                                        .header-catalog-menu::-webkit-scrollbar-thumb {-->
-        <!--                                            background-color: #ccc; /* Цвет ползунка */-->
-        <!--                                            border-radius: 4px; /* Округленные углы */-->
-        <!--                                        }-->
-
-        <!--                                        .header-catalog-menu::-webkit-scrollbar-track {-->
-        <!--                                            background: transparent; /* Фон трека */-->
-        <!--                                        }-->
-
-        <!--                                </style>-->
-
-        <!--                                <ul class="header-catalog-menu mobile-catalog" data-toggle-second=" ">-->
-        <!--                                    <li class="header-catalog-menu__item" style="padding-left: 40px;"-->
-        <!--                                        data-id-category="4">-->
-        <!--                                        <a class="header-catalog-menu__item-link mobile-category"-->
-        <!--                                           href="/catalog/stroitelstvo/" data-id-category="4">-->
-        <!--                                            Строительство-->
-        <!--                                            <svg class="icon icon_arrow-right-min" data-id-category="4">-->
-        <!--                                                <use xlink:href="/static/img/svg/symbol/sprite.svg#arrow-right-min"></use>-->
-        <!--                                            </svg>-->
-        <!--                                        </a>-->
-        <!--                                        <div class="lvl-holder-1">-->
-        <!--                                            <ul class="header-catalog-menu__submenu lvl-1">-->
-        <!--                                                <li class="header-catalog-menu__submenu-item" data-id-category="2570"-->
-        <!--                                                    style="padding-left: 40px;">-->
-        <!--                                                    <a class="header-catalog-menu__submenu-link mobile-category"-->
-        <!--                                                       href="/catalog/kronshtejn-opor-osvesheniya/"-->
-        <!--                                                       data-id-category="2570">Кронштейны опор освещения</a>-->
-        <!--                                                </li>-->
-        <!--                                                <li class="header-catalog-menu__submenu-item" data-id-category="1575"-->
-        <!--                                                    style="padding-left: 40px;">-->
-        <!--                                                    <a class="header-catalog-menu__submenu-link mobile-category"-->
-        <!--                                                       href="/catalog/kommunikacii/" data-id-category="1575">Коммуникации-->
-        <!--                                                        жби</a>-->
-        <!--                                                </li>-->
-        <!--                                                <li class="header-catalog-menu__submenu-item" data-id-category="1841"-->
-        <!--                                                    style="padding-left: 40px;">-->
-        <!--                                                    <a class="header-catalog-menu__submenu-link mobile-category"-->
-        <!--                                                       href="/catalog/dorozhnye-ograzhdeniya/" data-id-category="1841">Дорожные-->
-        <!--                                                        ограждения</a>-->
-        <!--                                                </li>-->
-        <!--                                                <li class="header-catalog-menu__submenu-item" data-id-category="1304"-->
-        <!--                                                    style="padding-left: 40px;">-->
-        <!--                                                    <a class="header-catalog-menu__submenu-link mobile-category"-->
-        <!--                                                       href="/catalog/ventilyaciya/"-->
-        <!--                                                       data-id-category="1304">Вентиляция</a>-->
-        <!--                                                </li>-->
-        <!--                                                <li class="header-catalog-menu__submenu-item" data-id-category="1460"-->
-        <!--                                                    style="padding-left: 40px;">-->
-        <!--                                                    <a class="header-catalog-menu__submenu-link mobile-category"-->
-        <!--                                                       href="/catalog/kanalizaciya/"-->
-        <!--                                                       data-id-category="1460">Канализация</a>-->
-        <!--                                                </li>-->
-        <!--                                                <li class="header-catalog-menu__submenu-item" data-id-category="2525"-->
-        <!--                                                    style="padding-left: 40px;">-->
-        <!--                                                    <a class="header-catalog-menu__submenu-link mobile-category"-->
-        <!--                                                       href="/catalog/opora-osvesheniya/" data-id-category="2525">Опоры-->
-        <!--                                                        освещения</a>-->
-        <!--                                                </li>-->
-        <!--                                                <li class="header-catalog-menu__submenu-item" data-id-category="2569"-->
-        <!--                                                    style="padding-left: 40px;">-->
-        <!--                                                    <a class="header-catalog-menu__submenu-link mobile-category"-->
-        <!--                                                       href="/catalog/machta-osvesheniya/" data-id-category="2569">Мачты-->
-        <!--                                                        освещения</a>-->
-        <!--                                                </li>-->
-        <!--                                                <li class="header-catalog-menu__submenu-item" data-id-category="1706"-->
-        <!--                                                    style="padding-left: 40px;">-->
-        <!--                                                    <a class="header-catalog-menu__submenu-link mobile-category"-->
-        <!--                                                       href="/catalog/profnastil/"-->
-        <!--                                                       data-id-category="1706">Профнастил</a>-->
-        <!--                                                </li>-->
-        <!--                                                <li class="header-catalog-menu__submenu-item" data-id-category="2538"-->
-        <!--                                                    style="padding-left: 40px;">-->
-        <!--                                                    <a class="header-catalog-menu__submenu-link mobile-category"-->
-        <!--                                                       href="/catalog/shumozashitnye-ekrany/" data-id-category="2538">Шумозащитные-->
-        <!--                                                        экраны</a>-->
-        <!--                                                </li>-->
-        <!--                                                <li class="header-catalog-menu__submenu-item" data-id-category="2081"-->
-        <!--                                                    style="padding-left: 40px;">-->
-        <!--                                                    <a class="header-catalog-menu__submenu-link mobile-category"-->
-        <!--                                                       href="/catalog/metallocherepica-mp/" data-id-category="2081">Металлочерепица</a>-->
-        <!--                                                </li>-->
-        <!--                                                <li class="header-catalog-menu__submenu-item" data-id-category="1885"-->
-        <!--                                                    style="padding-left: 40px;">-->
-        <!--                                                    <a class="header-catalog-menu__submenu-link mobile-category"-->
-        <!--                                                       href="/catalog/krany-balki/"-->
-        <!--                                                       data-id-category="1885">Кран-балка</a>-->
-        <!--                                                </li>-->
-        <!--                                                <li class="header-catalog-menu__submenu-item" data-id-category="1924"-->
-        <!--                                                    style="padding-left: 40px;">-->
-        <!--                                                    <a class="header-catalog-menu__submenu-link mobile-category"-->
-        <!--                                                       href="/catalog/metallicheskie-konstrukcii/"-->
-        <!--                                                       data-id-category="1924">Металлические конструкции</a>-->
-        <!--                                                </li>-->
-        <!--                                                <li class="header-catalog-menu__submenu-item" data-id-category="1946"-->
-        <!--                                                    style="padding-left: 40px;">-->
-        <!--                                                    <a class="header-catalog-menu__submenu-link mobile-category"-->
-        <!--                                                       href="/catalog/kolyuchaya-provoloka/" data-id-category="1946">Колючие-->
-        <!--                                                        проволоки</a>-->
-        <!--                                                </li>-->
-        <!--                                                <li class="header-catalog-menu__submenu-item" data-id-category="1862"-->
-        <!--                                                    style="padding-left: 40px;">-->
-        <!--                                                    <a class="header-catalog-menu__submenu-link mobile-category"-->
-        <!--                                                       href="/catalog/vodostochnye-sistemy/" data-id-category="1862">Водосточные-->
-        <!--                                                        системы</a>-->
-        <!--                                                </li>-->
-        <!--                                                <li class="header-catalog-menu__submenu-item" data-id-category="1983"-->
-        <!--                                                    style="padding-left: 40px;">-->
-        <!--                                                    <a class="header-catalog-menu__submenu-link mobile-category"-->
-        <!--                                                       href="/catalog/shpunty-larsena/" data-id-category="1983">Шпунты-->
-        <!--                                                        Ларсена</a>-->
-        <!--                                                </li>-->
-        <!--                                                <li class="header-catalog-menu__submenu-item" data-id-category="2030"-->
-        <!--                                                    style="padding-left: 40px;">-->
-        <!--                                                    <a class="header-catalog-menu__submenu-link mobile-category"-->
-        <!--                                                       href="/catalog/stroitelnye-truby/" data-id-category="2030">Строительные-->
-        <!--                                                        трубы</a>-->
-        <!--                                                </li>-->
-        <!--                                                <li class="header-catalog-menu__submenu-item" data-id-category="2074"-->
-        <!--                                                    style="padding-left: 40px;">-->
-        <!--                                                    <a class="header-catalog-menu__submenu-link mobile-category"-->
-        <!--                                                       href="/catalog/stalnye-fundamenty/" data-id-category="2074">Стальные-->
-        <!--                                                        фундаменты</a>-->
-        <!--                                                </li>-->
-        <!--                                                <li class="header-catalog-menu__submenu-item" data-id-category="2085"-->
-        <!--                                                    style="padding-left: 40px;">-->
-        <!--                                                    <a class="header-catalog-menu__submenu-link mobile-category"-->
-        <!--                                                       href="/catalog/ankernye-gruppy/" data-id-category="2085">Анкерные-->
-        <!--                                                        группы</a>-->
-        <!--                                                </li>-->
-        <!--                                                <li class="header-catalog-menu__submenu-item" data-id-category="1720"-->
-        <!--                                                    style="padding-left: 40px;">-->
-        <!--                                                    <a class="header-catalog-menu__submenu-link mobile-category"-->
-        <!--                                                       href="/catalog/asbest/" data-id-category="1720">Асбестовые-->
-        <!--                                                        изделия</a>-->
-        <!--                                                </li>-->
-        <!--                                                <li class="header-catalog-menu__submenu-item" data-id-category="901"-->
-        <!--                                                    style="padding-left: 40px;">-->
-        <!--                                                    <a class="header-catalog-menu__submenu-link mobile-category"-->
-        <!--                                                       href="/catalog/reshetchatye-nastily/" data-id-category="901">Решетчатые-->
-        <!--                                                        настилы</a>-->
-        <!--                                                </li>-->
-        <!--                                                <li class="header-catalog-menu__submenu-item" data-id-category="1342"-->
-        <!--                                                    style="padding-left: 40px;">-->
-        <!--                                                    <a class="header-catalog-menu__submenu-link mobile-category"-->
-        <!--                                                       href="/catalog/kranovye-relsy/" data-id-category="1342">Крановые-->
-        <!--                                                        рельсы</a>-->
-        <!--                                                </li>-->
-        <!--                                            </ul>-->
-        <!--                                            <a href="/catalog/stroitelstvo/" class="header-catalog-menu__view-all">Посмотреть-->
-        <!--                                                всё</a>-->
-        <!--                                        </div>-->
-        <!--                                    </li>-->
-        <!--                                    <li class="header-catalog-menu__item" style="padding-left: 40px;"-->
-        <!--                                        data-id-category="6">-->
-        <!--                                        <a class="header-catalog-menu__item-link mobile-category"-->
-        <!--                                           href="/catalog/zheleznodorozhnyj-transport/" data-id-category="6">-->
-        <!--                                            Материалы ВСП-->
-        <!--                                            <svg class="icon icon_arrow-right-min" data-id-category="6">-->
-        <!--                                                <use xlink:href="/static/img/svg/symbol/sprite.svg#arrow-right-min"></use>-->
-        <!--                                            </svg>-->
-        <!--                                        </a>-->
-        <!--                                        <div class="lvl-holder-1">-->
-        <!--                                            <ul class="header-catalog-menu__submenu lvl-1">-->
-        <!--                                                <li class="header-catalog-menu__submenu-item" data-id-category="2566"-->
-        <!--                                                    style="padding-left: 40px;">-->
-        <!--                                                    <a class="header-catalog-menu__submenu-link mobile-category"-->
-        <!--                                                       href="/catalog/strelochnyj-perevod/" data-id-category="2566">Стрелочные-->
-        <!--                                                        переводы</a>-->
-        <!--                                                </li>-->
-        <!--                                                <li class="header-catalog-menu__submenu-item" data-id-category="2562"-->
-        <!--                                                    style="padding-left: 40px;">-->
-        <!--                                                    <a class="header-catalog-menu__submenu-link mobile-category"-->
-        <!--                                                       href="/catalog/bashmak-zheleznodorozhnyj/"-->
-        <!--                                                       data-id-category="2562">Башмаки железнодорожные</a>-->
-        <!--                                                </li>-->
-        <!--                                                <li class="header-catalog-menu__submenu-item" data-id-category="2563"-->
-        <!--                                                    style="padding-left: 40px;">-->
-        <!--                                                    <a class="header-catalog-menu__submenu-link mobile-category"-->
-        <!--                                                       href="/catalog/gajka-klemmnaya-i-stykovaya/"-->
-        <!--                                                       data-id-category="2563">Гайки клеммные и стыковые</a>-->
-        <!--                                                </li>-->
-        <!--                                                <li class="header-catalog-menu__submenu-item" data-id-category="2565"-->
-        <!--                                                    style="padding-left: 40px;">-->
-        <!--                                                    <a class="header-catalog-menu__submenu-link mobile-category"-->
-        <!--                                                       href="/catalog/klemma-pk/" data-id-category="2565">Клеммы ПК</a>-->
-        <!--                                                </li>-->
-        <!--                                                <li class="header-catalog-menu__submenu-item" data-id-category="2564"-->
-        <!--                                                    style="padding-left: 40px;">-->
-        <!--                                                    <a class="header-catalog-menu__submenu-link mobile-category"-->
-        <!--                                                       href="/catalog/shajba-klemmnaya-i-stykovaya/"-->
-        <!--                                                       data-id-category="2564">Шайбы клеммные и стыковые</a>-->
-        <!--                                                </li>-->
-        <!--                                                <li class="header-catalog-menu__submenu-item" data-id-category="2552"-->
-        <!--                                                    style="padding-left: 40px;">-->
-        <!--                                                    <a class="header-catalog-menu__submenu-link mobile-category"-->
-        <!--                                                       href="/catalog/bolt-stykovoj/" data-id-category="2552">Болты-->
-        <!--                                                        стыковые</a>-->
-        <!--                                                </li>-->
-        <!--                                                <li class="header-catalog-menu__submenu-item" data-id-category="2553"-->
-        <!--                                                    style="padding-left: 40px;">-->
-        <!--                                                    <a class="header-catalog-menu__submenu-link mobile-category"-->
-        <!--                                                       href="/catalog/bolt-zakladnoj/" data-id-category="2553">Болты-->
-        <!--                                                        закладные</a>-->
-        <!--                                                </li>-->
-        <!--                                                <li class="header-catalog-menu__submenu-item" data-id-category="2554"-->
-        <!--                                                    style="padding-left: 40px;">-->
-        <!--                                                    <a class="header-catalog-menu__submenu-link mobile-category"-->
-        <!--                                                       href="/catalog/bolt-klemmnyj/" data-id-category="2554">Болты-->
-        <!--                                                        клеммные</a>-->
-        <!--                                                </li>-->
-        <!--                                                <li class="header-catalog-menu__submenu-item" data-id-category="2555"-->
-        <!--                                                    style="padding-left: 40px;">-->
-        <!--                                                    <a class="header-catalog-menu__submenu-link mobile-category"-->
-        <!--                                                       href="/catalog/nakladka-relsovaya/" data-id-category="2555">Накладки-->
-        <!--                                                        рельсовые</a>-->
-        <!--                                                </li>-->
-        <!--                                                <li class="header-catalog-menu__submenu-item" data-id-category="2556"-->
-        <!--                                                    style="padding-left: 40px;">-->
-        <!--                                                    <a class="header-catalog-menu__submenu-link mobile-category"-->
-        <!--                                                       href="/catalog/kostyl-putevoy/" data-id-category="2556">Костыли-->
-        <!--                                                        путевые</a>-->
-        <!--                                                </li>-->
-        <!--                                                <li class="header-catalog-menu__submenu-item" data-id-category="2557"-->
-        <!--                                                    style="padding-left: 40px;">-->
-        <!--                                                    <a class="header-catalog-menu__submenu-link mobile-category"-->
-        <!--                                                       href="/catalog/podkladka-pod-rels/" data-id-category="2557">Подкладки-->
-        <!--                                                        под рельс</a>-->
-        <!--                                                </li>-->
-        <!--                                                <li class="header-catalog-menu__submenu-item" data-id-category="2559"-->
-        <!--                                                    style="padding-left: 40px;">-->
-        <!--                                                    <a class="header-catalog-menu__submenu-link mobile-category"-->
-        <!--                                                       href="/catalog/shpala/" data-id-category="2559">Шпалы</a>-->
-        <!--                                                </li>-->
-        <!--                                                <li class="header-catalog-menu__submenu-item" data-id-category="2560"-->
-        <!--                                                    style="padding-left: 40px;">-->
-        <!--                                                    <a class="header-catalog-menu__submenu-link mobile-category"-->
-        <!--                                                       href="/catalog/kolodka-tormoznaya/" data-id-category="2560">Колодки-->
-        <!--                                                        тормозные железнодорожные</a>-->
-        <!--                                                </li>-->
-        <!--                                                <li class="header-catalog-menu__submenu-item" data-id-category="2561"-->
-        <!--                                                    style="padding-left: 40px;">-->
-        <!--                                                    <a class="header-catalog-menu__submenu-link mobile-category"-->
-        <!--                                                       href="/catalog/izolyaciya-dlya-relsov/" data-id-category="2561">Изоляция-->
-        <!--                                                        для рельсов</a>-->
-        <!--                                                </li>-->
-        <!--                                                <li class="header-catalog-menu__submenu-item" data-id-category="886"-->
-        <!--                                                    style="padding-left: 40px;">-->
-        <!--                                                    <a class="header-catalog-menu__submenu-link mobile-category"-->
-        <!--                                                       href="/catalog/zheleznodorozhnye-relsy/" data-id-category="886">Железнодорожные-->
-        <!--                                                        рельсы</a>-->
-        <!--                                                </li>-->
-        <!--                                                <li class="header-catalog-menu__submenu-item" data-id-category="1589"-->
-        <!--                                                    style="padding-left: 40px;">-->
-        <!--                                                    <a class="header-catalog-menu__submenu-link mobile-category"-->
-        <!--                                                       href="/catalog/zheleznodorozhnye-prokladki/"-->
-        <!--                                                       data-id-category="1589">Железнодорожные прокладки</a>-->
-        <!--                                                </li>-->
-        <!--                                                <li class="header-catalog-menu__submenu-item" data-id-category="1728"-->
-        <!--                                                    style="padding-left: 40px;">-->
-        <!--                                                    <a class="header-catalog-menu__submenu-link mobile-category"-->
-        <!--                                                       href="/catalog/zheleznodorozhnye-planki/"-->
-        <!--                                                       data-id-category="1728">Железнодорожные планки</a>-->
-        <!--                                                </li>-->
-        <!--                                                <li class="header-catalog-menu__submenu-item" data-id-category="1342"-->
-        <!--                                                    style="padding-left: 40px;">-->
-        <!--                                                    <a class="header-catalog-menu__submenu-link mobile-category"-->
-        <!--                                                       href="/catalog/kranovye-relsy/" data-id-category="1342">Крановые-->
-        <!--                                                        рельсы</a>-->
-        <!--                                                </li>-->
-        <!--                                            </ul>-->
-        <!--                                            <a href="/catalog/zheleznodorozhnyj-transport/"-->
-        <!--                                               class="header-catalog-menu__view-all">Посмотреть всё</a>-->
-        <!--                                        </div>-->
-        <!--                                    </li>-->
-        <!--                                    <li class="header-catalog-menu__item" style="padding-left: 40px;"-->
-        <!--                                        data-id-category="7">-->
-        <!--                                        <a class="header-catalog-menu__item-link mobile-category"-->
-        <!--                                           href="/catalog/pishevaya-promyshlennost/" data-id-category="7">-->
-        <!--                                            Пищевая промышленность-->
-        <!--                                            <svg class="icon icon_arrow-right-min" data-id-category="7">-->
-        <!--                                                <use xlink:href="/static/img/svg/symbol/sprite.svg#arrow-right-min"></use>-->
-        <!--                                            </svg>-->
-        <!--                                        </a>-->
-        <!--                                        <div class="lvl-holder-1">-->
-        <!--                                            <ul class="header-catalog-menu__submenu lvl-1">-->
-        <!--                                                <li class="header-catalog-menu__submenu-item" data-id-category="1601"-->
-        <!--                                                    style="padding-left: 40px;">-->
-        <!--                                                    <a class="header-catalog-menu__submenu-link mobile-category"-->
-        <!--                                                       href="/catalog/molochnye-mufty/" data-id-category="1601">Молочные-->
-        <!--                                                        муфты</a>-->
-        <!--                                                </li>-->
-        <!--                                                <li class="header-catalog-menu__submenu-item" data-id-category="1393"-->
-        <!--                                                    style="padding-left: 40px;">-->
-        <!--                                                    <a class="header-catalog-menu__submenu-link mobile-category"-->
-        <!--                                                       href="/catalog/pishevye-perehody/" data-id-category="1393">Переходы-->
-        <!--                                                        нержавеющие</a>-->
-        <!--                                                </li>-->
-        <!--                                                <li class="header-catalog-menu__submenu-item" data-id-category="1675"-->
-        <!--                                                    style="padding-left: 40px;">-->
-        <!--                                                    <a class="header-catalog-menu__submenu-link mobile-category"-->
-        <!--                                                       href="/catalog/pishevye-otvody/" data-id-category="1675">Пищевые-->
-        <!--                                                        отводы</a>-->
-        <!--                                                </li>-->
-        <!--                                                <li class="header-catalog-menu__submenu-item" data-id-category="1790"-->
-        <!--                                                    style="padding-left: 40px;">-->
-        <!--                                                    <a class="header-catalog-menu__submenu-link mobile-category"-->
-        <!--                                                       href="/catalog/pishevye-sharovye-kran/" data-id-category="1790">Пищевые-->
-        <!--                                                        шаровые краны</a>-->
-        <!--                                                </li>-->
-        <!--                                                <li class="header-catalog-menu__submenu-item" data-id-category="1866"-->
-        <!--                                                    style="padding-left: 40px;">-->
-        <!--                                                    <a class="header-catalog-menu__submenu-link mobile-category"-->
-        <!--                                                       href="/catalog/pishevye-zaglushki/" data-id-category="1866">Пищевые-->
-        <!--                                                        заглушки</a>-->
-        <!--                                                </li>-->
-        <!--                                                <li class="header-catalog-menu__submenu-item" data-id-category="51"-->
-        <!--                                                    style="padding-left: 40px;">-->
-        <!--                                                    <a class="header-catalog-menu__submenu-link mobile-category"-->
-        <!--                                                       href="/catalog/pishevye-nasosy/" data-id-category="51">Пищевые-->
-        <!--                                                        насосы</a>-->
-        <!--                                                </li>-->
-        <!--                                                <li class="header-catalog-menu__submenu-item" data-id-category="1829"-->
-        <!--                                                    style="padding-left: 40px;">-->
-        <!--                                                    <a class="header-catalog-menu__submenu-link mobile-category"-->
-        <!--                                                       href="/catalog/pishevye-flancy/" data-id-category="1829">Пищевые-->
-        <!--                                                        фланцы</a>-->
-        <!--                                                </li>-->
-        <!--                                                <li class="header-catalog-menu__submenu-item" data-id-category="1740"-->
-        <!--                                                    style="padding-left: 40px;">-->
-        <!--                                                    <a class="header-catalog-menu__submenu-link mobile-category"-->
-        <!--                                                       href="/catalog/pishevye-obratnye-klapany/"-->
-        <!--                                                       data-id-category="1740">Пищевые обратные клапаны</a>-->
-        <!--                                                </li>-->
-        <!--                                                <li class="header-catalog-menu__submenu-item" data-id-category="1902"-->
-        <!--                                                    style="padding-left: 40px;">-->
-        <!--                                                    <a class="header-catalog-menu__submenu-link mobile-category"-->
-        <!--                                                       href="/catalog/pishevye-trojniki/" data-id-category="1902">Пищевые-->
-        <!--                                                        тройники</a>-->
-        <!--                                                </li>-->
-        <!--                                                <li class="header-catalog-menu__submenu-item" data-id-category="1933"-->
-        <!--                                                    style="padding-left: 40px;">-->
-        <!--                                                    <a class="header-catalog-menu__submenu-link mobile-category"-->
-        <!--                                                       href="/catalog/pishevye-krestoviny/" data-id-category="1933">Пищевые-->
-        <!--                                                        крестовины</a>-->
-        <!--                                                </li>-->
-        <!--                                                <li class="header-catalog-menu__submenu-item" data-id-category="1967"-->
-        <!--                                                    style="padding-left: 40px;">-->
-        <!--                                                    <a class="header-catalog-menu__submenu-link mobile-category"-->
-        <!--                                                       href="/catalog/kolcevye-pishevye-lyuki/" data-id-category="1967">Кольцевые-->
-        <!--                                                        пищевые люки</a>-->
-        <!--                                                </li>-->
-        <!--                                                <li class="header-catalog-menu__submenu-item" data-id-category="1505"-->
-        <!--                                                    style="padding-left: 40px;">-->
-        <!--                                                    <a class="header-catalog-menu__submenu-link mobile-category"-->
-        <!--                                                       href="/catalog/pishevye-truby/" data-id-category="1505">Пищевые-->
-        <!--                                                        трубы</a>-->
-        <!--                                                </li>-->
-        <!--                                            </ul>-->
-        <!--                                            <a href="/catalog/pishevaya-promyshlennost/"-->
-        <!--                                               class="header-catalog-menu__view-all">Посмотреть всё</a>-->
-        <!--                                        </div>-->
-        <!--                                    </li>-->
-        <!--                                    <li class="header-catalog-menu__item" style="padding-left: 40px;"-->
-        <!--                                        data-id-category="3">-->
-        <!--                                        <a class="header-catalog-menu__item-link mobile-category"-->
-        <!--                                           href="/catalog/himicheskaya-promyshlennost/" data-id-category="3">-->
-        <!--                                            Химическая промышленность-->
-        <!--                                            <svg class="icon icon_arrow-right-min" data-id-category="3">-->
-        <!--                                                <use xlink:href="/static/img/svg/symbol/sprite.svg#arrow-right-min"></use>-->
-        <!--                                            </svg>-->
-        <!--                                        </a>-->
-        <!--                                        <div class="lvl-holder-1">-->
-        <!--                                            <ul class="header-catalog-menu__submenu lvl-1">-->
-        <!--                                                <li class="header-catalog-menu__submenu-item" data-id-category="1332"-->
-        <!--                                                    style="padding-left: 40px;">-->
-        <!--                                                    <a class="header-catalog-menu__submenu-link mobile-category"-->
-        <!--                                                       href="/catalog/kislotostojkie-stali/" data-id-category="1332">Кислотостойкие-->
-        <!--                                                        стали</a>-->
-        <!--                                                </li>-->
-        <!--                                            </ul>-->
-        <!--                                            <a href="/catalog/himicheskaya-promyshlennost/"-->
-        <!--                                               class="header-catalog-menu__view-all">Посмотреть всё</a>-->
-        <!--                                        </div>-->
-        <!--                                    </li>-->
-        <!--                                    <li class="header-catalog-menu__item" style="padding-left: 40px;"-->
-        <!--                                        data-id-category="2">-->
-        <!--                                        <a class="header-catalog-menu__item-link mobile-category"-->
-        <!--                                           href="/catalog/sudostroenie/" data-id-category="2">-->
-        <!--                                            Судостроение-->
-        <!--                                            <svg class="icon icon_arrow-right-min" data-id-category="2">-->
-        <!--                                                <use xlink:href="/static/img/svg/symbol/sprite.svg#arrow-right-min"></use>-->
-        <!--                                            </svg>-->
-        <!--                                        </a>-->
-        <!--                                        <div class="lvl-holder-1">-->
-        <!--                                            <ul class="header-catalog-menu__submenu lvl-1">-->
-        <!--                                                <li class="header-catalog-menu__submenu-item" data-id-category="1454"-->
-        <!--                                                    style="padding-left: 40px;">-->
-        <!--                                                    <a class="header-catalog-menu__submenu-link mobile-category"-->
-        <!--                                                       href="/catalog/alyuminievyj-polosobulb/" data-id-category="1454">Алюминиевый-->
-        <!--                                                        полособульб</a>-->
-        <!--                                                </li>-->
-        <!--                                                <li class="header-catalog-menu__submenu-item" data-id-category="341"-->
-        <!--                                                    style="padding-left: 40px;">-->
-        <!--                                                    <a class="header-catalog-menu__submenu-link mobile-category"-->
-        <!--                                                       href="/catalog/sudostroitelnaya-stal/" data-id-category="341">Судостроительные-->
-        <!--                                                        стали</a>-->
-        <!--                                                </li>-->
-        <!--                                            </ul>-->
-        <!--                                            <a href="/catalog/sudostroenie/" class="header-catalog-menu__view-all">Посмотреть-->
-        <!--                                                всё</a>-->
-        <!--                                        </div>-->
-        <!--                                    </li>-->
-        <!--                                    <li class="header-catalog-menu__item" style="padding-left: 40px;"-->
-        <!--                                        data-id-category="1">-->
-        <!--                                        <a class="header-catalog-menu__item-link mobile-category"-->
-        <!--                                           href="/catalog/neftegazovaya-promyshlennost/" data-id-category="1">Нефтегазовая-->
-        <!--                                            промышленность</a>-->
-        <!--                                    </li>-->
-        <!--                                </ul>-->
-
-        <!--                                <a class="header-catalog-menu__view-all" href="/catalog/">-->
-        <!--                                    data-href="Здесь ссылка на страницу каталог продукции"&gt;Посмотреть все</a>-->
-        <!--                            </div>-->
-        <!--                            <div class="header-catalog-menu__wrapper-fast-order">-->
-        <!--                                <div class="header-catalog-menu__fast-order" data-call-modal="order-click"-->
-        <!--                                     style="background-image: url(&quot;/static/img/content/fast-order.webp&quot;); right: 16px;">-->
-        <!--                                    <div class="header-catalog-menu__fast-order-top-text">Нет времени смотреть каталог?-->
-        <!--                                    </div>-->
-        <!--                                    <div class="header-catalog-menu__fast-order-title-text">Оформите быстрый заказ!-->
-        <!--                                    </div>-->
-        <!--                                    <div class="header-catalog-menu__fast-order-description-text">Займет всего 2 минуты,-->
-        <!--                                        после чего мы вышлем подготовленный список товаров с ценами-->
-        <!--                                    </div>-->
-        <!--                                </div>-->
-        <!--                            </div>-->
-        <!--                        </div>-->
-        <!--                    </div>-->
-        <!--                </div>-->
-        <!--            </div>-->
-        <!--        </div>-->
-        <!--        <style>-->
-        <!--            @media (max-width: 991px) {-->
-        <!--                .header-modal.modal .modal__overlay {-->
-        <!--                    display: none !important;-->
-        <!--                }-->
-        <!--            }-->
-        <!--        </style>-->
         <div class="modal modal-mobile-menu" id="modal-mobile-menu">
             <div class="modal__overlay" style="margin-top: 27px;">
                 <div class="modal__content animate__animated animate__slideInLeft">
                     <div class="mobile-menu container">
-                        <a href="{% url 'app:category' %}" class="mobile-menu__button mobile-menu__catalog"
+                        <a style="background-color: #1f1f1f; color: white;" href="{% url 'app:category' %}" class="mobile-menu__button mobile-menu__catalog"
                            type="button">
                             Каталог 📕
                         </a>
-                        <span class="mobile-menu__button header__menu-link"
+                        <span style="background-color: #1f1f1f; color: white;" class="mobile-menu__button header__menu-link"
                               onclick="ym(window.uni-trade.ym_id, 'reachGoal', 'click_fast_order');"
                               data-call-modal="order-click">Заказ в 1 клик</span>
                         <ol class="mobile-menu__menu">
                             <li class="mobile-menu__menu-item"></li>
                             <li class="mobile-menu__menu-item">
-                                <a class="header__menu-link" href="/">
+                                <a style="color: white;" class="header__menu-link" href="/">
                                     Главная
                                 </a>
                             </li>
 
                             <li class="mobile-menu__menu-item">
-                                <a class="header__menu-link" href="{% url 'app:services' %}">
+                                <a style="color: white;" class="header__menu-link" href="{% url 'app:services' %}">
                                     Услуги
                                 </a>
                             </li>
 
-                            <li class="mobile-menu__menu-item">
-                                <div class="header__menu-link" data-modal-show="#modal-buyers-catalog">
-                                    Покупателям
-                                    <svg class=" icon icon_next">
-                                        <use xlink:href="images/sprite.svg#next"></use>
-                                    </svg>
-                                </div>
-                            </li>
                             <li class="mobile-menu__menu-item"></li>
                             <li class="mobile-menu__menu-item">
-                                <a class="header__menu-link" href="{% url 'app:about' %}">
+                                <a style="color: white;" class="header__menu-link" href="{% url 'app:about' %}">
                                     Контакты
                                 </a>
                             </li>
                             <li class="mobile-menu__menu-item">
-                                <div class="header__menu-link" data-modal-show="#modal-company-catalog">
+                                <div style="color: white;" class="header__menu-link" data-modal-show="#modal-company-catalog">
                                     О компании
                                     <svg class=" icon icon_next">
                                         <use xlink:href="images/sprite.svg#next"></use>
@@ -1079,6 +491,12 @@
                 </div>
             </div>
         </div>
+
+        <style>
+            .modal__content.animate__animated.animate__slideInLeft {
+                background-color: black;
+            }
+        </style>
         <!-- Каталог-->
         <div class="modal header-modal header-catalog-modal" id="modal-company-catalog">
             <div class="modal__overlay">
@@ -1224,6 +642,27 @@
                 </div>
             </div>
         </div>
+        <style>
+            .modal-mobile-menu.modal .modal__content {
+                width: 100%;
+                height: 100%;
+                background-color: black;
+                overflow: auto;
+            }
+            .modal-overlay {
+                background-color: black;
+            }
+            .stop-scroll {
+                overflow: hidden;
+                margin-right: auto;
+            }
+            @media (max-width: 991px) {
+                .header__bottom {
+                    padding: 10px 0;
+                    border-bottom: 2px solid #1f1f1f;
+                }
+            }
+        </style>
     </div>
 </header>
 
@@ -1638,14 +1077,6 @@
 
 {% endblock %}
 
-<div class="container">
-    <div class="page-up-holder">
-        <a class="page-up" href="#" data-scroll="body">
-            <span>👆</span>
-        </a>
-    </div>
-</div>
-
 <footer class="footer" style="margin-top: 0px; background-color: black;">
     <div class="container">
         <div class="footer__top">
@@ -1667,7 +1098,7 @@
                     <form class="need-validate footer__top_subscribe_input" id="subscribe_footer" method="post"
                           data-need-notification="true" data-action="/informer/form_send/subscribe_footer/">
                         <input class="input__input" type="email" name="email" placeholder="Электронная почта"
-                               required="">
+                               required="" style="background-color: #1f1f1f; border: none;">
                         <button class="subscription_footer" type="submit">
                             <svg class="icon icon_arrow-right">
                                 <use xlink:href="images/sprite.svg#arrow-right"></use>
@@ -1864,118 +1295,6 @@
     </div>
 </div>
 
-<!--<div class="modal modal-mobile-menu" id="modal-mobile-menu">-->
-<!--    <div class="modal__overlay" style="margin-top: 27px;">-->
-<!--        <div class="modal__content animate__animated animate__slideInLeft">-->
-<!--            <div class="mobile-menu container">-->
-<!--                <button class="mobile-menu__button mobile-menu__catalog" type="button"-->
-<!--                        data-modal-show="#modal-header-catalog">-->
-<!--                    Каталог 📕-->
-<!--                </button>-->
-<!--                <span class="mobile-menu__button header__menu-link"-->
-<!--                      onclick="ym(window.isteels.ym_id, 'reachGoal', 'click_fast_order');"-->
-<!--                      data-call-modal="order-click">Заказ в 1 клик</span>-->
-<!--                <ol class="mobile-menu__menu">-->
-<!--                    <li class="mobile-menu__menu-item"></li>-->
-<!--                    <li class="mobile-menu__menu-item">-->
-<!--                        <a class="header__menu-link" href="/">-->
-<!--                            Главная-->
-<!--                        </a>-->
-<!--                    </li>-->
-
-<!--                    <li class="mobile-menu__menu-item">-->
-<!--                        <a class="header__menu-link" href="{% url 'app:services' %}">-->
-<!--                            Услуги-->
-<!--                        </a>-->
-<!--                    </li>-->
-
-<!--                    <li class="mobile-menu__menu-item">-->
-<!--                        <div class="header__menu-link" data-modal-show="#modal-buyers-catalog">-->
-<!--                            Покупателям-->
-<!--                            <svg class=" icon icon_next">-->
-<!--                                <use xlink:href="images/sprite.svg#next"></use>-->
-<!--                            </svg>-->
-<!--                        </div>-->
-<!--                    </li>-->
-<!--                    <li class="mobile-menu__menu-item"></li>-->
-<!--                    <li class="mobile-menu__menu-item">-->
-<!--                        <a class="header__menu-link" href="/contacts/">-->
-<!--                            Контакты-->
-<!--                        </a>-->
-<!--                    </li>-->
-<!--                    <li class="mobile-menu__menu-item">-->
-<!--                        <div class="header__menu-link" data-modal-show="#modal-company-catalog">-->
-<!--                            О компании-->
-<!--                            <svg class=" icon icon_next">-->
-<!--                                <use xlink:href="images/sprite.svg#next"></use>-->
-<!--                            </svg>-->
-<!--                        </div>-->
-<!--                    </li>-->
-<!--                    <li class="mobile-menu__menu-item"></li>-->
-<!--                </ol>-->
-<!--                <button class="mobile-menu__city link" data-modal-show="#modal-choice-city">-->
-<!--                    📍Астана-->
-<!--                    <svg class="header__city-icon icon icon_arrow-down">-->
-<!--                        <use xlink:href="images/sprite.svg#arrow-down"></use>-->
-<!--                    </svg>-->
-<!--                    <span class="link__icon">-->
-<!--                        <svg class=" icon icon_mark">-->
-<!--                            <use xlink:href="images/sprite.svg#mark"></use>-->
-<!--                        </svg>-->
-<!--                    </span>-->
-<!--                </button>-->
-
-<!--                <button class="mobile-menu__city link mobile-menu-language" type="button">-->
-<!--                    <div class="mobile-language-title">🇷🇺 Русский</div>-->
-<!--                    <svg class="header__city-icon icon icon_arrow-down">-->
-<!--                        <use xlink:href="images/sprite.svg#arrow-down"></use>-->
-<!--                    </svg>-->
-<!--                    <div class="drop-menu__content header__menu-sub">-->
-<!--                        <span class="header__menu-link" data-google-lang="ru"-->
-<!--                              onclick="ym(window.isteels.ym_id, 'reachGoal', 'kz_ru');">🇷🇺 Русский</span>-->
-<!--                        <span class="header__menu-link" data-google-lang="en"-->
-<!--                              onclick="ym(window.isteels.ym_id, 'reachGoal', 'kz_en');">🇺🇸 Английский</span>-->
-<!--                        <span class="header__menu-link" data-google-lang="kk"-->
-<!--                              onclick="ym(window.isteels.ym_id, 'reachGoal', 'kz_kk');">🇰🇿 Казахский</span>-->
-<!--                    </div>-->
-<!--                </button>-->
-
-
-<!--                <a class="mobile-menu__email link mgo-email" href="mailto:info@uni-trade.kz">-->
-<!--                    <span class="mgo-email">info@uni-trade.kz</span>-->
-<!--                    <span class="link__icon">-->
-<!--                        <svg class=" icon icon_email">-->
-<!--                            <use xlink:href="images/sprite.svg#email"></use>-->
-<!--                        </svg>-->
-<!--                    </span>-->
-<!--                </a>-->
-
-<!--                <a class="mobile-menu__phone link" href="https://t.me/isteelskz_bot">Telegram-->
-<!--                    <span class="link__icon">-->
-<!--                            <svg class="icon icon_logos_telegram">-->
-<!--                              <use xlink:href="images/sprite.svg#logos_telegram"></use>-->
-<!--                            </svg>-->
-<!--                        </span>-->
-<!--                </a>-->
-
-<!--                <a class="mobile-menu__phone link" href="https://wa.me/77005330150">WhatsApp-->
-<!--                    <span class="link__icon">-->
-<!--                            <svg class="icon icon_logos_whatsapp">-->
-<!--                              <use xlink:href="images/sprite.svg#logos_whatsapp"></use>-->
-<!--                            </svg>-->
-<!--                        </span>-->
-<!--                </a>-->
-
-<!--                <button class="mobile-menu__callback" data-modal-show="#modal-callback">-->
-<!--                    Обратный звонок-->
-<!--                    <svg class=" icon icon_callback">-->
-<!--                        <use xlink:href="images/sprite.svg#callback"></use>-->
-<!--                    </svg>-->
-<!--                </button>-->
-<!--            </div>-->
-<!--        </div>-->
-<!--    </div>-->
-<!--</div>-->
 
 <div class="modal header-modal callback-modal" id="modal-callback">
     <div class="modal__dialog">
@@ -2156,6 +1475,16 @@
 <script src="{% static 'js/libs.js' %}"></script>
 <script src="{% static 'js/index.js' %}"></script>
 <script src="{% static 'js/tools.js' %}"></script>
-
+<script src="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.js"></script>
+<script>
+  // Инициализация AOS
+  document.addEventListener("DOMContentLoaded", function () {
+    AOS.init({
+      duration: 1000, // Длительность анимации (в миллисекундах)
+      offset: 200,    // Смещение до появления элемента
+      once: true,     // Анимация выполняется только один раз
+    });
+  });
+</script>
 </body>
 </html>

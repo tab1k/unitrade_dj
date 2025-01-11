@@ -4,408 +4,169 @@
 {% block content %}
 <main>
 
+    <div class="container">
 
-    <div class="page-content career-with-us">
-        <section class="hero">
-            <div class="hero__video">
-                <img src="/static/img/openspaceoffice.png" alt="">
-            </div>
-            <div class="hero__box">
-                <div class="hero__box-inner container">
-                    <div class="hero__wrapper-title">
-                        <h1 class="hero__title">Твоя карьера <br> в ГК «UniTrade»</h1>
-                    </div>
-                    <div class="hero__bottom">
-                        <div class="hero__application">
-                            <form class="hero__application-form send-resume need-validate" data-need-notification="true"
-                                  action="/informer/form_send/careers/"><input type="hidden" name="csrfmiddlewaretoken"
-                                                                               value="skBfq5ghGwRzBoE1nEzGPYBtoZAZJZxQVD2VTUfEZyIOnFgH8FNv53RxBy7L4JMw">
-                                <div class="hero__application-element">
-                                    <label for="hero-name">Имя</label>
-                                    <input class="input__input" id="hero-name" placeholder="Иван">
-                                </div>
-                                <div class="hero__application-element">
-                                    <label for="hero-contacts">Телефон</label>
-                                    <input class="input__input" name="phone" id="hero-contacts"
-                                           placeholder="+7 (999) 123-45-67" maxlength="21" minlength="18">
-                                </div>
-                                <div class="hero__application-element">
-                                    <label class="btn--file hero__btn-file" for="order-load-file1">
-                                        Прикрепить резюме
-                                        <svg class="icon icon_add-file">
-                                            <use xlink:href="/static/img/svg/symbol/sprite.svg#add-file"></use>
-                                        </svg>
-                                        <input id="order-load-file1" type="file" name="file_link"
-                                               accept=".doc, .docx, .xls, .xlsx, .txt, .pdf, .rar, .zip">
-                                    </label>
-                                </div>
-                                <button class="hero__application-element btn" type="submit">
-                                    <div class="btn-content"><span>Оставить</span>
-                                        <svg class="icon icon_done-done">
-                                            <use xlink:href="/static/img/svg/symbol/sprite.svg#done-done"></use>
-                                        </svg>
-                                    </div>
-                                </button>
-                            </form>
-                        </div>
-                    </div>
-                    <div class="hero__policy">
-                        Нажимая на кнопку «Отправить», вы соглашаетесь на обработку Ваших
-                        <a href="/policy/" target="_blank">персональных данных</a>
-                    </div>
-                </div>
-            </div>
-        </section>
-        <section class="successful-career">
+        <div class="bread-crumbs">
             <div class="container">
-                <h1 class="page-title">Что такое успешная <br> карьера в UniTrade</h1>
-                <div class="successful-career__wrapper">
-                    <section class="career-up teammasters">
-                        <div class="career-up__info bg-gray br-8"
-                             style="background-image: url(/static/img/careers-card3.png);">
-                            <div class="career-up__title block-title">Знания и опыт</div>
-                            <div class="career-up__desc">
-                                <p>Если ты новичок, мы всему научим. В компании действует крутая система корпоративного
-                                    обучения – как ассортименту нашего каталога, так и искусству переговоров.</p>
-                                <p>Если ты уже гуру продаж, мы сделаем из тебя супер-гуру. А еще предложим особые
-                                    условия на
-                                    старте.</p>
-                            </div>
+                <ul class="bread-crumbs__list" style="list-style: none; padding-left: 0;">
+                    <li class="bread-crumbs__item" itemprop="itemListElement" itemscope=""
+                        itemtype="https://schema.org/ListItem">
+                        <a class="bread-crumbs__link" href="/" itemprop="item"
+                           style="color: #fff; text-decoration: none;">
+                            <span itemprop="name">Главная</span>
+                        </a>
+                        <meta itemprop="position" content="1">
+                    </li>
+                    <li class="bread-crumbs__item" itemprop="itemListElement" itemscope=""
+                        itemtype="https://schema.org/ListItem">
+                        <div class="bread-crumbs__link" itemprop="item">
+                            <span itemprop="name" style="color: #fff;">Контакты</span>
                         </div>
-                        <div class="career-up__block">
-                            <div class="our-masters bg-gray"
-                                 style="background-image: url(/static/img/teammasters.png);">
-                                <div class="our-masters__top">
-                                    <div class="our-masters__title block-title">Мастерство</div>
-                                    <div class="our-masters__desc">Регулярно приглашаем топовых бизнес-спикеров для
-                                        проведения персональных тренингов.
-                                    </div>
-                                </div>
-                                <div class="our-masters__list">
-                                    <div class="our-masters__item">
-                                        <div class="our-masters__name">Максим Батырев</div>
-                                        <div class="our-masters__text">Предприниматель, бизнес-спикер, обладатель премий
-                                            «Коммерческий директор года», «Бизнес-тренер года 2019», «Топ-менеджер 2021»
-                                        </div>
-                                    </div>
-                                    <div class="our-masters__item">
-                                        <div class="our-masters__name">Игорь Рызов</div>
-                                        <div class="our-masters__text">Бизнес-тренер, ведущий эксперт России в области
-                                            деловых переговоров. Обучал менеджерский состав компаний ПАО Сбербанк,
-                                            Мегафон,
-                                            Yandex, Ростелеком
-                                        </div>
-                                    </div>
-                                    <div class="our-masters__item">
-                                        <div class="our-masters__name">Александр Фридман</div>
-                                        <div class="our-masters__text">Действующий международный консультант по
-                                            стратегическому развитию бизнеса. А также автор многих книг в жанре деловой
-                                            литературы
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </section>
-
-                    <!--                <div class="career-up">-->
-                    <!--                    <div class="career-up__info bg-gray br-8" style="background-image: url(/static/img/careers-card2.png);">-->
-                    <!--                        <div class="career-up__title block-title">Карьерный рост</div>-->
-                    <!--                        <div class="career-up__desc">-->
-                    <!--                            <p>С нашей помощью ты можешь через полгода стать руководителем своего собственного отдела-->
-                    <!--                                продаж.</p>-->
-                    <!--                            <p>Мы гордимся, что все директора филиалов «UniTrade» начинали свой путь с позиции-->
-                    <!--                                менеджера и добились невероятных успехов!</p>-->
-                    <!--                            <p>Не веришь? Послушай истории успеха наших коллег</p>-->
-                    <!--                        </div>-->
-                    <!--                    </div>-->
-                    <!--                    <div class="career-up__videos">-->
-                    <!--                        <div id="js-swiper-career">-->
-                    <!--                            <div class="swiper-wrapper">-->
-                    <!--                                -->
-                    <!--                            </div>-->
-                    <!--                             <div class="slider__controls">-->
-                    <!--                                <button class="btn-control slider-prev">-->
-                    <!--                                  <svg class="icon icon_prev">-->
-                    <!--                                    <use xlink:href="/static/img/svg/symbol/sprite.svg#prev"></use>-->
-                    <!--                                  </svg>-->
-                    <!--                                </button>-->
-                    <!--                                <button class="btn-control slider-next">-->
-                    <!--                                  <svg class="icon icon_next">-->
-                    <!--                                    <use xlink:href="/static/img/svg/symbol/sprite.svg#next"></use>-->
-                    <!--                                  </svg>-->
-                    <!--                                </button>-->
-                    <!--                              </div>-->
-                    <!--                        </div>-->
-                    <!--                    </div>-->
-                    <!--                </div>-->
-                    <section class="grid-half">
-                        <div class="grid-half__block bg-gray br-8">
-                            <div class="info-card" style="background-image: url(/static/img/img-chat-cloud.png)">
-                                <div class="info-card__info">
-                                    <div class="info-card__title block-title">Поток входящих заявок</div>
-                                    <div class="info-card__desc"><p>Отдел маркетинга ежедневно привлекает горячие лиды –
-                                        это
-                                        реальные запросы снабженцев крупных предприятий.</p>
-                                        <p>На наши сайты ежемесячно приходят около 100 000 посетителей. А еще мы есть на
-                                            Пульс Цен, Авито и других профессиональных площадках. Недостатка в клиентах
-                                            нет!</p></div>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="grid-half__block bg-gray br-8">
-                            <div class="info-card" style="background-image: url(/static/img/img-desktop-pc.png)">
-                                <div class="info-card__info">
-                                    <div class="info-card__title block-title">Комфортное рабочее место</div>
-                                    <div class="info-card__desc">
-                                        <ul>
-                                            <li>Офис в центре города.</li>
-                                            <li>Свободный стиль одежды.</li>
-                                            <li>Безлимитная связь.</li>
-                                            <li>Корпоративные праздники и спорт.</li>
-                                        </ul>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </section>
-                </div>
-            </div>
-        </section>
-        <div class="container">
-            <div class="tmp-grid tmp-grid--right">
-                <div class="tmp-grid__left">
-                    <div class="tmp-grid__block">
-                        <div class="page-title">Что мы ждем от тебя</div>
-                        <ul class="list list--star">
-                            <li>Настойчивость в желании победить и добиться своей цели</li>
-                            <li>Умение расположить к себе, установить контакт и долгосрочные отношения с клиентами</li>
-                            <li>Способность противостоять временным неудачам и отказам</li>
-                            <li>Жизненный план расти и развиваться, быть успешным и много зарабатывать</li>
-                        </ul>
-                        <div class="block-title">Остальному мы научим!</div>
-                    </div>
-                    <div class="tmp-grid__block">
-                        <div class="page-title">И все-таки что я буду делать?</div>
-                        <ul class="list list--succes">
-                            <li>Отвечать на входящие звонки и заявки</li>
-                            <li>Выходить на контакт с клиентами, которые покупали у нас раньше</li>
-                            <li>Вести свою базу в идеально настроенной системе Битрикс24</li>
-                            <li>Предлагать дополнительные категории товаров для увеличения среднего чека</li>
-                            <li>Выполнять и перевыполнять план продаж</li>
-                            <li>Предоставлять клиентам все необходимые закрывающие документы (не волнуйся, бухгалтер
-                                рядом,
-                                всё подскажет)
-                            </li>
-                        </ul>
-                    </div>
-                </div>
-                <div class="tmp-grid__right">
-                    <form class="form need-validate row" id="career-resume-form" data-need-notification="true"
-                          style="background-image: url(/static/img/block-decor-1.png)"
-                          action="/informer/form_send/careers/"><input type="hidden" name="csrfmiddlewaretoken"
-                                                                       value="skBfq5ghGwRzBoE1nEzGPYBtoZAZJZxQVD2VTUfEZyIOnFgH8FNv53RxBy7L4JMw">
-                        <div class="heading-2">Ждём тебя <br> в нашей команде!</div>
-                        <label class="careers-form__form-field">
-                        <span class="modal-order__form-field-title required">
-                            Имя
-                          <svg class="icon icon_required-input">
-                            <use xlink:href="/static/img/svg/symbol/sprite.svg#required-input"></use>
-                          </svg>
-                        </span>
-                            <input class="careers-form__form-field-input input__input" type="text" name="fio"
-                                   placeholder="Иванов Андрей" required="" maxlength="100"
-                                   pattern="(^[а-яА-ЯёЁa-zA-Z]+ ?[а-яА-ЯёЁa-zA-Z]* ?[а-яА-ЯёЁa-zA-Z]*)?$">
-                            <span class="input__error">
-                          <svg class="icon icon_error">
-                            <use xlink:href="/static/img/svg/symbol/sprite.svg#error"></use>
-                          </svg>Введите Имя или Фамилию и Имя
-                        </span>
-                        </label>
-                        <label class="careers-form__form-field">
-                        <span class="modal-order__form-field-title required">
-                                Телефон
-                          <svg class="icon icon_required-input">
-                            <use xlink:href="/static/img/svg/symbol/sprite.svg#required-input"></use>
-                          </svg>
-                        </span>
-                            <input class="careers-form__form-field-input input__input" type="tel" name="phone"
-                                   placeholder="+7 ( ___ ) ___ - __ - __" required="" maxlength="21" minlength="18">
-                            <span class="input__error">
-                          <svg class="icon icon_error">
-                            <use xlink:href="/static/img/svg/symbol/sprite.svg#error"></use>
-                          </svg>Введите корректный телефон
-                        </span>
-                        </label>
-                        <div class="col-btns">
-                            <label class="btn--file btn_100 justify-content-center" for="order-load-file2">
-                                Прикрепить резюме
-                                <svg class="icon icon_add-file">
-                                    <use xlink:href="/static/img/svg/symbol/sprite.svg#add-file"></use>
-                                </svg>
-                                <input id="order-load-file2" type="file" name="file_link" data-inpfile=""
-                                       accept=".doc, .docx, .xls, .xlsx, .txt, .pdf, .rar, .zip">
-                            </label>
-                            <div class="file-container"></div>
-                            <button class="btn btn--submit btn_100 justify-content-center" type="submit">
-                                <div class="btn-content">
-                                    <span>Отправить</span>
-                                    <svg class="icon icon_done-done">
-                                        <use xlink:href="/static/img/svg/symbol/sprite.svg#done-done"></use>
-                                    </svg>
-                                </div>
-                            </button>
-                        </div>
-                        <div class="policy-text">
-                            Нажимая «Отправить заявку», вы соглашаетесь с
-                            <a href="/policy/" target="_blank"> политикой обработки персональных данных</a>
-                        </div>
-                    </form>
-                </div>
+                        <meta itemprop="position" content="2">
+                    </li>
+                </ul>
             </div>
         </div>
 
+    </div>
 
-        <div class="container">
-            <section class="careers-form">
-                <div class="careers-form-wrap__title">Хотите работать у нас?</div>
-                <div class="careers-form-wrap__subtitle">Заполните анкету и мы свяжемся с вами</div>
-                <div class="careers-form__wrapper">
-                    <form class="need-validate row" id="careers-form" data-need-notification="true"
-                          action="/informer/form_send/careers/"><input type="hidden" name="csrfmiddlewaretoken"
-                                                                       value="skBfq5ghGwRzBoE1nEzGPYBtoZAZJZxQVD2VTUfEZyIOnFgH8FNv53RxBy7L4JMw">
-                        <div class="careers-form__left">
-                            <h4 class="careers-form__title">Как с вами связаться?</h4>
-                            <label class="careers-form__form-field">
-                                <span class="careers-form__form-field-title">Фамилия Имя</span>
-                                <input class="careers-form__form-field-input input__input" type="text" name="fio"
-                                       placeholder="Иванов Андрей" maxlength="100"
-                                       pattern="(^[а-яА-ЯёЁa-zA-Z]+ ?[а-яА-ЯёЁa-zA-Z]* ?[а-яА-ЯёЁa-zA-Z]*)?$">
-                                <span class="input__error">
-                                <svg class="icon icon_error">
-                                  <use xlink:href="/static/img/svg/symbol/sprite.svg#error"></use>
-                                </svg>Введите Имя или Фамилию и Имя
-                            </span>
-                            </label>
-                            <div class="careers-form__form-field-wrapper">
-                                <label class="careers-form__form-field">
-                                    <span class="careers-form__form-field-title">Телефон</span>
-                                    <input class="careers-form__form-field-input input__input" type="tel" name="phone"
-                                           placeholder="+7 ( ___ ) ___ - __ - __" required="" maxlength="21"
-                                           minlength="18">
-                                    <span class="input__error">
-                                      <svg class="icon icon_error">
-                                        <use xlink:href="/static/img/svg/symbol/sprite.svg#error"></use>
-                                      </svg>
-                                    Введите корректный телефон
-                                </span>
-                                </label>
-                                <label class="careers-form__form-field">
-                                    <span class="careers-form__form-field-title">Email</span>
-                                    <input class="careers-form__form-field-input input__input" type="email" name="email"
-                                           placeholder="example@email.com" maxlength="100"
-                                           pattern="^([A-z0-9_-]+.)*[A-z0-9_-]+@[a-z0-9_-]+(.[a-z0-9_-]+)*.[a-z]{2,6}$">
-                                    <span class="input__error">
-                                  <svg class="icon icon_error">
-                                    <use xlink:href="/static/img/svg/symbol/sprite.svg#error"></use>
-                                  </svg>Введите корректный email
-                                </span>
-                                </label>
-                            </div>
-                            <fieldset class="select-wrapper">
-                                <div class="careers-form__form-field">
-                                    <span class="careers-form__form-field-title">Город</span>
-                                    <label class="select-label">
-                                        <select name="city">
-                                            <option value="Любой город">Любой город</option>
+    <div class="contacts">
+        <div class="container" style="color: #fff;">
 
-                                        </select>
-                                        <svg width="20" height="20" viewBox="0 0 20 20" fill="none"
-                                             xmlns="http://www.w3.org/2000/svg">
-                                            <path fill-rule="evenodd" clip-rule="evenodd"
-                                                  d="M4.26335 6.76335C4.67015 6.35655 5.32969 6.35655 5.73649 6.76335L9.99992 11.0268L14.2633 6.76335C14.6701 6.35655 15.3297 6.35655 15.7365 6.76335C16.1433 7.17015 16.1433 7.82969 15.7365 8.23649L10.7365 13.2365C10.3297 13.6433 9.67014 13.6433 9.26335 13.2365L4.26335 8.23649C3.85655 7.82969 3.85655 7.17015 4.26335 6.76335Z"
-                                                  fill="#383A44"></path>
-                                        </svg>
-                                    </label>
+            <h1 class="title title_page" style="color: #fff; font-size: 36px; font-weight: bold; margin-bottom: 40px;">
+                Контакты</h1>
+
+            <div class="row" style="margin-bottom: 40px;">
+                <div class="col-12">
+                    <section class="contacts__adress">
+                        <div class="contacts-adress"
+                             style="background-color: #1a1a1a; padding: 30px; border-radius: 8px;">
+                            <div class="row contacts-adress__adress">
+                                <div class="col-lg-5">
+                                    <h2 class="col-lg-12 contacts-adress__office"
+                                        style="color: #e74c3c; margin-bottom: 10px;">Отдел продаж</h2>
+                                    <div class="col-lg-12 contacts-adress__time" style="font-size: 16px; color: #ccc;">
+                                        <p>Пн-Чт: с 9:00 до 18:00, Пт: с 9:00 до 17:00</p>
+                                    </div>
                                 </div>
-                                <div class="careers-form__form-field">
-                                    <span class="careers-form__form-field-title">Вакансия</span>
-                                    <label class="select-label">
-                                        <select name="vacancy">
-                                            <option value="Любая">Любая</option>
-
-                                        </select>
-                                        <svg width="20" height="20" viewBox="0 0 20 20" fill="none"
-                                             xmlns="http://www.w3.org/2000/svg">
-                                            <path fill-rule="evenodd" clip-rule="evenodd"
-                                                  d="M4.26335 6.76335C4.67015 6.35655 5.32969 6.35655 5.73649 6.76335L9.99992 11.0268L14.2633 6.76335C14.6701 6.35655 15.3297 6.35655 15.7365 6.76335C16.1433 7.17015 16.1433 7.82969 15.7365 8.23649L10.7365 13.2365C10.3297 13.6433 9.67014 13.6433 9.26335 13.2365L4.26335 8.23649C3.85655 7.82969 3.85655 7.17015 4.26335 6.76335Z"
-                                                  fill="#383A44"></path>
-                                        </svg>
-                                    </label>
-                                </div>
-                            </fieldset>
-                            <label class="careers-form__form-field">
-                            <span class="careers-form__form-field-title" data-replace-content="">
-                                <span>Текст о себе</span><span>Необязательно</span>
-                            </span>
-                                <textarea class="careers-form__form-field-textarea input__input" name="comment"
-                                          placeholder="Напишите о себе и кем бы хотели работать у нас, также не забудьте прикрепить резюме"
-                                          maxlength="2000" data-tippy-content="Максимум 2 000 символов"></textarea>
-                            </label>
-                            <label class="btn-file btn btn_outline" for="order-load-file">
-                                Добавить файл
-                                <svg class="icon icon_add-file">
-                                    <use xlink:href="/static/img/svg/symbol/sprite.svg#add-file"></use>
-                                </svg>
-                            </label>
-                            <input id="order-load-file" type="file" name="file_link" data-inpfile=""
-                                   accept=".doc, .docx, .xls, .xlsx, .txt, .pdf, .rar, .zip">
-                            <div class="file-container"></div>
-                            <div class="careers-form__bottom">
-                                <button class="careers-form__submit btn btn-primary" type="submit">
-                                    Отправить
-                                    <svg class="icon icon_check">
-                                        <use xlink:href="/static/img/svg/symbol/sprite.svg#check"></use>
-                                    </svg>
-                                </button>
-                                <div class="careers-form__license">
-                                    Нажимая «Отправить заявку», вы соглашаетесь с
-                                    <a href="/policy/" target="_blank"> политикой обработки персональных данных</a>
+                                <div class="col-lg-7">
+                                    <div class="row">
+                                        <div class="col-lg-12 contacts-adress__title"
+                                             style="font-weight: bold; font-size: 16px; color: #ccc;">
+                                            Адрес
+                                        </div>
+                                        <div class="col-lg-12 contacts-adress__desc" style="color: #fff;">Улица Сыганак,
+                                            54а, БЦ "А", офис 1001, 10 этаж
+                                        </div>
+                                    </div>
+                                    <div class="row" style="margin-top: 20px;">
+                                        <div class="col-lg" style="min-width: 50%">
+                                            <div class="contacts-adress__title" style="color: #ccc;">для Астаны</div>
+                                            <div class="contacts-adress__desc" style="color: #fff;">+7 (717) 264 02 97
+                                            </div>
+                                        </div>
+                                        <div class="col-lg" style="min-width: 50%">
+                                            <div class="contacts-adress__title" style="color: #ccc;">Email</div>
+                                            <div class="contacts-adress__desc mgo-email" id="contacts-adress__email"
+                                                 style="color: #fff;">
+                                                <span class="mgo-email">astana@isteels.kz</span>
+                                                <span data-tippy-content="Cкопировать" style="color: #e74c3c;">
+                                                    <svg class="icon icon_copy" style="width: 16px; height: 16px;">
+                                                      <use xlink:href="/static/img/svg/symbol/sprite.svg#copy"></use>
+                                                    </svg>
+                                                </span>
+                                            </div>
+                                        </div>
+                                    </div>
                                 </div>
                             </div>
                         </div>
-                    </form>
-                    <div class="contact-soon"
-                         style="background: url(/static/img/contacts-soon.png) bottom no-repeat,bottom no-repeat #f5f7f8">
-                        <p class="contact-soon__title">Мы скоро свяжемся с вами!</p>
-                        <p class="contact-soon__descr">
-                            Рассмотрим ваше резюме в течение 7 рабочих дней и отправим обратную связь на почту.
-                        </p>
-                    </div>
+                    </section>
                 </div>
-            </section>
-            <div class="careers-form-success">
-                <div class="order-success row">
-                    <div class="col-lg-6 col-12">
-                        <svg class="icon icon_success">
-                            <use xlink:href="/static/img/svg/symbol/sprite.svg#success"></use>
-                        </svg>
-                        <div class="order-success__title">
-                            <div>Спасибо за</div>
-                            <div>отправленное резюме</div>
+
+            </div >
+
+            <div class="row">
+                <div class="col-12">
+                    <section class="contacts__map" style="background-color: #333; border-radius: 8px; padding: 10px;">
+                        <div class="contacts-map">
+                            <div id="contacts-map">
+                                <iframe style="border-radius: 5px;"
+                                        src="https://yandex.ru/map-widget/v1/?lang=ru_RU&amp;scroll=true&amp;source=constructor-api&amp;um=constructor%3A273ef57fd2e3fe3fcb2f8c72d2c9123564330b69e804eb8b16efab4b0ba9cca5"
+                                        frameborder="0" allowfullscreen="true" width="100%" height="330px"
+                                        style="display: block;"></iframe>
+                                <div id="ymap_ctrl_display" style="color: #ccc;">
+                                    <h4>Чтобы изменить масштаб, прокручивайте карту, удерживая клавишу Ctrl.</h4>
+                                </div>
+                            </div>
                         </div>
-                        <div class="order-success__desc">
-                            <p>Как рассмотрим ваше резюме, мы перезвоним или напишем вам на почту насчет подходящей
-                                вакансии
-                                для вас</p>
-                            <p>По всем вопросам пишите на почту: <b class="order-success__email">job@isteels.ru</b></p>
-                        </div>
-                        <div class="btn-show-careers form btn btn_light">Отправить ещё одно резюме</div>
-                    </div>
+                    </section>
                 </div>
             </div>
+
+            <div class="row" style="margin-bottom: 40px;">
+                <div class="col-12">
+                    <section class="contacts__adress">
+                        <div class="contacts-adress"
+                             style="background-color: #1a1a1a; padding: 30px; border-radius: 8px;">
+                            <div class="row contacts-adress__details" style="margin-top: 30px;">
+                                <div class="col-lg-5">
+                                    <h2 class="col-lg-12 contacts-adress__detail" style="color: #e74c3c;">Реквизиты</h2>
+                                    <a class="col-lg-12 contacts-adress__download" href="/contacts_pdf/"
+                                       style="color: #e74c3c; font-weight: bold; text-decoration: none;">
+                                        Скачать документом (.pdf)
+                                    </a>
+                                </div>
+                                <div class="col-lg-7">
+                                    <div class="row">
+                                        <div class="col-lg" style="min-width: 50%">
+                                            <div class="contacts-adress__title" style="color: #ccc;">БИН</div>
+                                            <div class="contacts-adress__desc" style="color: #fff;">221040008280</div>
+                                        </div>
+                                        <div class="col-lg" style="min-width: 50%">
+                                            <div class="contacts-adress__title" style="color: #ccc;">ИИК</div>
+                                            <div class="contacts-adress__desc" style="color: #fff;">
+                                                KZ808562203125974472
+                                            </div>
+                                        </div>
+                                        <div class="col-lg" style="min-width: 50%">
+                                            <div class="contacts-adress__title" style="color: #ccc;">Банк</div>
+                                            <div class="contacts-adress__desc" style="color: #fff;">АО «Банк
+                                                ЦентрКредит»
+                                            </div>
+                                        </div>
+                                        <div class="col-lg" style="min-width: 50%">
+                                            <div class="contacts-adress__title" style="color: #ccc;">БИК</div>
+                                            <div class="contacts-adress__desc" style="color: #fff;">KCJBKZKX</div>
+                                        </div>
+                                        <div class="col-lg" style="min-width: 50%">
+                                            <div class="contacts-adress__title" style="color: #ccc;">Директор</div>
+                                            <div class="contacts-adress__desc" style="color: #fff;">Иванов Павел
+                                                Андреевич
+                                            </div>
+                                        </div>
+                                        <div class="col-lg" style="min-width: 50%">
+                                            <div class="contacts-adress__title" style="color: #ccc;">Телефон</div>
+                                            <div class="contacts-adress__desc" style="color: #fff;">+7 (717) 264 05 60
+                                            </div>
+                                        </div>
+                                        <div class="col-lg" style="min-width: 50%">
+                                            <div class="contacts-adress__title" style="color: #ccc;">Адрес эл. почты
+                                            </div>
+                                            <div class="contacts-adress__desc" style="color: #fff;">ivanov@isteels.kz
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </section>
+                </div>
+            </div>
+
         </div>
     </div>
 
 </main>
+
 {% endblock %}
