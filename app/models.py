@@ -36,7 +36,7 @@ class Product(models.Model):
         related_name='products',
         verbose_name="Категория"
     )
-    price = models.DecimalField(max_digits=10, decimal_places=2, verbose_name="Цена")
+    slug = models.SlugField(unique=True, verbose_name="Слаг", blank=True, null=True)
     description = models.TextField(blank=True, verbose_name="Описание")
     image = models.ImageField(upload_to='products/', verbose_name="Фото продукта")
 
@@ -46,5 +46,8 @@ class Product(models.Model):
 
     def __str__(self):
         return self.name
+
+    def get_absolute_url(self):
+        return reverse('app:product_detail', kwargs={'slug': self.slug})
 
 

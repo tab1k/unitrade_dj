@@ -77,7 +77,7 @@
                           <use xlink:href="images/sprite.svg#mark"></use>
                         </svg>
                     </span>
-                    <span class="expanding-list__option" style="color: white;">📍 Астана</span>
+                    <span class="expanding-list__option" style="color: white;">Астана</span>
                     <svg class="header__expanding_list-icon icon icon_arrow-down">
                         <use xlink:href="images/sprite.svg#arrow-down"></use>
                     </svg>
@@ -91,8 +91,6 @@
                     <div class="drop-menu__content header__menu-sub">
                         <span class="header__menu-link" data-google-lang="ru"
                               onclick="ym(window.uni-trade.ym_id, 'reachGoal', 'kz_ru');">🇷🇺 Русский</span>
-                        <span class="header__menu-link" data-google-lang="en"
-                              onclick="ym(window.uni-trade.ym_id, 'reachGoal', 'kz_en');">🇺🇸 Английский</span>
                         <span class="header__menu-link" data-google-lang="kk"
                               onclick="ym(window.uni-trade.ym_id, 'reachGoal', 'kz_kz');">🇰🇿 Казахский</span>
                     </div>
@@ -116,16 +114,10 @@
                     </div>
                     <div class="drop-menu">
                         <a class="header__phone link mgo-number" href="tel:+77077772817">
-                            <span class="link__icon">
-                                📞
-                            </span>
                             <span class="mgo-number__target" style="color: white;">+7 (707) 777 28 17</span>
                         </a>
                     </div>
                     <a class="header__email link mgo-email" href="mailto:info@uni-trade.kz">
-                        <span class="link__icon">
-                          📫
-                        </span>
                         <span class="mgo-email" style="color: white;">info@unitrade.kz</span>
                     </a>
                 </div>
@@ -144,7 +136,7 @@
                 </span>
 
                 <a href="{% url 'app:category' %}" class="header__catalog btn-toggle">
-                    <span class="header__catalog-text" style="color: white;">Каталог 📕</span>
+                    <span class="header__catalog-text" style="color: white;">Каталог</span>
                 </a>
                 <form class="header__search search" action="/search/?search=query&json=true"
                       data-action="/search/?search=query&json=true" data-ignore-fields="">
@@ -227,12 +219,12 @@
                                       fill="#383A44"></path>
                             </svg>
                         </a>
-                        <div class="drop-menu__content header__menu-sub">
-                            <a class="header__menu-link" href="/delivery/">
+                        <div class="drop-menu__content header__menu-sub" style="background-color: #1f1f1f;">
+                            <a style="color: white;" class="header__menu-link" href="/delivery/">
                                 Доставка</a>
-                            <a class="header__menu-link" href="/payment/">
+                            <a style="color: white;" class="header__menu-link" href="/payment/">
                                 Оплата</a>
-                            <a class="header__menu-link" href="/refund/">
+                            <a style="color: white;" class="header__menu-link" href="/refund/">
                                 Возврат</a>
                         </div>
                     </li>
@@ -248,21 +240,21 @@
                                       fill="#383A44"></path>
                             </svg>
                         </a>
-                        <div class="drop-menu__content header__menu-sub">
-                            <a class="header__menu-link" href="/dealership/">
+                        <div class="drop-menu__content header__menu-sub" style="background-color: #1f1f1f;">
+                            <a style="color: white;" class="header__menu-link" href="/dealership/">
                                 Дилерство</a>
-                            <a class="header__menu-link" href="/charity/">
+                            <a style="color: white;" class="header__menu-link" href="/charity/">
                                 Благотворительность</a>
-                            <a class="header__menu-link" href="/blog/">
+                            <a style="color: white;" class="header__menu-link" href="/blog/">
                                 Статьи</a>
-                            <a class="header__menu-link" href="/news/">
+                            <a style="color: white;" class="header__menu-link" href="/news/">
                                 Новости</a>
-                            <a class="header__menu-link" href="/cases/">
+                            <a style="color: white;" class="header__menu-link" href="/cases/">
                                 Наши проекты</a>
-                            <a class="header__menu-link" href="/thanks/">
+                            <a style="color: white;" class="header__menu-link" href="/thanks/">
                                 Благодарности</a>
 
-                            <a class="header__menu-link" href="/employee/">
+                            <a style="color: white;" class="header__menu-link" href="/employee/">
                                 Наши сотрудники</a>
 
                         </div>
@@ -393,7 +385,7 @@
                     <div class="mobile-menu container">
                         <a style="background-color: #1f1f1f; color: white;" href="{% url 'app:category' %}" class="mobile-menu__button mobile-menu__catalog"
                            type="button">
-                            Каталог 📕
+                            Каталог
                         </a>
                         <span style="background-color: #1f1f1f; color: white;" class="mobile-menu__button header__menu-link"
                               onclick="ym(window.uni-trade.ym_id, 'reachGoal', 'click_fast_order');"
@@ -445,11 +437,9 @@
                             <svg class="header__city-icon icon icon_arrow-down">
                                 <use xlink:href="images/sprite.svg#arrow-down"></use>
                             </svg>
-                            <div class="drop-menu__content header__menu-sub">
-                        <span class="header__menu-link" data-google-lang="ru"
+                            <div class="drop-menu__content header__menu-sub" style="background-color: #1f1f1f;">
+                                <span class="header__menu-link" data-google-lang="ru"
                               onclick="ym(window.uni-trade.ym_id, 'reachGoal', 'kz_ru');">🇷🇺 Русский</span>
-                                <span class="header__menu-link" data-google-lang="en"
-                                      onclick="ym(window.uni-trade.ym_id, 'reachGoal', 'kz_en');">🇺🇸 Английский</span>
                                 <span class="header__menu-link" data-google-lang="kk"
                                       onclick="ym(window.uni-trade.ym_id, 'reachGoal', 'kz_kk');">🇰🇿 Казахский</span>
                             </div>
@@ -1131,21 +1121,18 @@
                         </div>
                     </div>
                     <div class="footer__middle-down">
-                        <a class="footer__phone link mgo-number" href="tel:+77172640297">
-                            <span>
-                                📞
-                            </span>
-                            <span class="mgo-number__target" style="color: white;">+7 (717) 264 02 97</span>
+                        <a class="footer__phone link mgo-number" href="tel:+77077772817">
+                            <span class="mgo-number__target" style="color: white;">+7 (707) 777 28 17</span>
                         </a>
-                        <meta itemprop="telephone" content="+7 (717) 264 02 97">
+                        <meta itemprop="telephone" content="+7 (707) 777 28 17">
 
                         <a class="footer__email link mgo-email" itemprop="email" href="mailto:info@uni-trade.kz"
                            style="color: white;">
-                            <span class="link__icon">
-                                <svg>
-                                  📫
-                                </svg>
-                            </span>
+<!--                            <span class="link__icon">-->
+<!--                                <svg>-->
+<!--                                  📫-->
+<!--                                </svg>-->
+<!--                            </span>-->
                             <span class="mgo-email" style="color: white;">info@uni-trade.kz</span>
                         </a>
                     </div>

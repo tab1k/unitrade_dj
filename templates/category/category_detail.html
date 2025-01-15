@@ -8,23 +8,27 @@
     <div class="catalog container">
         <div class="row">
             <div class="col-lg-3">
-                <a class="link-back link-back-mb d-none d-lg-inline-flex" href="/catalog/">Назад</a>
+                <a class="link-back link-back-mb d-none d-lg-inline-flex"
+                   href="{% if category.parent %}{{ category.parent.get_absolute_url }}{% else %}{% url 'app:category' %}{% endif %}">
+                    Назад
+                </a>
+
 
                 <ul class="category-sidebar">
+
 
                     {% for category in categories %}
                     <li class="category-sidebar__item">
 
                         <div class="category-sidebar__title accordion">
                             <div class="click-block-sidebar"></div>
-                            <a href="{{ category.get_absolute_url }}">
+                            <a style="color: #d2cccc;" href="{{ category.get_absolute_url }}">
                                 {{ category.name }}
                             </a>
                             <div class="accordion-svg accordion-img">
-                                <svg class="icon icon_arrow-down">
-                                    <use xlink:href="/static/img/svg/symbol/sprite.svg#arrow-down"></use>
-                                </svg>
+                                <i class="fa fa-arrow-down"></i>
                             </div>
+
                         </div>
 
                         {% if category.children.exists %}
@@ -32,113 +36,13 @@
                             {% for subcategory in category.children.all %}
                             <li class="category-sidebar__submenu-item">
 
-                                <a class="category-sidebar__submenu-link" href="/catalog/precizionnye-stali/">
+                                <a style="color: #d2cccc;" class="category-sidebar__submenu-link"
+                                   href="/catalog/precizionnye-stali/">
                                     {{ subcategory.name }}
                                 </a>
 
                             </li>
                             {% endfor %}
-
-                            <li>
-                                <a class="show-more">Показать ещё</a>
-                            </li>
-
-                            <li class="category-sidebar__submenu-item display-none">
-
-                                <a class="category-sidebar__submenu-link" href="/catalog/elektrotehnicheskaya-stal/">
-                                    Электротехнические стали
-                                </a>
-
-                            </li>
-
-                            <li class="category-sidebar__submenu-item display-none">
-
-                                <a class="category-sidebar__submenu-link" href="/catalog/zharoprochnye-stali/">
-                                    Жаропрочные стали
-                                </a>
-
-                            </li>
-
-                            <li class="category-sidebar__submenu-item display-none">
-
-                                <a class="category-sidebar__submenu-link" href="/catalog/ressorno-pruzhinnye-stali/">
-                                    Рессорно-пружинные стали
-                                </a>
-
-                            </li>
-
-                            <li class="category-sidebar__submenu-item display-none">
-
-                                <a class="category-sidebar__submenu-link" href="/catalog/kriogennyj-prokat/">
-                                    Криогенный прокат
-                                </a>
-
-                            </li>
-
-                            <li class="category-sidebar__submenu-item display-none">
-
-                                <a class="category-sidebar__submenu-link" href="/catalog/avtomatnye-stali/">
-                                    Автоматные стали
-                                </a>
-
-                            </li>
-
-                            <li class="category-sidebar__submenu-item display-none">
-
-                                <a class="category-sidebar__submenu-link" href="/catalog/bimetallicheskij-prokat/">
-                                    Биметаллический прокат
-                                </a>
-
-                            </li>
-
-                            <li class="category-sidebar__submenu-item display-none">
-
-                                <a class="category-sidebar__submenu-link" href="/catalog/kislotostojkie-stali/">
-                                    Кислотостойкие стали
-                                </a>
-
-                            </li>
-
-                            <li class="category-sidebar__submenu-item display-none">
-
-                                <a class="category-sidebar__submenu-link" href="/catalog/shtampovaya-stal/">
-                                    Штамповые стали
-                                </a>
-
-                            </li>
-
-                            <li class="category-sidebar__submenu-item display-none">
-
-                                <a class="category-sidebar__submenu-link" href="/catalog/sudostroitelnaya-stal/">
-                                    Судостроительные стали
-                                </a>
-
-                            </li>
-
-                            <li class="category-sidebar__submenu-item display-none">
-
-                                <a class="category-sidebar__submenu-link" href="/catalog/nihromovyj-prokat/">
-                                    Нихром
-                                </a>
-
-                            </li>
-
-                            <li class="category-sidebar__submenu-item display-none">
-
-                                <a class="category-sidebar__submenu-link" href="/catalog/fehral/">
-                                    Фехраль
-                                </a>
-
-                            </li>
-
-                            <li class="category-sidebar__submenu-item display-none">
-
-                                <a class="category-sidebar__submenu-link" href="/catalog/list-hardox/">
-                                    Листы Hardox
-                                </a>
-
-                            </li>
-                            <li><a class="hide-more">Cкрыть</a></li>
 
                         </ul>
                         {% endif %}
@@ -150,39 +54,39 @@
                 </ul>
 
                 <script>
-                        document.addEventListener("DOMContentLoaded", function () {
-                            const accordionTitles = document.querySelectorAll('.category-sidebar__title.accordion');
+                    document.addEventListener("DOMContentLoaded", function () {
+                        const accordionTitles = document.querySelectorAll('.category-sidebar__title.accordion');
 
-                            accordionTitles.forEach(function (accordionTitle) {
-                                accordionTitle.addEventListener('click', function () {
-                                    const submenu = this.nextElementSibling;
-                                    const icon = this.querySelector('.accordion-svg');
+                        accordionTitles.forEach(function (accordionTitle) {
+                            accordionTitle.addEventListener('click', function () {
+                                const submenu = this.nextElementSibling;
+                                const icon = this.querySelector('.accordion-svg');
 
-                                    // Тогглим классы для активного состояния
-                                    submenu.classList.toggle('accordion-content-active');
-                                    if (submenu.classList.contains('accordion-content-active')) {
-                                        submenu.style.maxHeight = submenu.scrollHeight + 'px';
-                                        icon.classList.remove('open-svg');
-                                    } else {
-                                        submenu.style.maxHeight = '0';
-                                        icon.classList.add('open-svg');
-                                    }
-                                });
+                                // Тогглим классы для активного состояния
+                                submenu.classList.toggle('accordion-content-active');
+                                if (submenu.classList.contains('accordion-content-active')) {
+                                    submenu.style.maxHeight = submenu.scrollHeight + 'px';
+                                    icon.classList.remove('open-svg');
+                                } else {
+                                    submenu.style.maxHeight = '0';
+                                    icon.classList.add('open-svg');
+                                }
                             });
                         });
+                    });
 
-                    </script>
+                </script>
                 <style>
-                        .category-sidebar__submenu {
-                            transition: max-height 0.3s ease-in-out;
-                            overflow: hidden;
-                            max-height: 0; /* Начальная высота скрытого списка */
-                        }
+                    .category-sidebar__submenu {
+                        transition: max-height 0.3s ease-in-out;
+                        overflow: hidden;
+                        max-height: 0; /* Начальная высота скрытого списка */
+                    }
 
-                        .category-sidebar__submenu.accordion-content-active {
-                            max-height: 500px; /* Или set the max-height на любое подходящее значение */
-                        }
-                    </style>
+                    .category-sidebar__submenu.accordion-content-active {
+                        max-height: 500px; /* Или set the max-height на любое подходящее значение */
+                    }
+                </style>
             </div>
             <div class="col-lg-9">
 
@@ -194,9 +98,9 @@
                             <li class="bread-crumbs__item" itemprop="itemListElement" itemscope=""
                                 itemtype="https://schema.org/ListItem">
                                 <a class="bread-crumbs__link" href="/" itemprop="item">
-                      <span itemprop="name">
-                          Главная
-                      </span>
+                                  <span itemprop="name">
+                                      Главная
+                                  </span>
                                 </a>
                                 <meta itemprop="position" content="1">
                             </li>
@@ -225,260 +129,117 @@
                     </div>
                 </div>
 
-                <h1 class="title title_page">{{ category.name }}</h1>
+                <h1 class="title title_page" style="color: white;">{{ category.name }}</h1>
                 <a class="link-back link-back-mb d-lg-none" href="/catalog/">Каталог</a>
-                <div class="row row-cols-1 row-cols-md-2 row-cols-xl-3 catalog__container active">
-                    {% if category.children.exists %}
+                <div class="news-container mb-5">
+                    <div class="news-list">
+                        {% if category.children.exists %}
                         {% for subcategory in category.children.all %}
-                        <div class="col catalog__item">
-                        <div class="catalog__item-head">
-                            <div class="catalog__item-img">
-                                <img loading="lazy"
-                                     src="/resize/200/media/uploads/catalog/category/%D0%92%D0%93%D0%9F_%D1%82%D1%80%D1%83%D0%B1%D1%8B_TGctYIe.png"
-                                     alt="Трубный прокат купить в Астане" title="Трубный прокат купить в Астане">
+                        <a class="news-list__item" href="{{ subcategory.get_absolute_url }}">
+                            <div class="news-list__photo"
+                                 style="background-image: url({% if category.image %}{{ category.image.url }}{% else %}{% static 'images/first.jpg' %}{% endif %})">
+                                <div class="news-list__info">
+                                    <h2 class="news-list__title">{{ subcategory.name }}</h2>
+                                </div>
                             </div>
-                            <a class="catalog__item-link stretched-link" href="{{ subcategory.get_absolute_url }}">
-                                {{ subcategory.name }}
-                            </a>
-                        </div>
-                        {% if child.children.exists %}
-                        <ul class="catalog__list" aria-expanded="false">
-                            {% for grandchild in child.children.all %}
-
-                            <li class="catalog__list-item">
-                                <a href="{{ child.get_absolute_url }}">{{ grandchild.name }}</a>
-                            </li>
-
-                            {% endfor %}
-
-
-                            <li class="show-more-wrapper">
-                                <button class="show-more-btn" aria-expanded="false" aria-label="expand" tabindex="0">
-                                    Показать ещё
-                                </button>
-                            </li>
-                        </ul>
+                        </a>
+                        {% endfor %}
+                        {% else %}
+                        {% if category.products.exists %}
+                        {% for product in category.products.all %}
+                        <a class="news-list__item" href="{{ subcategory.get_absolute_url }}">
+                            <div class="news-list__photo"
+                                 style="background-image: url({% if category.image %}{{ category.image.url }}{% else %}{% static 'images/first.jpg' %}{% endif %})">
+                                <div class="news-list__info">
+                                    <h2 class="news-list__title">{{ product.name }}</h2>
+                                </div>
+                            </div>
+                        </a>
+                        {% endfor %}
+                        {% else %}
+                        <p>Нет продуктов в этой категории.</p>
+                        {% endif %}
                         {% endif %}
                     </div>
-                        {% endfor %}
-                    {% endif %}
                 </div>
+
+                <style>
+                    .news-container {
+                        width: 100%;
+                        max-width: 1200px;
+                        margin: 0 auto;
+                        padding: 16px;
+                    }
+
+                    .news-list {
+                        display: grid;
+                        grid-template-columns: repeat(4, 1fr); /* 4 карточки на строку */
+                        gap: 16px; /* Отступы между карточками */
+                    }
+
+                    .news-list__item {
+                        background-color: #f9f9f9;
+                        border-radius: 8px;
+                        text-decoration: none;
+                        color: inherit;
+                        display: flex;
+                        flex-direction: column;
+                        justify-content: space-between;
+                        align-items: center;
+                        box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+                        aspect-ratio: 1; /* Квадратные карточки */
+                        overflow: hidden;
+                    }
+
+                    .news-list__photo {
+                        position: relative; /* Для абсолютного позиционирования текста */
+                        width: 100%;
+                        height: 100%;
+                        background-size: cover;
+                        background-position: center;
+                    }
+
+                    .news-list__info {
+                        position: absolute; /* Абсолютное позиционирование для текста */
+                        top: 0; /* Текст будет в верхнем левом углу */
+                        left: 0;
+                        padding: 10px;
+                        color: #fff; /* Белый цвет текста для контраста */
+                        border-radius: 4px; /* Скругление для фона */
+                    }
+
+                    .news-list__title {
+                        font-size: 25px;
+                        font-weight: bold;
+                        margin: 0;
+                        color: white;
+                    }
+
+                    @media (max-width: 992px) {
+                        .news-list {
+                            grid-template-columns: repeat(3, 1fr); /* 3 карточки на строку на планшетах */
+                        }
+                    }
+
+                    @media (max-width: 768px) {
+                        .news-list {
+                            grid-template-columns: repeat(2, 1fr); /* 2 карточки на строку на мобильных */
+                        }
+                    }
+
+                    @media (max-width: 480px) {
+                        .news-list {
+                            grid-template-columns: repeat(2, 1fr); /* 2 карточки на строку на очень маленьких экранах */
+                        }
+
+                        .news-list__title {
+                            font-size: 16px; /* Уменьшаем текст на маленьких экранах */
+                        }
+                    }
+                </style>
             </div>
         </div>
     </div>
-
-<!--    <section class="catalog__purchase-details purchase-details">-->
-<!--        <div class="container">-->
-<!--            <div class="purchase-details__inner row tab-product-content product-tab-show justify-content-center"-->
-<!--                 id="product-desc">-->
-<!--                <div class="col-lg-8 order-lg-1 order-2">-->
-<!--                    <div class="purchase-details__section mb-5">-->
-<!--                        <div class="purchase-details__section-title">Вопрос ответ</div>-->
-
-<!--                        <a class="tabs__question-elem accordion__low">-->
-<!--                            Как сделать заказ?-->
-<!--                            <div class="accordion-svg-plus">-->
-<!--                                <div class="circle-plus active-side-bar">-->
-<!--                                    <div class="circle">-->
-<!--                                        <div class="horizontal transform-horizontal"></div>-->
-<!--                                        <div class="vertical transform-vertical"></div>-->
-<!--                                    </div>-->
-<!--                                </div>-->
-<!--                            </div>-->
-<!--                        </a>-->
-<!--                        <div class="tabs__answer-elem accordion-content__low">По телефону коммерческого отдела или через-->
-<!--                            заявку на почту, указанную на сайте. В течение дня мы подготовим и вышлем предложение с-->
-<!--                            наилучшими ценами и условиями поставки по Вашему заказу.-->
-<!--                        </div>-->
-
-<!--                        <a class="tabs__question-elem accordion__low">-->
-<!--                            Могу я приобрести товар как физическое лицо?-->
-<!--                            <div class="accordion-svg-plus">-->
-<!--                                <div class="circle-plus active-side-bar">-->
-<!--                                    <div class="circle">-->
-<!--                                        <div class="horizontal transform-horizontal"></div>-->
-<!--                                        <div class="vertical transform-vertical"></div>-->
-<!--                                    </div>-->
-<!--                                </div>-->
-<!--                            </div>-->
-<!--                        </a>-->
-<!--                        <div class="tabs__answer-elem accordion-content__low">Да, мы работаем как с юридическими, так и-->
-<!--                            физическими лицами. Однако обратите внимание, что минимальная сумма заказа составляет 50 000-->
-<!--                            рублей.-->
-<!--                        </div>-->
-
-<!--                        <a class="tabs__question-elem accordion__low">-->
-<!--                            Я могу купить один экземпляр товара?-->
-<!--                            <div class="accordion-svg-plus">-->
-<!--                                <div class="circle-plus active-side-bar">-->
-<!--                                    <div class="circle">-->
-<!--                                        <div class="horizontal transform-horizontal"></div>-->
-<!--                                        <div class="vertical transform-vertical"></div>-->
-<!--                                    </div>-->
-<!--                                </div>-->
-<!--                            </div>-->
-<!--                        </a>-->
-<!--                        <div class="tabs__answer-elem accordion-content__low">Все зависит от стоимости товара. Мы-->
-<!--                            работаем с крупными заказами. Если Ваша заявка примерно соответствует минимальному порогу в-->
-<!--                            30 000 - 50 000 рублей (в зависимости от города заказа, подробности уточняйте у менеджера),-->
-<!--                            позвоните нам или отправьте письмо с номенклатурой. Наш эксперт рассчитает индивидуальную-->
-<!--                            стоимость конкретно под объем Вашей заявки.-->
-<!--                        </div>-->
-
-<!--                        <a class="tabs__question-elem accordion__low">-->
-<!--                            У меня срочный заказ. Можно ли получить товар в день оплаты или на следующий день?-->
-<!--                            <div class="accordion-svg-plus">-->
-<!--                                <div class="circle-plus active-side-bar">-->
-<!--                                    <div class="circle">-->
-<!--                                        <div class="horizontal transform-horizontal"></div>-->
-<!--                                        <div class="vertical transform-vertical"></div>-->
-<!--                                    </div>-->
-<!--                                </div>-->
-<!--                            </div>-->
-<!--                        </a>-->
-<!--                        <div class="tabs__answer-elem accordion-content__low">При наличии продукции на складе в Вашем-->
-<!--                            городе, мы, конечно же, постараемся организовать срочную доставку. Если товара нет, мы-->
-<!--                            найдем его на других региональных базах «UniTrade» и предложим Вам минимально возможные-->
-<!--                            сроки поставки. Если нужная Вам номенклатура в принципе изготавливается под заказ, в таком-->
-<!--                            случае все решается индивидуально, в зависимости от очереди и наличия на производстве-->
-<!--                            исходного сырья.-->
-<!--                        </div>-->
-
-<!--                        <a class="tabs__question-elem accordion__low">-->
-<!--                            Вы доставляете в любые регионы? А в небольшие, отдаленные города?-->
-<!--                            <div class="accordion-svg-plus">-->
-<!--                                <div class="circle-plus active-side-bar">-->
-<!--                                    <div class="circle">-->
-<!--                                        <div class="horizontal transform-horizontal"></div>-->
-<!--                                        <div class="vertical transform-vertical"></div>-->
-<!--                                    </div>-->
-<!--                                </div>-->
-<!--                            </div>-->
-<!--                        </a>-->
-<!--                        <div class="tabs__answer-elem accordion-content__low">Мы поставляем металлопрокат по всей-->
-<!--                            территории России и Казахстана. Межтерминальные перевозки осуществляются надежными-->
-<!--                            транспортными компаниями, с которыми заключены долгосрочные контракты. Также Вы можете-->
-<!--                            самостоятельно забрать товар со склада по предварительной договоренности.-->
-<!--                        </div>-->
-
-<!--                        <a class="tabs__question-elem accordion__low">-->
-<!--                            Почему на сайте не указана цена на товар? Или стоит явно устаревшая цифра?-->
-<!--                            <div class="accordion-svg-plus">-->
-<!--                                <div class="circle-plus active-side-bar">-->
-<!--                                    <div class="circle">-->
-<!--                                        <div class="horizontal transform-horizontal"></div>-->
-<!--                                        <div class="vertical transform-vertical"></div>-->
-<!--                                    </div>-->
-<!--                                </div>-->
-<!--                            </div>-->
-<!--                        </a>-->
-<!--                        <div class="tabs__answer-elem accordion-content__low">Наш каталог насчитывает более 6 миллионов-->
-<!--                            товаров. Мы стремимся к поддержанию актуальных цен на все позиции. Но, в зависимости от-->
-<!--                            тенденций мирового рынка сырья и загруженности производства, влияющих на конечную стоимость-->
-<!--                            продукции, не представляется возможным ежедневно актуализировать абсолютно все цены.-->
-<!--                            Кроме того, мы всегда стараемся предложить нашим клиентам индивидуальную цену, исходя из-->
-<!--                            условий поставки: количества, схемы оплаты и места отгрузки. Поэтому информация на сайте-->
-<!--                            носит исключительно ознакомительный характер и ни при каких обстоятельствах не является-->
-<!--                            публичной офертой, определяемой ч. 2 ст. 437 Гражданского кодекса Российской Федерации.-->
-<!--                        </div>-->
-
-<!--                        <a class="tabs__question-elem accordion__low">-->
-<!--                            Мне нужна металлообработка для моего металла – сколько это стоит?-->
-<!--                            <div class="accordion-svg-plus">-->
-<!--                                <div class="circle-plus active-side-bar">-->
-<!--                                    <div class="circle">-->
-<!--                                        <div class="horizontal transform-horizontal"></div>-->
-<!--                                        <div class="vertical transform-vertical"></div>-->
-<!--                                    </div>-->
-<!--                                </div>-->
-<!--                            </div>-->
-<!--                        </a>-->
-<!--                        <div class="tabs__answer-elem accordion-content__low">Сожалеем, но все услуги по обработке-->
-<!--                            оказываются только при покупке нашего проката и сопутствующих товаров. Производство не-->
-<!--                            принимает сторонние изделия.-->
-<!--                        </div>-->
-
-
-<!--                    </div>-->
-<!--                    <div class="purchase-details__section">-->
-<!--                        <p>Черный металлопрокат применяют в строительстве, промышленности и прочих областях. Получают-->
-<!--                            его посредством горячей и холодной прокатки. Это общее обозначение для металлических-->
-<!--                            изделий, получаемых из полуфабрикатов из металла с помощью обработки и формовки. Их-->
-<!--                            производят из чугуна (Fe3C) и стали, изделия обладают уникальными <a-->
-<!--                                    title="Металл для химической промышленности"-->
-<!--                                    href="/catalog/himicheskaya-promyshlennost/">химическими</a> и физическими-->
-<!--                            свойствами. В составе могут быть и другие материалы, от которых будут зависеть качества-->
-<!--                            конечного продукта. Черный металлопрокат занимает 90% от всех используемых металлов. Он-->
-<!--                            является базовым и применяется в сооружении конструкций и производстве промышленных и-->
-<!--                            бытовых изделий – агрегатов, станков и т. д.</p>-->
-<!--                        <h2>Какие свойства имеет черный металлопрокат</h2>-->
-<!--                        <p>Он имеет следующие качества:</p>-->
-<!--                        <ul>-->
-<!--                            <li>Высокую прочность: это качество делает его подходящим для применения в различных-->
-<!--                                конструкциях, где нужна стойкость;-->
-<!--                            </li>-->
-<!--                            <li><a title="Прокат нержавеющих металлов" href="/catalog/nerzhaveyushij-prokat/">Устойчивость-->
-<!--                                к коррозии</a>: изделия обрабатывают разными методами, продлить сроки службы металла и-->
-<!--                                предотвратить появление коррозии;-->
-<!--                            </li>-->
-<!--                            <li>Гибкость: черный металлопрокат легко формировать и адаптировать под различные-->
-<!--                                требования, что упрощает использование в разных проектах;-->
-<!--                            </li>-->
-<!--                            <li>Токо- и теплопроводимость: эти параметры расширяют сферы его применения;</li>-->
-<!--                            <li>Универсальность обработки. Материал легко поддается сверлению, резке, гибке, <a-->
-<!--                                    title="Товары для сварки" href="/catalog/svarochnye-materialy/">сварке</a> и другим-->
-<!--                                манипуляциям.-->
-<!--                            </li>-->
-<!--                        </ul>-->
-<!--                        <h2>Виды черного металлопроката и где используется</h2>-->
-<!--                        <p>Он представлен на рынке в разных формах.</p>-->
-<!--                        <ul>-->
-<!--                            <li>Трубы: в <a title="Металл для строительства"-->
-<!--                                            href="/catalog/stroitelstvo/">строительстве</a> они нужны для сооружения-->
-<!--                                стальных трубопроводов, систем кондиционирования и отопления, прочих металлоконструкций.-->
-<!--                            </li>-->
-<!--                            <li>Профили, балки: их используют для возведения мостов, каркасов, рам, дорожных и прочих-->
-<!--                                конструкций. Они пользуются большим спросом у строительных компаний. Швеллеры имеют-->
-<!--                                П-образную форму и становятся частью разных конструкций.-->
-<!--                            </li>-->
-<!--                            <li>Проволоки, прутки: используют для армирования бетонных конструкций, сварочных работ,-->
-<!--                                создания металлических изделий разных размеров и форм.-->
-<!--                            </li>-->
-<!--                            <li>Листы: применяют в судостроительной и автомобильной промышленностях, для создания-->
-<!--                                корпусов, емкостей.-->
-<!--                            </li>-->
-<!--                            <li>Арматура: необходима для армирования конструкций из бетона для их дополнительной-->
-<!--                                прочности.-->
-<!--                            </li>-->
-<!--                        </ul>-->
-<!--                        <p>Разные виды черного металлопроката используют в строительстве, машиностроении,-->
-<!--                            промышленности, инженерии, интерьере, дизайне. Он становится частью для строительных-->
-<!--                            проектов, представляя основу конструкций. В интерьере и дизайне используется для стильного-->
-<!--                            декора: лестниц, перил, мебели. Изделия несут не только прикладную, но и художественную-->
-<!--                            функцию.</p>-->
-<!--                        <h2>Заключение</h2>-->
-<!--                        <p>Черный металлопрокат – отличный строительный материал с различными свойствами, из-за которых-->
-<!--                            его активно применяют в разных целях. Перед тем как выбрать вид проката, учитываются-->
-<!--                            требования по стойкости к коррозии, прочностным характеристикам, гибкости и др. Это надежный-->
-<!--                            и прочный материал, способный выдерживать высокие нагрузки и прослужить длительный срок. К-->
-<!--                            его основным плюсам относят низкую цену.</p>-->
-<!--                        <p>Черный металлопрокат производится строго по требованиям и нормам ГОСТов!</p>-->
-<!--                    </div>-->
-<!--                </div>-->
-<!--                <div class="col-lg-3 ml-auto order-lg-2 order-1">-->
-<!--                    <a class="purchase-details__special-offer" href="/spec/"-->
-<!--                       style="background-image: url(/static/img/content/special-offer.webp);">-->
-<!--        <span class="purchase-details__special-offer-title">-->
-<!--            Спецпредложения на ограниченное количество<br>продукции-->
-<!--        </span>-->
-<!--                        <img class="purchase-details__special-offer-logo" src="/static/img/logo_img.svg"-->
-<!--                             alt="UniTrade">-->
-<!--                    </a>-->
-<!--                </div>-->
-<!--            </div>-->
-<!--        </div>-->
-<!--    </section>-->
-
 
 </main>
 {% endblock %}

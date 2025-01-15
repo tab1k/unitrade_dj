@@ -12,5 +12,7 @@ urlpatterns = [
     path('refund/', RefundViewPage.as_view(), name='refund'),
     path('category/', CategoryViewPage.as_view(), name='category'),
     path('category/<slug:slug>/', CategoryDetailView.as_view(), name='category_detail'),
+    path('<slug:slug>/products/', ProductListView.as_view(), name='product_list'),
+    path('product/<slug:slug>/', ProductDetailView.as_view(), name='product_detail'),
 ]
 

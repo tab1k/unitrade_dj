@@ -2,7 +2,9 @@ from django.db.models import Prefetch
 from django.shortcuts import render
 from django.views.generic import TemplateView
 from .models import *
-from django.views.generic import DetailView
+from django.shortcuts import redirect
+
+from django.views.generic import DetailView, ListView
 
 
 class IndexViewPage(TemplateView):
@@ -18,22 +20,25 @@ class IndexViewPage(TemplateView):
         )
         return context
 
+
 class ServiceViewPage(TemplateView):
-    template_name ='services.html'
+    template_name = 'services.html'
+
 
 class AboutViewPage(TemplateView):
-    template_name ='about.html'
+    template_name = 'about.html'
+
 
 class DeliveryViewPage(TemplateView):
-    template_name ='buyers/delivery.html'
+    template_name = 'buyers/delivery.html'
 
 
 class PaymentViewPage(TemplateView):
-    template_name ='buyers/payment.html'
+    template_name = 'buyers/payment.html'
 
 
 class RefundViewPage(TemplateView):
-    template_name ='buyers/refund.html'
+    template_name = 'buyers/refund.html'
 
 
 class CategoryViewPage(TemplateView):
@@ -57,7 +62,7 @@ class CategoryViewPage(TemplateView):
                 ),
                 Prefetch(
                     'products',
-                    queryset=Product.objects.only('id', 'name', 'price')
+                    queryset=Product.objects.only('id', 'name', 'slug')
                 )
             )
         )
@@ -65,22 +70,63 @@ class CategoryViewPage(TemplateView):
         return context
 
 
-
 class CategoryDetailView(DetailView):
     model = Category
     template_name = 'category/category_detail.html'
     context_object_name = 'category'
 
+    def get_queryset(self):
+        # Загружаем связанные данные только один раз
+        return Category.objects.prefetch_related(
+            'children',  # Предзагрузка подкатегорий
+            'products'  # Предзагрузка продуктов
+        ).select_related('parent').order_by('id')  # Сохраняем порядок категорий
+
+    def get(self, request, *args, **kwargs):
+        # Получение текущего объекта категории
+        self.object = self.get_object()
+
+        # Проверка: если подкатегорий нет, перенаправить на страницу списка продуктов
+        if not self.object.children.exists():
+            return redirect('app:product_list', slug=self.object.slug)
+
+        # Если подкатегории существуют, отображаем стандартный шаблон
+        return super().get(request, *args, **kwargs)
+
     def get_context_data(self, **kwargs):
         context = super().get_context_data(**kwargs)
-
-        # Добавляем продукцию в контекст для отображения
         category = self.get_object()
+
+        # Проверим содержимое продуктов для категории
         context['products'] = category.products.all()
-        context['categories'] = Category.objects.filter(parent__isnull=True).order_by('id').prefetch_related('children')
+        print(context['products'])  # Выведет список продуктов в консоль, если это нужно
 
+        context['categories'] = Category.objects.filter(
+            parent__isnull=True
+        ).order_by('id').only('id', 'name')
 
-
-        # Для фильтрации по другим характеристикам, вам нужно определить логику
-        # например, с фильтрами по бренду, размеру и т.п.
         return context
+
+
+class ProductListView(ListView):
+    model = Product
+    template_name = 'product/product_list.html'
+    context_object_name = 'products'
+
+    def get_queryset(self):
+        # Загружаем только продукты для текущей категории
+        slug = self.kwargs.get('slug')
+        category = Category.objects.get(slug=slug)
+        return category.products.all()
+
+    def get_context_data(self, **kwargs):
+        context = super().get_context_data(**kwargs)
+        slug = self.kwargs.get('slug')
+        context['category'] = Category.objects.get(slug=slug)
+        return context
+
+
+class ProductDetailView(DetailView):
+    model = Product
+    template_name = 'product/product_detail.html'
+    context_object_name = 'product'

@@ -12,6 +12,8 @@ class CategoryAdmin(admin.ModelAdmin):
 
 @admin.register(Product)
 class ProductAdmin(admin.ModelAdmin):
-    list_display = ('name', 'category', 'price')
+    list_display = ('name', 'category', 'slug')
+    prepopulated_fields = {'slug': ('name',)}
+    autocomplete_fields = ['category']
     search_fields = ('name', 'category__name')
     ordering = ('name',)
