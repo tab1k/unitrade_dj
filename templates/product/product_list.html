@@ -1,6 +1,8 @@
 {% extends 'base.html' %}
 {% load static %}
 
+{% block title %} {{ category.name }}{% endblock %}
+
 {% block content %}
 <main>
 
@@ -86,7 +88,7 @@
         <div class="slider mt-3 mt-lg-0 mb-5">
             <div class="slider__head">
                 <div class="slider__head-row">
-                    <h1 class="slider__title" style="color: white;" >{{ category.name }}</h1>
+                    <h1 class="slider__title" style="color: white;">{{ category.name }}</h1>
                 </div>
                 <a class="link-back d-md-none mb-0" href="/catalog/truby-iz-stali/">Назад</a>
             </div>
@@ -99,11 +101,9 @@
                              style="background-color: #1d1d1d; border-radius: 8px; overflow: hidden; box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);">
                             <div class="card-mini__img" style="width: 100%; overflow: hidden;">
                                 <img src="{{ product.image.url }}"
-                                     alt="Электросварная стальная труба купить в Астане"
-                                     title="Электросварная стальная труба купить в Астане"
                                      style="width: 100%; height: 100%; object-fit: cover;">
                             </div>
-                            <a class="card-mini__link stretched-link" href="/catalog/elektrosvarnye-stalnye-truby/"
+                            <a class="card-mini__link stretched-link" href="{{ product.get_absolute_url }}"
                                style="color: #f5a623; font-size: 16px; font-weight: bold; display: block; text-decoration: none; text-align: center; padding: 12px;">
                                 {{ product.name }}
                             </a>
@@ -192,7 +192,8 @@
                             </div>
                             <div class="filter-aside__content open">
                                 <label class="search__label visible">
-                                    <input class="search__input filter-aside__search" placeholder="Поиск...">
+                                    <input class="search__input filter-aside__search" style="background-color: #1f1f1f;"
+                                           placeholder="Поиск...">
                                 </label>
                                 <div class="filter-list">
 
@@ -843,7 +844,8 @@
                             </div>
                             <div class="filter-aside__content open">
                                 <label class="search__label">
-                                    <input class="search__input filter-aside__search" placeholder="Поиск...">
+                                    <input class="search__input filter-aside__search" style="background-color: #1f1f1f;"
+                                           placeholder="Поиск...">
                                 </label>
                                 <div class="filter-list">
 
@@ -878,7 +880,8 @@
                             </div>
                             <div class="filter-aside__content open">
                                 <label class="search__label visible">
-                                    <input class="search__input filter-aside__search" placeholder="Поиск...">
+                                    <input class="search__input filter-aside__search" style="background-color: #1f1f1f;"
+                                           placeholder="Поиск...">
                                 </label>
                                 <div class="filter-list">
 
@@ -961,7 +964,8 @@
                             </div>
                             <div class="filter-aside__content open">
                                 <label class="search__label visible">
-                                    <input class="search__input filter-aside__search" placeholder="Поиск...">
+                                    <input class="search__input filter-aside__search" style="background-color: #1f1f1f;"
+                                           placeholder="Поиск...">
                                 </label>
                                 <div class="filter-list">
 
@@ -1028,7 +1032,8 @@
                             </div>
                             <div class="filter-aside__content open">
                                 <label class="search__label visible">
-                                    <input class="search__input filter-aside__search" placeholder="Поиск...">
+                                    <input class="search__input filter-aside__search" style="background-color: #1f1f1f;"
+                                           placeholder="Поиск...">
                                 </label>
                                 <div class="filter-list">
 
@@ -3127,7 +3132,8 @@
                             </div>
                             <div class="filter-aside__content open">
                                 <label class="search__label visible">
-                                    <input class="search__input filter-aside__search" placeholder="Поиск...">
+                                    <input class="search__input filter-aside__search" style="background-color: #1f1f1f;"
+                                           placeholder="Поиск...">
                                 </label>
                                 <div class="filter-list">
 
@@ -6050,7 +6056,8 @@
                             </div>
                             <div class="filter-aside__content open">
                                 <label class="search__label visible">
-                                    <input class="search__input filter-aside__search" placeholder="Поиск...">
+                                    <input class="search__input filter-aside__search" style="background-color: #1f1f1f;"
+                                           placeholder="Поиск...">
                                 </label>
                                 <div class="filter-list">
 
@@ -6125,7 +6132,8 @@
                             </div>
                             <div class="filter-aside__content open">
                                 <label class="search__label">
-                                    <input class="search__input filter-aside__search" placeholder="Поиск...">
+                                    <input class="search__input filter-aside__search" style="background-color: #1f1f1f;"
+                                           placeholder="Поиск...">
                                 </label>
                                 <div class="filter-list">
 
@@ -6160,7 +6168,8 @@
                             </div>
                             <div class="filter-aside__content open">
                                 <label class="search__label">
-                                    <input class="search__input filter-aside__search" placeholder="Поиск...">
+                                    <input class="search__input filter-aside__search" style="background-color: #1f1f1f;"
+                                           placeholder="Поиск...">
                                 </label>
                                 <div class="filter-list">
 
@@ -6195,7 +6204,8 @@
                             </div>
                             <div class="filter-aside__content open">
                                 <label class="search__label visible">
-                                    <input class="search__input filter-aside__search" placeholder="Поиск...">
+                                    <input class="search__input filter-aside__search" style="background-color: #1f1f1f;"
+                                           placeholder="Поиск...">
                                 </label>
                                 <div class="filter-list">
 
@@ -8445,7 +8455,7 @@
             </div>
             <div class="listing-grid__content">
                 <div class="product-control">
-                    <div class="product-control__found">Найдено 997374 товара</div>
+                    <div class="product-control__found">Найдено {{ products.count }} товара</div>
                     <div class="product-control__reset d-none" data-reset-filter="">
                         Очистить фильтр
                         <svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -8458,27 +8468,25 @@
                         </svg>
                     </div>
                 </div>
-                <div class="table-wrapper">
+                <div class="table-wrapper" style="border: 1px solid #1f1f1f; border-radius: 10px;">
                     <table class="product-table style-body style-card style-callback" itemscope=""
                            itemtype="https://schema.org/ItemList">
                         <tbody id="listing-table-target" data-pagination-target="">
 
-                        <tr class="product-table__item" data-product-card="" itemprop="itemListElement" itemscope=""
-                            itemtype="https://schema.org/Product">
+                        {% for product in products %}
+
+                        <tr class="product-table__item" style="border-bottom: 1px solid #1f1f1f;">
                             <td>
                                 <div class="short-product">
                                     <div class="short-product__photo">
-                                        <img src="/media/uploads/catalog/category/%D0%A6%D0%B5%D0%BB%D1%8C%D0%BD%D0%BE%D1%82%D1%8F%D0%BD%D1%83%D1%82%D0%B0%D1%8F_%D1%82%D1%80%D1%83%D0%B1%D0%B0_FGhEo9l.png"
-                                             alt="Цельнотянутая стальная труба горячекатаная 50х9 мм 30ХГСА ТУ 14-3-675-78 купить в Астане"
-                                             title="Цельнотянутая стальная труба горячекатаная 50х9 мм 30ХГСА ТУ 14-3-675-78 купить в Астане"
-                                             itemprop="image">
+                                        <img src="{{ product.image.url }}">
                                     </div>
                                     <div class="short-product__info">
 
-                                        <a href="/product/tselnotjanutaja-stalnaja-truba-gorjachekatanaja-50-mm-9-mm-30hgsa-tu-14-3-675-78/"
+                                        <a href="{{ product.get_absolute_url }}"
                                            itemprop="url">
                                             <div class="short-product__title" data-product-title="" itemprop="name">
-                                                Цельнотянутая стальная труба горячекатаная 50х9 мм 30ХГСА ТУ 14-3-675-78
+                                                {{ product.name }}
                                             </div>
                                         </a>
 
@@ -8525,1193 +8533,19 @@
                             </td>
                         </tr>
 
-                        <tr class="product-table__item" data-product-card="" itemprop="itemListElement" itemscope=""
-                            itemtype="https://schema.org/Product">
-                            <td>
-                                <div class="short-product">
-                                    <div class="short-product__photo">
-                                        <img src="/media/uploads/catalog/category/%D0%A6%D0%B5%D0%BB%D1%8C%D0%BD%D0%BE%D1%82%D1%8F%D0%BD%D1%83%D1%82%D0%B0%D1%8F_%D1%82%D1%80%D1%83%D0%B1%D0%B0_FGhEo9l.png"
-                                             alt="Цельнотянутая стальная труба горячекатаная 54х3 мм 30ХГСА ТУ 14-3-675-78 купить в Астане"
-                                             title="Цельнотянутая стальная труба горячекатаная 54х3 мм 30ХГСА ТУ 14-3-675-78 купить в Астане"
-                                             itemprop="image">
-                                    </div>
-                                    <div class="short-product__info">
-
-                                        <a href="/product/tselnotjanutaja-stalnaja-truba-gorjachekatanaja-54-mm-3-mm-30hgsa-tu-14-3-675-78/"
-                                           itemprop="url">
-                                            <div class="short-product__title" data-product-title="" itemprop="name">
-                                                Цельнотянутая стальная труба горячекатаная 54х3 мм 30ХГСА ТУ 14-3-675-78
-                                            </div>
-                                        </a>
-
-
-                                    </div>
-                                    <div class="product-table__battery product-table__battery--many"
-                                         data-tippy-content-p-no-arrow="<p>Много</p>">
-                                        <svg class="icon icon_battery-many">
-                                            <use xlink:href="/static/img/svg/symbol/sprite.svg#battery-many"></use>
-                                        </svg>
-                                    </div>
-                                </div>
-                            </td>
-                            <td itemprop="offers" itemscope="" itemtype="http://schema.org/Offer">
-                                <link itemprop="availability" href="http://schema.org/InStock">
-                                <meta itemprop="priceCurrency" content="KZT">
-                                <div class="product-table__actions callback">
-
-
-                                    <div class="product-table__btn btn-find" data-call-modal="find-price"
-                                         onclick="ym(window.isteels.ym_id, 'reachGoal', 'click_product_price');">
-                                        Узнать цену
-                                    </div>
-
-
-                                    <div class="callblock">
-                                        <div class="callblock__item" data-modal-toggle="#modal-call"
-                                             onclick="ym(window.isteels.ym_id, 'reachGoal', 'pricelist_phone');">
-                                            <svg class="icon icon_phone">
-                                                <use xlink:href="/static/img/svg/symbol/sprite.svg#phone"></use>
-                                            </svg>
-                                        </div>
-                                        <a class="callblock__item mgo-email" href="mailto:astana@isteels.kz"
-                                           onclick="ym(window.isteels.ym_id, 'reachGoal', 'pricelist_email');">
-                                            <svg class="icon icon_email">
-                                                <use xlink:href="/static/img/svg/symbol/sprite.svg#email"></use>
-                                            </svg>
-                                            <span class="d-none">astana@isteels.kz</span>
-                                        </a>
-                                    </div>
-
-
-                                </div>
-                            </td>
-                        </tr>
-
-                        <tr class="product-table__item" data-product-card="" itemprop="itemListElement" itemscope=""
-                            itemtype="https://schema.org/Product">
-                            <td>
-                                <div class="short-product">
-                                    <div class="short-product__photo">
-                                        <img src="/media/uploads/catalog/category/%D0%A6%D0%B5%D0%BB%D1%8C%D0%BD%D0%BE%D1%82%D1%8F%D0%BD%D1%83%D1%82%D0%B0%D1%8F_%D1%82%D1%80%D1%83%D0%B1%D0%B0_FGhEo9l.png"
-                                             alt="Цельнотянутая стальная труба горячекатаная 54х5 мм 30ХГСА ТУ 14-3-675-78 купить в Астане"
-                                             title="Цельнотянутая стальная труба горячекатаная 54х5 мм 30ХГСА ТУ 14-3-675-78 купить в Астане"
-                                             itemprop="image">
-                                    </div>
-                                    <div class="short-product__info">
-
-                                        <a href="/product/tselnotjanutaja-stalnaja-truba-gorjachekatanaja-54-mm-5-mm-30hgsa-tu-14-3-675-78/"
-                                           itemprop="url">
-                                            <div class="short-product__title" data-product-title="" itemprop="name">
-                                                Цельнотянутая стальная труба горячекатаная 54х5 мм 30ХГСА ТУ 14-3-675-78
-                                            </div>
-                                        </a>
-
-
-                                    </div>
-                                    <div class="product-table__battery product-table__battery--many"
-                                         data-tippy-content-p-no-arrow="<p>Много</p>">
-                                        <svg class="icon icon_battery-many">
-                                            <use xlink:href="/static/img/svg/symbol/sprite.svg#battery-many"></use>
-                                        </svg>
-                                    </div>
-                                </div>
-                            </td>
-                            <td itemprop="offers" itemscope="" itemtype="http://schema.org/Offer">
-                                <link itemprop="availability" href="http://schema.org/InStock">
-                                <meta itemprop="priceCurrency" content="KZT">
-                                <div class="product-table__actions callback">
-
-
-                                    <div class="product-table__btn btn-find" data-call-modal="find-price"
-                                         onclick="ym(window.isteels.ym_id, 'reachGoal', 'click_product_price');">
-                                        Узнать цену
-                                    </div>
-
-
-                                    <div class="callblock">
-                                        <div class="callblock__item" data-modal-toggle="#modal-call"
-                                             onclick="ym(window.isteels.ym_id, 'reachGoal', 'pricelist_phone');">
-                                            <svg class="icon icon_phone">
-                                                <use xlink:href="/static/img/svg/symbol/sprite.svg#phone"></use>
-                                            </svg>
-                                        </div>
-                                        <a class="callblock__item mgo-email" href="mailto:astana@isteels.kz"
-                                           onclick="ym(window.isteels.ym_id, 'reachGoal', 'pricelist_email');">
-                                            <svg class="icon icon_email">
-                                                <use xlink:href="/static/img/svg/symbol/sprite.svg#email"></use>
-                                            </svg>
-                                            <span class="d-none">astana@isteels.kz</span>
-                                        </a>
-                                    </div>
-
-
-                                </div>
-                            </td>
-                        </tr>
-
-                        <tr class="product-table__item" data-product-card="" itemprop="itemListElement" itemscope=""
-                            itemtype="https://schema.org/Product">
-                            <td>
-                                <div class="short-product">
-                                    <div class="short-product__photo">
-                                        <img src="/media/uploads/catalog/category/%D0%A6%D0%B5%D0%BB%D1%8C%D0%BD%D0%BE%D1%82%D1%8F%D0%BD%D1%83%D1%82%D0%B0%D1%8F_%D1%82%D1%80%D1%83%D0%B1%D0%B0_FGhEo9l.png"
-                                             alt="Цельнотянутая стальная труба горячекатаная 54х6 мм 30ХГСА ТУ 14-3-675-78 купить в Астане"
-                                             title="Цельнотянутая стальная труба горячекатаная 54х6 мм 30ХГСА ТУ 14-3-675-78 купить в Астане"
-                                             itemprop="image">
-                                    </div>
-                                    <div class="short-product__info">
-
-                                        <a href="/product/tselnotjanutaja-stalnaja-truba-gorjachekatanaja-54-mm-6-mm-30hgsa-tu-14-3-675-78/"
-                                           itemprop="url">
-                                            <div class="short-product__title" data-product-title="" itemprop="name">
-                                                Цельнотянутая стальная труба горячекатаная 54х6 мм 30ХГСА ТУ 14-3-675-78
-                                            </div>
-                                        </a>
-
-
-                                    </div>
-                                    <div class="product-table__battery product-table__battery--many"
-                                         data-tippy-content-p-no-arrow="<p>Много</p>">
-                                        <svg class="icon icon_battery-many">
-                                            <use xlink:href="/static/img/svg/symbol/sprite.svg#battery-many"></use>
-                                        </svg>
-                                    </div>
-                                </div>
-                            </td>
-                            <td itemprop="offers" itemscope="" itemtype="http://schema.org/Offer">
-                                <link itemprop="availability" href="http://schema.org/InStock">
-                                <meta itemprop="priceCurrency" content="KZT">
-                                <div class="product-table__actions callback">
-
-
-                                    <div class="product-table__btn btn-find" data-call-modal="find-price"
-                                         onclick="ym(window.isteels.ym_id, 'reachGoal', 'click_product_price');">
-                                        Узнать цену
-                                    </div>
-
-
-                                    <div class="callblock">
-                                        <div class="callblock__item" data-modal-toggle="#modal-call"
-                                             onclick="ym(window.isteels.ym_id, 'reachGoal', 'pricelist_phone');">
-                                            <svg class="icon icon_phone">
-                                                <use xlink:href="/static/img/svg/symbol/sprite.svg#phone"></use>
-                                            </svg>
-                                        </div>
-                                        <a class="callblock__item mgo-email" href="mailto:astana@isteels.kz"
-                                           onclick="ym(window.isteels.ym_id, 'reachGoal', 'pricelist_email');">
-                                            <svg class="icon icon_email">
-                                                <use xlink:href="/static/img/svg/symbol/sprite.svg#email"></use>
-                                            </svg>
-                                            <span class="d-none">astana@isteels.kz</span>
-                                        </a>
-                                    </div>
-
-
-                                </div>
-                            </td>
-                        </tr>
-
-                        <tr class="product-table__item" data-product-card="" itemprop="itemListElement" itemscope=""
-                            itemtype="https://schema.org/Product">
-                            <td>
-                                <div class="short-product">
-                                    <div class="short-product__photo">
-                                        <img src="/media/uploads/catalog/category/%D0%A6%D0%B5%D0%BB%D1%8C%D0%BD%D0%BE%D1%82%D1%8F%D0%BD%D1%83%D1%82%D0%B0%D1%8F_%D1%82%D1%80%D1%83%D0%B1%D0%B0_FGhEo9l.png"
-                                             alt="Цельнотянутая стальная труба горячекатаная 54х7 мм 30ХГСА ТУ 14-3-675-78 купить в Астане"
-                                             title="Цельнотянутая стальная труба горячекатаная 54х7 мм 30ХГСА ТУ 14-3-675-78 купить в Астане"
-                                             itemprop="image">
-                                    </div>
-                                    <div class="short-product__info">
-
-                                        <a href="/product/tselnotjanutaja-stalnaja-truba-gorjachekatanaja-54-mm-7-mm-30hgsa-tu-14-3-675-78/"
-                                           itemprop="url">
-                                            <div class="short-product__title" data-product-title="" itemprop="name">
-                                                Цельнотянутая стальная труба горячекатаная 54х7 мм 30ХГСА ТУ 14-3-675-78
-                                            </div>
-                                        </a>
-
-
-                                    </div>
-                                    <div class="product-table__battery product-table__battery--many"
-                                         data-tippy-content-p-no-arrow="<p>Много</p>">
-                                        <svg class="icon icon_battery-many">
-                                            <use xlink:href="/static/img/svg/symbol/sprite.svg#battery-many"></use>
-                                        </svg>
-                                    </div>
-                                </div>
-                            </td>
-                            <td itemprop="offers" itemscope="" itemtype="http://schema.org/Offer">
-                                <link itemprop="availability" href="http://schema.org/InStock">
-                                <meta itemprop="priceCurrency" content="KZT">
-                                <div class="product-table__actions callback">
-
-
-                                    <div class="product-table__btn btn-find" data-call-modal="find-price"
-                                         onclick="ym(window.isteels.ym_id, 'reachGoal', 'click_product_price');">
-                                        Узнать цену
-                                    </div>
-
-
-                                    <div class="callblock">
-                                        <div class="callblock__item" data-modal-toggle="#modal-call"
-                                             onclick="ym(window.isteels.ym_id, 'reachGoal', 'pricelist_phone');">
-                                            <svg class="icon icon_phone">
-                                                <use xlink:href="/static/img/svg/symbol/sprite.svg#phone"></use>
-                                            </svg>
-                                        </div>
-                                        <a class="callblock__item mgo-email" href="mailto:astana@isteels.kz"
-                                           onclick="ym(window.isteels.ym_id, 'reachGoal', 'pricelist_email');">
-                                            <svg class="icon icon_email">
-                                                <use xlink:href="/static/img/svg/symbol/sprite.svg#email"></use>
-                                            </svg>
-                                            <span class="d-none">astana@isteels.kz</span>
-                                        </a>
-                                    </div>
-
-
-                                </div>
-                            </td>
-                        </tr>
-
-                        <tr class="product-table__item" data-product-card="" itemprop="itemListElement" itemscope=""
-                            itemtype="https://schema.org/Product">
-                            <td>
-                                <div class="short-product">
-                                    <div class="short-product__photo">
-                                        <img src="/media/uploads/catalog/category/%D0%A6%D0%B5%D0%BB%D1%8C%D0%BD%D0%BE%D1%82%D1%8F%D0%BD%D1%83%D1%82%D0%B0%D1%8F_%D1%82%D1%80%D1%83%D0%B1%D0%B0_FGhEo9l.png"
-                                             alt="Цельнотянутая стальная труба горячекатаная 54х8 мм 30ХГСА ТУ 14-3-675-78 купить в Астане"
-                                             title="Цельнотянутая стальная труба горячекатаная 54х8 мм 30ХГСА ТУ 14-3-675-78 купить в Астане"
-                                             itemprop="image">
-                                    </div>
-                                    <div class="short-product__info">
-
-                                        <a href="/product/tselnotjanutaja-stalnaja-truba-gorjachekatanaja-54-mm-8-mm-30hgsa-tu-14-3-675-78/"
-                                           itemprop="url">
-                                            <div class="short-product__title" data-product-title="" itemprop="name">
-                                                Цельнотянутая стальная труба горячекатаная 54х8 мм 30ХГСА ТУ 14-3-675-78
-                                            </div>
-                                        </a>
-
-
-                                    </div>
-                                    <div class="product-table__battery product-table__battery--many"
-                                         data-tippy-content-p-no-arrow="<p>Много</p>">
-                                        <svg class="icon icon_battery-many">
-                                            <use xlink:href="/static/img/svg/symbol/sprite.svg#battery-many"></use>
-                                        </svg>
-                                    </div>
-                                </div>
-                            </td>
-                            <td itemprop="offers" itemscope="" itemtype="http://schema.org/Offer">
-                                <link itemprop="availability" href="http://schema.org/InStock">
-                                <meta itemprop="priceCurrency" content="KZT">
-                                <div class="product-table__actions callback">
-
-
-                                    <div class="product-table__btn btn-find" data-call-modal="find-price"
-                                         onclick="ym(window.isteels.ym_id, 'reachGoal', 'click_product_price');">
-                                        Узнать цену
-                                    </div>
-
-
-                                    <div class="callblock">
-                                        <div class="callblock__item" data-modal-toggle="#modal-call"
-                                             onclick="ym(window.isteels.ym_id, 'reachGoal', 'pricelist_phone');">
-                                            <svg class="icon icon_phone">
-                                                <use xlink:href="/static/img/svg/symbol/sprite.svg#phone"></use>
-                                            </svg>
-                                        </div>
-                                        <a class="callblock__item mgo-email" href="mailto:astana@isteels.kz"
-                                           onclick="ym(window.isteels.ym_id, 'reachGoal', 'pricelist_email');">
-                                            <svg class="icon icon_email">
-                                                <use xlink:href="/static/img/svg/symbol/sprite.svg#email"></use>
-                                            </svg>
-                                            <span class="d-none">astana@isteels.kz</span>
-                                        </a>
-                                    </div>
-
-
-                                </div>
-                            </td>
-                        </tr>
-
-                        <tr class="product-table__item" data-product-card="" itemprop="itemListElement" itemscope=""
-                            itemtype="https://schema.org/Product">
-                            <td>
-                                <div class="short-product">
-                                    <div class="short-product__photo">
-                                        <img src="/media/uploads/catalog/category/%D0%A6%D0%B5%D0%BB%D1%8C%D0%BD%D0%BE%D1%82%D1%8F%D0%BD%D1%83%D1%82%D0%B0%D1%8F_%D1%82%D1%80%D1%83%D0%B1%D0%B0_FGhEo9l.png"
-                                             alt="Цельнотянутая стальная труба горячекатаная 60х10 мм 30ХГСА ТУ 14-3-675-78 купить в Астане"
-                                             title="Цельнотянутая стальная труба горячекатаная 60х10 мм 30ХГСА ТУ 14-3-675-78 купить в Астане"
-                                             itemprop="image">
-                                    </div>
-                                    <div class="short-product__info">
-
-                                        <a href="/product/tselnotjanutaja-stalnaja-truba-gorjachekatanaja-60-mm-10-mm-30hgsa-tu-14-3-675-78/"
-                                           itemprop="url">
-                                            <div class="short-product__title" data-product-title="" itemprop="name">
-                                                Цельнотянутая стальная труба горячекатаная 60х10 мм 30ХГСА ТУ
-                                                14-3-675-78
-                                            </div>
-                                        </a>
-
-
-                                    </div>
-                                    <div class="product-table__battery product-table__battery--many"
-                                         data-tippy-content-p-no-arrow="<p>Много</p>">
-                                        <svg class="icon icon_battery-many">
-                                            <use xlink:href="/static/img/svg/symbol/sprite.svg#battery-many"></use>
-                                        </svg>
-                                    </div>
-                                </div>
-                            </td>
-                            <td itemprop="offers" itemscope="" itemtype="http://schema.org/Offer">
-                                <link itemprop="availability" href="http://schema.org/InStock">
-                                <meta itemprop="priceCurrency" content="KZT">
-                                <div class="product-table__actions callback">
-
-
-                                    <div class="product-table__btn btn-find" data-call-modal="find-price"
-                                         onclick="ym(window.isteels.ym_id, 'reachGoal', 'click_product_price');">
-                                        Узнать цену
-                                    </div>
-
-
-                                    <div class="callblock">
-                                        <div class="callblock__item" data-modal-toggle="#modal-call"
-                                             onclick="ym(window.isteels.ym_id, 'reachGoal', 'pricelist_phone');">
-                                            <svg class="icon icon_phone">
-                                                <use xlink:href="/static/img/svg/symbol/sprite.svg#phone"></use>
-                                            </svg>
-                                        </div>
-                                        <a class="callblock__item mgo-email" href="mailto:astana@isteels.kz"
-                                           onclick="ym(window.isteels.ym_id, 'reachGoal', 'pricelist_email');">
-                                            <svg class="icon icon_email">
-                                                <use xlink:href="/static/img/svg/symbol/sprite.svg#email"></use>
-                                            </svg>
-                                            <span class="d-none">astana@isteels.kz</span>
-                                        </a>
-                                    </div>
-
-
-                                </div>
-                            </td>
-                        </tr>
-
-                        <tr class="product-table__item" data-product-card="" itemprop="itemListElement" itemscope=""
-                            itemtype="https://schema.org/Product">
-                            <td>
-                                <div class="short-product">
-                                    <div class="short-product__photo">
-                                        <img src="/media/uploads/catalog/category/%D0%A6%D0%B5%D0%BB%D1%8C%D0%BD%D0%BE%D1%82%D1%8F%D0%BD%D1%83%D1%82%D0%B0%D1%8F_%D1%82%D1%80%D1%83%D0%B1%D0%B0_FGhEo9l.png"
-                                             alt="Цельнотянутая стальная труба горячедеформированная 127х22 мм 13ХФА ТУ 14-3Р-91-2004 купить в Астане"
-                                             title="Цельнотянутая стальная труба горячедеформированная 127х22 мм 13ХФА ТУ 14-3Р-91-2004 купить в Астане"
-                                             itemprop="image">
-                                    </div>
-                                    <div class="short-product__info">
-
-                                        <a href="/product/tselnotjanutaja-stalnaja-truba-gorjachedeformirovannaja-127-mm-22-mm-13hfa-tu-14-3r-91-2004/"
-                                           itemprop="url">
-                                            <div class="short-product__title" data-product-title="" itemprop="name">
-                                                Цельнотянутая стальная труба горячедеформированная 127х22 мм 13ХФА ТУ
-                                                14-3Р-91-2004
-                                            </div>
-                                        </a>
-
-
-                                    </div>
-                                    <div class="product-table__battery product-table__battery--many"
-                                         data-tippy-content-p-no-arrow="<p>Много</p>">
-                                        <svg class="icon icon_battery-many">
-                                            <use xlink:href="/static/img/svg/symbol/sprite.svg#battery-many"></use>
-                                        </svg>
-                                    </div>
-                                </div>
-                            </td>
-                            <td itemprop="offers" itemscope="" itemtype="http://schema.org/Offer">
-                                <link itemprop="availability" href="http://schema.org/InStock">
-                                <meta itemprop="priceCurrency" content="KZT">
-                                <div class="product-table__actions callback">
-
-
-                                    <div class="product-table__btn btn-find" data-call-modal="find-price"
-                                         onclick="ym(window.isteels.ym_id, 'reachGoal', 'click_product_price');">
-                                        Узнать цену
-                                    </div>
-
-
-                                    <div class="callblock">
-                                        <div class="callblock__item" data-modal-toggle="#modal-call"
-                                             onclick="ym(window.isteels.ym_id, 'reachGoal', 'pricelist_phone');">
-                                            <svg class="icon icon_phone">
-                                                <use xlink:href="/static/img/svg/symbol/sprite.svg#phone"></use>
-                                            </svg>
-                                        </div>
-                                        <a class="callblock__item mgo-email" href="mailto:astana@isteels.kz"
-                                           onclick="ym(window.isteels.ym_id, 'reachGoal', 'pricelist_email');">
-                                            <svg class="icon icon_email">
-                                                <use xlink:href="/static/img/svg/symbol/sprite.svg#email"></use>
-                                            </svg>
-                                            <span class="d-none">astana@isteels.kz</span>
-                                        </a>
-                                    </div>
-
-
-                                </div>
-                            </td>
-                        </tr>
-
-                        <tr class="product-table__item" data-product-card="" itemprop="itemListElement" itemscope=""
-                            itemtype="https://schema.org/Product">
-                            <td>
-                                <div class="short-product">
-                                    <div class="short-product__photo">
-                                        <img src="/media/uploads/catalog/category/%D0%A6%D0%B5%D0%BB%D1%8C%D0%BD%D0%BE%D1%82%D1%8F%D0%BD%D1%83%D1%82%D0%B0%D1%8F_%D1%82%D1%80%D1%83%D0%B1%D0%B0_FGhEo9l.png"
-                                             alt="Цельнотянутая стальная труба горячекатаная 60х3 мм 30ХГСА ТУ 14-3-675-78 купить в Астане"
-                                             title="Цельнотянутая стальная труба горячекатаная 60х3 мм 30ХГСА ТУ 14-3-675-78 купить в Астане"
-                                             itemprop="image">
-                                    </div>
-                                    <div class="short-product__info">
-
-                                        <a href="/product/tselnotjanutaja-stalnaja-truba-gorjachekatanaja-60-mm-3-mm-30hgsa-tu-14-3-675-78/"
-                                           itemprop="url">
-                                            <div class="short-product__title" data-product-title="" itemprop="name">
-                                                Цельнотянутая стальная труба горячекатаная 60х3 мм 30ХГСА ТУ 14-3-675-78
-                                            </div>
-                                        </a>
-
-
-                                    </div>
-                                    <div class="product-table__battery product-table__battery--many"
-                                         data-tippy-content-p-no-arrow="<p>Много</p>">
-                                        <svg class="icon icon_battery-many">
-                                            <use xlink:href="/static/img/svg/symbol/sprite.svg#battery-many"></use>
-                                        </svg>
-                                    </div>
-                                </div>
-                            </td>
-                            <td itemprop="offers" itemscope="" itemtype="http://schema.org/Offer">
-                                <link itemprop="availability" href="http://schema.org/InStock">
-                                <meta itemprop="priceCurrency" content="KZT">
-                                <div class="product-table__actions callback">
-
-
-                                    <div class="product-table__btn btn-find" data-call-modal="find-price"
-                                         onclick="ym(window.isteels.ym_id, 'reachGoal', 'click_product_price');">
-                                        Узнать цену
-                                    </div>
-
-
-                                    <div class="callblock">
-                                        <div class="callblock__item" data-modal-toggle="#modal-call"
-                                             onclick="ym(window.isteels.ym_id, 'reachGoal', 'pricelist_phone');">
-                                            <svg class="icon icon_phone">
-                                                <use xlink:href="/static/img/svg/symbol/sprite.svg#phone"></use>
-                                            </svg>
-                                        </div>
-                                        <a class="callblock__item mgo-email" href="mailto:astana@isteels.kz"
-                                           onclick="ym(window.isteels.ym_id, 'reachGoal', 'pricelist_email');">
-                                            <svg class="icon icon_email">
-                                                <use xlink:href="/static/img/svg/symbol/sprite.svg#email"></use>
-                                            </svg>
-                                            <span class="d-none">astana@isteels.kz</span>
-                                        </a>
-                                    </div>
-
-
-                                </div>
-                            </td>
-                        </tr>
-
-                        <tr class="product-table__item" data-product-card="" itemprop="itemListElement" itemscope=""
-                            itemtype="https://schema.org/Product">
-                            <td>
-                                <div class="short-product">
-                                    <div class="short-product__photo">
-                                        <img src="/media/uploads/catalog/category/%D0%A6%D0%B5%D0%BB%D1%8C%D0%BD%D0%BE%D1%82%D1%8F%D0%BD%D1%83%D1%82%D0%B0%D1%8F_%D1%82%D1%80%D1%83%D0%B1%D0%B0_FGhEo9l.png"
-                                             alt="Цельнотянутая стальная труба горячекатаная 60х4 мм 30ХГСА ТУ 14-3-675-78 купить в Астане"
-                                             title="Цельнотянутая стальная труба горячекатаная 60х4 мм 30ХГСА ТУ 14-3-675-78 купить в Астане"
-                                             itemprop="image">
-                                    </div>
-                                    <div class="short-product__info">
-
-                                        <a href="/product/tselnotjanutaja-stalnaja-truba-gorjachekatanaja-60-mm-4-mm-30hgsa-tu-14-3-675-78/"
-                                           itemprop="url">
-                                            <div class="short-product__title" data-product-title="" itemprop="name">
-                                                Цельнотянутая стальная труба горячекатаная 60х4 мм 30ХГСА ТУ 14-3-675-78
-                                            </div>
-                                        </a>
-
-
-                                    </div>
-                                    <div class="product-table__battery product-table__battery--many"
-                                         data-tippy-content-p-no-arrow="<p>Много</p>">
-                                        <svg class="icon icon_battery-many">
-                                            <use xlink:href="/static/img/svg/symbol/sprite.svg#battery-many"></use>
-                                        </svg>
-                                    </div>
-                                </div>
-                            </td>
-                            <td itemprop="offers" itemscope="" itemtype="http://schema.org/Offer">
-                                <link itemprop="availability" href="http://schema.org/InStock">
-                                <meta itemprop="priceCurrency" content="KZT">
-                                <div class="product-table__actions callback">
-
-
-                                    <div class="product-table__btn btn-find" data-call-modal="find-price"
-                                         onclick="ym(window.isteels.ym_id, 'reachGoal', 'click_product_price');">
-                                        Узнать цену
-                                    </div>
-
-
-                                    <div class="callblock">
-                                        <div class="callblock__item" data-modal-toggle="#modal-call"
-                                             onclick="ym(window.isteels.ym_id, 'reachGoal', 'pricelist_phone');">
-                                            <svg class="icon icon_phone">
-                                                <use xlink:href="/static/img/svg/symbol/sprite.svg#phone"></use>
-                                            </svg>
-                                        </div>
-                                        <a class="callblock__item mgo-email" href="mailto:astana@isteels.kz"
-                                           onclick="ym(window.isteels.ym_id, 'reachGoal', 'pricelist_email');">
-                                            <svg class="icon icon_email">
-                                                <use xlink:href="/static/img/svg/symbol/sprite.svg#email"></use>
-                                            </svg>
-                                            <span class="d-none">astana@isteels.kz</span>
-                                        </a>
-                                    </div>
-
-
-                                </div>
-                            </td>
-                        </tr>
-
-                        <tr class="product-table__item" data-product-card="" itemprop="itemListElement" itemscope=""
-                            itemtype="https://schema.org/Product">
-                            <td>
-                                <div class="short-product">
-                                    <div class="short-product__photo">
-                                        <img src="/media/uploads/catalog/category/%D0%A6%D0%B5%D0%BB%D1%8C%D0%BD%D0%BE%D1%82%D1%8F%D0%BD%D1%83%D1%82%D0%B0%D1%8F_%D1%82%D1%80%D1%83%D0%B1%D0%B0_FGhEo9l.png"
-                                             alt="Цельнотянутая стальная труба горячекатаная 60х5 мм 30ХГСА ТУ 14-3-675-78 купить в Астане"
-                                             title="Цельнотянутая стальная труба горячекатаная 60х5 мм 30ХГСА ТУ 14-3-675-78 купить в Астане"
-                                             itemprop="image">
-                                    </div>
-                                    <div class="short-product__info">
-
-                                        <a href="/product/tselnotjanutaja-stalnaja-truba-gorjachekatanaja-60-mm-5-mm-30hgsa-tu-14-3-675-78/"
-                                           itemprop="url">
-                                            <div class="short-product__title" data-product-title="" itemprop="name">
-                                                Цельнотянутая стальная труба горячекатаная 60х5 мм 30ХГСА ТУ 14-3-675-78
-                                            </div>
-                                        </a>
-
-
-                                    </div>
-                                    <div class="product-table__battery product-table__battery--many"
-                                         data-tippy-content-p-no-arrow="<p>Много</p>">
-                                        <svg class="icon icon_battery-many">
-                                            <use xlink:href="/static/img/svg/symbol/sprite.svg#battery-many"></use>
-                                        </svg>
-                                    </div>
-                                </div>
-                            </td>
-                            <td itemprop="offers" itemscope="" itemtype="http://schema.org/Offer">
-                                <link itemprop="availability" href="http://schema.org/InStock">
-                                <meta itemprop="priceCurrency" content="KZT">
-                                <div class="product-table__actions callback">
-
-
-                                    <div class="product-table__btn btn-find" data-call-modal="find-price"
-                                         onclick="ym(window.isteels.ym_id, 'reachGoal', 'click_product_price');">
-                                        Узнать цену
-                                    </div>
-
-
-                                    <div class="callblock">
-                                        <div class="callblock__item" data-modal-toggle="#modal-call"
-                                             onclick="ym(window.isteels.ym_id, 'reachGoal', 'pricelist_phone');">
-                                            <svg class="icon icon_phone">
-                                                <use xlink:href="/static/img/svg/symbol/sprite.svg#phone"></use>
-                                            </svg>
-                                        </div>
-                                        <a class="callblock__item mgo-email" href="mailto:astana@isteels.kz"
-                                           onclick="ym(window.isteels.ym_id, 'reachGoal', 'pricelist_email');">
-                                            <svg class="icon icon_email">
-                                                <use xlink:href="/static/img/svg/symbol/sprite.svg#email"></use>
-                                            </svg>
-                                            <span class="d-none">astana@isteels.kz</span>
-                                        </a>
-                                    </div>
-
-
-                                </div>
-                            </td>
-                        </tr>
-
-                        <tr class="product-table__item" data-product-card="" itemprop="itemListElement" itemscope=""
-                            itemtype="https://schema.org/Product">
-                            <td>
-                                <div class="short-product">
-                                    <div class="short-product__photo">
-                                        <img src="/media/uploads/catalog/category/%D0%A6%D0%B5%D0%BB%D1%8C%D0%BD%D0%BE%D1%82%D1%8F%D0%BD%D1%83%D1%82%D0%B0%D1%8F_%D1%82%D1%80%D1%83%D0%B1%D0%B0_FGhEo9l.png"
-                                             alt="Цельнотянутая стальная труба горячекатаная 60х6 мм 30ХГСА ТУ 14-3-675-78 купить в Астане"
-                                             title="Цельнотянутая стальная труба горячекатаная 60х6 мм 30ХГСА ТУ 14-3-675-78 купить в Астане"
-                                             itemprop="image">
-                                    </div>
-                                    <div class="short-product__info">
-
-                                        <a href="/product/tselnotjanutaja-stalnaja-truba-gorjachekatanaja-60-mm-6-mm-30hgsa-tu-14-3-675-78/"
-                                           itemprop="url">
-                                            <div class="short-product__title" data-product-title="" itemprop="name">
-                                                Цельнотянутая стальная труба горячекатаная 60х6 мм 30ХГСА ТУ 14-3-675-78
-                                            </div>
-                                        </a>
-
-
-                                    </div>
-                                    <div class="product-table__battery product-table__battery--many"
-                                         data-tippy-content-p-no-arrow="<p>Много</p>">
-                                        <svg class="icon icon_battery-many">
-                                            <use xlink:href="/static/img/svg/symbol/sprite.svg#battery-many"></use>
-                                        </svg>
-                                    </div>
-                                </div>
-                            </td>
-                            <td itemprop="offers" itemscope="" itemtype="http://schema.org/Offer">
-                                <link itemprop="availability" href="http://schema.org/InStock">
-                                <meta itemprop="priceCurrency" content="KZT">
-                                <div class="product-table__actions callback">
-
-
-                                    <div class="product-table__btn btn-find" data-call-modal="find-price"
-                                         onclick="ym(window.isteels.ym_id, 'reachGoal', 'click_product_price');">
-                                        Узнать цену
-                                    </div>
-
-
-                                    <div class="callblock">
-                                        <div class="callblock__item" data-modal-toggle="#modal-call"
-                                             onclick="ym(window.isteels.ym_id, 'reachGoal', 'pricelist_phone');">
-                                            <svg class="icon icon_phone">
-                                                <use xlink:href="/static/img/svg/symbol/sprite.svg#phone"></use>
-                                            </svg>
-                                        </div>
-                                        <a class="callblock__item mgo-email" href="mailto:astana@isteels.kz"
-                                           onclick="ym(window.isteels.ym_id, 'reachGoal', 'pricelist_email');">
-                                            <svg class="icon icon_email">
-                                                <use xlink:href="/static/img/svg/symbol/sprite.svg#email"></use>
-                                            </svg>
-                                            <span class="d-none">astana@isteels.kz</span>
-                                        </a>
-                                    </div>
-
-
-                                </div>
-                            </td>
-                        </tr>
-
-                        <tr class="product-table__item" data-product-card="" itemprop="itemListElement" itemscope=""
-                            itemtype="https://schema.org/Product">
-                            <td>
-                                <div class="short-product">
-                                    <div class="short-product__photo">
-                                        <img src="/media/uploads/catalog/category/%D0%A6%D0%B5%D0%BB%D1%8C%D0%BD%D0%BE%D1%82%D1%8F%D0%BD%D1%83%D1%82%D0%B0%D1%8F_%D1%82%D1%80%D1%83%D0%B1%D0%B0_FGhEo9l.png"
-                                             alt="Цельнотянутая стальная труба горячекатаная 60х7 мм 30ХГСА ТУ 14-3-675-78 купить в Астане"
-                                             title="Цельнотянутая стальная труба горячекатаная 60х7 мм 30ХГСА ТУ 14-3-675-78 купить в Астане"
-                                             itemprop="image">
-                                    </div>
-                                    <div class="short-product__info">
-
-                                        <a href="/product/tselnotjanutaja-stalnaja-truba-gorjachekatanaja-60-mm-7-mm-30hgsa-tu-14-3-675-78/"
-                                           itemprop="url">
-                                            <div class="short-product__title" data-product-title="" itemprop="name">
-                                                Цельнотянутая стальная труба горячекатаная 60х7 мм 30ХГСА ТУ 14-3-675-78
-                                            </div>
-                                        </a>
-
-
-                                    </div>
-                                    <div class="product-table__battery product-table__battery--many"
-                                         data-tippy-content-p-no-arrow="<p>Много</p>">
-                                        <svg class="icon icon_battery-many">
-                                            <use xlink:href="/static/img/svg/symbol/sprite.svg#battery-many"></use>
-                                        </svg>
-                                    </div>
-                                </div>
-                            </td>
-                            <td itemprop="offers" itemscope="" itemtype="http://schema.org/Offer">
-                                <link itemprop="availability" href="http://schema.org/InStock">
-                                <meta itemprop="priceCurrency" content="KZT">
-                                <div class="product-table__actions callback">
-
-
-                                    <div class="product-table__btn btn-find" data-call-modal="find-price"
-                                         onclick="ym(window.isteels.ym_id, 'reachGoal', 'click_product_price');">
-                                        Узнать цену
-                                    </div>
-
-
-                                    <div class="callblock">
-                                        <div class="callblock__item" data-modal-toggle="#modal-call"
-                                             onclick="ym(window.isteels.ym_id, 'reachGoal', 'pricelist_phone');">
-                                            <svg class="icon icon_phone">
-                                                <use xlink:href="/static/img/svg/symbol/sprite.svg#phone"></use>
-                                            </svg>
-                                        </div>
-                                        <a class="callblock__item mgo-email" href="mailto:astana@isteels.kz"
-                                           onclick="ym(window.isteels.ym_id, 'reachGoal', 'pricelist_email');">
-                                            <svg class="icon icon_email">
-                                                <use xlink:href="/static/img/svg/symbol/sprite.svg#email"></use>
-                                            </svg>
-                                            <span class="d-none">astana@isteels.kz</span>
-                                        </a>
-                                    </div>
-
-
-                                </div>
-                            </td>
-                        </tr>
-
-                        <tr class="product-table__item" data-product-card="" itemprop="itemListElement" itemscope=""
-                            itemtype="https://schema.org/Product">
-                            <td>
-                                <div class="short-product">
-                                    <div class="short-product__photo">
-                                        <img src="/media/uploads/catalog/category/%D0%A6%D0%B5%D0%BB%D1%8C%D0%BD%D0%BE%D1%82%D1%8F%D0%BD%D1%83%D1%82%D0%B0%D1%8F_%D1%82%D1%80%D1%83%D0%B1%D0%B0_FGhEo9l.png"
-                                             alt="Цельнотянутая стальная труба горячекатаная 60х8 мм 30ХГСА ТУ 14-3-675-78 купить в Астане"
-                                             title="Цельнотянутая стальная труба горячекатаная 60х8 мм 30ХГСА ТУ 14-3-675-78 купить в Астане"
-                                             itemprop="image">
-                                    </div>
-                                    <div class="short-product__info">
-
-                                        <a href="/product/tselnotjanutaja-stalnaja-truba-gorjachekatanaja-60-mm-8-mm-30hgsa-tu-14-3-675-78/"
-                                           itemprop="url">
-                                            <div class="short-product__title" data-product-title="" itemprop="name">
-                                                Цельнотянутая стальная труба горячекатаная 60х8 мм 30ХГСА ТУ 14-3-675-78
-                                            </div>
-                                        </a>
-
-
-                                    </div>
-                                    <div class="product-table__battery product-table__battery--many"
-                                         data-tippy-content-p-no-arrow="<p>Много</p>">
-                                        <svg class="icon icon_battery-many">
-                                            <use xlink:href="/static/img/svg/symbol/sprite.svg#battery-many"></use>
-                                        </svg>
-                                    </div>
-                                </div>
-                            </td>
-                            <td itemprop="offers" itemscope="" itemtype="http://schema.org/Offer">
-                                <link itemprop="availability" href="http://schema.org/InStock">
-                                <meta itemprop="priceCurrency" content="KZT">
-                                <div class="product-table__actions callback">
-
-
-                                    <div class="product-table__btn btn-find" data-call-modal="find-price"
-                                         onclick="ym(window.isteels.ym_id, 'reachGoal', 'click_product_price');">
-                                        Узнать цену
-                                    </div>
-
-
-                                    <div class="callblock">
-                                        <div class="callblock__item" data-modal-toggle="#modal-call"
-                                             onclick="ym(window.isteels.ym_id, 'reachGoal', 'pricelist_phone');">
-                                            <svg class="icon icon_phone">
-                                                <use xlink:href="/static/img/svg/symbol/sprite.svg#phone"></use>
-                                            </svg>
-                                        </div>
-                                        <a class="callblock__item mgo-email" href="mailto:astana@isteels.kz"
-                                           onclick="ym(window.isteels.ym_id, 'reachGoal', 'pricelist_email');">
-                                            <svg class="icon icon_email">
-                                                <use xlink:href="/static/img/svg/symbol/sprite.svg#email"></use>
-                                            </svg>
-                                            <span class="d-none">astana@isteels.kz</span>
-                                        </a>
-                                    </div>
-
-
-                                </div>
-                            </td>
-                        </tr>
-
-                        <tr class="product-table__item" data-product-card="" itemprop="itemListElement" itemscope=""
-                            itemtype="https://schema.org/Product">
-                            <td>
-                                <div class="short-product">
-                                    <div class="short-product__photo">
-                                        <img src="/media/uploads/catalog/category/%D0%A6%D0%B5%D0%BB%D1%8C%D0%BD%D0%BE%D1%82%D1%8F%D0%BD%D1%83%D1%82%D0%B0%D1%8F_%D1%82%D1%80%D1%83%D0%B1%D0%B0_FGhEo9l.png"
-                                             alt="Цельнотянутая стальная труба холоднокатаная 190х6,5 мм 30ХГСА ГОСТ 8733-74 купить в Астане"
-                                             title="Цельнотянутая стальная труба холоднокатаная 190х6,5 мм 30ХГСА ГОСТ 8733-74 купить в Астане"
-                                             itemprop="image">
-                                    </div>
-                                    <div class="short-product__info">
-
-                                        <a href="/product/tselnotjanutaja-stalnaja-truba-holodnokatanaja-190-mm-6-5-mm-30hgsa-gost-8733-74/"
-                                           itemprop="url">
-                                            <div class="short-product__title" data-product-title="" itemprop="name">
-                                                Цельнотянутая стальная труба холоднокатаная 190х6,5 мм 30ХГСА ГОСТ
-                                                8733-74
-                                            </div>
-                                        </a>
-
-
-                                    </div>
-                                    <div class="product-table__battery product-table__battery--many"
-                                         data-tippy-content-p-no-arrow="<p>Много</p>">
-                                        <svg class="icon icon_battery-many">
-                                            <use xlink:href="/static/img/svg/symbol/sprite.svg#battery-many"></use>
-                                        </svg>
-                                    </div>
-                                </div>
-                            </td>
-                            <td itemprop="offers" itemscope="" itemtype="http://schema.org/Offer">
-                                <link itemprop="availability" href="http://schema.org/InStock">
-                                <meta itemprop="priceCurrency" content="KZT">
-                                <div class="product-table__actions callback">
-
-
-                                    <div class="product-table__btn btn-find" data-call-modal="find-price"
-                                         onclick="ym(window.isteels.ym_id, 'reachGoal', 'click_product_price');">
-                                        Узнать цену
-                                    </div>
-
-
-                                    <div class="callblock">
-                                        <div class="callblock__item" data-modal-toggle="#modal-call"
-                                             onclick="ym(window.isteels.ym_id, 'reachGoal', 'pricelist_phone');">
-                                            <svg class="icon icon_phone">
-                                                <use xlink:href="/static/img/svg/symbol/sprite.svg#phone"></use>
-                                            </svg>
-                                        </div>
-                                        <a class="callblock__item mgo-email" href="mailto:astana@isteels.kz"
-                                           onclick="ym(window.isteels.ym_id, 'reachGoal', 'pricelist_email');">
-                                            <svg class="icon icon_email">
-                                                <use xlink:href="/static/img/svg/symbol/sprite.svg#email"></use>
-                                            </svg>
-                                            <span class="d-none">astana@isteels.kz</span>
-                                        </a>
-                                    </div>
-
-
-                                </div>
-                            </td>
-                        </tr>
-
-                        <tr class="product-table__item" data-product-card="" itemprop="itemListElement" itemscope=""
-                            itemtype="https://schema.org/Product">
-                            <td>
-                                <div class="short-product">
-                                    <div class="short-product__photo">
-                                        <img src="/media/uploads/catalog/category/%D0%A6%D0%B5%D0%BB%D1%8C%D0%BD%D0%BE%D1%82%D1%8F%D0%BD%D1%83%D1%82%D0%B0%D1%8F_%D1%82%D1%80%D1%83%D0%B1%D0%B0_FGhEo9l.png"
-                                             alt="Цельнотянутая стальная труба горячекатаная 60х9 мм 30ХГСА ТУ 14-3-675-78 купить в Астане"
-                                             title="Цельнотянутая стальная труба горячекатаная 60х9 мм 30ХГСА ТУ 14-3-675-78 купить в Астане"
-                                             itemprop="image">
-                                    </div>
-                                    <div class="short-product__info">
-
-                                        <a href="/product/tselnotjanutaja-stalnaja-truba-gorjachekatanaja-60-mm-9-mm-30hgsa-tu-14-3-675-78/"
-                                           itemprop="url">
-                                            <div class="short-product__title" data-product-title="" itemprop="name">
-                                                Цельнотянутая стальная труба горячекатаная 60х9 мм 30ХГСА ТУ 14-3-675-78
-                                            </div>
-                                        </a>
-
-
-                                    </div>
-                                    <div class="product-table__battery product-table__battery--many"
-                                         data-tippy-content-p-no-arrow="<p>Много</p>">
-                                        <svg class="icon icon_battery-many">
-                                            <use xlink:href="/static/img/svg/symbol/sprite.svg#battery-many"></use>
-                                        </svg>
-                                    </div>
-                                </div>
-                            </td>
-                            <td itemprop="offers" itemscope="" itemtype="http://schema.org/Offer">
-                                <link itemprop="availability" href="http://schema.org/InStock">
-                                <meta itemprop="priceCurrency" content="KZT">
-                                <div class="product-table__actions callback">
-
-
-                                    <div class="product-table__btn btn-find" data-call-modal="find-price"
-                                         onclick="ym(window.isteels.ym_id, 'reachGoal', 'click_product_price');">
-                                        Узнать цену
-                                    </div>
-
-
-                                    <div class="callblock">
-                                        <div class="callblock__item" data-modal-toggle="#modal-call"
-                                             onclick="ym(window.isteels.ym_id, 'reachGoal', 'pricelist_phone');">
-                                            <svg class="icon icon_phone">
-                                                <use xlink:href="/static/img/svg/symbol/sprite.svg#phone"></use>
-                                            </svg>
-                                        </div>
-                                        <a class="callblock__item mgo-email" href="mailto:astana@isteels.kz"
-                                           onclick="ym(window.isteels.ym_id, 'reachGoal', 'pricelist_email');">
-                                            <svg class="icon icon_email">
-                                                <use xlink:href="/static/img/svg/symbol/sprite.svg#email"></use>
-                                            </svg>
-                                            <span class="d-none">astana@isteels.kz</span>
-                                        </a>
-                                    </div>
-
-
-                                </div>
-                            </td>
-                        </tr>
-
-                        <tr class="product-table__item" data-product-card="" itemprop="itemListElement" itemscope=""
-                            itemtype="https://schema.org/Product">
-                            <td>
-                                <div class="short-product">
-                                    <div class="short-product__photo">
-                                        <img src="/media/uploads/catalog/category/%D0%A6%D0%B5%D0%BB%D1%8C%D0%BD%D0%BE%D1%82%D1%8F%D0%BD%D1%83%D1%82%D0%B0%D1%8F_%D1%82%D1%80%D1%83%D0%B1%D0%B0_FGhEo9l.png"
-                                             alt="Цельнотянутая стальная труба горячекатаная 70х10 мм 30ХГСА ТУ 14-3-675-78 купить в Астане"
-                                             title="Цельнотянутая стальная труба горячекатаная 70х10 мм 30ХГСА ТУ 14-3-675-78 купить в Астане"
-                                             itemprop="image">
-                                    </div>
-                                    <div class="short-product__info">
-
-                                        <a href="/product/tselnotjanutaja-stalnaja-truba-gorjachekatanaja-70-mm-10-mm-30hgsa-tu-14-3-675-78/"
-                                           itemprop="url">
-                                            <div class="short-product__title" data-product-title="" itemprop="name">
-                                                Цельнотянутая стальная труба горячекатаная 70х10 мм 30ХГСА ТУ
-                                                14-3-675-78
-                                            </div>
-                                        </a>
-
-
-                                    </div>
-                                    <div class="product-table__battery product-table__battery--many"
-                                         data-tippy-content-p-no-arrow="<p>Много</p>">
-                                        <svg class="icon icon_battery-many">
-                                            <use xlink:href="/static/img/svg/symbol/sprite.svg#battery-many"></use>
-                                        </svg>
-                                    </div>
-                                </div>
-                            </td>
-                            <td itemprop="offers" itemscope="" itemtype="http://schema.org/Offer">
-                                <link itemprop="availability" href="http://schema.org/InStock">
-                                <meta itemprop="priceCurrency" content="KZT">
-                                <div class="product-table__actions callback">
-
-
-                                    <div class="product-table__btn btn-find" data-call-modal="find-price"
-                                         onclick="ym(window.isteels.ym_id, 'reachGoal', 'click_product_price');">
-                                        Узнать цену
-                                    </div>
-
-
-                                    <div class="callblock">
-                                        <div class="callblock__item" data-modal-toggle="#modal-call"
-                                             onclick="ym(window.isteels.ym_id, 'reachGoal', 'pricelist_phone');">
-                                            <svg class="icon icon_phone">
-                                                <use xlink:href="/static/img/svg/symbol/sprite.svg#phone"></use>
-                                            </svg>
-                                        </div>
-                                        <a class="callblock__item mgo-email" href="mailto:astana@isteels.kz"
-                                           onclick="ym(window.isteels.ym_id, 'reachGoal', 'pricelist_email');">
-                                            <svg class="icon icon_email">
-                                                <use xlink:href="/static/img/svg/symbol/sprite.svg#email"></use>
-                                            </svg>
-                                            <span class="d-none">astana@isteels.kz</span>
-                                        </a>
-                                    </div>
-
-
-                                </div>
-                            </td>
-                        </tr>
-
-                        <tr class="product-table__item" data-product-card="" itemprop="itemListElement" itemscope=""
-                            itemtype="https://schema.org/Product">
-                            <td>
-                                <div class="short-product">
-                                    <div class="short-product__photo">
-                                        <img src="/media/uploads/catalog/category/%D0%A6%D0%B5%D0%BB%D1%8C%D0%BD%D0%BE%D1%82%D1%8F%D0%BD%D1%83%D1%82%D0%B0%D1%8F_%D1%82%D1%80%D1%83%D0%B1%D0%B0_FGhEo9l.png"
-                                             alt="Цельнотянутая стальная труба горячекатаная 70х15 мм 30ХГСА ТУ 14-3-675-78 купить в Астане"
-                                             title="Цельнотянутая стальная труба горячекатаная 70х15 мм 30ХГСА ТУ 14-3-675-78 купить в Астане"
-                                             itemprop="image">
-                                    </div>
-                                    <div class="short-product__info">
-
-                                        <a href="/product/tselnotjanutaja-stalnaja-truba-gorjachekatanaja-70-mm-15-mm-30hgsa-tu-14-3-675-78/"
-                                           itemprop="url">
-                                            <div class="short-product__title" data-product-title="" itemprop="name">
-                                                Цельнотянутая стальная труба горячекатаная 70х15 мм 30ХГСА ТУ
-                                                14-3-675-78
-                                            </div>
-                                        </a>
-
-
-                                    </div>
-                                    <div class="product-table__battery product-table__battery--many"
-                                         data-tippy-content-p-no-arrow="<p>Много</p>">
-                                        <svg class="icon icon_battery-many">
-                                            <use xlink:href="/static/img/svg/symbol/sprite.svg#battery-many"></use>
-                                        </svg>
-                                    </div>
-                                </div>
-                            </td>
-                            <td itemprop="offers" itemscope="" itemtype="http://schema.org/Offer">
-                                <link itemprop="availability" href="http://schema.org/InStock">
-                                <meta itemprop="priceCurrency" content="KZT">
-                                <div class="product-table__actions callback">
-
-
-                                    <div class="product-table__btn btn-find" data-call-modal="find-price"
-                                         onclick="ym(window.isteels.ym_id, 'reachGoal', 'click_product_price');">
-                                        Узнать цену
-                                    </div>
-
-
-                                    <div class="callblock">
-                                        <div class="callblock__item" data-modal-toggle="#modal-call"
-                                             onclick="ym(window.isteels.ym_id, 'reachGoal', 'pricelist_phone');">
-                                            <svg class="icon icon_phone">
-                                                <use xlink:href="/static/img/svg/symbol/sprite.svg#phone"></use>
-                                            </svg>
-                                        </div>
-                                        <a class="callblock__item mgo-email" href="mailto:astana@isteels.kz"
-                                           onclick="ym(window.isteels.ym_id, 'reachGoal', 'pricelist_email');">
-                                            <svg class="icon icon_email">
-                                                <use xlink:href="/static/img/svg/symbol/sprite.svg#email"></use>
-                                            </svg>
-                                            <span class="d-none">astana@isteels.kz</span>
-                                        </a>
-                                    </div>
-
-
-                                </div>
-                            </td>
-                        </tr>
-
-                        <tr class="product-table__item" data-product-card="" itemprop="itemListElement" itemscope=""
-                            itemtype="https://schema.org/Product">
-                            <td>
-                                <div class="short-product">
-                                    <div class="short-product__photo">
-                                        <img src="/media/uploads/catalog/category/%D0%A6%D0%B5%D0%BB%D1%8C%D0%BD%D0%BE%D1%82%D1%8F%D0%BD%D1%83%D1%82%D0%B0%D1%8F_%D1%82%D1%80%D1%83%D0%B1%D0%B0_FGhEo9l.png"
-                                             alt="Цельнотянутая стальная труба горячекатаная 70х3 мм 30ХГСА ТУ 14-3-675-78 купить в Астане"
-                                             title="Цельнотянутая стальная труба горячекатаная 70х3 мм 30ХГСА ТУ 14-3-675-78 купить в Астане"
-                                             itemprop="image">
-                                    </div>
-                                    <div class="short-product__info">
-
-                                        <a href="/product/tselnotjanutaja-stalnaja-truba-gorjachekatanaja-70-mm-3-mm-30hgsa-tu-14-3-675-78/"
-                                           itemprop="url">
-                                            <div class="short-product__title" data-product-title="" itemprop="name">
-                                                Цельнотянутая стальная труба горячекатаная 70х3 мм 30ХГСА ТУ 14-3-675-78
-                                            </div>
-                                        </a>
-
-
-                                    </div>
-                                    <div class="product-table__battery product-table__battery--many"
-                                         data-tippy-content-p-no-arrow="<p>Много</p>">
-                                        <svg class="icon icon_battery-many">
-                                            <use xlink:href="/static/img/svg/symbol/sprite.svg#battery-many"></use>
-                                        </svg>
-                                    </div>
-                                </div>
-                            </td>
-                            <td itemprop="offers" itemscope="" itemtype="http://schema.org/Offer">
-                                <link itemprop="availability" href="http://schema.org/InStock">
-                                <meta itemprop="priceCurrency" content="KZT">
-                                <div class="product-table__actions callback">
-
-
-                                    <div class="product-table__btn btn-find" data-call-modal="find-price"
-                                         onclick="ym(window.isteels.ym_id, 'reachGoal', 'click_product_price');">
-                                        Узнать цену
-                                    </div>
-
-
-                                    <div class="callblock">
-                                        <div class="callblock__item" data-modal-toggle="#modal-call"
-                                             onclick="ym(window.isteels.ym_id, 'reachGoal', 'pricelist_phone');">
-                                            <svg class="icon icon_phone">
-                                                <use xlink:href="/static/img/svg/symbol/sprite.svg#phone"></use>
-                                            </svg>
-                                        </div>
-                                        <a class="callblock__item mgo-email" href="mailto:astana@isteels.kz"
-                                           onclick="ym(window.isteels.ym_id, 'reachGoal', 'pricelist_email');">
-                                            <svg class="icon icon_email">
-                                                <use xlink:href="/static/img/svg/symbol/sprite.svg#email"></use>
-                                            </svg>
-                                            <span class="d-none">astana@isteels.kz</span>
-                                        </a>
-                                    </div>
-
-
-                                </div>
-                            </td>
-                        </tr>
-
-                        <tr class="product-table__item" data-product-card="" itemprop="itemListElement" itemscope=""
-                            itemtype="https://schema.org/Product">
-                            <td>
-                                <div class="short-product">
-                                    <div class="short-product__photo">
-                                        <img src="/media/uploads/catalog/category/%D0%A6%D0%B5%D0%BB%D1%8C%D0%BD%D0%BE%D1%82%D1%8F%D0%BD%D1%83%D1%82%D0%B0%D1%8F_%D1%82%D1%80%D1%83%D0%B1%D0%B0_FGhEo9l.png"
-                                             alt="Цельнотянутая стальная труба холоднокатаная 190х6,5 мм 30ХГСА ГОСТ 8734-75 купить в Астане"
-                                             title="Цельнотянутая стальная труба холоднокатаная 190х6,5 мм 30ХГСА ГОСТ 8734-75 купить в Астане"
-                                             itemprop="image">
-                                    </div>
-                                    <div class="short-product__info">
-
-                                        <a href="/product/tselnotjanutaja-stalnaja-truba-holodnokatanaja-190-mm-6-5-mm-30hgsa-gost-8734-75/"
-                                           itemprop="url">
-                                            <div class="short-product__title" data-product-title="" itemprop="name">
-                                                Цельнотянутая стальная труба холоднокатаная 190х6,5 мм 30ХГСА ГОСТ
-                                                8734-75
-                                            </div>
-                                        </a>
-
-
-                                    </div>
-                                    <div class="product-table__battery product-table__battery--many"
-                                         data-tippy-content-p-no-arrow="<p>Много</p>">
-                                        <svg class="icon icon_battery-many">
-                                            <use xlink:href="/static/img/svg/symbol/sprite.svg#battery-many"></use>
-                                        </svg>
-                                    </div>
-                                </div>
-                            </td>
-                            <td itemprop="offers" itemscope="" itemtype="http://schema.org/Offer">
-                                <link itemprop="availability" href="http://schema.org/InStock">
-                                <meta itemprop="priceCurrency" content="KZT">
-                                <div class="product-table__actions callback">
-
-
-                                    <div class="product-table__btn btn-find" data-call-modal="find-price"
-                                         onclick="ym(window.isteels.ym_id, 'reachGoal', 'click_product_price');">
-                                        Узнать цену
-                                    </div>
-
-
-                                    <div class="callblock">
-                                        <div class="callblock__item" data-modal-toggle="#modal-call"
-                                             onclick="ym(window.isteels.ym_id, 'reachGoal', 'pricelist_phone');">
-                                            <svg class="icon icon_phone">
-                                                <use xlink:href="/static/img/svg/symbol/sprite.svg#phone"></use>
-                                            </svg>
-                                        </div>
-                                        <a class="callblock__item mgo-email" href="mailto:astana@isteels.kz"
-                                           onclick="ym(window.isteels.ym_id, 'reachGoal', 'pricelist_email');">
-                                            <svg class="icon icon_email">
-                                                <use xlink:href="/static/img/svg/symbol/sprite.svg#email"></use>
-                                            </svg>
-                                            <span class="d-none">astana@isteels.kz</span>
-                                        </a>
-                                    </div>
-
-
-                                </div>
-                            </td>
-                        </tr>
-
+                        {% endfor %}
                         </tbody>
                     </table>
                 </div>
+                <style>
+                    @media (max-width: 991px) {
+                        .product-table__item {
+                            display: flex;
+                            flex-direction: column;
+                            padding: 24px;
+                        }
+                    }
+                </style>
                 <div class="pagination-block" id="pagination-container">
                     <div class="pagination-block__pagination">
 

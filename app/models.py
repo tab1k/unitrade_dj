@@ -47,6 +47,11 @@ class Product(models.Model):
     def __str__(self):
         return self.name
 
+    def save(self, *args, **kwargs):
+        if not self.slug:
+            self.slug = slugify(self.name)  # Генерируем slug из названия
+        super().save(*args, **kwargs)
+
     def get_absolute_url(self):
         return reverse('app:product_detail', kwargs={'slug': self.slug})
 
