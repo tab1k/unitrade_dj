@@ -1,17 +1,15 @@
 {% extends 'base.html' %}
 {% load static %}
 
-{% block title %} Контакты {% endblock %}
-
 {% block content %}
 <main style="background-color: black;">
 
 
     <div class="about-company">
         <section class="about-company__head">
-            <div class="about-company-head" style="background-color: #1a1a1a; padding-top: 100px;">
+            <div class="about-company-head" style="background-color: #1a1a1a;">
                 <div class="container">
-                    <h1 class="about-company-head__title">О компании</h1>
+                    <h1 class="about-company-head__title" style="color: white;">Контакты</h1>
                     <div class="about-company-head__desc">
                         Группа компаний «Интерстилс» поставляет металлопрокат и сопутствующие товары заказчикам в
                         России, Казахстане,
@@ -21,11 +19,16 @@
             </div>
         </section>
         <style>
-            @media (max-width: 991px) {
-                .about-company-head {
-                    padding: 32px 16px 32px 16px;
-                }
+            .about-company-head {
+                height: 270px;
+                width: 100%;
+                background-color: #f5f7f8;
+                background-image: url(#);
+                background-repeat: no-repeat;
+                background-position: right;
+                padding-top: 25px;
             }
+
 
         </style>
         <div class="container">

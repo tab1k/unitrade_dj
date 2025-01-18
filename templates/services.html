@@ -4,36 +4,64 @@
 {% block title %} Услуги {% endblock %}
 
 {% block content %}
-<main>
+<main style="background-color: black;"
+
+    <section class="about-company__head" style="margin-bottom: 50px;">
+        <div class="about-company-head" style="background-color: #1a1a1a;">
+            <div class="container">
+                <h1 class="about-company-head__title" style="color: white;">Услуги</h1>
+                <div class="about-company-head__desc">
+                    Группа компаний «Интерстилс» поставляет металлопрокат и сопутствующие товары заказчикам в
+                    России, Казахстане,
+                    Узбекистане, а также других странах ближнего и дальнего зарубежья.
+                </div>
+            </div>
+        </div>
+    </section>
+    <style>
+        .about-company-head {
+            height: 270px;
+            width: 100%;
+            background-color: #f5f7f8;
+            background-image: url(#);
+            background-repeat: no-repeat;
+            background-position: right;
+            padding-top: 25px;
+        }
+
+
+    </style>
 
 
     <div class="catalog container">
         <div class="row">
             <div class="col-lg-12">
 
-                <h1 class="title title_page" style="color: white;">Услуги</h1>
-                <a class="link-back link-back-mb d-lg-none" href="/services/">Услуги</a>
+                <a class="link-back link-back-mb d-lg-none" href="/">Главная</a>
 
                 <div style="display: flex; gap: 20px; flex-wrap: wrap; justify-content: center; margin-bottom: 70px;">
                     <!-- Карточка 1 -->
                     <div style="background-color: #1a1a1a; border-radius: 16px; padding: 20px; width: 23%; display: flex; flex-direction: column; justify-content: space-between; align-items: center; box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); margin-bottom: 20px;">
                         <img src="{% static 'images/proizvodstvo-metallokonstrukcij.png' %}" alt="DelPapa"
                              style="border-radius: 50%; width: 80px; height: 80px; margin-bottom: 15px;">
-                        <h3 style="font-size: 18px; text-align: center; margin-bottom: 10px; color: #ccc;">Производство металлоконструкций</h3>
+                        <h3 style="font-size: 18px; text-align: center; margin-bottom: 10px; color: #ccc;">Производство
+                            металлоконструкций</h3>
                     </div>
 
                     <!-- Карточка 2 -->
                     <div style="background-color: #1a1a1a; border-radius: 16px; padding: 20px; width: 23%; display: flex; flex-direction: column; justify-content: space-between; align-items: center; box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); margin-bottom: 20px;">
                         <img src="{% static 'images/fundamentnyh-boltov.jpg' %}" alt="BB"
                              style="border-radius: 50%; width: 80px; height: 80px; margin-bottom: 15px;">
-                        <h3 style="font-size: 18px; text-align: center; margin-bottom: 10px; color: #ccc;">Производство фундаментных болтов</h3>
+                        <h3 style="font-size: 18px; text-align: center; margin-bottom: 10px; color: #ccc;">Производство
+                            фундаментных болтов</h3>
                     </div>
 
                     <!-- Карточка 3 -->
                     <div style="background-color: #1a1a1a; border-radius: 16px; padding: 20px; width: 23%; display: flex; flex-direction: column; justify-content: space-between; align-items: center; box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); margin-bottom: 20px;">
                         <img src="{% static 'images/armaturnye-karkai.jpg' %}" alt="Coco"
                              style="border-radius: 50%; width: 80px; height: 80px; margin-bottom: 15px;">
-                        <h3 style="font-size: 18px; text-align: center; margin-bottom: 10px; color: #ccc;">Производство арматурных каркасов</h3>
+                        <h3 style="font-size: 18px; text-align: center; margin-bottom: 10px; color: #ccc;">Производство
+                            арматурных каркасов</h3>
 
                     </div>
 
@@ -41,37 +69,42 @@
                     <div style="background-color: #1a1a1a; border-radius: 16px; padding: 20px; width: 23%; display: flex; flex-direction: column; justify-content: space-between; align-items: center; box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); margin-bottom: 20px;">
                         <img src="{% static 'images/sendvich-panel.jpg' %}" alt="Food"
                              style="border-radius: 50%; width: 80px; height: 80px; margin-bottom: 15px;">
-                        <h3 style="font-size: 18px; text-align: center; margin-bottom: 10px; color: #ccc;">Производство сэндвич-панелей</h3>
+                        <h3 style="font-size: 18px; text-align: center; margin-bottom: 10px; color: #ccc;">Производство
+                            сэндвич-панелей</h3>
                     </div>
 
                     <div style="background-color: #1a1a1a; border-radius: 16px; padding: 20px; width: 23%; display: flex; flex-direction: column; justify-content: space-between; align-items: center; box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); margin-bottom: 20px;">
                         <img src="{% static 'images/vzryvozashishenny-elektronagrevatel.jpg' %}" alt="Food"
                              style="border-radius: 50%; width: 80px; height: 80px; margin-bottom: 15px;">
-                        <h3 style="font-size: 18px; text-align: center; margin-bottom: 10px; color: #ccc;">Производство взрывозащищенных электронагревателей</h3>
+                        <h3 style="font-size: 18px; text-align: center; margin-bottom: 10px; color: #ccc;">Производство
+                            взрывозащищенных электронагревателей</h3>
 
                     </div>
 
                     <div style="background-color: #1a1a1a; border-radius: 16px; padding: 20px; width: 23%; display: flex; flex-direction: column; justify-content: space-between; align-items: center; box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); margin-bottom: 20px;">
                         <img src="{% static 'images/protivopozharnyh-sistem.jpg' %}" alt="Food"
                              style="border-radius: 50%; width: 80px; height: 80px; margin-bottom: 15px;">
-                        <h3 style="font-size: 18px; text-align: center; margin-bottom: 10px; color: #ccc;">Производство противопожарных систем</h3>
+                        <h3 style="font-size: 18px; text-align: center; margin-bottom: 10px; color: #ccc;">Производство
+                            противопожарных систем</h3>
                     </div>
 
                     <div style="background-color: #1a1a1a; border-radius: 16px; padding: 20px; width: 23%; display: flex; flex-direction: column; justify-content: space-between; align-items: center; box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); margin-bottom: 20px;">
                         <img src="{% static 'images/cinkovanie.jpg' %}" alt="Food"
                              style="border-radius: 50%; width: 80px; height: 80px; margin-bottom: 15px;">
-                        <h3 style="font-size: 18px; text-align: center; margin-bottom: 10px; color: #ccc;">Цинкование металлоконструкций</h3>
+                        <h3 style="font-size: 18px; text-align: center; margin-bottom: 10px; color: #ccc;">Цинкование
+                            металлоконструкций</h3>
                     </div>
 
                     <div style="background-color: #1a1a1a; border-radius: 16px; padding: 20px; width: 23%; display: flex; flex-direction: column; justify-content: space-between; align-items: center; box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); margin-bottom: 20px;">
                         <img src="{% static 'images/trubchatyh-svaj.jpg' %}" alt="Food"
                              style="border-radius: 50%; width: 80px; height: 80px; margin-bottom: 15px;">
-                        <h3 style="font-size: 18px; text-align: center; margin-bottom: 10px; color: #ccc;">Производство свай из трубы</h3>
-<!--                        <a href="#"-->
-<!--                           style="text-decoration: none; font-size: 16px; color: #fff; background-color: #333; padding: 10px 15px; border-radius: 50px; display: flex; align-items: center; justify-content: center; gap: 10px; transition: background-color 0.3s ease;">-->
-<!--                            Презентация-->
-<!--                            <span style="font-size: 18px; font-weight: bold; margin-left: 5px;">➔</span>-->
-<!--                        </a>-->
+                        <h3 style="font-size: 18px; text-align: center; margin-bottom: 10px; color: #ccc;">Производство
+                            свай из трубы</h3>
+                        <!--                        <a href="#"-->
+                        <!--                           style="text-decoration: none; font-size: 16px; color: #fff; background-color: #333; padding: 10px 15px; border-radius: 50px; display: flex; align-items: center; justify-content: center; gap: 10px; transition: background-color 0.3s ease;">-->
+                        <!--                            Презентация-->
+                        <!--                            <span style="font-size: 18px; font-weight: bold; margin-left: 5px;">➔</span>-->
+                        <!--                        </a>-->
                     </div>
 
                 </div>

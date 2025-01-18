@@ -40,6 +40,9 @@ class PaymentViewPage(TemplateView):
 class RefundViewPage(TemplateView):
     template_name = 'buyers/refund.html'
 
+class ContactViewPage(TemplateView):
+    template_name = 'buyers/contacts.html'
+
 
 class CategoryViewPage(TemplateView):
     template_name = 'category/index.html'

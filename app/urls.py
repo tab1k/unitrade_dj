@@ -10,6 +10,7 @@ urlpatterns = [
     path('delivery/', DeliveryViewPage.as_view(), name='delivery'),
     path('payment', PaymentViewPage.as_view(), name='payment'),
     path('refund/', RefundViewPage.as_view(), name='refund'),
+    path('contacts/', ContactViewPage.as_view(), name='contacts'),
     path('category/', CategoryViewPage.as_view(), name='category'),
     path('category/<slug:slug>/', CategoryDetailView.as_view(), name='category_detail'),
     path('<slug:slug>/products/', ProductListView.as_view(), name='product_list'),
