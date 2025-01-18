@@ -67,13 +67,13 @@
 
 <header class="header" style="background-color: black; box-shadow: 0 3px 8px rgba(255, 255, 255, 0.05);">
     <div class="header-top container" style="backgground-color: black;">
-        <span>
-            <a href="mailto:metall@rozmet.ru">
-                <i class="bi bi-envelope"></i> metall@rozmet.ru
-            </a>
+        <span style="color: #d9d9d9;">
+            Будни: 8:00 - 18:00, Суббота: 8:00 — 17:00
         </span>
         <span>
-            Будни: 8:00 - 18:00, Суббота: 8:00 — 17:00
+            <a style="color: #d9d9d9;" href="mailto:metall@rozmet.ru">
+                <i class="bi bi-envelope"></i> metall@rozmet.ru
+            </a>
         </span>
     </div>
     <div class="header__inner" style="background-color: black;">
@@ -163,15 +163,15 @@
             </div>
         </div>
         <div class="header__bottom">
-            <div class="header__bottom-inner container">
+            <div class="header__bottom-inner container" style="gap: 90px; padding-top: 5px;">
                 <button class="header__show-menu show-menu" style="color: white;" type="button"
                         data-modal-toggle="#modal-mobile-menu">
                     <span></span>
                 </button>
 
                 <span class="header__logo logo" href="/">
-                    <a href="/"><img src="{% static 'images/logo.png' %}" style="height: 50px; width: 50px;"
-                                     alt="UniTrade"></a>
+<!--                    <a href="/"><img src="{% static 'images/logo.png' %}" style="height: 50px; width: 50px;"-->
+<!--                                     alt="UniTrade"></a>-->
                 </span>
 
                 <a href="{% url 'app:category' %}" class="header__catalog btn-toggle">
@@ -603,6 +603,7 @@
             .header__bottom {
                 padding: 15px 0;
             }
+
             .modal-overlay {
                 background-color: black;
             }
@@ -621,6 +622,7 @@
 </header>
 
 <style>
+
 
     .header-top {
         display: flex;
@@ -689,6 +691,12 @@
         color: #d9534f;
     }
 
+    @media (max-width: 991px) {
+        .header__search {
+            margin: 0px;
+        }
+    }
+
     @media (max-width: 768px) {
         .header-top {
             flex-direction: column;
@@ -732,8 +740,6 @@
         }
     }
 
-
-
     @media (max-width: 480px) {
         .header {
             padding: 10px;
@@ -747,7 +753,7 @@
         .header-top {
             justify-content: space-between;
             text-align: center;
-            display: initial;
+            display: block;
         }
 
         .header-top span {

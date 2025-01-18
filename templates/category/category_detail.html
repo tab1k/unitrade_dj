@@ -96,7 +96,7 @@
             <div class="col-lg-9">
 
                 <h1 class="title title_page" style="color: white;">{{ category.name }}</h1>
-                <a class="link-back link-back-mb d-lg-none" href="/catalog/">Каталог</a>
+                <a class="link-back link-back-mb d-lg-none" href="{% if category.parent %}{{ category.parent.get_absolute_url }}{% else %}{% url 'app:category' %}{% endif %}">Назад</a>
                 <div class="news-container mb-5">
                     <div class="news-list">
                         {% if category.children.exists %}
