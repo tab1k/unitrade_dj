@@ -10,7 +10,6 @@
     <div class="catalognew container">
 
 
-
         <div class="slider mt-3 mt-lg-0 mb-5">
             <div class="slider__head">
                 <div class="slider__head-row">
@@ -56,11 +55,12 @@
 
 
         <div class="product-filter" id="product-size">
-            <button class="btn btn_light btn_lg w-100 mb-3 d-md-none" id="open-mobile-filter">
+            <button class="btn btn_light btn_lg w-100 mb-3 d-md-none" id="open-mobile-filter"
+                    style="background-color: #1a1a1a; color: white;">
                 Фильтры
-                <svg class="icon icon_filter">
-                    <use xlink:href="/static/img/svg/symbol/sprite.svg#filter"></use>
-                </svg>
+                <span class="icon icon_filter">
+                    <i class="fi fi-rr-filter"></i>
+                </span>
             </button>
             <form class="mb-4"><input type="hidden" name="csrfmiddlewaretoken"
                                       value="0SiNL3N263em7GuwgrcuPM2M20ONl5NAkhLydpB8oUhZCWE9JK1LySVQwkAtIZ8V">
@@ -109,7 +109,7 @@
 
                         <div class="filter-aside__item" data-filter-id="2" data-filter-slug="gost">
                             <div class="filter-aside__title">
-                                <a href="#">ГОСТ</a>
+                                <a style="color: white;" href="#">ГОСТ</a>
                                 <div class="filter-aside__arrow open">
                                     <svg class="icon icon_arrow-down">
                                         <use xlink:href="/static/img/svg/symbol/sprite.svg#arrow-down"></use>
@@ -8432,25 +8432,20 @@
                                 <div class="product-table__actions callback">
 
 
-                                    <div class="product-table__btn btn-find" data-call-modal="find-price"
+                                    <div class="product-table__btn btn-find"
+                                         style="background-color: white; outline: 1px solid #1a1a1a;"
+                                         data-call-modal="find-price"
                                          onclick="ym(window.isteels.ym_id, 'reachGoal', 'click_product_price');">
                                         Узнать цену
                                     </div>
 
 
                                     <div class="callblock">
-                                        <div class="callblock__item" data-modal-toggle="#modal-call"
-                                             onclick="ym(window.isteels.ym_id, 'reachGoal', 'pricelist_phone');">
-                                            <svg class="icon icon_phone">
-                                                <use xlink:href="/static/img/svg/symbol/sprite.svg#phone"></use>
-                                            </svg>
+                                        <div class="callblock__item" style="background-color: #1a1a1a;">
+                                            <span><i style="color: white;" class="fi fi-rr-phone-call"></i></span>
                                         </div>
-                                        <a class="callblock__item mgo-email" href="mailto:astana@isteels.kz"
-                                           onclick="ym(window.isteels.ym_id, 'reachGoal', 'pricelist_email');">
-                                            <svg class="icon icon_email">
-                                                <use xlink:href="/static/img/svg/symbol/sprite.svg#email"></use>
-                                            </svg>
-                                            <span class="d-none">astana@isteels.kz</span>
+                                        <a class="callblock__item" style="background-color: #1a1a1a;" href="#">
+                                            <span><i style="color: white;" class="fi fi-brands-whatsapp"></i></span>
                                         </a>
                                     </div>
 
@@ -8470,6 +8465,10 @@
                             flex-direction: column;
                             padding: 24px;
                         }
+                    }
+
+                    .btn-buy:hover, .btn-order:hover, .callblock__item:hover {
+                        outline: 1px solid green !important;
                     }
                 </style>
                 <div class="pagination-block" id="pagination-container">
@@ -8531,9 +8530,9 @@
                 </div>
             </div>
         </div>
-        <div class="not-found-product" style="background-image: url(/static/img/not-found-product.png)">
+        <div class="not-found-product" style="background-image: url(/static/img/not-found-product.png); margin-bottom: 70px;">
             <div class="not-found-product__info">
-                <div class="not-found-product__title">Не нашли нужный товар?</div>
+                <div class="not-found-product__title" style="color: white;">Не нашли нужный товар?</div>
                 <div class="not-found-product__desc">
                     Оставьте свои контакты и мы вышлем вам коммерческое предложение на интересующую вас продукцию.
                 </div>
@@ -8543,7 +8542,7 @@
                       action="/informer/form_send/ask-not-found/"><input type="hidden" name="csrfmiddlewaretoken"
                                                                          value="0SiNL3N263em7GuwgrcuPM2M20ONl5NAkhLydpB8oUhZCWE9JK1LySVQwkAtIZ8V">
                     <label class="feedback-form__field">
-                        <span class="feedback-form__field-title">Имя</span>
+                        <span class="feedback-form__field-title" style="color: white;">Имя</span>
                         <input class="feedback-form__field-input input__input" type="text" name="fio"
                                placeholder="Иванов Андрей" maxlength="100"
                                pattern="(^[а-яА-ЯёЁa-zA-Z]+ ?[а-яА-ЯёЁa-zA-Z]* ?[а-яА-ЯёЁa-zA-Z]*)?$">
@@ -8554,7 +8553,7 @@
                         </span>
                     </label>
                     <label class="feedback-form__field">
-                        <span class="feedback-form__field-title">Номер телефона</span>
+                        <span class="feedback-form__field-title" style="color: white;">Номер телефона</span>
                         <input class="feedback-form__field-input input__input" type="tel" name="phone" maxlength="21"
                                minlength="18" required="" placeholder="+7 ( ___ ) ___ - __ - __">
                         <span class="input__error">
@@ -8565,391 +8564,36 @@
                 </span>
                     </label>
                     <div class="feedback-form__bottom">
-                        <button class="feedback-form__submit btn btn-primary" type="submit">Отправить</button>
-                        <div class="feedback-form__license">
-                            Нажимая на кнопку «Отправить», вы соглашаетесь с
-                            <a href="/policy/">
-                                политикой обработки персональных данных и политикой конфиденциальности.
-                            </a>
-                        </div>
+                        <button class="feedback-form__submit btn" style="background-color: #971212; color: white;" type="submit">Отправить</button>
                     </div>
                 </form>
             </div>
         </div>
 
-        <div class="section-container catalog__purchase-details purchase-details">
-            <div class="container">
-                <div class="purchase-details__inner row tab-product-content product-tab-show justify-content-center"
-                     id="product-desc">
-                    <div class="col-lg-8 order-lg-1 order-2">
-                        <div class="purchase-details__section mb-5">
-                            <div class="purchase-details__section-title">Вопрос ответ</div>
 
-                            <a class="tabs__question-elem accordion__low">
-                                Как сделать заказ?
-                                <div class="accordion-svg-plus">
-                                    <div class="circle-plus active-side-bar">
-                                        <div class="circle">
-                                            <div class="horizontal transform-horizontal"></div>
-                                            <div class="vertical transform-vertical"></div>
-                                        </div>
-                                    </div>
-                                </div>
-                            </a>
-                            <div class="tabs__answer-elem accordion-content__low">По телефону коммерческого отдела или
-                                через заявку на почту, указанную на сайте. В течение дня мы подготовим и вышлем
-                                предложение с наилучшими ценами и условиями поставки по Вашему заказу.
-                            </div>
-
-                            <a class="tabs__question-elem accordion__low">
-                                Могу я приобрести товар как физическое лицо?
-                                <div class="accordion-svg-plus">
-                                    <div class="circle-plus active-side-bar">
-                                        <div class="circle">
-                                            <div class="horizontal transform-horizontal"></div>
-                                            <div class="vertical transform-vertical"></div>
-                                        </div>
-                                    </div>
-                                </div>
-                            </a>
-                            <div class="tabs__answer-elem accordion-content__low">Да, мы работаем как с юридическими,
-                                так и физическими лицами. Однако обратите внимание, что минимальная сумма заказа
-                                составляет 50 000 рублей.
-                            </div>
-
-                            <a class="tabs__question-elem accordion__low">
-                                Я могу купить один экземпляр товара?
-                                <div class="accordion-svg-plus">
-                                    <div class="circle-plus active-side-bar">
-                                        <div class="circle">
-                                            <div class="horizontal transform-horizontal"></div>
-                                            <div class="vertical transform-vertical"></div>
-                                        </div>
-                                    </div>
-                                </div>
-                            </a>
-                            <div class="tabs__answer-elem accordion-content__low">Все зависит от стоимости товара. Мы
-                                работаем с крупными заказами. Если Ваша заявка примерно соответствует минимальному
-                                порогу в 30 000 - 50 000 рублей (в зависимости от города заказа, подробности уточняйте у
-                                менеджера), позвоните нам или отправьте письмо с номенклатурой. Наш эксперт рассчитает
-                                индивидуальную стоимость конкретно под объем Вашей заявки.
-                            </div>
-
-                            <a class="tabs__question-elem accordion__low">
-                                У меня срочный заказ. Можно ли получить товар в день оплаты или на следующий день?
-                                <div class="accordion-svg-plus">
-                                    <div class="circle-plus active-side-bar">
-                                        <div class="circle">
-                                            <div class="horizontal transform-horizontal"></div>
-                                            <div class="vertical transform-vertical"></div>
-                                        </div>
-                                    </div>
-                                </div>
-                            </a>
-                            <div class="tabs__answer-elem accordion-content__low">При наличии продукции на складе в
-                                Вашем городе, мы, конечно же, постараемся организовать срочную доставку. Если товара
-                                нет, мы найдем его на других региональных базах «Интерстилс» и предложим Вам минимально
-                                возможные сроки поставки. Если нужная Вам номенклатура в принципе изготавливается под
-                                заказ, в таком случае все решается индивидуально, в зависимости от очереди и наличия на
-                                производстве исходного сырья.
-                            </div>
-
-                            <a class="tabs__question-elem accordion__low">
-                                Вы доставляете в любые регионы? А в небольшие, отдаленные города?
-                                <div class="accordion-svg-plus">
-                                    <div class="circle-plus active-side-bar">
-                                        <div class="circle">
-                                            <div class="horizontal transform-horizontal"></div>
-                                            <div class="vertical transform-vertical"></div>
-                                        </div>
-                                    </div>
-                                </div>
-                            </a>
-                            <div class="tabs__answer-elem accordion-content__low">Мы поставляем металлопрокат по всей
-                                территории России и Казахстана. Межтерминальные перевозки осуществляются надежными
-                                транспортными компаниями, с которыми заключены долгосрочные контракты. Также Вы можете
-                                самостоятельно забрать товар со склада по предварительной договоренности.
-                            </div>
-
-                            <a class="tabs__question-elem accordion__low">
-                                Почему на сайте не указана цена на товар? Или стоит явно устаревшая цифра?
-                                <div class="accordion-svg-plus">
-                                    <div class="circle-plus active-side-bar">
-                                        <div class="circle">
-                                            <div class="horizontal transform-horizontal"></div>
-                                            <div class="vertical transform-vertical"></div>
-                                        </div>
-                                    </div>
-                                </div>
-                            </a>
-                            <div class="tabs__answer-elem accordion-content__low">Наш каталог насчитывает более 6
-                                миллионов товаров. Мы стремимся к поддержанию актуальных цен на все позиции. Но, в
-                                зависимости от тенденций мирового рынка сырья и загруженности производства, влияющих на
-                                конечную стоимость продукции, не представляется возможным ежедневно актуализировать
-                                абсолютно все цены.
-                                Кроме того, мы всегда стараемся предложить нашим клиентам индивидуальную цену, исходя из
-                                условий поставки: количества, схемы оплаты и места отгрузки. Поэтому информация на сайте
-                                носит исключительно ознакомительный характер и ни при каких обстоятельствах не является
-                                публичной офертой, определяемой ч. 2 ст. 437 Гражданского кодекса Российской Федерации.
-                            </div>
-
-                            <a class="tabs__question-elem accordion__low">
-                                Мне нужна металлообработка для моего металла – сколько это стоит?
-                                <div class="accordion-svg-plus">
-                                    <div class="circle-plus active-side-bar">
-                                        <div class="circle">
-                                            <div class="horizontal transform-horizontal"></div>
-                                            <div class="vertical transform-vertical"></div>
-                                        </div>
-                                    </div>
-                                </div>
-                            </a>
-                            <div class="tabs__answer-elem accordion-content__low">Сожалеем, но все услуги по обработке
-                                оказываются только при покупке нашего проката и сопутствующих товаров. Производство не
-                                принимает сторонние изделия.
-                            </div>
-
-
-                        </div>
-                        <div class="purchase-details__section">
-                            <h3 style="text-align: justify;">Общая характеристика стальных круглых труб</h3>
-                            <p style="text-align: justify;">Стальные круглые трубы — это универсальный и
-                                многофункциональный вид металлопроката. Благодаря своей цилиндрической форме и высоким
-                                механическим характеристикам, они применяются в различных промышленных и строительных
-                                проектах. Широкий диапазон размеров и разнообразие методов производства делают их
-                                подходящими для использования в самых сложных и специфических условиях. Современные
-                                стальные трубы сочетают в себе надёжность, долговечность и экономическую эффективность,
-                                что делает их незаменимыми для инженерных коммуникаций и сложных технических решений в
-                                Астане.</p>
-                            <h3 style="text-align: justify;">Виды стальных круглых труб</h3>
-                            <p style="text-align: justify;">Стальные трубы делятся на три основные категории:</p>
-                            <ul style="text-align: justify;">
-                                <li><strong>Электросварные трубы</strong>: изготавливаются путём сворачивания и
-                                    сваривания металлического листа. Они отличаются доступной стоимостью и широко
-                                    применяются в системах водоснабжения, отопления, вентиляции и строительных
-                                    конструкциях.
-                                </li>
-                                <li><strong>Бесшовные трубы</strong>: производятся методом горячей или холодной
-                                    деформации. Их главное преимущество — отсутствие сварного шва, что обеспечивает
-                                    повышенную прочность и устойчивость к давлению, делая их востребованными в
-                                    нефтегазовой промышленности и энергетике.
-                                </li>
-                                <li><strong>Цельнотянутые трубы</strong>: представляют собой изделия, созданные методом
-                                    тянутого проката, что позволяет добиться высокой точности размеров и однородности
-                                    структуры. Они находят применение в машиностроении и авиации, где требования к
-                                    качеству продукции особенно высоки.
-                                </li>
-                            </ul>
-                            <h3 style="text-align: justify;">Методы производства</h3>
-                            <p style="text-align: justify;">Стальные круглые трубы производятся двумя основными
-                                способами:</p>
-                            <ul style="text-align: justify;">
-                                <li><strong>Горячедеформированные трубы</strong>: создаются путём прокатки заготовок при
-                                    высоких температурах. Этот метод подходит для труб с большими диаметрами и толщинами
-                                    стенок. Они активно применяются для транспортировки нефти, газа и агрессивных
-                                    химических сред.
-                                </li>
-                                <li><strong>Холоднодеформированные трубы</strong>: изготавливаются без нагрева, что
-                                    обеспечивает высокую точность размеров и гладкость внутренней и внешней
-                                    поверхностей. Такие трубы используются для деталей машин, гидравлических систем и
-                                    оборудования.
-                                </li>
-                            </ul>
-                            <p style="text-align: justify;">Оба метода позволяют получить продукцию, соответствующую
-                                международным стандартам качества, с длительным сроком службы.</p>
-                            <h3 style="text-align: justify;">Покрытия стальных труб</h3>
-                            <p style="text-align: justify;">Покрытие играет важную роль в продлении срока службы труб.
-                                Основные виды:</p>
-                            <ul style="text-align: justify;">
-                                <li><strong>Оцинкованные трубы</strong>: покрыты слоем цинка для защиты от коррозии. Они
-                                    идеально подходят для наружных инженерных систем, подверженных воздействию влаги и
-                                    агрессивных сред.
-                                </li>
-                                <li><strong>Неоцинкованные трубы</strong>: чаще используются в помещениях или в средах с
-                                    минимальными коррозионными рисками. Они отличаются экономичностью и лёгкостью в
-                                    обработке.
-                                </li>
-                            </ul>
-                            <p style="text-align: justify;">Дополнительные покрытия, такие как полимерные или
-                                лакокрасочные, применяются для повышения стойкости труб к химическим воздействиям или
-                                механическим повреждениям.</p>
-                            <h3 style="text-align: justify;">Диапазон размеров</h3>
-                            <p style="text-align: justify;">Диаметр стальных круглых труб варьируется от 2,1 до 3820 мм,
-                                а толщина стенки — от 0,2 до 100 мм. Эти параметры определяют область применения:</p>
-                            <ul style="text-align: justify;">
-                                <li><strong>Малые диаметры</strong> (до 50 мм) используются в системах отопления,
-                                    гидравлических системах и машиностроении.
-                                </li>
-                                <li><strong>Средние диаметры</strong> (от 50 до 500 мм) востребованы в строительстве,
-                                    производстве металлоконструкций и систем водоснабжения.
-                                </li>
-                                <li><strong>Крупные диаметры</strong> (свыше 500 мм) незаменимы для магистральных
-                                    трубопроводов, опорных конструкций и мостостроения.
-                                </li>
-                            </ul>
-                            <p style="text-align: justify;">Толщина стенки влияет на прочность трубы: трубы с большими
-                                стенками подходят для высоких давлений и механических нагрузок.</p>
-                            <h3 style="text-align: justify;">Состав и марки сплавов</h3>
-                            <p style="text-align: justify;">Стальные круглые трубы изготавливаются из разных видов
-                                сталей:</p>
-                            <ul style="text-align: justify;">
-                                <li><strong>Углеродистые стали</strong> (например, Ст3, Ст20) обеспечивают хорошее
-                                    сочетание прочности и стоимости.
-                                </li>
-                                <li><strong>Легированные стали</strong> (10Г2, 30ХМА) устойчивы к износу, коррозии и
-                                    перепадам температур.
-                                </li>
-                                <li><strong>Высоколегированные стали</strong> (12Х18Н10Т, ХН78Т) применяются в
-                                    химической промышленности, энергетике и при работе с агрессивными веществами.
-                                </li>
-                                <li><strong>Низколегированные стали</strong> (09Г2С, 15ХМ) сочетают прочность и
-                                    гибкость, что делает их востребованными в машиностроении и строительстве.
-                                </li>
-                            </ul>
-                            <p style="text-align: justify;">Каждая марка стали подбирается в зависимости от требований
-                                конкретного проекта, обеспечивая надёжность и долгий срок службы.</p>
-                            <h3 style="text-align: justify;">Процесс производства</h3>
-                            <p style="text-align: justify;">Производство стальных труб включает следующие этапы:</p>
-                            <ol style="text-align: justify;">
-                                <li><strong>Подготовка заготовок</strong>: это может быть штрипс для сварных труб или
-                                    цельные заготовки для бесшовных и цельнотянутых.
-                                </li>
-                                <li><strong>Формование</strong>: придание изделию цилиндрической формы.</li>
-                                <li><strong>Сварка или прокатка</strong>: сварка применяется для электросварных труб, а
-                                    горячая или холодная прокатка — для бесшовных и цельнотянутых.
-                                </li>
-                                <li><strong>Термообработка</strong>: улучшение механических характеристик изделия.</li>
-                                <li><strong>Финишная обработка</strong>: резка, нанесение покрытий, проверка качества.
-                                </li>
-                            </ol>
-                            <p style="text-align: justify;">Процесс ориентирован на достижение высокой точности размеров
-                                и длительного срока эксплуатации продукции.</p>
-                            <h3 style="text-align: justify;">Сферы применения</h3>
-                            <p style="text-align: justify;">Стальные круглые трубы находят применение в широком спектре
-                                отраслей:</p>
-                            <ul style="text-align: justify;">
-                                <li><strong>Строительство</strong>: используются для возведения опорных конструкций,
-                                    прокладки инженерных систем и создания каркасов зданий.
-                                </li>
-                                <li><strong>Машиностроение</strong>: трубы применяются в гидравлических системах,
-                                    деталях машин и оборудования.
-                                </li>
-                                <li><strong>Нефтегазовая отрасль</strong>: для транспортировки нефти, газа и химических
-                                    жидкостей под высоким давлением.
-                                </li>
-                                <li><strong>Энергетика</strong>: производство теплообменников, котлов, паропроводов и
-                                    трубопроводов высокого давления.
-                                </li>
-                                <li><strong>Химическая промышленность</strong>: перекачка агрессивных жидкостей и газов,
-                                    работающих в экстремальных условиях.
-                                </li>
-                            </ul>
-                            <p style="text-align: justify;">Например, трубы больших диаметров с толщиной стенки более 20
-                                мм востребованы для магистральных трубопроводов, в то время как тонкостенные трубы
-                                малого диаметра находят применение в инженерных системах и машиностроении.</p>
-                            <h3 style="text-align: justify;">Преимущества стальных круглых труб</h3>
-                            <p style="text-align: justify;">Стальные круглые трубы обладают рядом достоинств:</p>
-                            <ul style="text-align: justify;">
-                                <li><strong>Высокая прочность</strong>: выдерживают значительные нагрузки и давления.
-                                </li>
-                                <li><strong>Устойчивость к коррозии</strong>: особенно в случае использования
-                                    оцинкованных и легированных сталей.
-                                </li>
-                                <li><strong>Долговечность</strong>: сохраняют эксплуатационные характеристики в течение
-                                    десятилетий.
-                                </li>
-                                <li><strong>Простота обработки</strong>: трубы легко режутся, свариваются и монтируются,
-                                    что ускоряет процесс установки.
-                                </li>
-                                <li><strong>Широкий ассортимент размеров и покрытий</strong>: позволяет выбрать
-                                    подходящий вариант для любых условий эксплуатации.
-                                </li>
-                            </ul>
-                            <p style="text-align: justify;">Эти преимущества делают стальные круглые трубы универсальным
-                                выбором для множества отраслей в Астане.</p>
-                            <h3 style="text-align: justify;">Преимущества работы с Группой компаний «Интерстилс»</h3>
-                            <p style="text-align: justify;">Работа с Группой компаний «Интерстилс» — это гарантия
-                                надёжности, качества и оперативности в решении любых задач, связанных с поставками
-                                металлопроката. Мы гордимся своей репутацией профессионального и ответственного
-                                партнёра, способного адаптироваться к любым требованиям клиентов.</p>
-                            <p style="text-align: justify;"><strong>Комплексный подход к клиентским задачам</strong><br>ГК
-                                «Интерстилс» предлагает не просто поставку металлопроката, но и полный спектр услуг,
-                                начиная с выбора оптимальных материалов и заканчивая их доставкой на объект. Мы
-                                обеспечиваем выполнение даже самых нестандартных заказов, будь то поставка редких марок
-                                сталей или изготовление конструкций по индивидуальным чертежам.</p>
-                            <p style="text-align: justify;"><strong>Огромный выбор продукции</strong><br>Наш ассортимент
-                                насчитывает более 1100 категорий товаров, включая стальные и алюминиевые прокаты,
-                                металлоконструкции, кабельную продукцию и многое другое. Мы работаем с предприятиями из
-                                таких отраслей, как химическая, нефтегазовая, строительная и пищевая промышленности.
-                                Благодаря этому «Интерстилс» остаётся универсальным поставщиком для любого производства.
-                            </p>
-                            <p style="text-align: justify;"><strong>Глобальная сеть партнёров и оперативность
-                                поставок</strong><br>Мы сотрудничаем с крупнейшими производителями из России, Китая и
-                                Индии. Это даёт возможность обеспечить минимальные сроки поставки, независимо от
-                                сложности заказа. Кроме того, сеть складов и логистические центры компании позволяют
-                                доставлять в Астане продукцию точно в срок.</p>
-                            <p style="text-align: justify;"><strong>Экспертная поддержка на каждом этапе</strong><br>Клиенты
-                                «Интерстилс» получают доступ к обширным знаниям нашей команды. Наши специалисты готовы
-                                предоставить консультации по выбору материалов, технологиям обработки и требованиям
-                                стандартов. Мы знаем, как важно понимание технических особенностей продукции, поэтому
-                                всегда на связи.</p>
-                            <p style="text-align: justify;"><strong>Экономическая выгода и гибкость условий
-                                сотрудничества</strong><br>Объёмы наших закупок позволяют получать от производителей
-                                эксклюзивные ценовые условия. Для крупных заказчиков действуют дополнительные скидки, а
-                                для постоянных клиентов мы всегда готовы предложить гибкие схемы оплаты. Мы понимаем
-                                специфику работы промышленных предприятий и адаптируем наши процессы под их нужды.</p>
-                            <p style="text-align: justify;"><strong>Соответствие строгим стандартам
-                                качества</strong><br>Вся продукция, предлагаемая «Интерстилс», соответствует отраслевым
-                                стандартам, что подтверждается необходимыми сертификатами. Это обеспечивает надёжность и
-                                долговечность поставляемых материалов.</p>
-                            <p style="text-align: justify;"><strong>Поддержка на тендерах и госзаказах</strong><br>Мы
-                                имеем обширный опыт работы с коммерческими и государственными проектами. Наши
-                                специалисты обеспечат всю необходимую документацию и профессионально сопровождают
-                                участие в тендерах, помогая клиентам выиграть важные контракты.</p>
-                            <p style="text-align: justify;">Сотрудничество с ГК «Интерстилс» — это оптимизация процессов
-                                закупки, уверенность в надёжности поставок и уверенность в успешном выполнении проектов
-                                любой сложности.</p>
-                        </div>
-                    </div>
-                    <div class="col-lg-3 ml-auto order-lg-2 order-1">
-                        <a class="purchase-details__special-offer" href="/spec/"
-                           style="background-image: url(/static/img/content/special-offer.webp);">
-        <span class="purchase-details__special-offer-title">
-            Спецпредложения на ограниченное количество<br>продукции
-        </span>
-                            <img class="purchase-details__special-offer-logo" src="/static/img/logo_img.svg"
-                                 alt="Интерстилс">
-                        </a>
-                    </div>
-                </div>
-            </div>
-        </div>
-        <div class="catalog__promo-help-white promo-help-white"
-             style="background-image: url(/static/img/content/promo-help-white.webp);">
-            <div class="promo-help-white__inner">
-                <div class="promo-help-white__title">Нужна помощь?</div>
-                <div class="promo-help-white__desc">
-                    <p>Обсудить все вопросы, рассчитать стоимость доставки и договориться о способе оплаты вы можете с
-                        нашими специалистами.</p>
-                </div>
-                <div class="promo-help-white__controls">
-                    <button class="promo-help-white__order btn" data-modal-toggle="#modal-request">
-                        Оставить заявку
-                        <svg class="icon icon_arrow-right">
-                            <use xlink:href="/static/img/svg/symbol/sprite.svg#arrow-right"></use>
-                        </svg>
-                    </button>
-                    <a class="promo-help-white__consultant btn btn_outline" href="javascript:void(0);"
-                       onclick="jivo_api.open()">
-                        Онлайн консультант
-                        <svg class="icon icon_chat">
-                            <use xlink:href="/static/img/svg/symbol/sprite.svg#chat"></use>
-                        </svg>
-                    </a>
-                </div>
-            </div>
-        </div>
     </div>
+
+    <style>
+        tr.product-table__item:hover {
+            background-color: #1a1a1a;
+            border-radius: 15px;
+        }
+
+        .not-found-product {
+            background-color: #1a1a1a; /* Устанавливаем черный цвет фона */
+        }
+
+        @media (max-width: 767px) {
+            .card-mini {
+                align-items: flex-start;
+                flex-direction: column;
+                gap: 8px;
+                background-color: #fff;
+                max-width: 150px;
+                max-height: unset;
+            }
+        }
+    </style>
 
 </main>
 {% endblock %}

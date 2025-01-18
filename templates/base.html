@@ -34,6 +34,7 @@
 
     <link rel="stylesheet" href="{% static 'css/fonts.css' %}">
     <link rel="stylesheet" href="{% static 'css/style.css' %}">
+    <link rel='stylesheet' href='https://cdn-uicons.flaticon.com/2.6.0/uicons-brands/css/uicons-brands.css'>
     <link rel='stylesheet' href='https://cdn-uicons.flaticon.com/2.6.0/uicons-regular-rounded/css/uicons-regular-rounded.css'>
 
 
@@ -209,11 +210,11 @@
                             </svg>
                         </a>
                         <div class="drop-menu__content header__menu-sub" style="background-color: #1f1f1f;">
-                            <a style="color: white;" class="header__menu-link" href="/delivery/">
+                            <a style="color: white;" class="header__menu-link" href="{% url 'app:delivery' %}">
                                 Доставка</a>
-                            <a style="color: white;" class="header__menu-link" href="/payment/">
+                            <a style="color: white;" class="header__menu-link" href="{% url 'app:payment' %}">
                                 Оплата</a>
-                            <a style="color: white;" class="header__menu-link" href="/refund/">
+                            <a style="color: white;" class="header__menu-link" href="{% url 'app:refund' %}">
                                 Возврат</a>
                         </div>
                     </li>
@@ -744,7 +745,7 @@
 </div>
 <div class="my-modal order-click-modal" data-modal="find-price">
     <div class="my-modal__content">
-        <button class="close-modal-btn">
+        <button class="close-modal-btn" style="background-color: #1a1a1a;">
             <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none">
                 <path fill-rule="evenodd" clip-rule="evenodd"
                       d="M12 10.2322L4.88386 3.11612L3.11609 4.88389L10.2322 12L3.11609 19.1161L4.88386 20.8839L12 13.7678L19.1161 20.8839L20.8839 19.1161L13.7677 12L20.8839 4.88389L19.1161 3.11612L12 10.2322Z"
@@ -828,6 +829,14 @@
         </div>
     </div>
 </div>
+<style>
+    .order-click-modal .my-modal__content {
+        background-color: #1a1a1a;
+    }
+    .order-click-modal .modal-order__bottom {
+        background-color: #1a1a1a;
+    }
+</style>
 
 <!--/noindex-->
 {% block content %}
@@ -1175,55 +1184,7 @@
         </div>
     </div>
 </div>
-<div class="modal modal-order" id="modal-call">
-    <div class="modal__dialog">
-        <div class="modal__container">
-            <div class="modal__content modal-order__container">
-                <div class="modal__close">
-                    <svg class=" icon icon_close">
-                        <use xlink:href="images/sprite.svg#close"></use>
-                    </svg>
-                </div>
-                <div class="modal__title">
-                    <div>Оставьте свой номер</div>
-                </div>
-                <form class="modal-order__form need-validate" data-need-notification="true" id="call" method="POST"
-                      data-action="/informer/form_send/call/">
-                    <input type="text" name="first__name" class="d-none" value="">
-                    <label class="modal-order__form-field">
-                        <span class="modal-order__form-field-title required">
-                            Телефон
-                            <svg class="icon icon_required-input">
-                                <use xlink:href="images/sprite.svg#required-input"></use>
-                            </svg>
-                        </span>
-                        <input name="phone" maxlength="21" minlength="18"
-                               class="order-form__form-item-input input__input" type="tel"
-                               placeholder="+7 ( ___ ) ___ - __ - __" required="required">
-                        <span class="input__error">
-                            <svg class="icon icon_error">
-                                <use xlink:href="images/sprite.svg#error"></use>
-                            </svg>
-                            Введите корректный номер
-                        </span>
-                    </label>
-                    <button class="modal-order__form_submit btn btn-primary btn_100 justify-content-center"
-                            type="submit">
-                        <span>Отправить</span>
-                        <svg class=" icon icon_arrow-right">
-                            <use xlink:href="images/sprite.svg#arrow-right"></use>
-                        </svg>
-                    </button>
-                </form>
-                <p class="modal-order__info-license modal-call__politics">
-                        <span>Нажимая на кнопку “Отправить”, вы соглашаетесь с
-                            <a href="/policy/" target="_blank">политикой обработки персональных данных</a>
-                        </span>
-                </p>
-            </div>
-        </div>
-    </div>
-</div>
+
 <!--/noindex-->
 
 <script src="{% static 'js/Snow.min.js' %}"></script>

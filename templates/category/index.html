@@ -6,7 +6,6 @@
 {% block content %}
 <main style="background-color: black;">
 
-
     <div class="catalog container mb-3">
         <div class="row">
             <div class="col-lg-3">
@@ -112,7 +111,7 @@
                 <h1 class="title title_page" style="color: white;">Каталог</h1>
                 <a class="link-back link-back-mb d-lg-none" href="{% url 'app:index' %}">Главная</a>
 
-                <div class="news-container mb-5" data-aos="zoom-in">
+                <div class="news-container mb-5" >
                     <div class="news-list">
                         {% for category in categories %}
                         <a class="news-list__item" href="{{ category.get_absolute_url }}">
@@ -204,158 +203,6 @@
             </div>
         </div>
     </div>
-
-    <!--    <section class="catalog__purchase-details purchase-details">-->
-    <!--        <div class="container">-->
-    <!--            <div class="purchase-details__inner row tab-product-content product-tab-show justify-content-center"-->
-    <!--                 id="product-desc">-->
-    <!--                <div class="col-lg-8 order-lg-1 order-2">-->
-    <!--                    <div class="purchase-details__section mb-5">-->
-    <!--                        <div class="purchase-details__section-title">Вопрос ответ</div>-->
-
-    <!--                        <a class="tabs__question-elem accordion__low">-->
-    <!--                            Как сделать заказ?-->
-    <!--                            <div class="accordion-svg-plus">-->
-    <!--                                <div class="circle-plus active-side-bar">-->
-    <!--                                    <div class="circle">-->
-    <!--                                        <div class="horizontal transform-horizontal"></div>-->
-    <!--                                        <div class="vertical transform-vertical"></div>-->
-    <!--                                    </div>-->
-    <!--                                </div>-->
-    <!--                            </div>-->
-    <!--                        </a>-->
-    <!--                        <div class="tabs__answer-elem accordion-content__low">По телефону коммерческого отдела или через-->
-    <!--                            заявку на почту, указанную на сайте. В течение дня мы подготовим и вышлем предложение с-->
-    <!--                            наилучшими ценами и условиями поставки по Вашему заказу.-->
-    <!--                        </div>-->
-
-    <!--                        <a class="tabs__question-elem accordion__low">-->
-    <!--                            Могу я приобрести товар как физическое лицо?-->
-    <!--                            <div class="accordion-svg-plus">-->
-    <!--                                <div class="circle-plus active-side-bar">-->
-    <!--                                    <div class="circle">-->
-    <!--                                        <div class="horizontal transform-horizontal"></div>-->
-    <!--                                        <div class="vertical transform-vertical"></div>-->
-    <!--                                    </div>-->
-    <!--                                </div>-->
-    <!--                            </div>-->
-    <!--                        </a>-->
-    <!--                        <div class="tabs__answer-elem accordion-content__low">Да, мы работаем как с юридическими, так и-->
-    <!--                            физическими лицами. Однако обратите внимание, что минимальная сумма заказа составляет 50 000-->
-    <!--                            рублей.-->
-    <!--                        </div>-->
-
-    <!--                        <a class="tabs__question-elem accordion__low">-->
-    <!--                            Я могу купить один экземпляр товара?-->
-    <!--                            <div class="accordion-svg-plus">-->
-    <!--                                <div class="circle-plus active-side-bar">-->
-    <!--                                    <div class="circle">-->
-    <!--                                        <div class="horizontal transform-horizontal"></div>-->
-    <!--                                        <div class="vertical transform-vertical"></div>-->
-    <!--                                    </div>-->
-    <!--                                </div>-->
-    <!--                            </div>-->
-    <!--                        </a>-->
-    <!--                        <div class="tabs__answer-elem accordion-content__low">Все зависит от стоимости товара. Мы-->
-    <!--                            работаем с крупными заказами. Если Ваша заявка примерно соответствует минимальному порогу в-->
-    <!--                            30 000 - 50 000 рублей (в зависимости от города заказа, подробности уточняйте у менеджера),-->
-    <!--                            позвоните нам или отправьте письмо с номенклатурой. Наш эксперт рассчитает индивидуальную-->
-    <!--                            стоимость конкретно под объем Вашей заявки.-->
-    <!--                        </div>-->
-
-    <!--                        <a class="tabs__question-elem accordion__low">-->
-    <!--                            У меня срочный заказ. Можно ли получить товар в день оплаты или на следующий день?-->
-    <!--                            <div class="accordion-svg-plus">-->
-    <!--                                <div class="circle-plus active-side-bar">-->
-    <!--                                    <div class="circle">-->
-    <!--                                        <div class="horizontal transform-horizontal"></div>-->
-    <!--                                        <div class="vertical transform-vertical"></div>-->
-    <!--                                    </div>-->
-    <!--                                </div>-->
-    <!--                            </div>-->
-    <!--                        </a>-->
-    <!--                        <div class="tabs__answer-elem accordion-content__low">При наличии продукции на складе в Вашем-->
-    <!--                            городе, мы, конечно же, постараемся организовать срочную доставку. Если товара нет, мы-->
-    <!--                            найдем его на других региональных базах «UniTrade» и предложим Вам минимально возможные-->
-    <!--                            сроки поставки. Если нужная Вам номенклатура в принципе изготавливается под заказ, в таком-->
-    <!--                            случае все решается индивидуально, в зависимости от очереди и наличия на производстве-->
-    <!--                            исходного сырья.-->
-    <!--                        </div>-->
-
-    <!--                        <a class="tabs__question-elem accordion__low">-->
-    <!--                            Вы доставляете в любые регионы? А в небольшие, отдаленные города?-->
-    <!--                            <div class="accordion-svg-plus">-->
-    <!--                                <div class="circle-plus active-side-bar">-->
-    <!--                                    <div class="circle">-->
-    <!--                                        <div class="horizontal transform-horizontal"></div>-->
-    <!--                                        <div class="vertical transform-vertical"></div>-->
-    <!--                                    </div>-->
-    <!--                                </div>-->
-    <!--                            </div>-->
-    <!--                        </a>-->
-    <!--                        <div class="tabs__answer-elem accordion-content__low">Мы поставляем металлопрокат по всей-->
-    <!--                            территории России и Казахстана. Межтерминальные перевозки осуществляются надежными-->
-    <!--                            транспортными компаниями, с которыми заключены долгосрочные контракты. Также Вы можете-->
-    <!--                            самостоятельно забрать товар со склада по предварительной договоренности.-->
-    <!--                        </div>-->
-
-    <!--                        <a class="tabs__question-elem accordion__low">-->
-    <!--                            Почему на сайте не указана цена на товар? Или стоит явно устаревшая цифра?-->
-    <!--                            <div class="accordion-svg-plus">-->
-    <!--                                <div class="circle-plus active-side-bar">-->
-    <!--                                    <div class="circle">-->
-    <!--                                        <div class="horizontal transform-horizontal"></div>-->
-    <!--                                        <div class="vertical transform-vertical"></div>-->
-    <!--                                    </div>-->
-    <!--                                </div>-->
-    <!--                            </div>-->
-    <!--                        </a>-->
-    <!--                        <div class="tabs__answer-elem accordion-content__low">Наш каталог насчитывает более 6 миллионов-->
-    <!--                            товаров. Мы стремимся к поддержанию актуальных цен на все позиции. Но, в зависимости от-->
-    <!--                            тенденций мирового рынка сырья и загруженности производства, влияющих на конечную стоимость-->
-    <!--                            продукции, не представляется возможным ежедневно актуализировать абсолютно все цены.-->
-    <!--                            Кроме того, мы всегда стараемся предложить нашим клиентам индивидуальную цену, исходя из-->
-    <!--                            условий поставки: количества, схемы оплаты и места отгрузки. Поэтому информация на сайте-->
-    <!--                            носит исключительно ознакомительный характер и ни при каких обстоятельствах не является-->
-    <!--                            публичной офертой, определяемой ч. 2 ст. 437 Гражданского кодекса Российской Федерации.-->
-    <!--                        </div>-->
-
-    <!--                        <a class="tabs__question-elem accordion__low">-->
-    <!--                            Мне нужна металлообработка для моего металла – сколько это стоит?-->
-    <!--                            <div class="accordion-svg-plus">-->
-    <!--                                <div class="circle-plus active-side-bar">-->
-    <!--                                    <div class="circle">-->
-    <!--                                        <div class="horizontal transform-horizontal"></div>-->
-    <!--                                        <div class="vertical transform-vertical"></div>-->
-    <!--                                    </div>-->
-    <!--                                </div>-->
-    <!--                            </div>-->
-    <!--                        </a>-->
-    <!--                        <div class="tabs__answer-elem accordion-content__low">Сожалеем, но все услуги по обработке-->
-    <!--                            оказываются только при покупке нашего проката и сопутствующих товаров. Производство не-->
-    <!--                            принимает сторонние изделия.-->
-    <!--                        </div>-->
-
-
-    <!--                    </div>-->
-    <!--                    <div class="purchase-details__section">-->
-
-    <!--                    </div>-->
-    <!--                </div>-->
-    <!--                <div class="col-lg-3 ml-auto order-lg-2 order-1">-->
-    <!--                    <a class="purchase-details__special-offer" href="/spec/"-->
-    <!--                       style="background-image: url(/static/img/content/special-offer.webp);">-->
-    <!--        <span class="purchase-details__special-offer-title">-->
-    <!--            Спецпредложения на ограниченное количество<br>продукции-->
-    <!--        </span>-->
-    <!--                        <img class="purchase-details__special-offer-logo" src="/static/img/logo_img.svg"-->
-    <!--                             alt="UniTrade">-->
-    <!--                    </a>-->
-    <!--                </div>-->
-    <!--            </div>-->
-    <!--        </div>-->
-    <!--    </section>-->
-
 
 </main>
 {% endblock %}

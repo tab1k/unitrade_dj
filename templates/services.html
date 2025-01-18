@@ -6,7 +6,7 @@
 {% block content %}
 <main style="background-color: black;">
 
-    <section class="about-company__head" style="margin-bottom: 50px;">
+    <section class="about-company__head" >
         <div class="about-company-head" style="background-color: #1a1a1a;">
             <div class="container">
                 <h1 class="about-company-head__title" style="color: white;">Услуги</h1>
@@ -27,6 +27,12 @@
             background-repeat: no-repeat;
             background-position: right;
             padding-top: 25px;
+        }
+
+        @media (max-width: 991px) {
+            .about-company__head {
+                margin-bottom: 0px;
+            }
         }
 
 
