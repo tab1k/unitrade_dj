@@ -10,13 +10,96 @@
     <div class="catalog container mb-3">
         <div class="row">
             <div class="col-lg-3">
-                <a class="link-back link-back-mb d-none d-lg-inline-flex" href="/" style="background-color: #1f1f1f; color: white;">Назад</a>
+                <a class="link-back link-back-mb d-none d-lg-inline-flex"
+                   href="/">
+                    Главная
+                </a>
+
+
+                <ul class="category-sidebar">
+
+
+                    {% for category in categories %}
+                    <li class="category-sidebar__item">
+
+                        <div class="category-sidebar__title accordion">
+                            <div class="click-block-sidebar"></div>
+                            <a style="color: #d2cccc;" href="{{ category.get_absolute_url }}">
+                                {{ category.name }}
+                            </a>
+                            <div class="accordion-svg accordion-img">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
+                                     class="bi bi-caret-down" viewBox="0 0 16 16">
+                                    <path d="M3.204 5h9.592L8 10.481 3.204 5z"/>
+                                </svg>
+                            </div>
+
+
+                        </div>
+
+                        {% if category.children.exists %}
+                        <ul class="category-sidebar__submenu accordion-content">
+                            {% for subcategory in category.children.all %}
+                            <li class="category-sidebar__submenu-item">
+
+                                <a style="color: #d2cccc;" class="category-sidebar__submenu-link"
+                                   href="{{ subcategory.get_absolute_url }}">
+                                    {{ subcategory.name }}
+                                </a>
+
+                            </li>
+                            {% endfor %}
+
+                        </ul>
+                        {% endif %}
+
+
+                    </li>
+                    {% endfor %}
+
+                </ul>
+
+                <script>
+                    document.addEventListener("DOMContentLoaded", function () {
+                        const accordionTitles = document.querySelectorAll('.category-sidebar__title.accordion');
+
+                        accordionTitles.forEach(function (accordionTitle) {
+                            accordionTitle.addEventListener('click', function () {
+                                const submenu = this.nextElementSibling;
+                                const icon = this.querySelector('.accordion-svg');
+
+                                // Тогглим классы для активного состояния
+                                submenu.classList.toggle('accordion-content-active');
+                                if (submenu.classList.contains('accordion-content-active')) {
+                                    submenu.style.maxHeight = submenu.scrollHeight + 'px';
+                                    icon.classList.remove('open-svg');
+                                } else {
+                                    submenu.style.maxHeight = '0';
+                                    icon.classList.add('open-svg');
+                                }
+                            });
+                        });
+                    });
+
+                </script>
+                <style>
+                    .category-sidebar__submenu {
+                        transition: max-height 0.3s ease-in-out;
+                        overflow: hidden;
+                        max-height: 0; /* Начальная высота скрытого списка */
+                    }
+
+                    .category-sidebar__submenu.accordion-content-active {
+                        max-height: 500px; /* Или set the max-height на любое подходящее значение */
+                    }
+                </style>
                 <!--noindex-->
                 <div class="category-sidebar mt-5">
                     <div class="tmp-grid__right">
                         <div class="dealer-soon" style="background-color: #262a31;">
                             <p class="dealer-soon__title" style="color: white;">Мы скоро свяжемся с вами!</p>
-                            <p class="dealer-soon__descr" style="color: white;">Рассмотрим вашу заявку в течение 2 рабочих дней и дадим
+                            <p class="dealer-soon__descr" style="color: white;">Рассмотрим вашу заявку в течение 2
+                                рабочих дней и дадим
                                 обратную
                                 связь.</p>
                         </div>
