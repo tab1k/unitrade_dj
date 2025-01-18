@@ -10,8 +10,6 @@
     <title itemprop="name">{% block title %}{% endblock %}</title>
 
     <link rel="canonical" href="https://uni-trade.kz/">
-    <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css"/>
-    <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.css" />
 
 
@@ -38,7 +36,9 @@
     <link rel="stylesheet" href="{% static 'css/fonts.css' %}">
 
     <link rel="stylesheet" href="{% static 'css/style.css' %}">
-    <meta name="yandex-verification" content="6823f77366593821">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons/font/bootstrap-icons.css" rel="stylesheet">
+
+
     <!-- UpassistRUM -->
     <script async="" src="{% static 'js/rumscript.js' %}"></script>
 
@@ -51,6 +51,12 @@
             background: #1f1f1f;
             height: 103vh;
         }
+        @media (max-width: 991px) {
+            .catalog .link-back-mb {
+                margin-bottom: 24px;
+                margin-top: 10px;
+            }
+        }
     </style>
 
 </head>
@@ -61,7 +67,17 @@
 <link href="{% static 'css/snow.min.css' %}" rel="stylesheet">
 
 
-<header class="header">
+<header class="header" style="background-color: black;">
+    <div class="header-top container" style="backgground-color: black;">
+        <span>
+            <a href="mailto:metall@rozmet.ru">
+                <i class="bi bi-envelope"></i> metall@rozmet.ru
+            </a>
+        </span>
+        <span>
+            Будни: 8:00 - 18:00, Суббота: 8:00 — 17:00
+        </span>
+    </div>
     <div class="header__inner" style="background-color: black;">
         <div class="header__middle-inner container">
             <div class="header__middle" style="background-color: black; border-bottom: 1px solid #1f1f1f;">
@@ -648,6 +664,150 @@
     </div>
 </header>
 
+<style>
+
+    .header-top {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        font-size: 0.875rem;
+        color: #666;
+        padding-top: 0.5rem;
+        padding-bottom: 0.5rem;
+        border-bottom: 1px solid #1a1a1a;
+        background-color: black;
+    }
+
+    .header-top a {
+        color: #666;
+        text-decoration: none;
+    }
+
+    .header-main {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        padding: 10px 0;
+    }
+
+    .logo {
+        display: flex;
+        align-items: center;
+    }
+
+    .logo img {
+        max-height: 50px;
+    }
+
+    .search-bar {
+        flex: 1;
+        margin: 0 20px;
+    }
+
+    .search-bar input {
+        width: 100%;
+        padding: 8px;
+        border: 1px solid #ddd;
+        border-radius: 4px;
+    }
+
+    .contacts {
+        text-align: right;
+    }
+
+    .nav {
+        display: flex;
+        justify-content: space-around;
+        padding: 10px 0;
+        font-size: 1rem;
+        flex-wrap: wrap;
+    }
+
+    .nav a {
+        color: #fff;
+        text-decoration: none;
+        padding: 5px 15px;
+    }
+
+    .nav a:hover {
+        color: #d9534f;
+    }
+
+    @media (max-width: 768px) {
+        .header-top {
+            flex-direction: column;
+            text-align: center;
+        }
+
+        .header-main {
+            flex-direction: column;
+            text-align: center;
+        }
+
+        .logo img {
+            max-height: 40px;
+        }
+
+        .search-bar {
+            margin: 10px 0;
+        }
+
+        .contacts {
+            margin-top: 10px;
+        }
+
+        .contacts div {
+            font-size: 0.875rem;
+        }
+
+        .nav {
+            flex-direction: column;
+            align-items: center;
+            font-size: 0.875rem;
+        }
+
+        .nav a {
+            padding: 10px 0;
+        }
+    }
+
+    @media (max-width: 480px) {
+        .header {
+            padding: 10px;
+            background-color: black;
+        }
+        .header__bottom {
+            border-bottom: none;
+        }
+
+        .header-top {
+            justify-content: space-between;
+            text-align: center;
+            display: initial;
+        }
+
+        .header-top span {
+            font-size: 0.8rem;
+        }
+
+        .header-main {
+            padding: 5px 0;
+        }
+
+        .search-bar input {
+            padding: 6px;
+        }
+
+        .contacts div {
+            font-size: 0.75rem;
+        }
+
+        .nav a {
+            padding: 8px 0;
+        }
+    }
+</style>
+
 <!--noindex-->
 <div class="my-modal order-click-modal" data-modal="order-click">
     <div class="my-modal__content">
@@ -1067,6 +1227,8 @@
         </div>
     </div>
 </div>
+
+
 <div class="modal modal-success" id="modal-success">
     <div class="modal__dialog">
         <div class="modal__content">

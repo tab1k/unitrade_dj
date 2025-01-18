@@ -19,88 +19,6 @@
             </div>
             <div class="col">
 
-                <div class="bread-crumbs">
-                    <div class="container">
-                        <ul class="bread-crumbs__list" itemscope="" itemtype="https://schema.org/BreadcrumbList">
-
-
-                            <li class="bread-crumbs__item" itemprop="itemListElement" itemscope=""
-                                itemtype="https://schema.org/ListItem">
-                                <a class="bread-crumbs__link" href="/" itemprop="item">
-                      <span itemprop="name">
-                          Главная
-                      </span>
-                                </a>
-                                <meta itemprop="position" content="1">
-                            </li>
-
-
-                            <li class="bread-crumbs__item" itemprop="itemListElement" itemscope=""
-                                itemtype="https://schema.org/ListItem">
-                                <a class="bread-crumbs__link" href="/catalog/" itemprop="item">
-                      <span itemprop="name">
-                          Каталог металлопроката
-                      </span>
-                                </a>
-                                <meta itemprop="position" content="2">
-                            </li>
-
-
-                            <li class="bread-crumbs__item" itemprop="itemListElement" itemscope=""
-                                itemtype="https://schema.org/ListItem">
-                                <a class="bread-crumbs__link" href="/catalog/chernyj-metalloprokat/" itemprop="item">
-                      <span itemprop="name">
-                          Черный металлопрокат
-                      </span>
-                                </a>
-                                <meta itemprop="position" content="3">
-                            </li>
-
-
-                            <li class="bread-crumbs__item bread-crumbs__item_popup">
-                                <a class="bread-crumbs__link bread-crumbs__link_popup">...</a>
-                                <div class="bread-crumbs__item_brcr hidden">
-                                    <div class="select__dropdown">
-                                        <div class="select__items">
-
-                                            <a class="select__item" itemprop="itemListElement"
-                                               itemtype="https://schema.org/ListItem" itemscope=""
-                                               href="/catalog/trubnyj-prokat/">Трубный прокат
-                                                <meta itemprop="name" content="Трубный прокат">
-                                                <meta itemprop="position" content="4">
-                                            </a>
-
-                                            <a class="select__item" itemprop="itemListElement"
-                                               itemtype="https://schema.org/ListItem" itemscope=""
-                                               href="/catalog/truby-iz-stali/">Стальной трубный прокат
-                                                <meta itemprop="name" content="Стальной трубный прокат">
-                                                <meta itemprop="position" content="5">
-                                            </a>
-
-                                            <a class="select__item" itemprop="itemListElement"
-                                               itemtype="https://schema.org/ListItem" itemscope=""
-                                               href="/catalog/stalnye-truby/">Стальная круглая труба
-                                                <meta itemprop="name" content="Стальная круглая труба">
-                                                <meta itemprop="position" content="6">
-                                            </a>
-
-                                        </div>
-                                    </div>
-                                </div>
-                            </li>
-
-
-                            <li class="bread-crumbs__item" itemprop="itemListElement" itemscope=""
-                                itemtype="https://schema.org/ListItem">
-                                <div class="bread-crumbs__link" itemprop="item"><span itemprop="name">{{ product.name }}</span>
-                                </div>
-                                <meta itemprop="position" content="7">
-                            </li>
-
-
-                        </ul>
-                    </div>
-                </div>
 
                 <h1 class="title" style="color: white;">{{ product.name }}</h1>
                 <a class="link-back link-back-mb d-lg-none" href="/catalog/stalnye-truby/">Назад</a>
@@ -120,7 +38,9 @@
                     </div>
                 </div>
                 <div class="for-juridical" style="background-color: #1f1f1f;">
-                    <p><span style="font-size: 14pt; color: white;"><strong>Минимальный заказ - 100 000 ₸.</strong></span></p>
+                    <p><span
+                            style="font-size: 14pt; color: white;"><strong>Минимальный заказ - 100 000 ₸.</strong></span>
+                    </p>
                     <p><strong style="color: red; ">С тендерами и физическими лицами не работаем!</strong></p>
                 </div>
             </div>
@@ -4088,44 +4008,58 @@
                 </div>
             </div>
         </div>
-        <div class="not-found-product" style="background-image: url(/static/img/not-found-product.png)">
+        <div class="not-found-product"
+             style="background-image: url(/static/img/not-found-product.png); background-color: #000; color: #fff; padding: 20px; border-radius: 8px;">
             <div class="not-found-product__info">
-                <div class="not-found-product__title">Не нашли нужный товар?</div>
-                <div class="not-found-product__desc">
+                <div class="not-found-product__title"
+                     style="font-size: 1.5rem; font-weight: bold; color: #fff; margin-bottom: 10px;">Не нашли нужный
+                    товар?
+                </div>
+                <div class="not-found-product__desc" style="font-size: 1rem; color: #ccc;">
                     Оставьте свои контакты и мы вышлем вам коммерческое предложение на интересующую вас продукцию.
                 </div>
             </div>
             <div class="not-found-product__form">
                 <form class="feedback-form need-validate" data-need-notification="true"
-                      action="/informer/form_send/ask-not-found/"><input type="hidden" name="csrfmiddlewaretoken"
-                                                                         value="WzXi92YMT6kwvcV2B9lPF6a1KQ4fWm5dgYq3BoMSbXn90s5F4sa6oc35eaQVjgqy">
-                    <label class="feedback-form__field">
-                        <span class="feedback-form__field-title">Имя</span>
+                      action="/informer/form_send/ask-not-found/">
+                    <input type="hidden" name="csrfmiddlewaretoken"
+                           value="0SiNL3N263em7GuwgrcuPM2M20ONl5NAkhLydpB8oUhZCWE9JK1LySVQwkAtIZ8V">
+
+                    <label class="feedback-form__field" style="display: block; margin-bottom: 20px;">
+                        <span class="feedback-form__field-title" style="color: #fff;">Имя</span>
                         <input class="feedback-form__field-input input__input" type="text" name="fio"
                                placeholder="Иванов Андрей" maxlength="100"
-                               pattern="(^[а-яА-ЯёЁa-zA-Z]+ ?[а-яА-ЯёЁa-zA-Z]* ?[а-яА-ЯёЁa-zA-Z]*)?$">
-                        <span class="input__error">
-                          <svg class="icon icon_error">
-                            <use xlink:href="/static/img/svg/symbol/sprite.svg#error"></use>
-                          </svg>Введите Имя или Фамилию и Имя
-                        </span>
+                               pattern="(^[а-яА-ЯёЁa-zA-Z]+ ?[а-яА-ЯёЁa-zA-Z]* ?[а-яА-ЯёЁa-zA-Z]*)?$"
+                               style="width: 100%; padding: 10px; border: 1px solid #444; background: #222; color: #fff; border-radius: 4px;">
+                        <span class="input__error" style="color: #ff6b6b;">
+                    <svg class="icon icon_error" style="fill: #ff6b6b; width: 16px; height: 16px;">
+                        <use xlink:href="/static/img/svg/symbol/sprite.svg#error"></use>
+                    </svg>
+                    Введите Имя или Фамилию и Имя
+                </span>
                     </label>
-                    <label class="feedback-form__field">
-                        <span class="feedback-form__field-title">Номер телефона</span>
+
+                    <label class="feedback-form__field" style="display: block; margin-bottom: 20px;">
+                        <span class="feedback-form__field-title" style="color: #fff;">Номер телефона</span>
                         <input class="feedback-form__field-input input__input" type="tel" name="phone" maxlength="21"
-                               minlength="18" required="" placeholder="+7 ( ___ ) ___ - __ - __">
-                        <span class="input__error">
-                    <svg class="icon icon_error">
+                               minlength="18" required="" placeholder="+7 ( ___ ) ___ - __ - __"
+                               style="width: 100%; padding: 10px; border: 1px solid #444; background: #222; color: #fff; border-radius: 4px;">
+                        <span class="input__error" style="color: #ff6b6b;">
+                    <svg class="icon icon_error" style="fill: #ff6b6b; width: 16px; height: 16px;">
                         <use xlink:href="/static/img/svg/symbol/sprite.svg#error"></use>
                     </svg>
                     Введите корректный телефон
                 </span>
                     </label>
-                    <div class="feedback-form__bottom">
-                        <button class="feedback-form__submit btn btn-primary" type="submit">Отправить</button>
-                        <div class="feedback-form__license">
+
+                    <div class="feedback-form__bottom" style="margin-top: 20px;">
+                        <button class="feedback-form__submit btn btn-primary" type="submit"
+                                style="background-color: #ff4747; border: none; padding: 10px 20px; color: #fff; border-radius: 4px; cursor: pointer;">
+                            Отправить
+                        </button>
+                        <div class="feedback-form__license" style="margin-top: 10px; font-size: 0.875rem; color: #ccc;">
                             Нажимая на кнопку «Отправить», вы соглашаетесь с
-                            <a href="/policy/">
+                            <a href="/policy/" style="color: #ff4747; text-decoration: none;">
                                 политикой обработки персональных данных и политикой конфиденциальности.
                             </a>
                         </div>
@@ -4133,6 +4067,7 @@
                 </form>
             </div>
         </div>
+
         <div class="section-container">
             <div class="slider">
                 <div class="slider__head">
