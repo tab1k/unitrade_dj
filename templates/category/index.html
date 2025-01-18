@@ -4,7 +4,7 @@
 {% block title %} Каталог {% endblock %}
 
 {% block content %}
-<main>
+<main style="background-color: black;">
 
 
     <div class="catalog container mb-3">
@@ -27,7 +27,7 @@
             <div class="col-lg-9">
 
                 <h1 class="title title_page" style="color: white;">Каталог</h1>
-                <a class="link-back link-back-mb d-lg-none" href="/catalog/">Каталог</a>
+                <a class="link-back link-back-mb d-lg-none" href="{% url 'app:index' %}">Главная</a>
 
                 <div class="news-container mb-5" data-aos="zoom-in">
                     <div class="news-list">

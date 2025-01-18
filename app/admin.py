@@ -10,6 +10,18 @@ class CategoryAdmin(admin.ModelAdmin):
     search_fields = ('name', 'parent__name')  # Поиск по имени категории и родительской категории
     ordering = ('name',)  # Сортировка категорий по имени в алфавитном порядке
 
+    # Добавляем фильтрацию категорий без родителя
+    list_filter = ('parent',)
+
+    # Переопределяем список категорий для показа
+    def get_queryset(self, request):
+        queryset = super().get_queryset(request)
+        # Если нужен фильтр для категорий без родителя:
+        if request.GET.get('parent__isnull', None):
+            return queryset.filter(parent__isnull=True)
+        return queryset
+
+
 @admin.register(Product)
 class ProductAdmin(admin.ModelAdmin):
     list_display = ('name', 'category', 'slug')

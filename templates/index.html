@@ -64,7 +64,7 @@
                         {% for category in categories|slice:":8" %}
                         <a class="news-list__item" href="{{ category.get_absolute_url }}">
                             <div class="news-list__photo"
-                                 style="background-image: url({% if category.image %}{{ category.image.url }}{% else %}{% static 'images/first.jpg' %}{% endif %})">
+                                 style="background-image: url({% if category.image %}{{ category.image.url }}{% else %}{% static 'images/firstq.jpg' %}{% endif %})">
                                 <div class="news-list__info">
                                     <h2 class="news-list__title">{{ category.name }}</h2>
                                 </div>
@@ -150,6 +150,7 @@
                 </style>
 
             </div>
+        </div>
     </section>
     <!-- КОНЕЦ БЛОК КАТЕГОРИЙ -->
 
