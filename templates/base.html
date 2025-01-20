@@ -87,10 +87,15 @@
                     <a href="/"><img src="{% static 'images/logo_bg.png' %}" style="max-height: 130px; width: 130px;"
                                      alt="#"></a>
                 </div>
-                <div class="search-bar">
-                    <input type="text" style="background-color: #1a1a1a; border: 1px solid #1a1a1a;"
+                <div class="search-bar" style="position: relative; width: 100%;">
+                    <input type="text"
+                           style="background-color: #1a1a1a; border-radius: 7px; border: 1px solid #1a1a1a; color: white; padding: 8px 40px 8px 8px; width: 100%;"
                            placeholder="Поиск в каталоге...">
+                    <button style="position: absolute; border-radius: 7px; right: 1px; top: 50%; transform: translateY(-50%); background-color: #333; color: white; border: none; padding: 8px 12px; cursor: pointer;">
+                        Поиск
+                    </button>
                 </div>
+
 
 
                 <div class="header__content-right flex-wrap">
