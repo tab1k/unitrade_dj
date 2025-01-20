@@ -173,8 +173,8 @@
                 </button>
 
                 <span class="header__logo logo" href="/">
-            <!-- Ваш логотип -->
-        </span>
+<!--                    <img src="{% static 'images/logo_bg.png' %}">-->
+                </span>
 
                 <a href="/category/" class="header__catalog btn-toggle">
                     <span class="header__catalog-text" style="color: white;">Каталог</span>
@@ -911,7 +911,7 @@
 
 <footer>
     <div class="footer-container">
-        <div class="footer-column mr-5">
+        <div class="footer-column">
             <div class="footer-logo">
                 <img style="" src="{% static 'images/logo_bg.png' %}" alt="Logo"/>
             </div>
@@ -967,86 +967,115 @@
 
 <style>
     footer {
-      background-color: #1a1a1a;
-      color: #fff;
-      padding: 40px 130px;
-      font-family: Arial, sans-serif;
-    }
+    background-color: #1a1a1a;
+    color: #fff;
+    padding: 40px 130px;
+    font-family: Arial, sans-serif;
+}
 
-    .footer-container {
-      display: flex;
-      justify-content: space-between;
-      flex-wrap: wrap;
+.footer-container {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+}
+
+.footer-column {
+    flex: 1;
+    min-width: 200px;
+    margin: 10px 20px;
+}
+
+.footer-column h4 {
+    font-size: 16px;
+    margin-bottom: 10px;
+    color: #fff;
+}
+
+.footer-column ul {
+    list-style: none;
+    padding: 0;
+}
+
+.footer-column ul li {
+    font-size: 14px;
+    margin-bottom: 8px;
+    color: #ccc;
+    cursor: pointer;
+    transition: color 0.3s ease;
+}
+
+.footer-column ul li:hover {
+    color: #fff;
+}
+
+.social-icons {
+    display: flex;
+    gap: 10px;
+}
+
+.social-icons a {
+    color: #fff;
+    font-size: 20px; /* Размер иконок увеличен для удобства кликов */
+    text-decoration: none;
+    transition: color 0.3s ease;
+}
+
+.social-icons a:hover {
+    color: #bbb;
+}
+
+.footer-bottom {
+    text-align: center;
+    padding-top: 10px;
+    border-top: 1px solid #333;
+    margin-top: 20px;
+    color: #ccc;
+    font-size: 14px;
+}
+
+/* --- Средние экраны: планшеты --- */
+@media (max-width: 768px) {
+    footer {
+        padding: 30px;
     }
 
     .footer-column {
-      flex: 1;
-      min-width: 200px;
-      margin: 10px;
+        flex: 1 1 calc(50% - 20px); /* 2 колонки в строке */
+        min-width: 160px;
+    }
+}
+
+/* --- Маленькие экраны: телефоны --- */
+@media (max-width: 480px) {
+    footer {
+        padding: 20px;
     }
 
-    .footer-column h4 {
-      font-size: 16px;
-      margin-bottom: 10px;
-      color: #fff;
+    .footer-container {
+        flex-direction: column;
+        align-items: center; /* Центральное выравнивание контента */
+        gap: 20px;
     }
 
-    .footer-column ul {
-      list-style: none;
-      padding: 0;
+    .footer-column {
+        flex: 1 1 100%; /* Каждая колонка занимает всю ширину */
+        text-align: center; /* Выравнивание текста по центру */
+        margin: 10px 0;
     }
 
     .footer-column ul li {
-      font-size: 14px;
-      margin-bottom: 8px;
-      color: #ccc;
+        font-size: 16px;
     }
 
-    .footer-column ul li:hover {
-      color: #fff;
-    }
-
-    .social-icons a img {
-      width: 24px;
-      margin-right: 10px;
-      transition: opacity 0.3s ease;
-    }
-
-    .social-icons a img:hover {
-      opacity: 0.7;
+    .social-icons {
+        justify-content: center; /* Центрирование иконок */
     }
 
     .footer-bottom {
-      text-align: center;
-      padding-top: 10px;
-      border-top: 1px solid #333;
-      margin-top: 20px;
-      color: #ccc;
-      font-size: 14px;
+        font-size: 12px; /* Уменьшенный размер текста */
     }
-    /* Средний экран: планшеты */
-    @media (max-width: 768px) {
-      .footer-column {
-        flex: 1 1 calc(50% - 20px); /* 2 колонки в строке */
-        min-width: 160px;
-      }
-    }
+}
 
-    /* Маленький экран: телефоны */
-    @media (max-width: 480px) {
-      .footer-container {
-        flex-direction: column;
-        align-items: flex-start;
-      }
-
-      .footer-column {
-        flex: 1 1 100%; /* Каждая колонка занимает всю ширину */
-        margin: 10px 0;
-      }
-
-      .social-icons {
-        justify-content: flex-start;
-      }
 </style>
 
 

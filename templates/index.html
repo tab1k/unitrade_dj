@@ -12,7 +12,7 @@
     <section class="hero">
         <div class="hero__video">
             <video class="lazy" autoplay="" loop="" muted="" playsinline poster="/static/video/hero-poster.webp">
-                <source data-src="{% static 'video/hero.mp4' %}" type="video/mp4">
+                <source data-src="{% static 'video/video.mp4' %}" type="video/mp4">
             </video>
 
         </div>
@@ -166,15 +166,14 @@
                        style="color: #f44336;">О компании</p>
                     <h2 class="about__title title aos-init aos-animate" data-aos="fade-up" data-aos-delay="50"
                         style="color: white;">
-                        Группа Компаний «Интерстилс»
+                        ВАШ НАДЕЖНЫЙ ПАРТНЕР «Build Line»
                     </h2>
                     <div class="about__desc aos-init aos-animate" data-aos="fade-up" data-aos-delay="100"
                          style="color: #ddd;">
-                        <p>Группа компаний «Интерстилс» - надёжный поставщик металлопроката и сопутствующих товаров:
-                            оборудования для пищевой, горнодобывающей, автомобильной, химической и нефтегазовой
-                            промышленности, сферы строительства, авиа- и судостроения, а также кабельной продукции,
-                            сварочных материалов, метизов, металлургического сырья, бурового и рентгенозащитного
-                            оборудования.</p>
+                        <p>Build Line — ваш надежный партнер в строительстве. Мы предлагаем комплексные поставки
+                            металлопроката, строительных материалов и оборудования. Обеспечивая качественные товары и
+                            услуги, включая доставку, резку и гибку металла, мы помогаем успешно реализовать любой
+                            проект.</p>
                         <br>
                         <p>Мы работаем только с оптовыми покупателями – коммерческими и государственными организациями.
                             Высококвалифицированные эксперты коммерческого отдела помогают клиентам собрать заказ любой
@@ -187,12 +186,12 @@
                     <div class="about__box" style="background-color: #1f1f1f; border-radius: 8px; padding: 25px;">
                         <h3 class="about__box-title aos-init aos-animate" data-aos="fade-up" data-aos-delay="50"
                             style="color: white;">
-                            Сотрудничество с командой ГК «Интерстилс»
+                            Сотрудничество с командой «Build Line»
                         </h3>
                         <div class="about__box-desc aos-init aos-animate" data-aos="fade-up" data-aos-delay="100"
                              style="color: #ddd;">
                             <p>Благодаря широкой сети филиалов в крупнейших городах Казахстана мы доставляем заказы до
-                                любого производственного или складского объекта точно в срок и с соблюдением всех
+                                любого производственного или складского объекта точно в срок, и с соблюдением всех
                                 условий перевозки данного вида груза.</p>
                             <br>
                             <p>У нас в наличии всегда имеется широкий ассортимент готовой продукции – всего более 6 млн
@@ -247,6 +246,165 @@
     </style>
 
     <!-- КОНЕЦ БЛОК О НАС -->
+
+
+    <!-- УСЛУГИ -->
+    <section class="container mt-5 mb-5">
+        <div class="about-company-bottom__sub-title" style="color: #f44336;">Допонительно</div>
+            <h2 class="about-company-bottom__title" style="color: white;">Наши услуги</h2>
+        <div class="services-grid">
+            <div class="service-item">
+                <img src="{% static 'images/vzryvozashishenny-elektronagrevatel.jpg' %}" alt="Цинкование"/>
+                <div class="service-overlay">
+                    <h3>ЦИНКОВАНИЕ</h3>
+                </div>
+            </div>
+            <div class="service-item">
+                <img src="{% static 'images/vzryvozashishenny-elektronagrevatel.jpg' %}" alt="Гибка металла"/>
+                <div class="service-overlay">
+                    <h3>ГИБКА МЕТАЛЛА</h3>
+                </div>
+            </div>
+            <div class="service-item">
+                <img src="{% static 'images/vzryvozashishenny-elektronagrevatel.jpg' %}" alt="Резка газом"/>
+                <div class="service-overlay">
+                    <h3>РЕЗКА ГАЗОМ</h3>
+                </div>
+            </div>
+            <div class="service-item">
+                <img src="{% static 'images/vzryvozashishenny-elektronagrevatel.jpg' %}" alt="Плазменная резка"/>
+                <div class="service-overlay">
+                    <h3>ПЛАЗМЕННАЯ РЕЗКА</h3>
+                </div>
+            </div>
+            <div class="service-item hidden">
+                <img src="{% static 'images/vzryvozashishenny-elektronagrevatel.jpg' %}" alt="Рубка металла"/>
+                <div class="service-overlay">
+                    <h3>РУБКА МЕТАЛЛА</h3>
+                </div>
+            </div>
+            <div class="service-item hidden">
+                <img src="{% static 'images/vzryvozashishenny-elektronagrevatel.jpg' %}" alt="Сверловка металла"/>
+                <div class="service-overlay">
+                    <h3>СВЕРЛОВКА МЕТАЛЛА</h3>
+                </div>
+            </div>
+            <div class="service-item hidden">
+                <img src="{% static 'images/vzryvozashishenny-elektronagrevatel.jpg' %}" alt="Размотка арматуры"/>
+                <div class="service-overlay">
+                    <h3>РАЗМОТКА АРМАТУРЫ</h3>
+                </div>
+            </div>
+            <div class="service-item hidden">
+                <img src="{% static 'images/vzryvozashishenny-elektronagrevatel.jpg' %}" alt="Доставка"/>
+                <div class="service-overlay">
+                    <h3>ДОСТАВКА</h3>
+                </div>
+            </div>
+        </div>
+        <button class="show-more-btn">Показать все</button>
+    </section>
+
+    <style>
+
+        section.services h2 {
+            font-size: 24px;
+            margin-bottom: 30px;
+            color: #000;
+        }
+
+        .services-grid {
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            gap: 1px;
+        }
+
+        .service-item {
+            position: relative;
+            overflow: hidden;
+            border-radius: 1px;
+        }
+
+        .service-item img {
+            width: 100%;
+            height: 150px;
+            display: block;
+            transition: transform 0.3s ease;
+        }
+
+        .service-overlay {
+            position: absolute;
+            top: 10px;
+            left: 10px;
+            color: #fff;
+            padding: 5px 10px;
+            border-radius: 3px;
+        }
+
+        .hidden {
+            display: none;
+        }
+
+        .show-more-btn {
+            margin-top: 20px;
+            padding: 10px 20px;
+            font-size: 16px;
+            background-color: #333;
+            border-radius: 5px;
+            color: #fff;
+            border: none;
+            cursor: pointer;
+        }
+
+        .show-more-btn:hover {
+            background-color: #333;
+        }
+
+        /* --- Адаптивность --- */
+        @media (max-width: 768px) {
+            .services-grid {
+                grid-template-columns: repeat(2, 1fr);
+            }
+
+            .service-item {
+                margin-bottom: 5px;
+            }
+
+            .hidden {
+                display: none;
+            }
+
+            .show-more-btn {
+                display: block;
+            }
+        }
+
+        @media (max-width: 480px) {
+            .services-grid {
+                grid-template-columns: 1fr;
+            }
+        }
+    </style>
+    <script>
+        const showMoreBtn = document.querySelector('.show-more-btn');
+        const hiddenItems = document.querySelectorAll('.service-item.hidden');
+
+        showMoreBtn.addEventListener('click', () => {
+            hiddenItems.forEach(item => {
+                item.classList.toggle('hidden');
+            });
+
+            // Меняем текст кнопки
+            if (showMoreBtn.textContent === 'Показать все') {
+                showMoreBtn.textContent = 'Скрыть';
+            } else {
+                showMoreBtn.textContent = 'Показать все';
+            }
+        });
+    </script>
+
+    <!-- КОНЕЦ УСЛУГИ -->
+
 
     <!-- ДОПОЛНИТЕЛЬНЫЙ БЛОК О НАС -->
     <section class="container about-company__bottom">
@@ -339,6 +497,8 @@
             -webkit-box-orient: vertical;
         }
     </style>
+
+    <!-- КОНЕЦ ДОПОЛНИТЕЛЬНЫЙ БЛОК О НАС -->
 
 
 </main>
