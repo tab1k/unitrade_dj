@@ -12,19 +12,20 @@ WORKDIR /code
 # Переменные окружения
 ENV PYTHONUNBUFFERED 1
 
-# Создание папок для статики и медиа-файлов
-RUN mkdir -p /code/static /code/media
-
 # Копирование зависимостей и установка
 COPY requirements.txt /code/requirements.txt
-RUN pip3 install --upgrade pip && pip3 install -r requirements.txt
+RUN pip3 install --upgrade pip && pip3 install -r /code/requirements.txt
 
 # Копирование исходного кода
-COPY . /code
+COPY . /code/
 
-# Установка прав для entrypoint
-COPY ./docker-entrypoint.sh ./docker-entrypoint.sh
+# Копирование и установка прав для entrypoint
+COPY ./docker-entrypoint.sh /code/docker-entrypoint.sh
 RUN chmod +x /code/docker-entrypoint.sh
+
+# Установка прав на статику и медиа
+RUN mkdir -p /code/unitrade_dj/staticfiles /code/unitrade_dj/media
 
 # Команда запуска
 CMD ["/code/docker-entrypoint.sh"]
+

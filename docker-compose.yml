@@ -12,8 +12,8 @@ services:
       bash -c "python manage.py migrate && python manage.py runserver 0.0.0.0:8000"
     restart: always
     volumes:
-      - .:/code
-      - static_data:/code/static
-      - media_data:/code/media
+      - .:/code/unitrade_dj
+      - static_data:/code/unitrade_dj/staticfiles
+      - media_data:/code/unitrade_dj/media
     ports:
       - "8000:8000"
