@@ -35,7 +35,8 @@
     <link rel="stylesheet" href="{% static 'css/fonts.css' %}">
     <link rel="stylesheet" href="{% static 'css/style.css' %}">
     <link rel='stylesheet' href='https://cdn-uicons.flaticon.com/2.6.0/uicons-brands/css/uicons-brands.css'>
-    <link rel='stylesheet' href='https://cdn-uicons.flaticon.com/2.6.0/uicons-regular-rounded/css/uicons-regular-rounded.css'>
+    <link rel='stylesheet'
+          href='https://cdn-uicons.flaticon.com/2.6.0/uicons-regular-rounded/css/uicons-regular-rounded.css'>
 
 
     <!-- UpassistRUM -->
@@ -83,7 +84,8 @@
             <div class="header__middle" style="background-color: black; border-bottom: 1px solid #1f1f1f;">
 
                 <div class="logo">
-                    <a href="/"><img src="{% static 'images/logo.png' %}" style="max-height: 60px; width: 60px;" alt="Розмет"></a>
+                    <a href="/"><img src="{% static 'images/logo.png' %}" style="max-height: 60px; width: 60px;"
+                                     alt="Розмет"></a>
                 </div>
                 <div class="search-bar">
                     <input type="text" style="background-color: #1a1a1a; border: 1px solid #1a1a1a;"
@@ -164,30 +166,29 @@
             </div>
         </div>
         <div class="header__bottom">
-            <div class="header__bottom-inner container" style="gap: 90px; padding-top: 5px;">
+            <div class="header__bottom-inner container" style="padding-top: 5px;">
                 <button class="header__show-menu show-menu" style="color: white;" type="button"
                         data-modal-toggle="#modal-mobile-menu">
                     <span></span>
                 </button>
 
                 <span class="header__logo logo" href="/">
-<!--                    <a href="/"><img src="{% static 'images/logo.png' %}" style="height: 50px; width: 50px;"-->
-<!--                                     alt="UniTrade"></a>-->
-                </span>
+            <!-- Ваш логотип -->
+        </span>
 
-                <a href="{% url 'app:category' %}" class="header__catalog btn-toggle">
+                <a href="/category/" class="header__catalog btn-toggle">
                     <i style="margin: 1px 5px 0px 0px; color: white;" class="fi fi-rr-apps"></i>
                     <span class="header__catalog-text" style="color: white;">Каталог</span>
                 </a>
 
-                <form class="header__search search" action="/search/?search=query&json=true"
-                      data-action="/search/?search=query&json=true" data-ignore-fields="">
+                <form class="header__search search" action="/search/?search=query&amp;json=true"
+                      data-action="/search/?search=query&amp;json=true" data-ignore-fields="">
                     <button class="header__search-button search__button" type="button"
                             data-modal-toggle="#modal-search">
                         <span><i style="color: white;" class="fi fi-rr-search"></i></span>
                     </button>
-
                 </form>
+
                 <ul class="header__menu">
 
                     <li class="header__menu-item">
@@ -237,7 +238,8 @@
                 <div class="modal__content">
                     <div class="search-modal__search search" data-action="/search/">
                         <div class="search__inner">
-                            <div class="search-modal__search-header" style="background-color: black; border-bottom: 1px solid #1a1a1a;">
+                            <div class="search-modal__search-header"
+                                 style="background-color: black; border-bottom: 1px solid #1a1a1a;">
                                 <div class="container">
                                     <label class="search__label">
                                         <input class="search-modal__search-input search__input" type="text"
@@ -247,23 +249,28 @@
                             </div>
                             <div class="container" style="background-color: black;">
                                 <!--noindex-->
-                                <ul style="background-color: black;" class="search-modal__search-result search-modal__search-result_popular search__result search__result_popular">
+                                <ul style="background-color: black;"
+                                    class="search-modal__search-result search-modal__search-result_popular search__result search__result_popular">
                                     <li class="search__result-item">
-                                        <div class="search__result-title" style="color: white;"><h2>Часто ищут</h2></div>
+                                        <div class="search__result-title" style="color: white;"><h2>Часто ищут</h2>
+                                        </div>
                                     </li>
                                     <li class="search-modal__search-item search__result-item">
-                                        <a style="color: white;" class="search__result-link" href="/search/?search=Кабель+СИП" rel="nofollow">
+                                        <a style="color: white;" class="search__result-link"
+                                           href="/search/?search=Кабель+СИП" rel="nofollow">
                                             Кабель СИП
                                         </a>
                                     </li>
                                     <li class="search-modal__search-item search__result-item">
-                                        <a style="color: white;" class="search__result-link" href="/search/?search=Электрод+для+сварки+чугуна"
+                                        <a style="color: white;" class="search__result-link"
+                                           href="/search/?search=Электрод+для+сварки+чугуна"
                                            rel="nofollow">
                                             Электрод для сварки чугуна
                                         </a>
                                     </li>
                                     <li class="search-modal__search-item search__result-item">
-                                        <a style="color: white;" class="search__result-link" href="/search/?search=Обратный+клапан"
+                                        <a style="color: white;" class="search__result-link"
+                                           href="/search/?search=Обратный+клапан"
                                            rel="nofollow">
                                             Обратный клапан
                                         </a>
@@ -275,24 +282,28 @@
                                         </a>
                                     </li>
                                     <li class="search-modal__search-item search__result-item">
-                                        <a style="color: white;" class="search__result-link" href="/search/?search=НКТ" rel="nofollow">
+                                        <a style="color: white;" class="search__result-link" href="/search/?search=НКТ"
+                                           rel="nofollow">
                                             Труба НКТ
                                         </a>
                                     </li>
                                     <li class="search-modal__search-item search__result-item">
-                                        <a style="color: white;" class="search__result-link" href="/search/?search=Перфорированный+лист"
+                                        <a style="color: white;" class="search__result-link"
+                                           href="/search/?search=Перфорированный+лист"
                                            rel="nofollow">
                                             Перфорированный лист
                                         </a>
                                     </li>
                                     <li class="search-modal__search-item search__result-item">
-                                        <a style="color: white;" class="search__result-link" href="/search/?search=Кладочная+сварная+сетка"
+                                        <a style="color: white;" class="search__result-link"
+                                           href="/search/?search=Кладочная+сварная+сетка"
                                            rel="nofollow">
                                             Кладочная сварная сетка
                                         </a>
                                     </li>
                                     <li class="search-modal__search-item search__result-item">
-                                        <a style="color: white;" class="search__result-link" href="/search/?search=Труба+ГОСТ+632-80"
+                                        <a style="color: white;" class="search__result-link"
+                                           href="/search/?search=Труба+ГОСТ+632-80"
                                            rel="nofollow">
                                             Труба ГОСТ 632-80
                                         </a>
@@ -339,7 +350,7 @@
         </div>
 
         <div class="modal modal-mobile-menu" id="modal-mobile-menu">
-            <div class="modal__overlay" style="margin-top: 27px;">
+            <div class="modal__overlay">
                 <div class="modal__content animate__animated animate__slideInLeft">
                     <div class="mobile-menu container">
                         <a style="background-color: #1f1f1f; color: white;" href="{% url 'app:category' %}"
@@ -384,7 +395,6 @@
                         </ol>
 
 
-
                         <a class="mobile-menu__email link mgo-email" href="mailto:info@uni-trade.kz">
                             <span class="mgo-email">info@uni-trade.kz</span>
                             <span class="link__icon">
@@ -422,6 +432,63 @@
         </div>
 
         <style>
+            form.header__search.search {
+                left: 15px;
+            }
+
+            .header__bottom-inner {
+                display: flex;
+                justify-content: space-between; /* Располагает элементы по краям */
+                align-items: center; /* Выравнивание по вертикали */
+                padding-top: 5px;
+                width: 100%;
+                box-sizing: border-box; /* Гарантирует, что padding не выходит за пределы контейнера */
+                gap: 10px; /* Убираем слишком большое пространство между элементами */
+            }
+
+            .header__bottom {
+                width: 100%;
+                overflow: hidden; /* Убирает возможные проблемы с выходом за пределы */
+            }
+
+            .container {
+                width: 100%;
+                max-width: 1200px; /* Устанавливаем максимальную ширину для контейнера */
+                margin: 0 auto; /* Центрируем контейнер */
+                padding: 0 15px; /* Небольшие отступы по бокам */
+            }
+
+            .header__show-menu, .header__search-button {
+                flex-shrink: 0; /* Не даем элементам сжиматься */
+            }
+
+
+            .modal__overlay {
+              margin-top: 27px;
+            }
+
+            /* Для iPhone 12 Pro, 13 Pro, 14 Pro, 15 Pro, 16 Pro (ширина экрана от 390px до 430px) */
+            @media screen and (min-width: 390px) and (max-width: 430px) {
+              .modal__overlay {
+                margin-top: 60px;
+              }
+            }
+
+            /* Для больших устройств (ширина экрана больше 430px) */
+            @media screen and (min-width: 430px) {
+              .modal__overlay {
+                margin-top: 40px;
+              }
+            }
+
+            /* Для маленьких устройств, таких как iPhone SE (ширина экрана меньше 375px) */
+            @media screen and (max-width: 375px) {
+              .modal__overlay {
+                margin-top: 67px;
+              }
+            }
+
+
             .modal__content.animate__animated.animate__slideInLeft {
                 background-color: black;
             }

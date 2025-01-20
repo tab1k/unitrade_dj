@@ -101,6 +101,15 @@ AUTH_PASSWORD_VALIDATORS = [
 ]
 
 
+CACHES = {
+    'default': {
+        'BACKEND': 'django.core.cache.backends.locmem.LocMemCache',
+        'LOCATION': 'unique-snowflake',  # Уникальное имя для вашей кэш-системы
+    }
+}
+
+
+
 # Internationalization
 # https://docs.djangoproject.com/en/5.1/topics/i18n/
 
