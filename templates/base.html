@@ -87,15 +87,45 @@
                     <a href="/"><img src="{% static 'images/logo_bg.png' %}" style="max-height: 130px; width: 130px;"
                                      alt="#"></a>
                 </div>
+
+                <!-- Вставьте в ваш шаблон HTML -->
                 <div class="search-bar" style="position: relative; width: 100%;">
                     <input type="text"
+                           id="search-input"
                            style="background-color: #1a1a1a; border-radius: 7px; border: 1px solid #1a1a1a; color: white; padding: 8px 40px 8px 8px; width: 100%;"
                            placeholder="Поиск в каталоге...">
                     <button style="position: absolute; border-radius: 7px; right: 1px; top: 50%; transform: translateY(-50%); background-color: #333; color: white; border: none; padding: 8px 12px; cursor: pointer;">
                         Поиск
                     </button>
+                    <ul id="search-results"
+                        style="position: absolute; background: #fff; width: 100%; max-height: 200px; overflow-y: auto; z-index: 10; display: none; list-style: none; padding: 0; margin: 0;"></ul>
                 </div>
 
+                <script>
+                    document.getElementById('search-input').addEventListener('input', function() {
+                        const query = this.value;
+                        if (query.length > 1) {  // Начинать поиск, если введено более 2 символов
+                            fetch(`/search/?query=${query}`)
+                                .then(response => response.json())
+                                .then(data => {
+                                    const resultsContainer = document.getElementById('search-results');
+                                    resultsContainer.innerHTML = '';  // Очистить текущие результаты
+                                    if (data.results.length > 0) {
+                                        resultsContainer.style.display = 'block';  // Показать результаты
+                                        data.results.forEach(result => {
+                                            const li = document.createElement('li');
+                                            li.innerHTML = `<a href="/product/${result.slug}">${result.name}</a>`;
+                                            resultsContainer.appendChild(li);
+                                        });
+                                    } else {
+                                        resultsContainer.style.display = 'none';  // Скрыть, если нет результатов
+                                    }
+                                });
+                        } else {
+                            document.getElementById('search-results').style.display = 'none';  // Скрыть результаты, если менее 2 символов
+                        }
+                    });
+                </script>
 
 
                 <div class="header__content-right flex-wrap">
@@ -365,7 +395,7 @@
                         <span style="background-color: #1f1f1f; color: white;"
                               class="mobile-menu__button header__menu-link"
                               onclick="ym(window.uni-trade.ym_id, 'reachGoal', 'click_fast_order');"
-                              data-call-modal="order-click">Заказ в 1 клик</span>
+                              data-call-modal="order-click" style="color: white;">Заказ в 1 клик</span>
                         <ol class="mobile-menu__menu" style="border-bottom: 2px solid #1a1a1a; padding-bottom: 15px;">
                             <li class="mobile-menu__menu-item"></li>
                             <li class="mobile-menu__menu-item">
@@ -694,62 +724,39 @@
         <div class="filling-step">
             <form class="form order-click-form" data-action="/informer/form_send/speed-request/"
                   onsubmit="ym(window.uni-trade.ym_id, 'reachGoal', 'sent_fast_order');">
-                <p class="order-click-form__name">Заказ в 1 клик</p>
+                <p class="order-click-form__name" style="color: white;">Заказ в 1 клик</p>
                 <label class="modal-order__form-field">
-                        <span class="modal-order__form-field-title required">
+                        <span class="modal-order__form-field-title required" style="color: white;">
                             Товар
                             <svg class="icon icon_required-input">
                               <use xlink:href="images/sprite.svg#required-input"></use>
                             </svg>
                         </span>
-                    <input class="modal-order__form-field-input input__input" type="text" name="product"
-                           placeholder="Кабель силовой медный" required="" autocomplete="off">
+                    <input class="modal-order__form-field-input input__input" style="background-color: #262a31; color: white;" type="text" name="product"
+                           placeholder="Что вы хотите заказать?" required="" autocomplete="off">
                 </label>
                 <label class="modal-order__form-field">
-                        <span class="modal-order__form-field-title required">
+                        <span class="modal-order__form-field-title required" style="color: white;">
                             Количество
                             <svg class="icon icon_required-input">
                               <use xlink:href="images/sprite.svg#required-input"></use>
                             </svg>
                         </span>
-                    <input class="modal-order__form-field-input input__input" type="text" name="quantity"
+                    <input class="modal-order__form-field-input input__input" style="background-color: #262a31; color: white;" type="text" name="quantity"
                            placeholder="20" required="" autocomplete="off">
                 </label>
                 <label class="modal-order__form-field">
-                        <span class="modal-order__form-field-title">
+                        <span class="modal-order__form-field-title" style="color: white;">
                             Номер телефона
                         </span>
-                    <input class="modal-order__form-field-input input__input" type="tel" name="phone" maxlength="21"
+                    <input class="modal-order__form-field-input input__input" style="background-color: #262a31; color: white;" type="tel" name="phone" maxlength="21"
                            minlength="18" required="">
-                </label>
-                <label class="modal-order__form-field">
-                        <span class="modal-order__form-field-title">
-                            Email
-                        </span>
-                    <input class="modal-order__form-field-input input__input" type="email" name="email"
-                           placeholder="example@email.com">
-                </label>
-                <label class="input-file">
-                    Добавить файл
-                    <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 20 20" fill="none">
-                        <path fill-rule="evenodd" clip-rule="evenodd"
-                              d="M13.8835 2.56029C12.3945 1.07135 9.98048 1.07135 8.49155 2.56029L2.56045 8.49139C0.475943 10.5759 0.475944 13.9556 2.56045 16.0401C4.35899 17.8386 7.1217 18.0853 9.18478 16.7803V15.2503V14.8076L9.03074 14.9617C7.54181 16.4506 5.12777 16.4506 3.63883 14.9617C2.1499 13.4727 2.1499 11.0587 3.63883 9.56977L9.56993 3.63867C10.4633 2.74531 11.9117 2.74531 12.8051 3.63867C13.6984 4.53203 13.6984 5.98045 12.8051 6.87382L7.14357 12.5353C6.84579 12.8331 6.36298 12.8331 6.06519 12.5353C5.76741 12.2375 5.76741 11.7547 6.06519 11.4569L11.4571 6.06503L10.3787 4.98665L4.98681 10.3786C4.09345 11.2719 4.09345 12.7203 4.98681 13.6137C5.88017 14.5071 7.32859 14.5071 8.22195 13.6137L13.8835 7.9522C15.3724 6.46326 15.3724 4.04922 13.8835 2.56029Z"
-                              fill="#262A31"></path>
-                        <path d="M14.0935 17.9592V15.2398H11.374V13.4268H14.0935V10.7074H15.9065V13.4268H18.6259V15.2398H15.9065V17.9592H14.0935Z"
-                              fill="#383A44"></path>
-                    </svg>
-                    <input name="file_link" type="file" multiple="" data-inpfile="">
                 </label>
                 <div class="file-container"></div>
                 <div class="modal-order__bottom">
                     <button class="modal-order__form_submit btn btn-primary btn_100 send_fast_order" type="submit"
                             data-call-modal="order-processed">
                         Отправить
-                        <svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
-                            <path fill-rule="evenodd" clip-rule="evenodd"
-                                  d="M17.82 5.66455L7.50008 15.9844L2.18018 10.6645L3.65331 9.19141L7.50008 13.0382L16.3468 4.19141L17.82 5.66455Z"
-                                  fill="black"></path>
-                        </svg>
                     </button>
                     <div class="modal-order__info-license">
                         Нажимая «Отправить», вы соглашаетесь с
@@ -758,6 +765,33 @@
                 </div>
             </form>
         </div>
+
+        <style>
+            .order-click-modal .modal-order__bottom {
+                position: absolute;
+                bottom: 0;
+                right: 0;
+                margin: 0;
+                padding: 32px 40px;
+                border-top: 1px solid #1a1a1a;
+                background: #fff;
+            }
+            .btn {
+                display: inline-flex;
+                justify-content: space-between;
+                align-items: center;
+                margin: 0;
+                padding: 10px 16px;
+                color: #262a31;
+                font-size: 16px;
+                font-weight: 700;
+                line-height: 20px;
+                background-color: white;
+                border: none;
+                border-radius: 8px;
+            }
+        </style>
+
         <div class="data-sent-step hidden">
             <svg xmlns="http://www.w3.org/2000/svg" width="80" height="80" viewBox="0 0 80 80" fill="none">
                 <g clip-path="url(#clip0_10585_65552)">

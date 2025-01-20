@@ -1,5 +1,6 @@
 from django.db import models
 from django.urls import reverse
+from slugify import slugify
 
 
 class Category(models.Model):
@@ -28,7 +29,7 @@ class Category(models.Model):
 
 
 class Product(models.Model):
-    name = models.CharField(max_length=255, verbose_name="Название продукта")
+    name = models.CharField(max_length=255, verbose_name="Название продукта", db_index=True)
     image = models.ImageField(upload_to='products/', verbose_name="Фото продукта")
     category = models.ForeignKey(
         Category,

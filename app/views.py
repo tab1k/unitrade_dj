@@ -3,7 +3,7 @@ from django.shortcuts import render
 from django.views.generic import TemplateView
 from .models import *
 from django.shortcuts import redirect
-
+from django.http import JsonResponse
 from django.views.generic import DetailView, ListView
 
 
@@ -133,3 +133,18 @@ class ProductDetailView(DetailView):
     model = Product
     template_name = 'product/product_detail.html'
     context_object_name = 'product'
+
+
+def search_products(request):
+    query = request.GET.get('query', '')  # Получаем запрос из GET-параметра
+    if query:
+        products = Product.objects.filter(name__icontains=query)  # Поиск по имени продукта
+        results = [{'name': product.name, 'slug': product.slug} for product in products]
+        print(results)  # Добавьте это для отладки
+    elif query.is_lower():
+        results = Category.objects.filter(name__istartswith=query)  # Поиск по начальной букве категории
+        results = [{'name': category.name, 'slug': category.slug} for category in results]
+        print(results)  # Добавьте это для отладки
+    else:
+        results = []
+    return JsonResponse({'results': results})
