@@ -12,7 +12,7 @@
     <section class="hero">
         <div class="hero__video">
             <video class="lazy" autoplay="" loop="" muted="" playsinline poster="/static/video/hero-poster.webp">
-                <source data-src="{% static 'video/video.mp4' %}" type="video/mp4">
+                <source data-src="{% static 'video/video2.mp4' %}" type="video/mp4">
             </video>
 
         </div>
@@ -249,159 +249,101 @@
 
 
     <!-- УСЛУГИ -->
-    <section class="container mt-5 mb-5">
-        <div class="about-company-bottom__sub-title" style="color: #f44336;">Допонительно</div>
-            <h2 class="about-company-bottom__title" style="color: white;">Наши услуги</h2>
-        <div class="services-grid">
-            <div class="service-item">
-                <img src="{% static 'images/vzryvozashishenny-elektronagrevatel.jpg' %}" alt="Цинкование"/>
-                <div class="service-overlay">
-                    <h3>ЦИНКОВАНИЕ</h3>
+
+    <div class="catalog container mt-5">
+        <div class="about-company-bottom__sub-title" style="color: #f44336;">Дополнительно</div>
+        <h2 class="about-company-bottom__title" style="color: white;">Наши услуги</h2>
+        <div class="row" data-aos="zoom-in">
+            <div class="col-lg-12">
+
+                <a class="link-back link-back-mb d-lg-none mt-0" href="{% url 'app:services' %}">Услуги</a>
+
+                <div style="display: flex; gap: 20px; flex-wrap: wrap; justify-content: center; margin-bottom: 70px;">
+                    <!-- Карточка 1 -->
+                    <div style="background-color: #1a1a1a; border-radius: 16px; padding: 20px; width: 23%; display: flex; flex-direction: column; justify-content: space-between; align-items: center; box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); margin-bottom: 20px;">
+                        <img src="{% static 'images/proizvodstvo-metallokonstrukcij.png' %}" alt="DelPapa"
+                             style="border-radius: 50%; width: 80px; height: 80px; margin-bottom: 15px;">
+                        <h3 style="font-size: 18px; text-align: center; margin-bottom: 10px; color: #ccc;">Производство
+                            металлоконструкций</h3>
+                    </div>
+
+                    <!-- Карточка 2 -->
+                    <div style="background-color: #1a1a1a; border-radius: 16px; padding: 20px; width: 23%; display: flex; flex-direction: column; justify-content: space-between; align-items: center; box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); margin-bottom: 20px;">
+                        <img src="{% static 'images/fundamentnyh-boltov.jpg' %}" alt="BB"
+                             style="border-radius: 50%; width: 80px; height: 80px; margin-bottom: 15px;">
+                        <h3 style="font-size: 18px; text-align: center; margin-bottom: 10px; color: #ccc;">Производство
+                            фундаментных болтов</h3>
+                    </div>
+
+                    <!-- Карточка 3 -->
+                    <div style="background-color: #1a1a1a; border-radius: 16px; padding: 20px; width: 23%; display: flex; flex-direction: column; justify-content: space-between; align-items: center; box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); margin-bottom: 20px;">
+                        <img src="{% static 'images/armaturnye-karkai.jpg' %}" alt="Coco"
+                             style="border-radius: 50%; width: 80px; height: 80px; margin-bottom: 15px;">
+                        <h3 style="font-size: 18px; text-align: center; margin-bottom: 10px; color: #ccc;">Производство
+                            арматурных каркасов</h3>
+
+                    </div>
+
+                    <!-- Карточка 4 -->
+                    <div style="background-color: #1a1a1a; border-radius: 16px; padding: 20px; width: 23%; display: flex; flex-direction: column; justify-content: space-between; align-items: center; box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); margin-bottom: 20px;">
+                        <img src="{% static 'images/sendvich-panel.jpg' %}" alt="Food"
+                             style="border-radius: 50%; width: 80px; height: 80px; margin-bottom: 15px;">
+                        <h3 style="font-size: 18px; text-align: center; margin-bottom: 10px; color: #ccc;">Производство
+                            сэндвич-панелей</h3>
+                    </div>
+
+                    <div style="background-color: #1a1a1a; border-radius: 16px; padding: 20px; width: 23%; display: flex; flex-direction: column; justify-content: space-between; align-items: center; box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); margin-bottom: 20px;">
+                        <img src="{% static 'images/vzryvozashishenny-elektronagrevatel.jpg' %}" alt="Food"
+                             style="border-radius: 50%; width: 80px; height: 80px; margin-bottom: 15px;">
+                        <h3 style="font-size: 18px; text-align: center; margin-bottom: 10px; color: #ccc;">Производство
+                            взрывозащищенных электронагревателей</h3>
+
+                    </div>
+
+                    <div style="background-color: #1a1a1a; border-radius: 16px; padding: 20px; width: 23%; display: flex; flex-direction: column; justify-content: space-between; align-items: center; box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); margin-bottom: 20px;">
+                        <img src="{% static 'images/protivopozharnyh-sistem.jpg' %}" alt="Food"
+                             style="border-radius: 50%; width: 80px; height: 80px; margin-bottom: 15px;">
+                        <h3 style="font-size: 18px; text-align: center; margin-bottom: 10px; color: #ccc;">Производство
+                            противопожарных систем</h3>
+                    </div>
+
+                    <div style="background-color: #1a1a1a; border-radius: 16px; padding: 20px; width: 23%; display: flex; flex-direction: column; justify-content: space-between; align-items: center; box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); margin-bottom: 20px;">
+                        <img src="{% static 'images/cinkovanie.jpg' %}" alt="Food"
+                             style="border-radius: 50%; width: 80px; height: 80px; margin-bottom: 15px;">
+                        <h3 style="font-size: 18px; text-align: center; margin-bottom: 10px; color: #ccc;">Цинкование
+                            металлоконструкций</h3>
+                    </div>
+
+                    <div style="background-color: #1a1a1a; border-radius: 16px; padding: 20px; width: 23%; display: flex; flex-direction: column; justify-content: space-between; align-items: center; box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); margin-bottom: 20px;">
+                        <img src="{% static 'images/trubchatyh-svaj.jpg' %}" alt="Food"
+                             style="border-radius: 50%; width: 80px; height: 80px; margin-bottom: 15px;">
+                        <h3 style="font-size: 18px; text-align: center; margin-bottom: 10px; color: #ccc;">Производство
+                            свай из трубы</h3>
+                        <!--                        <a href="#"-->
+                        <!--                           style="text-decoration: none; font-size: 16px; color: #fff; background-color: #333; padding: 10px 15px; border-radius: 50px; display: flex; align-items: center; justify-content: center; gap: 10px; transition: background-color 0.3s ease;">-->
+                        <!--                            Презентация-->
+                        <!--                            <span style="font-size: 18px; font-weight: bold; margin-left: 5px;">➔</span>-->
+                        <!--                        </a>-->
+                    </div>
+
                 </div>
-            </div>
-            <div class="service-item">
-                <img src="{% static 'images/vzryvozashishenny-elektronagrevatel.jpg' %}" alt="Гибка металла"/>
-                <div class="service-overlay">
-                    <h3>ГИБКА МЕТАЛЛА</h3>
-                </div>
-            </div>
-            <div class="service-item">
-                <img src="{% static 'images/vzryvozashishenny-elektronagrevatel.jpg' %}" alt="Резка газом"/>
-                <div class="service-overlay">
-                    <h3>РЕЗКА ГАЗОМ</h3>
-                </div>
-            </div>
-            <div class="service-item">
-                <img src="{% static 'images/vzryvozashishenny-elektronagrevatel.jpg' %}" alt="Плазменная резка"/>
-                <div class="service-overlay">
-                    <h3>ПЛАЗМЕННАЯ РЕЗКА</h3>
-                </div>
-            </div>
-            <div class="service-item hidden">
-                <img src="{% static 'images/vzryvozashishenny-elektronagrevatel.jpg' %}" alt="Рубка металла"/>
-                <div class="service-overlay">
-                    <h3>РУБКА МЕТАЛЛА</h3>
-                </div>
-            </div>
-            <div class="service-item hidden">
-                <img src="{% static 'images/vzryvozashishenny-elektronagrevatel.jpg' %}" alt="Сверловка металла"/>
-                <div class="service-overlay">
-                    <h3>СВЕРЛОВКА МЕТАЛЛА</h3>
-                </div>
-            </div>
-            <div class="service-item hidden">
-                <img src="{% static 'images/vzryvozashishenny-elektronagrevatel.jpg' %}" alt="Размотка арматуры"/>
-                <div class="service-overlay">
-                    <h3>РАЗМОТКА АРМАТУРЫ</h3>
-                </div>
-            </div>
-            <div class="service-item hidden">
-                <img src="{% static 'images/vzryvozashishenny-elektronagrevatel.jpg' %}" alt="Доставка"/>
-                <div class="service-overlay">
-                    <h3>ДОСТАВКА</h3>
-                </div>
+
+                <script>
+                    // Адаптивность: на мобильных устройствах будет по 3 карточки на строке
+                    if (window.innerWidth <= 768) {
+                      const cards = document.querySelectorAll('div[style*="width: 23%"]');
+                      cards.forEach(card => card.style.width = '30%');
+                    }
+
+                    // На экранах до 480px по 2 карточки на строке
+                    if (window.innerWidth <= 480) {
+                      const cards = document.querySelectorAll('div[style*="width: 30%"]');
+                      cards.forEach(card => card.style.width = '45%');
+                    }
+                </script>
             </div>
         </div>
-        <button class="show-more-btn">Показать все</button>
-    </section>
-
-    <style>
-
-        section.services h2 {
-            font-size: 24px;
-            margin-bottom: 30px;
-            color: #000;
-        }
-
-        .services-grid {
-            display: grid;
-            grid-template-columns: repeat(4, 1fr);
-            gap: 1px;
-        }
-
-        .service-item {
-            position: relative;
-            overflow: hidden;
-            border-radius: 1px;
-        }
-
-        .service-item img {
-            width: 100%;
-            height: 150px;
-            display: block;
-            transition: transform 0.3s ease;
-        }
-
-        .service-overlay {
-            position: absolute;
-            top: 10px;
-            left: 10px;
-            color: #fff;
-            padding: 5px 10px;
-            border-radius: 3px;
-        }
-
-        .hidden {
-            display: none;
-        }
-
-        .show-more-btn {
-            margin-top: 20px;
-            padding: 10px 20px;
-            font-size: 16px;
-            background-color: #333;
-            border-radius: 5px;
-            color: #fff;
-            border: none;
-            cursor: pointer;
-        }
-
-        .show-more-btn:hover {
-            background-color: #333;
-        }
-
-        /* --- Адаптивность --- */
-        @media (max-width: 768px) {
-            .services-grid {
-                grid-template-columns: repeat(2, 1fr);
-            }
-
-            .service-item {
-                margin-bottom: 5px;
-            }
-
-            .hidden {
-                display: none;
-            }
-
-            .show-more-btn {
-                display: block;
-            }
-        }
-
-        @media (max-width: 480px) {
-            .services-grid {
-                grid-template-columns: 1fr;
-            }
-        }
-    </style>
-    <script>
-        const showMoreBtn = document.querySelector('.show-more-btn');
-        const hiddenItems = document.querySelectorAll('.service-item.hidden');
-
-        showMoreBtn.addEventListener('click', () => {
-            hiddenItems.forEach(item => {
-                item.classList.toggle('hidden');
-            });
-
-            // Меняем текст кнопки
-            if (showMoreBtn.textContent === 'Показать все') {
-                showMoreBtn.textContent = 'Скрыть';
-            } else {
-                showMoreBtn.textContent = 'Показать все';
-            }
-        });
-    </script>
+    </div>
 
     <!-- КОНЕЦ УСЛУГИ -->
 

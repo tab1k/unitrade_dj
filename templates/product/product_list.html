@@ -15,7 +15,7 @@
                 <div class="slider__head-row">
                     <h1 class="slider__title" style="color: white;">{{ category.name }}</h1>
                 </div>
-                <a class="link-back d-md-none mb-0" href="/catalog/truby-iz-stali/">Назад</a>
+                <a class="link-back d-md-none mb-0" href="{% if category.parent %}{{ category.parent.get_absolute_url }}{% else %}{% url 'app:category' %}{% endif %}">Назад</a>
             </div>
             <div class="swiper-cards swiper-container-initialized swiper-container-horizontal swiper-container-pointer-events">
                 <div class="swiper-wrapper">
@@ -8530,7 +8530,7 @@
                 </div>
             </div>
         </div>
-        <div class="not-found-product" style="background-image: url(/static/img/not-found-product.png); margin-bottom: 70px;">
+        <div class="not-found-product mt-5" style="background-image: url(/static/img/not-found-product.png); margin-bottom: 70px;">
             <div class="not-found-product__info">
                 <div class="not-found-product__title" style="color: white;">Не нашли нужный товар?</div>
                 <div class="not-found-product__desc">

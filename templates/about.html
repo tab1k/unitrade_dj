@@ -8,10 +8,11 @@
 
 
     <div class="about-company">
+
         <section class="about-company__head">
-            <div class="about-company-head" style="background-color: #1a1a1a; padding-top: 100px;">
+            <div class="about-company-head" style="background-color: #1a1a1a;">
                 <div class="container">
-                    <h1 class="about-company-head__title">О компании</h1>
+                    <h1 class="about-company-head__title" style="color: white;">О компании</h1>
                     <div class="about-company-head__desc">
                         Группа компаний «Интерстилс» поставляет металлопрокат и сопутствующие товары заказчикам в
                         России, Казахстане,
@@ -21,15 +22,34 @@
             </div>
         </section>
         <style>
+            .about-company-head {
+                height: 270px;
+                width: 100%;
+                background-color: #f5f7f8;
+                background-image: url(#);
+                background-repeat: no-repeat;
+                background-position: right;
+                padding-top: 25px;
+            }
+
             @media (max-width: 991px) {
-                .about-company-head {
-                    padding: 32px 16px 32px 16px;
+                .about-company__head {
+                    margin-bottom: 0px;
+                }
+            }
+
+            @media (max-width: 1399px) {
+                .facts__item {
+                    min-height: 385px;
                 }
             }
 
         </style>
+
         <div class="container">
-            <section class="about-company__middle row justify-content-center">
+
+            <section class="about-company__middle row ">
+
                 <div class="col-md-6">
                     <div class="about-company-middle">
                         <div class="about-company-middle__sub-title">о компании</div>
@@ -54,181 +74,15 @@
                         </div>
                     </div>
                 </div>
-            </section>
-            <section class="about-company__target">
-                <div class="company-target">
-                    <div class="company-target__logo">
-                        <svg class="icon icon_logo_img">
-                            <use xlink:href="/static/img/svg/symbol/sprite.svg#logo_img"></use>
-                        </svg>
-                    </div>
-                    <div class="company-target__item">
-                        <h3 class="company-target__item-left">Миссия нашей компании</h3>
-                        <div class="company-target__item-right">
-                            <div class="company-target__item-right-item">
-                                <div class="company-target__item-right-title">Быть для клиентов настоящим помощником
-                                    в решении любых металлоёмких задач
-                                </div>
-                                <div class="company-target__item-right-desc">
-                                    Миссия «Интерстилс» – быть для клиентов настоящим помощником в решении любых
-                                    металлоёмких задач.
-                                    Поэтому мы ежедневно инвестируем в компетенции наших сотрудников,
-                                    бизнес-процессы, производственные и логистические технологии.
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="company-target__item">
-                        <h3 class="company-target__item-left">Что мы можем предложить</h3>
-                        <div class="company-target__item-right">
-                            <div class="company-target__item-right-item">
-                                <div class="company-target__item-right-title">Готовые решения для всех отраслей
-                                </div>
-                                <div class="company-target__item-right-desc">
-                                    Помимо собственного производства по широкой номенклатуре, мы&nbsp;поддерживаем
-                                    прямые контакты с ведущими предприятиями России,
-                                    Казахстана, Индии, Китая и Европы.
-                                    Поэтому можем в короткие сроки и&nbsp;по выгодным ценам&nbsp;исполнить заявку
-                                    любой сложности.
-                                    Вся поставляемая продукция производится в строгом соответствии с отраслевыми
-                                    стандартами и имеет соответствующие
-                                    сертификаты качества.
-                                </div>
-                                <div class="target-card row">
-                                    <div class="target-card-column col">
-                                        <div class="target-card__item">
-                                            <div class="target-card__item-title">Автомобильная промышленность</div>
-                                            <div class="target-card__item-desc">Автомобильные стали, пластик и
-                                                другое
-                                            </div>
-                                            <div class="target-card__item-icon">
-                                                <svg class="icon icon_car">
-                                                    <use xlink:href="/static/img/svg/symbol/sprite.svg#car"></use>
-                                                </svg>
-                                            </div>
-                                        </div>
-                                        <div class="target-card__item">
-                                            <div class="target-card__item-title">Электроэнергетика</div>
-                                            <div class="target-card__item-desc">Электротехнические стали, опоры ЛЭП,
-                                                кабельная продукция
-                                            </div>
-                                            <div class="target-card__item-icon">
-                                                <svg class="icon icon_mol">
-                                                    <use xlink:href="/static/img/svg/symbol/sprite.svg#mol"></use>
-                                                </svg>
-                                            </div>
-                                        </div>
-                                        <div class="target-card__item">
-                                            <div class="target-card__item-title">Судостроение</div>
-                                            <div class="target-card__item-desc">Судовые стали, судовое оборудование,
-                                                судовая арматура, судовой трубопровод, такелаж, судовая вентиляция
-                                            </div>
-                                            <div class="target-card__item-icon">
-                                                <svg class="icon icon_pirat">
-                                                    <use xlink:href="/static/img/svg/symbol/sprite.svg#pirat"></use>
-                                                </svg>
-                                            </div>
-                                        </div>
-                                        <div class="target-card__item">
-                                            <div class="target-card__item-title">Строительство</div>
-                                            <div class="target-card__item-desc">Конструкции из металла разных тип и
-                                                форм
-                                            </div>
-                                            <div class="target-card__item-icon">
-                                                <svg class="icon icon_molot">
-                                                    <use xlink:href="/static/img/svg/symbol/sprite.svg#molot"></use>
-                                                </svg>
-                                            </div>
-                                        </div>
-                                        <div class="target-card__item">
-                                            <div class="target-card__item-title">Сырье</div>
-                                            <div class="target-card__item-desc">Металлические порошки, слитки</div>
-                                            <div class="target-card__item-icon">
-                                                <svg class="icon icon_zolot">
-                                                    <use xlink:href="/static/img/svg/symbol/sprite.svg#zolot"></use>
-                                                </svg>
-                                            </div>
-                                        </div>
-                                    </div>
-                                    <div class="target-card-column col">
-                                        <div class="target-card__item">
-                                            <div class="target-card__item-title">Сортовой и фасонный прокат общего
-                                                назначения
-                                            </div>
-                                            <div class="target-card__item-desc">Трубы, арматура, листы, круги,
-                                                прутки ленты, квадраты, проволока, профили и другие виды
-                                                металлопроката из цветных металлов и сплавов, специальных сталей,
-                                                нержавеющей стали, черной стали и чугуна.
-                                            </div>
-                                            <div class="target-card__item-icon">
-                                                <svg class="icon icon_nacav">
-                                                    <use xlink:href="/static/img/svg/symbol/sprite.svg#nacav"></use>
-                                                </svg>
-                                            </div>
-                                        </div>
-                                        <div class="target-card__item">
-                                            <div class="target-card__item-title">Авиастроение</div>
-                                            <div class="target-card__item-desc">Авиационные стали, композитные
-                                                материалы для авиастроения, цветные металлы для авиастроения
-                                            </div>
-                                            <div class="target-card__item-icon">
-                                                <svg class="icon icon_avia">
-                                                    <use xlink:href="/static/img/svg/symbol/sprite.svg#avia"></use>
-                                                </svg>
-                                            </div>
-                                        </div>
-                                        <div class="target-card__item">
-                                            <div class="target-card__item-title">Горнодобывающая промышленность
-                                            </div>
-                                            <div class="target-card__item-desc">Дробилки, промывочное оборудование,
-                                                сортировочные установки, конвейеры
-                                            </div>
-                                            <div class="target-card__item-icon">
-                                                <svg class="icon icon_gor">
-                                                    <use xlink:href="/static/img/svg/symbol/sprite.svg#gor"></use>
-                                                </svg>
-                                            </div>
-                                        </div>
-                                        <div class="target-card__item">
-                                            <div class="target-card__item-title">Нефтегазовая промышленность</div>
-                                            <div class="target-card__item-desc">Оборудование для добычи нефти и
-                                                газа, резервуары для нефти и газа, газо-и нефтепровод
-                                            </div>
-                                            <div class="target-card__item-icon">
-                                                <svg class="icon icon_oil">
-                                                    <use xlink:href="/static/img/svg/symbol/sprite.svg#oil"></use>
-                                                </svg>
-                                            </div>
-                                        </div>
-                                    </div>
-                                    <a class="target-card__all-show"> <span>Показать все </span>
-                                        <svg class="icon icon_arrow-down">
-                                            <use xlink:href="/static/img/svg/symbol/sprite.svg#arrow-down"></use>
-                                        </svg>
-                                    </a>
-                                </div>
-                            </div>
-                            <div class="company-target__item-right-item">
-                                <div class="company-target__item-right-title">Дополнительные услуги</div>
-                                <div class="company-target__item-right-desc">
-                                    Мы закрываем все потребности клиентов, вплоть до любых видов&nbsp;металлообработки:&nbsp;гибка,
-                                    резка, штамповка,
-                                    теплоизоляция трубопровода (ВУС, ППУ, ППМ).
-                                </div>
-                            </div>
-                            <div class="company-target__item-right-item">
-                                <div class="company-target__item-right-title">Гибкое ценообразование</div>
-                                <div class="company-target__item-right-desc">
-                                    Благодаря высокому ежемесячному обороту ГК "Интерстилс" мы предоставляем
-                                    клиентам уникальные ценовые условия.
-                                    Чем больше объем заказа, тем выше скидка. Для постоянных клиентов предлагаем
-                                    индивидуальный график оплат.
-                                </div>
-                            </div>
-                        </div>
-                    </div>
+
+                <div class="col-md-6">
+                    <img class="mb-5" style="border-radius: 15px;"
+                         src="{% static 'images/proizvodstvo-metallokonstrukcij.png' %}">
+                    <img style="border-radius: 15px;" src="{% static 'images/proizvodstvo-metallokonstrukcij.png' %}">
                 </div>
+
             </section>
+
             <section class="about-company__bottom">
                 <div class="about-company-bottom">
                     <div class="about-company-bottom__sub-title">Что на практике</div>
@@ -366,25 +220,6 @@
                                     позиций</h3>
                             </div>
                         </div>
-                    </div>
-                    <div class="facts__slider-controls">
-                        <button class="facts__prev btn-control">
-                            <svg class="icon icon_prev">
-                                <use xlink:href="/static/img/svg/symbol/sprite.svg#prev"></use>
-                            </svg>
-                        </button>
-                        <button class="facts__next btn-progress">
-                            <svg class="circle-progress" width="48" height="48" version="1.1"
-                                 xmlns="http://www.w3.org/2000/svg">
-                                <circle class="circle-progress__circle" cx="24" cy="24" r="22"></circle>
-                                <circle class="circle-progress__bar" cx="24" cy="24" r="22"
-                                        stroke-dasharray="138.23007675795088 138.23007675795088"
-                                        style="stroke-dashoffset: 98.4779;"></circle>
-                            </svg>
-                            <svg class="icon icon_next">
-                                <use xlink:href="/static/img/svg/symbol/sprite.svg#next"></use>
-                            </svg>
-                        </button>
                     </div>
                 </div>
             </div>
