@@ -4,8 +4,8 @@
 <head itemscope="" itemtype="https://schema.org/WPHeader">
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="icon" type="image/svg+xml" href="{% static 'images/logo.png' %}">
-    <link rel="icon" type="image/png" href="{% static 'images/logo.png' %}">
+    <link rel="icon" type="image/svg+xml" style="border-radius: 50%;" href="{% static 'images/logo.jpeg' %}">
+    <link rel="icon" type="image/jpeg" style="border-radius: 50%;" href="{% static 'images/logo.jpeg' %}">
 
     <title itemprop="name">{% block title %}{% endblock %}</title>
 
@@ -22,7 +22,7 @@
           content="Черный и цветной металлопрокат купить оптом с доставкой в Астане. Изготовление деталей по чертежам, металлообработка ☎ +7 (717) 264 02 97">
     <meta property="og:url" content="https://uni-trade.kz/">
 
-    <meta property="og:image" content="{% static 'images/logo.ppng' %}">
+    <meta property="og:image" content="{% static 'images/logo_bg.png' %}">
 
     <meta property="og:site_name" content="Казахстан">
 
@@ -84,8 +84,8 @@
             <div class="header__middle" style="background-color: black; border-bottom: 1px solid #1f1f1f;">
 
                 <div class="logo">
-                    <a href="/"><img src="{% static 'images/logo.png' %}" style="max-height: 60px; width: 60px;"
-                                     alt="Розмет"></a>
+                    <a href="/"><img src="{% static 'images/logo_bg.png' %}" style="max-height: 130px; width: 130px;"
+                                     alt="#"></a>
                 </div>
                 <div class="search-bar">
                     <input type="text" style="background-color: #1a1a1a; border: 1px solid #1a1a1a;"
@@ -177,7 +177,6 @@
         </span>
 
                 <a href="/category/" class="header__catalog btn-toggle">
-                    <i style="margin: 1px 5px 0px 0px; color: white;" class="fi fi-rr-apps"></i>
                     <span class="header__catalog-text" style="color: white;">Каталог</span>
                 </a>
 
@@ -635,7 +634,7 @@
     }
     @media (min-width: 991px) {
         .header_short {
-            transform: translateY(-117px);
+            transform: translateY(-150px);
         }
     }
 
@@ -910,199 +909,145 @@
 
 {% endblock %}
 
-<footer class="footer" style="margin-top: 0px; background-color: black;">
-    <div class="container">
-        <div class="footer__top" style="border-bottom: 1px solid #1a1a1a;">
-            <div class="row">
-                <div class="col-lg-auto col-sm-6">
-
-                    <span class="footer__logo logo">
-                        <img style="heigth: 50px; width: 50px;" src="{% static 'images/logo.png' %}" alt="UniTrade">
-                    </span>
-
-                </div>
-                <div class="footer__top_subscribe d-flex justify-content-end col-md col-sm-6">
-                    <div class="footer__top_subscribe_text">
-                        <div class="footer__menu-link" style="color: white;">Подписка на рассылку</div>
-                        <div class="footer__menu-item_title-link" style="color: white;">Регулярные спецпредложения и
-                            скидки
-                        </div>
-                    </div>
-                    <form class="need-validate footer__top_subscribe_input" id="subscribe_footer" method="post"
-                          data-need-notification="true" data-action="/informer/form_send/subscribe_footer/">
-                        <input class="input__input" type="email" name="email" placeholder="Электронная почта"
-                               required="" style="background-color: #1f1f1f; border: none;">
-                        <button class="subscription_footer" type="submit">
-                            <svg class="icon icon_arrow-right">
-                                <use xlink:href="images/sprite.svg#arrow-right"></use>
-                            </svg>
-                        </button>
-                    </form>
-                </div>
+<footer>
+    <div class="footer-container">
+        <div class="footer-column mr-5">
+            <div class="footer-logo">
+                <img style="" src="{% static 'images/logo_bg.png' %}" alt="Logo"/>
             </div>
         </div>
-        <div class="footer__middle">
-            <div class="row" itemscope="" itemtype="https://schema.org/Organization">
-                <meta itemprop="name" content="ООО ГК «UniTrade»®">
-                <div class="col-lg-6 col-md-6">
-                    <div class="footer__middle-up">
-                        <div class="footer__content-left">
-                            <div class="footer__menu-item_title-link" style="color: white;">Контакты</div>
-                            <meta itemprop="addressLocality" content="Астана">
-                            <button class="footer__city link" style="color: white;">
-                                <span class="link__icon">
-                                  <svg class="icon icon_mark">
-                                    <use xlink:href="images/sprite.svg#mark"></use>
-                                  </svg>
-                                </span>
-                                📍Астана
-                            </button>
-                            <address class="footer__address-city" itemprop="streetAddress" style="color: white;">
-                                Райымбека
-                            </address>
-                        </div>
-                    </div>
-                    <div class="footer__middle-down">
-                        <a class="footer__phone link mgo-number" href="tel:+77077772817">
-                            <span class="mgo-number__target" style="color: white;">+7 (707) 777 28 17</span>
-                        </a>
-                        <meta itemprop="telephone" content="+7 (707) 777 28 17">
-
-                        <a class="footer__email link mgo-email" itemprop="email" href="mailto:info@uni-trade.kz"
-                           style="color: white;">
-                            <!--                            <span class="link__icon">-->
-                            <!--                                <svg>-->
-                            <!--                                  📫-->
-                            <!--                                </svg>-->
-                            <!--                            </span>-->
-                            <span class="mgo-email" style="color: white;">info@uni-trade.kz</span>
-                        </a>
-                    </div>
-                </div>
-                <div class="ml-auto col-lg-6 col-md-6">
-                    <nav class="footer__nav">
-                        <div>
-                            <div class="footer__menu-item footer__menu-item_title">
-                                <a class="footer__menu-link footer__menu-item_title-link" href="#"
-                                   style="color: white;">Покупателям</a>
-                            </div>
-                            <ol class="footer__menu">
-                                <!--noindex-->
-                                <li class="footer__menu-item">
-                                    <a class="footer__menu-link" href="/catalog/" style="color: white;">
-                                        Весь каталог
-                                    </a>
-                                </li>
-                                <!--/noindex-->
-                                <li class="footer__menu-item">
-                                    <a class="footer__menu-link" href="{% url 'app:contacts' %}" style="color: white;">
-                                        Контакты
-                                    </a>
-                                </li>
-                            </ol>
-                        </div>
-                        <div>
-                            <div class="footer__menu-item footer__menu-item_title">
-                                <a class="footer__menu-link footer__menu-item_title-link" href="#"
-                                   style="color: white;">Меню сайта</a>
-                            </div>
-                            <ol class="footer__menu">
-                                <li class="footer__menu-item">
-                                    <a class="footer__menu-link" href="/" style="color: white;">
-                                        Главная
-                                    </a>
-                                </li>
-
-                                <li class="footer__menu-item">
-                                    <a class="footer__menu-link" href="{% url 'app:services' %}" style="color: white;">
-                                        Услуги
-                                    </a>
-                                </li>
-
-                                <li class="footer__menu-item">
-                                    <a class="footer__menu-link" href="#" style="color: white;">
-                                        Покупателям
-                                    </a>
-                                </li>
-                                <li class="footer__menu-item">
-                                    <a class="footer__menu-link" href="{% url 'app:contacts' %}" style="color: white;">
-                                        Контакты
-                                    </a>
-                                </li>
-                                <li class="footer__menu-item">
-                                    <a class="footer__menu-link" href="/about/" style="color: white;">
-                                        О компании
-                                    </a>
-                                </li>
-                            </ol>
-                        </div>
-                    </nav>
-                </div>
-            </div>
+        <div class="footer-column">
+            <h4>Наши рестораны</h4>
+            <ul>
+                <li>AUYL</li>
+                <li>TÖR</li>
+                <li>Bistro Blanca</li>
+                <li>Del Papa</li>
+                <li>bistro Alma</li>
+                <li>Огонёк</li>
+            </ul>
         </div>
-        <div class="footer__bottom">
-            <div class="row justify-content-between">
-                <div class="col-lg-6 col-md-6">
-                    <meta itemprop="copyrightYear" content="2025">
-                    <meta itemprop="copyrightHolder" content="ООО ГК «UniTrade»®">
-                    <p class="footer__copy">ООО ГК «UniTade»® 2019-2025.</p>
-                    <div class="footer__politic">
-
-                        <a class="footer__politic-link" href="/policy/">
-                            Политика персональных данных
-                        </a>
-                    </div>
-                </div>
-                <div class="col-lg-6 col-md-6">
-                    <ul class="social">
-
-                        <li class="social__item">
-                            <a class="social__link" href="https://t.me/isteelskz_bot" target="_blank">
-                                <svg class=" icon icon_telegram">
-                                    <use xlink:href="images/sprite.svg#telegram"></use>
-                                </svg>
-                            </a>
-                        </li>
-
-                        <li class="social__item">
-                            <a class="social__link" href="https://wa.me/77005330150" target="_blank">
-                                <svg class=" icon icon_whatsapp">
-                                    <use xlink:href="images/sprite.svg#whatsapp"></use>
-                                </svg>
-                            </a>
-                        </li>
-
-                    </ul>
-                </div>
-            </div>
+        <div class="footer-column">
+            <h4>Компания</h4>
+            <ul>
+                <li>About us</li>
+                <li>Loyalty program</li>
+                <li>GoGreen</li>
+                <li>Career</li>
+                <li>Franchise</li>
+                <li>Delivery</li>
+                <li>Contacts</li>
+            </ul>
         </div>
+        <div class="footer-column">
+            <h4>Помощь</h4>
+            <ul>
+                <li>Обратная связь</li>
+                <li>Политика конфиденциальности</li>
+                <li>Оферта</li>
+                <li>Cloud Payments</li>
+                <li>Политика конфиденциальности курьеров</li>
+                <li>Условия реферальной программы</li>
+            </ul>
+        </div>
+        <div class="footer-column logo-column">
+            <h4>Мы в соц.сетях</h4>
+            <div class="social-icons">
+                <a href="#"><i class="fi fi-brands-facebook"></i></a>
+                <a href="#"><i class="fi fi-brands-instagram"></i></a>
+            </div>
+
+        </div>
+    </div>
+    <div class="footer-bottom">
+        <p>© 2025 все права защищены.</p>
     </div>
 </footer>
-<!--noindex-->
-<div class="modal modal-cookie" id="modal-cookie">
-    <div class="modal__dialog">
-        <div class="modal__container">
-            <div class="modal__content modal-cookie__body row">
-                <div class="modal-cookie__body_col col">
-                    <div class="modal-cookie__title">
-                        Этот сайт использует файлы cookie с целью повышения удобства для пользователя - <a
-                            href="/policy/">подробнее</a>
-                    </div>
-                </div>
-                <div class="modal-cookie__body_col">
-                    <div class="modal__close">
-                        <button class="btn btn_black">
-                            <span>Ок</span>
-                            <svg class=" icon icon_check">
-                                <use xlink:href="images/sprite.svg#check"></use>
-                            </svg>
-                        </button>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>
-</div>
+
+
+<style>
+    footer {
+      background-color: #1a1a1a;
+      color: #fff;
+      padding: 40px 130px;
+      font-family: Arial, sans-serif;
+    }
+
+    .footer-container {
+      display: flex;
+      justify-content: space-between;
+      flex-wrap: wrap;
+    }
+
+    .footer-column {
+      flex: 1;
+      min-width: 200px;
+      margin: 10px;
+    }
+
+    .footer-column h4 {
+      font-size: 16px;
+      margin-bottom: 10px;
+      color: #fff;
+    }
+
+    .footer-column ul {
+      list-style: none;
+      padding: 0;
+    }
+
+    .footer-column ul li {
+      font-size: 14px;
+      margin-bottom: 8px;
+      color: #ccc;
+    }
+
+    .footer-column ul li:hover {
+      color: #fff;
+    }
+
+    .social-icons a img {
+      width: 24px;
+      margin-right: 10px;
+      transition: opacity 0.3s ease;
+    }
+
+    .social-icons a img:hover {
+      opacity: 0.7;
+    }
+
+    .footer-bottom {
+      text-align: center;
+      padding-top: 10px;
+      border-top: 1px solid #333;
+      margin-top: 20px;
+      color: #ccc;
+      font-size: 14px;
+    }
+    /* Средний экран: планшеты */
+    @media (max-width: 768px) {
+      .footer-column {
+        flex: 1 1 calc(50% - 20px); /* 2 колонки в строке */
+        min-width: 160px;
+      }
+    }
+
+    /* Маленький экран: телефоны */
+    @media (max-width: 480px) {
+      .footer-container {
+        flex-direction: column;
+        align-items: flex-start;
+      }
+
+      .footer-column {
+        flex: 1 1 100%; /* Каждая колонка занимает всю ширину */
+        margin: 10px 0;
+      }
+
+      .social-icons {
+        justify-content: flex-start;
+      }
+</style>
 
 
 <div class="modal modal-success" id="modal-success">
