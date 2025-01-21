@@ -15,7 +15,8 @@
                 <div class="slider__head-row">
                     <h1 class="slider__title" style="color: white;">{{ category.name }}</h1>
                 </div>
-                <a class="link-back d-md-none mb-0" href="{% if category.parent %}{{ category.parent.get_absolute_url }}{% else %}{% url 'app:category' %}{% endif %}">Назад</a>
+                <a class="link-back d-md-none mb-0"
+                   href="{% if category.parent %}{{ category.parent.get_absolute_url }}{% else %}{% url 'app:category' %}{% endif %}">Назад</a>
             </div>
             <div class="swiper-cards swiper-container-initialized swiper-container-horizontal swiper-container-pointer-events">
                 <div class="swiper-wrapper">
@@ -29,7 +30,7 @@
                                      style="width: 100%; height: 100%; object-fit: cover;">
                             </div>
                             <a class="card-mini__link stretched-link" href="{{ product.get_absolute_url }}"
-                               style="color: #f5a623; font-size: 16px; font-weight: bold; display: block; text-decoration: none; text-align: center; padding: 12px;">
+                               style="color: #ff740f; text-decoration: none; text-align: center; ">
                                 {{ product.name }}
                             </a>
                         </div>
@@ -62,8 +63,9 @@
                     <i class="fi fi-rr-filter"></i>
                 </span>
             </button>
-            <form class="mb-4"><input type="hidden" name="csrfmiddlewaretoken"
-                                      value="0SiNL3N263em7GuwgrcuPM2M20ONl5NAkhLydpB8oUhZCWE9JK1LySVQwkAtIZ8V">
+            <form class="mb-4">
+                <input type="hidden" name="csrfmiddlewaretoken"
+                       value="0SiNL3N263em7GuwgrcuPM2M20ONl5NAkhLydpB8oUhZCWE9JK1LySVQwkAtIZ8V">
                 <div class="d-none">
                     <input name="category_id" value="1324" hidden="">
                 </div>
@@ -111,9 +113,7 @@
                             <div class="filter-aside__title">
                                 <a style="color: white;" href="#">ГОСТ</a>
                                 <div class="filter-aside__arrow open">
-                                    <svg class="icon icon_arrow-down">
-                                        <use xlink:href="/static/img/svg/symbol/sprite.svg#arrow-down"></use>
-                                    </svg>
+
                                 </div>
                             </div>
                             <div class="filter-aside__content open">
@@ -763,9 +763,7 @@
                             <div class="filter-aside__title">
                                 <a href="#">Вид</a>
                                 <div class="filter-aside__arrow open">
-                                    <svg class="icon icon_arrow-down">
-                                        <use xlink:href="/static/img/svg/symbol/sprite.svg#arrow-down"></use>
-                                    </svg>
+
                                 </div>
                             </div>
                             <div class="filter-aside__content open">
@@ -799,9 +797,7 @@
                             <div class="filter-aside__title">
                                 <a href="#">Тип</a>
                                 <div class="filter-aside__arrow open">
-                                    <svg class="icon icon_arrow-down">
-                                        <use xlink:href="/static/img/svg/symbol/sprite.svg#arrow-down"></use>
-                                    </svg>
+
                                 </div>
                             </div>
                             <div class="filter-aside__content open">
@@ -883,9 +879,7 @@
                             <div class="filter-aside__title">
                                 <a href="#">Состав</a>
                                 <div class="filter-aside__arrow open">
-                                    <svg class="icon icon_arrow-down">
-                                        <use xlink:href="/static/img/svg/symbol/sprite.svg#arrow-down"></use>
-                                    </svg>
+
                                 </div>
                             </div>
                             <div class="filter-aside__content open">
@@ -951,9 +945,7 @@
                             <div class="filter-aside__title">
                                 <a href="#">Толщина стенки, мм</a>
                                 <div class="filter-aside__arrow open">
-                                    <svg class="icon icon_arrow-down">
-                                        <use xlink:href="/static/img/svg/symbol/sprite.svg#arrow-down"></use>
-                                    </svg>
+
                                 </div>
                             </div>
                             <div class="filter-aside__content open">
@@ -3051,9 +3043,7 @@
                             <div class="filter-aside__title">
                                 <a href="#">Марка</a>
                                 <div class="filter-aside__arrow open">
-                                    <svg class="icon icon_arrow-down">
-                                        <use xlink:href="/static/img/svg/symbol/sprite.svg#arrow-down"></use>
-                                    </svg>
+
                                 </div>
                             </div>
                             <div class="filter-aside__content open">
@@ -5975,9 +5965,7 @@
                             <div class="filter-aside__title">
                                 <a href="#">Метод обработки</a>
                                 <div class="filter-aside__arrow open">
-                                    <svg class="icon icon_arrow-down">
-                                        <use xlink:href="/static/img/svg/symbol/sprite.svg#arrow-down"></use>
-                                    </svg>
+
                                 </div>
                             </div>
                             <div class="filter-aside__content open">
@@ -6051,9 +6039,7 @@
                             <div class="filter-aside__title">
                                 <a href="#">Покрытие</a>
                                 <div class="filter-aside__arrow open">
-                                    <svg class="icon icon_arrow-down">
-                                        <use xlink:href="/static/img/svg/symbol/sprite.svg#arrow-down"></use>
-                                    </svg>
+
                                 </div>
                             </div>
                             <div class="filter-aside__content open">
@@ -6087,9 +6073,7 @@
                             <div class="filter-aside__title">
                                 <a href="#">Тип стенки</a>
                                 <div class="filter-aside__arrow open">
-                                    <svg class="icon icon_arrow-down">
-                                        <use xlink:href="/static/img/svg/symbol/sprite.svg#arrow-down"></use>
-                                    </svg>
+
                                 </div>
                             </div>
                             <div class="filter-aside__content open">
@@ -6123,9 +6107,7 @@
                             <div class="filter-aside__title">
                                 <a href="#">Наружный диаметр, мм</a>
                                 <div class="filter-aside__arrow open">
-                                    <svg class="icon icon_arrow-down">
-                                        <use xlink:href="/static/img/svg/symbol/sprite.svg#arrow-down"></use>
-                                    </svg>
+
                                 </div>
                             </div>
                             <div class="filter-aside__content open">
@@ -8373,9 +8355,7 @@
 
                     </div>
                     <button class="filter-list__reset d-none" data-reset-filter="" type="button">Очистить фильтр
-                        <svg class="icon icon_clear-filt">
-                            <use xlink:href="/static/img/svg/symbol/sprite.svg#clear-filt"></use>
-                        </svg>
+
                     </button>
                 </form>
             </div>
@@ -8420,9 +8400,7 @@
                                     </div>
                                     <div class="product-table__battery product-table__battery--many"
                                          data-tippy-content-p-no-arrow="<p>Много</p>">
-                                        <svg class="icon icon_battery-many">
-                                            <use xlink:href="/static/img/svg/symbol/sprite.svg#battery-many"></use>
-                                        </svg>
+
                                     </div>
                                 </div>
                             </td>
@@ -8513,9 +8491,7 @@
 
                                 <li class="pagination__li pagination__next">
                                     <a class="pagination__link" href="/catalog/stalnye-truby/page__2/">
-                                        <svg class="icon icon_arrow-right-min">
-                                            <use xlink:href="/static/img/svg/symbol/sprite.svg#arrow-right-min"></use>
-                                        </svg>
+
                                     </a>
                                 </li>
 
@@ -8530,7 +8506,8 @@
                 </div>
             </div>
         </div>
-        <div class="not-found-product mt-5" style="background-image: url(/static/img/not-found-product.png); margin-bottom: 70px;">
+        <div class="not-found-product mt-5"
+             style="background-image: url(/static/img/not-found-product.png); margin-bottom: 70px;">
             <div class="not-found-product__info">
                 <div class="not-found-product__title" style="color: white;">Не нашли нужный товар?</div>
                 <div class="not-found-product__desc">
@@ -8548,7 +8525,7 @@
                                pattern="(^[а-яА-ЯёЁa-zA-Z]+ ?[а-яА-ЯёЁa-zA-Z]* ?[а-яА-ЯёЁa-zA-Z]*)?$">
                         <span class="input__error">
                           <svg class="icon icon_error">
-                            <use xlink:href="/static/img/svg/symbol/sprite.svg#error"></use>
+                            <use xlink:href=""></use>
                           </svg>Введите Имя или Фамилию и Имя
                         </span>
                     </label>
@@ -8558,13 +8535,15 @@
                                minlength="18" required="" placeholder="+7 ( ___ ) ___ - __ - __">
                         <span class="input__error">
                     <svg class="icon icon_error">
-                        <use xlink:href="/static/img/svg/symbol/sprite.svg#error"></use>
+                        <use xlink:href=""></use>
                     </svg>
                     Введите корректный телефон
                 </span>
                     </label>
                     <div class="feedback-form__bottom">
-                        <button class="feedback-form__submit btn" style="background-color: #971212; color: white;" type="submit">Отправить</button>
+                        <button class="feedback-form__submit btn" style="background-color: #971212; color: white;"
+                                type="submit">Отправить
+                        </button>
                     </div>
                 </form>
             </div>
@@ -8594,6 +8573,7 @@
             }
         }
     </style>
+
 
 </main>
 {% endblock %}
