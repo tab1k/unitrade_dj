@@ -98,31 +98,68 @@
                         Поиск
                     </button>
                     <ul id="search-results"
-                        style="position: absolute; background: #fff; width: 100%; max-height: 200px; overflow-y: auto; z-index: 10; display: none; list-style: none; padding: 0; margin: 0;"></ul>
+                        style="position: absolute; background: black; width: 100%; max-height: 200px; overflow-y: auto; z-index: 10; display: none; list-style: none; padding: 0; margin: 0; border-radius: 7px;"></ul>
                 </div>
+
+                <style>
+                    #search-results li {
+                        background-color: black;
+                        margin-top: 5px;
+                        margin-bottom: 5px;
+                        padding: 10px;
+
+                    }
+                    #search-results li a{
+                        color: white;
+
+                    }
+                </style>
 
                 <script>
                     document.getElementById('search-input').addEventListener('input', function() {
-                        const query = this.value;
-                        if (query.length > 1) {  // Начинать поиск, если введено более 2 символов
-                            fetch(`/search/?query=${query}`)
+                        const query = this.value.trim();
+                        const resultsContainer = document.getElementById('search-results');
+
+                        if (query.length > 1) {  // Начинать поиск, если введено более 1 символа
+                            fetch(`/search/?query=${encodeURIComponent(query)}`)
                                 .then(response => response.json())
                                 .then(data => {
-                                    const resultsContainer = document.getElementById('search-results');
                                     resultsContainer.innerHTML = '';  // Очистить текущие результаты
                                     if (data.results.length > 0) {
                                         resultsContainer.style.display = 'block';  // Показать результаты
                                         data.results.forEach(result => {
                                             const li = document.createElement('li');
-                                            li.innerHTML = `<a href="/product/${result.slug}">${result.name}</a>`;
+                                            li.style.padding = '8px';
+                                            li.style.borderBottom = '1px solid #333';
+                                            if (result.type === 'product') {
+                                                // Если это продукт
+                                                li.innerHTML = `
+                                                    <a href="/product/${result.slug}" style="color: white; text-decoration: none;">
+                                                         ${result.name}
+                                                    </a>`;
+                                            } else if (result.type === 'category') {
+                                                // Если это категория
+                                                li.innerHTML = `
+                                                    <a href="/category/${result.slug}" style="color: white; text-decoration: none;">
+                                                         ${result.name}
+                                                    </a>`;
+                                            } else if (result.type === 'none') {
+                                                // Если ничего не найдено
+                                                li.innerHTML = `
+                                                    <span style="color: white;">${result.name}</span>`;
+                                            }
                                             resultsContainer.appendChild(li);
                                         });
                                     } else {
                                         resultsContainer.style.display = 'none';  // Скрыть, если нет результатов
                                     }
+                                })
+                                .catch(error => {
+                                    console.error('Ошибка загрузки данных:', error);
+                                    resultsContainer.style.display = 'none';  // Скрыть, если произошла ошибка
                                 });
                         } else {
-                            document.getElementById('search-results').style.display = 'none';  // Скрыть результаты, если менее 2 символов
+                            resultsContainer.style.display = 'none';  // Скрыть результаты, если менее 2 символов
                         }
                     });
                 </script>
@@ -277,111 +314,68 @@
                                 <div class="container">
                                     <label class="search__label">
                                         <input class="search-modal__search-input search__input" type="text"
-                                               placeholder="Найти товар">
+                                               placeholder="Найти товар" id="mobile-search-input">
                                     </label>
                                 </div>
                             </div>
                             <div class="container" style="background-color: black;">
-                                <!--noindex-->
-                                <ul style="background-color: black;"
-                                    class="search-modal__search-result search-modal__search-result_popular search__result search__result_popular">
-                                    <li class="search__result-item">
-                                        <div class="search__result-title" style="color: white;"><h2>Часто ищут</h2>
-                                        </div>
-                                    </li>
-                                    <li class="search-modal__search-item search__result-item">
-                                        <a style="color: white;" class="search__result-link"
-                                           href="/search/?search=Кабель+СИП" rel="nofollow">
-                                            Кабель СИП
-                                        </a>
-                                    </li>
-                                    <li class="search-modal__search-item search__result-item">
-                                        <a style="color: white;" class="search__result-link"
-                                           href="/search/?search=Электрод+для+сварки+чугуна"
-                                           rel="nofollow">
-                                            Электрод для сварки чугуна
-                                        </a>
-                                    </li>
-                                    <li class="search-modal__search-item search__result-item">
-                                        <a style="color: white;" class="search__result-link"
-                                           href="/search/?search=Обратный+клапан"
-                                           rel="nofollow">
-                                            Обратный клапан
-                                        </a>
-                                    </li>
-                                    <li class="search-modal__search-item search__result-item">
-                                        <a style="color: white;" class="search__result-link"
-                                           href="/search/?search=Задвижка+стальная+фланцевая+Ду-150" rel="nofollow">
-                                            Задвижка стальная фланцевая Ду-150
-                                        </a>
-                                    </li>
-                                    <li class="search-modal__search-item search__result-item">
-                                        <a style="color: white;" class="search__result-link" href="/search/?search=НКТ"
-                                           rel="nofollow">
-                                            Труба НКТ
-                                        </a>
-                                    </li>
-                                    <li class="search-modal__search-item search__result-item">
-                                        <a style="color: white;" class="search__result-link"
-                                           href="/search/?search=Перфорированный+лист"
-                                           rel="nofollow">
-                                            Перфорированный лист
-                                        </a>
-                                    </li>
-                                    <li class="search-modal__search-item search__result-item">
-                                        <a style="color: white;" class="search__result-link"
-                                           href="/search/?search=Кладочная+сварная+сетка"
-                                           rel="nofollow">
-                                            Кладочная сварная сетка
-                                        </a>
-                                    </li>
-                                    <li class="search-modal__search-item search__result-item">
-                                        <a style="color: white;" class="search__result-link"
-                                           href="/search/?search=Труба+ГОСТ+632-80"
-                                           rel="nofollow">
-                                            Труба ГОСТ 632-80
-                                        </a>
-                                    </li>
-                                </ul>
-                                <ul class="search-modal__search-result search-modal__search-result_product search__result search__result_product">
-                                    <li class="search__result-item">
-                                        <div class="search__result-title">Искать</div>
-                                    </li>
-                                    <li class="search-modal__search-item search__result-item"><a
-                                            class="search__result-link" href="#">Трубы 09Г2С<span>Все размеры</span></a>
-                                    </li>
-                                    <li class="search-modal__search-item search__result-item"><a
-                                            class="search__result-link" href="#">...трубы 09Г2С ГОСТ
-                                        8731-8<span>38 x 8</span></a></li>
-                                    <li class="search-modal__search-item search__result-item"><a
-                                            class="search__result-link" href="#">...трубы 09Г2С ГОСТ 8730-12<span>45 x 10</span></a>
-                                    </li>
-                                    <li class="search-modal__search-item search__result-item"><a
-                                            class="search__result-link" href="#">...трубы 09Г2С ГОСТ
-                                        8730-87<span>48 x 8</span></a></li>
-                                    <li class="search-modal__search-item search__result-item"><a
-                                            class="search__result-link" href="#">...трубы 09Г2С ГОСТ 8732-78<span>43,5 x 7,5</span></a>
-                                    </li>
-                                    <li class="search-modal__search-item search__result-item"><a
-                                            class="search__result-link" href="#">...трубы 09Г2С ГОСТ 8732-01<span>40,5 x 10,5</span></a>
-                                    </li>
-                                    <li class="search-modal__search-item search__result-item"><a
-                                            class="search__result-link" href="#">...трубы 09Г2С ГОСТ 8732-22<span>7,5 x 7,5</span></a>
-                                    </li>
-                                    <li class="search__result-more"><a class="search__result-more-link link-more"
-                                                                       href="#">Все результаты
-                                        <svg class="icon icon_arrow-right">
-                                            <use xlink:href="images/sprite.svg#arrow-right"></use>
-                                        </svg>
-                                    </a></li>
-                                </ul>
-                                <!--/noindex-->
+                                <ul id="mobile-search-results"
+                                    style="background-color: black; width: 100%; max-height: 400px; overflow-y: auto; z-index: 10; display: none; list-style: none; padding: 0; margin: 0;"></ul>
                             </div>
                         </div>
                     </div>
                 </div>
             </div>
         </div>
+
+        <script>
+            document.getElementById('mobile-search-input').addEventListener('input', function () {
+                const query = this.value.trim();
+                const resultsContainer = document.getElementById('mobile-search-results');
+
+                if (query.length > 1) {  // Начинать поиск, если введено более 1 символа
+                    fetch(`/search/?query=${encodeURIComponent(query)}`)
+                        .then(response => response.json())
+                        .then(data => {
+                            resultsContainer.innerHTML = '';  // Очистить текущие результаты
+                            if (data.results.length > 0) {
+                                resultsContainer.style.display = 'block';  // Показать результаты
+                                data.results.forEach(result => {
+                                    const li = document.createElement('li');
+                                    li.style.padding = '8px';
+                                    li.style.borderBottom = '1px solid #333';
+                                    if (result.type === 'product') {
+                                        // Если это продукт
+                                        li.innerHTML = `
+                                            <a href="/product/${result.slug}" style="color: white; text-decoration: none;">
+                                                 ${result.name}
+                                            </a>`;
+                                    } else if (result.type === 'category') {
+                                        // Если это категория
+                                        li.innerHTML = `
+                                            <a href="/category/${result.slug}" style="color: white; text-decoration: none;">
+                                                 ${result.name}
+                                            </a>`;
+                                    } else {
+                                        // Если ничего не найдено
+                                        li.innerHTML = `<span style="color: white;">${result.name}</span>`;
+                                    }
+                                    resultsContainer.appendChild(li);
+                                });
+                            } else {
+                                resultsContainer.style.display = 'none';  // Скрыть, если нет результатов
+                            }
+                        })
+                        .catch(error => {
+                            console.error('Ошибка загрузки данных:', error);
+                            resultsContainer.style.display = 'none';
+                        });
+                } else {
+                    resultsContainer.style.display = 'none';  // Скрыть, если меньше 2 символов
+                }
+            });
+        </script>
+
 
         <div class="modal modal-mobile-menu" id="modal-mobile-menu">
             <div class="modal__overlay">
@@ -417,13 +411,7 @@
                                 </a>
                             </li>
                             <li class="mobile-menu__menu-item">
-                                <div style="color: white;" class="header__menu-link"
-                                     data-modal-show="#modal-company-catalog">
-                                    О компании
-                                    <svg class=" icon icon_next">
-                                        <use xlink:href="images/sprite.svg#next"></use>
-                                    </svg>
-                                </div>
+                                <a style="color: white;" class="header__menu-link" href="{% url 'app:about' %}">О компании</a>
                             </li>
                             <li class="mobile-menu__menu-item"></li>
                         </ol>
@@ -732,7 +720,8 @@
                               <use xlink:href="images/sprite.svg#required-input"></use>
                             </svg>
                         </span>
-                    <input class="modal-order__form-field-input input__input" style="background-color: #262a31; color: white;" type="text" name="product"
+                    <input class="modal-order__form-field-input input__input"
+                           style="background-color: #262a31; color: white;" type="text" name="product"
                            placeholder="Что вы хотите заказать?" required="" autocomplete="off">
                 </label>
                 <label class="modal-order__form-field">
@@ -742,14 +731,16 @@
                               <use xlink:href="images/sprite.svg#required-input"></use>
                             </svg>
                         </span>
-                    <input class="modal-order__form-field-input input__input" style="background-color: #262a31; color: white;" type="text" name="quantity"
+                    <input class="modal-order__form-field-input input__input"
+                           style="background-color: #262a31; color: white;" type="text" name="quantity"
                            placeholder="20" required="" autocomplete="off">
                 </label>
                 <label class="modal-order__form-field">
                         <span class="modal-order__form-field-title" style="color: white;">
                             Номер телефона
                         </span>
-                    <input class="modal-order__form-field-input input__input" style="background-color: #262a31; color: white;" type="tel" name="phone" maxlength="21"
+                    <input class="modal-order__form-field-input input__input"
+                           style="background-color: #262a31; color: white;" type="tel" name="phone" maxlength="21"
                            minlength="18" required="">
                 </label>
                 <div class="file-container"></div>

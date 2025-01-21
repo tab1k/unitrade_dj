@@ -2,6 +2,8 @@ from django.db.models import Prefetch
 from django.shortcuts import render
 from django.views.generic import TemplateView
 from .models import *
+from django.http import JsonResponse
+from django.db.models import Q
 from django.shortcuts import redirect
 from django.http import JsonResponse
 from django.views.generic import DetailView, ListView
@@ -136,15 +138,41 @@ class ProductDetailView(DetailView):
 
 
 def search_products(request):
-    query = request.GET.get('query', '')  # Получаем запрос из GET-параметра
+    query = request.GET.get('query', '').strip()  # Получаем запрос из GET-параметра
+    results = []
+
     if query:
-        products = Product.objects.filter(name__icontains=query)  # Поиск по имени продукта
-        results = [{'name': product.name, 'slug': product.slug} for product in products]
-        print(results)  # Добавьте это для отладки
-    elif query.is_lower():
-        results = Category.objects.filter(name__istartswith=query)  # Поиск по начальной букве категории
-        results = [{'name': category.name, 'slug': category.slug} for category in results]
-        print(results)  # Добавьте это для отладки
-    else:
-        results = []
+        # Поиск продуктов по названию
+        products = Product.objects.filter(name__icontains=query).select_related('category')
+        product_results = [
+            {
+                'name': product.name,
+                'slug': product.slug,
+                'type': 'product',
+                'category': product.category.name,
+                'image': product.image.url if product.image else None
+            }
+            for product in products
+        ]
+
+        # Поиск категорий по названию
+        categories = Category.objects.filter(name__icontains=query)
+        category_results = [
+            {
+                'name': category.name,
+                'slug': category.slug,
+                'type': 'category',
+                'parent': category.parent.name if category.parent else None,
+                'image': category.image.url if category.image else None
+            }
+            for category in categories
+        ]
+
+        # Объединяем результаты
+        results = product_results + category_results
+
+    # Если ничего не найдено
+    if not results:
+        results = [{'name': 'Ничего не найдено', 'type': 'none'}]
+
     return JsonResponse({'results': results})
