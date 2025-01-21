@@ -5,6 +5,7 @@ app_name = 'app'
 
 urlpatterns = [
     path('', IndexViewPage.as_view(), name='index'),
+    path('category/prochee/', ProcheeCategoryView.as_view(), name='category-prochee'),
     path('services/', ServiceViewPage.as_view(), name='services'),
     path('about/', AboutViewPage.as_view(), name='about'),
     path('delivery/', DeliveryViewPage.as_view(), name='delivery'),

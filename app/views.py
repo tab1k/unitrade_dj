@@ -18,8 +18,17 @@ class IndexViewPage(TemplateView):
         context['categories'] = (
             Category.objects.filter(parent__isnull=True)
             .order_by('id')
-            .prefetch_related('children__children__children', 'products')  # Предзагрузка продуктов
+            .prefetch_related('children__children__children', 'products')
         )
+        return context
+
+
+class ProcheeCategoryView(TemplateView):
+    template_name = 'category/news_container.html'  # Убедитесь, что путь правильный
+
+    def get_context_data(self, **kwargs):
+        context = super().get_context_data(**kwargs)
+        context['categories'] = Category.objects.filter(parent__slug='prochee').prefetch_related('products')
         return context
 
 

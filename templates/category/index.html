@@ -108,10 +108,23 @@
             </div>
             <div class="col-lg-9">
 
+
                 <h1 class="title title_page" style="color: white;">Каталог</h1>
                 <a class="link-back link-back-mb d-lg-none" href="{% url 'app:index' %}">Главная</a>
+                <div class="toggle toggle_reverse d-lg-flex"
+                     style="padding-left: 66.5px; margin-bottom: 10px; justify-content: end;">
+                    <label for="catalog-checkbox"></label>
+                    <input type="checkbox" name="name-234" id="catalog-checkbox">
+                    <label class="toggle_label" for="catalog-checkbox" style="color: white;">По сфере
+                        деятельности</label>
+                </div>
+                <style>
+                    .toggle input:checked+label::before {
+                        background: #ff740f;
+                    }
+                </style>
 
-                <div class="news-container mb-5" >
+                <div class="news-container mb-5" id="news-container">
                     <div class="news-list">
                         {% for category in categories %}
                         <a class="news-list__item" href="{{ category.get_absolute_url }}">
@@ -125,6 +138,30 @@
                         {% endfor %}
                     </div>
                 </div>
+                <script>
+                    document.getElementById('catalog-checkbox').addEventListener('change', function () {
+                        const isChecked = this.checked;
+                        const url = isChecked ? '/category/prochee/' : '/category'; // Если чекбокс включён — грузим "Прочее", иначе — главную
+
+                        fetch(url, { method: 'GET' })
+                            .then(response => response.text())
+                            .then(html => {
+                                const parser = new DOMParser();
+                                const doc = parser.parseFromString(html, 'text/html');
+
+                                // Найти содержимое нового контейнера
+                                const newContent = doc.querySelector('.news-list');
+                                if (newContent) {
+                                    document.getElementById('news-container').innerHTML = newContent.outerHTML; // Заменяем содержимое
+                                } else {
+                                    console.error('Не удалось найти .news-list в загруженном HTML.');
+                                }
+                            })
+                            .catch(error => console.error('Ошибка при загрузке данных:', error));
+                    });
+
+                </script>
+
 
                 <style>
                     .news-container {
