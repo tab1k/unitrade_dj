@@ -141,7 +141,7 @@
                 <script>
                     document.getElementById('catalog-checkbox').addEventListener('change', function () {
                         const isChecked = this.checked;
-                        const url = isChecked ? '/category/prochee/' : '/category'; // Если чекбокс включён — грузим "Прочее", иначе — главную
+                        const url = isChecked ? '/sfera-deyatelnosty/' : '/category'; // Если чекбокс включён — грузим "Прочее", иначе — главную
 
                         fetch(url, { method: 'GET' })
                             .then(response => response.text())

@@ -18,7 +18,7 @@ class IndexViewPage(TemplateView):
         context['categories'] = (
             Category.objects.filter(parent__isnull=True)
             .order_by('id')
-            .prefetch_related('children__children__children', 'products')
+            .prefetch_related('children__children__children', 'products')  # Предзагрузка продуктов
         )
         return context
 
