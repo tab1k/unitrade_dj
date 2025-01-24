@@ -1,12 +1,16 @@
 from django.db.models import Prefetch
-from django.shortcuts import render
+from django.views import View
 from django.views.generic import TemplateView
 from .models import *
-from django.http import JsonResponse
-from django.db.models import Q
 from django.shortcuts import redirect
 from django.http import JsonResponse
 from django.views.generic import DetailView, ListView
+import requests
+from bs4 import BeautifulSoup
+from django.core.cache import cache
+from django.shortcuts import render
+from django.http import HttpResponseServerError
+
 
 
 class IndexViewPage(TemplateView):
@@ -122,28 +126,96 @@ class CategoryDetailView(DetailView):
         return context
 
 
-class ProductListView(ListView):
-    model = Product
+class ProxyProductListView(View):
     template_name = 'product/product_list.html'
-    context_object_name = 'products'
 
-    def get_queryset(self):
-        # Загружаем только продукты для текущей категории
-        slug = self.kwargs.get('slug')
-        category = Category.objects.get(slug=slug)
-        return category.products.all()
+    def get(self, request, slug):
+        # Проверяем, есть ли данные в кэше
+        cache_key = f'products_{slug}'
+        products = cache.get(cache_key)
 
-    def get_context_data(self, **kwargs):
-        context = super().get_context_data(**kwargs)
-        slug = self.kwargs.get('slug')
-        context['category'] = Category.objects.get(slug=slug)
-        return context
+        if not products:
+            # Формируем правильный URL для категории
+            external_url = f'https://isteels.kz/catalog/{slug}/'
+            headers = {
+                'User-Agent': 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/110.0.0.0 Safari/537.36'
+            }
+
+            try:
+                # Отправляем запрос к внешнему сайту
+                response = requests.get(external_url, headers=headers, timeout=10)
+                response.raise_for_status()  # Генерируем исключение для HTTP ошибок
+
+                # Парсим HTML, если ответ успешен
+                html_content = response.text
+                soup = BeautifulSoup(html_content, 'html.parser')
+
+                # Извлекаем данные о продуктах
+                products = []
+                product_items = soup.select('.short-product__info')  # Замените '.short-product__info' на корректный селектор
+                for item in product_items:
+                    product_name = item.select_one('.short-product__title').get_text(strip=True)  # Имя продукта
+                    product_url = item.select_one('a')['href']  # Ссылка на продукт
+                    products.append({
+                        'name': product_name,
+                        'url': product_url,
+                    })
+
+                # Сохраняем данные в кэш на 1 час
+                cache.set(cache_key, products, 3600)
+
+            except requests.exceptions.RequestException as e:
+                print(f"Ошибка при запросе к {external_url}: {e}")
+                return HttpResponseServerError("Не удалось получить данные с внешнего сайта.")
+            except Exception as e:
+                print(f"Ошибка при парсинге HTML: {e}")
+                return HttpResponseServerError("Ошибка при обработке данных с внешнего сайта.")
+
+        return render(request, self.template_name, {'products': products, 'category_slug': slug})
 
 
-class ProductDetailView(DetailView):
-    model = Product
+class ProxyProductDetailView(View):
     template_name = 'product/product_detail.html'
-    context_object_name = 'product'
+
+    def get(self, request, slug):
+        cache_key = f'product_detail_{slug}'
+        product = cache.get(cache_key)
+
+        if not product:
+            external_url = f'https://isteels.kz/catalog/{slug}/'
+            headers = {
+                'User-Agent': 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/110.0.0.0 Safari/537.36'
+            }
+
+            try:
+                response = requests.get(external_url, headers=headers, timeout=10)
+                response.raise_for_status()
+
+                soup = BeautifulSoup(response.text, 'html.parser')
+
+                # Проверяем элементы перед извлечением данных
+                product_name_tag = soup.select_one('.product__title.title')
+                product_name = product_name_tag.get_text(strip=True) if product_name_tag else "Название не найдено"
+
+
+                # Формируем продукт
+                product = {
+                    'name': product_name,
+
+                }
+
+                # Кэшируем данные
+                cache.set(cache_key, product, 3600)
+
+            except requests.exceptions.RequestException as e:
+                print(f"Ошибка при запросе к {external_url}: {e}")
+                return HttpResponseServerError("Не удалось получить данные с внешнего сайта.")
+            except Exception as e:
+                print(f"Ошибка при парсинге HTML: {e}")
+                return HttpResponseServerError("Ошибка при обработке данных с внешнего сайта.")
+
+        return render(request, self.template_name, {'product': product})
+
 
 
 def search_products(request):

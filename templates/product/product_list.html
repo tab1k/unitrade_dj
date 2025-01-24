@@ -1,7 +1,7 @@
 {% extends 'base.html' %}
 {% load static %}
 
-{% block title %} {{ category.name }}{% endblock %}
+{% block title %} {{ category.name }} {% endblock %}
 
 {% block content %}
 <main style="background-color: black; margin-top: 15px;">
@@ -9,51 +9,41 @@
 
     <div class="catalognew container">
 
-
-        <div class="slider mt-3 mt-lg-0 mb-5">
-            <div class="slider__head">
-                <div class="slider__head-row">
-                    <h1 class="slider__title" style="color: white;">{{ category.name }}</h1>
-                </div>
-                <a class="link-back d-md-none mb-0"
-                   href="{% if category.parent %}{{ category.parent.get_absolute_url }}{% else %}{% url 'app:category' %}{% endif %}">Назад</a>
-            </div>
-            <div class="swiper-cards swiper-container-initialized swiper-container-horizontal swiper-container-pointer-events">
-                <div class="swiper-wrapper">
-
-                    {% for product in products %}
-                    <div class="swiper-slide swiper-slide-active" style="margin-right: 16px;">
-                        <div class="card-mini"
-                             style="background-color: #1d1d1d; border-radius: 8px; overflow: hidden; box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);">
-                            <div class="card-mini__img" style="width: 100%; overflow: hidden;">
-                                <img src="{{ product.image.url }}"
-                                     style="width: 100%; height: 100%; object-fit: cover;">
-                            </div>
-                            <a class="card-mini__link stretched-link" href="{{ product.get_absolute_url }}"
-                               style="color: #ff740f; text-decoration: none; text-align: center; ">
-                                {{ product.name }}
-                            </a>
-                        </div>
+        <div class="row catalog-top">
+            <div class="col-lg-2 pr-2">
+                <div class="img-wrapper">
+                    <img class="catalog-top__img d-none d-lg-block"
+                         src="/media/uploads/catalog/category/%D0%AD%D0%BB%D0%B5%D0%BA%D1%82%D1%80%D0%BE%D1%81%D0%B2%D0%B0%D1%80%D0%BD%D0%B0%D1%8F_%D1%81%D1%82%D0%B0%D0%BB%D1%8C%D0%BD%D0%B0%D1%8F_%D1%82%D1%80%D1%83%D0%B1%D0%B0.png"
+                         alt="Электросварная стальная труба купить в Астане"
+                         title="Электросварная стальная труба купить в Астане">
+                    <div class="product__img_tippy">
+                        <p> Внешний вид изделия может отличаться от изображения, представленного на сайте</p>
                     </div>
-                    {% endfor %}
-
-
                 </div>
-                <style>
-                    .swiper-wrapper {
-                        overflow-x: auto;
-                        scrollbar-width: none; /* Для Firefox */
-                        -ms-overflow-style: none; /* Для старых версий IE и Edge */
-                    }
+            </div>
+            <div class="col">
 
-                    .swiper-wrapper::-webkit-scrollbar {
-                        display: none; /* Для Chrome, Safari, Opera */
-                    }
 
-                </style>
+                <h1 class="title" style="color: white;">sdvsdvs</h1>
+                <a class="link-back link-back-mb d-lg-none" href="/catalog/stalnye-truby/">Назад</a>
+                <div class="img-wrapper img-wrapper--mobile">
+                    <img class="catalog-top__img d-lg-none mb-5"
+                         src="/media/uploads/catalog/category/%D0%AD%D0%BB%D0%B5%D0%BA%D1%82%D1%80%D0%BE%D1%81%D0%B2%D0%B0%D1%80%D0%BD%D0%B0%D1%8F_%D1%81%D1%82%D0%B0%D0%BB%D1%8C%D0%BD%D0%B0%D1%8F_%D1%82%D1%80%D1%83%D0%B1%D0%B0.png"
+                         alt="Электросварная стальная труба купить в Астане"
+                         title="Электросварная стальная труба купить в Астане" data-product-img="">
+                    <div class="product__img_tippy"><p> Внешний вид изделия может отличаться от изображения,
+                        представленного на сайте </p>
+                        <svg class="icon icon_error">
+                            <use xlink:href="/static/img/svg/symbol/sprite.svg#error"></use>
+                        </svg>
+                    </div>
+                </div>
+                <div class="for-juridical">
+                    <p><span style="font-size: 14pt;"><strong>Минимальный заказ - 100 000 ₸.</strong></span></p>
+                    <p><strong>С тендерами и физическими лицами не работаем!</strong></p>
+                </div>
             </div>
         </div>
-
 
         <div class="product-filter" id="product-size">
             <button class="btn btn_light btn_lg w-100 mb-3 d-md-none" id="open-mobile-filter"
@@ -8389,7 +8379,7 @@
                                     </div>
                                     <div class="short-product__info">
 
-                                        <a href="{{ product.get_absolute_url }}"
+                                        <a href="{{ product.url }}"
                                            itemprop="url">
                                             <div class="short-product__title" data-product-title="" itemprop="name">
                                                 {{ product.name }}

@@ -272,24 +272,11 @@
                             Услуги</a>
                     </li>
 
-                    <li class="header__menu-item drop-menu">
-                        <a class="header__menu-link" style="color: white;" href="#">
-                            Покупателям
-                            <svg width="16" height="16" viewBox="0 0 16 16" fill="none"
-                                 xmlns="http://www.w3.org/2000/svg">
-                                <path d="M11.5515 5L4.44853 5C3.91399 5 3.64628 5.64628 4.02426 6.02426L7.29289 9.29289C7.68342 9.68342 8.31658 9.68342 8.70711 9.29289L11.9757 6.02426C12.3537 5.64629 12.086 5 11.5515 5Z"
-                                      fill="#383A44"></path>
-                            </svg>
-                        </a>
-                        <div class="drop-menu__content header__menu-sub" style="background-color: #1f1f1f;">
-                            <a style="color: white;" class="header__menu-link" href="{% url 'app:delivery' %}">
-                                Доставка</a>
-                            <a style="color: white;" class="header__menu-link" href="{% url 'app:payment' %}">
-                                Оплата</a>
-                            <a style="color: white;" class="header__menu-link" href="{% url 'app:refund' %}">
-                                Возврат</a>
-                        </div>
+                    <li class="header__menu-item">
+                        <a class="header__menu-link" style="color: white;" href="{% url 'app:services' %}">
+                            Покупателям</a>
                     </li>
+
                     <li class="header__menu-item">
                         <a class="header__menu-link" href="{% url 'app:contacts' %}" style="color: white;">Контакты</a>
                     </li>
