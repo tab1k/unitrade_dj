@@ -152,10 +152,10 @@ class ProxyProductListView(View):
 
                 # Извлекаем данные о продуктах
                 products = []
-                product_items = soup.select('.short-product__info')  # Замените '.short-product__info' на корректный селектор
+                product_items = soup.select('.short-product__info')
                 for item in product_items:
-                    product_name = item.select_one('.short-product__title').get_text(strip=True)  # Имя продукта
-                    product_url = item.select_one('a')['href']  # Ссылка на продукт
+                    product_name = item.select_one('.short-product__title').get_text(strip=True)
+                    product_url = item.select_one('a')['href']
                     products.append({
                         'name': product_name,
                         'url': product_url,
@@ -182,26 +182,42 @@ class ProxyProductDetailView(View):
         product = cache.get(cache_key)
 
         if not product:
-            external_url = f'https://isteels.kz/catalog/{slug}/'
+            external_url = f'https://isteels.kz/product/{slug}/'
             headers = {
                 'User-Agent': 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/110.0.0.0 Safari/537.36'
             }
 
             try:
+                print(f"Запрашиваемый URL: {external_url}")
                 response = requests.get(external_url, headers=headers, timeout=10)
+                print(f"HTTP код ответа: {response.status_code}")
                 response.raise_for_status()
 
                 soup = BeautifulSoup(response.text, 'html.parser')
 
-                # Проверяем элементы перед извлечением данных
-                product_name_tag = soup.select_one('.product__title.title')
-                product_name = product_name_tag.get_text(strip=True) if product_name_tag else "Название не найдено"
 
+                # Попробуем другие селекторы для поиска названия
+                # Выводим все заголовки h1 для проверки
+                h1_tags = soup.find_all('h1')
+                for tag in h1_tags:
+                    print(tag.get_text(strip=True))  # Выведем все h1 теги для анализа
+
+                # Попробуем более универсальный способ
+                product_name_tag = soup.find('h1', {'itemprop': 'name'}) or \
+                                    soup.find('h1', {'class': 'product__title'}) or \
+                                    soup.find('h1')  # Добавим универсальный поиск по тэгу <h1>
+
+                # Проверяем, если product_name_tag найден, то извлекаем текст
+                if product_name_tag:
+                    product_name = product_name_tag.get_text(strip=True)
+                else:
+                    product_name = "Название не найдено"
+
+                print(f"Найдено название продукта: {product_name}")
 
                 # Формируем продукт
                 product = {
                     'name': product_name,
-
                 }
 
                 # Кэшируем данные
@@ -215,6 +231,10 @@ class ProxyProductDetailView(View):
                 return HttpResponseServerError("Ошибка при обработке данных с внешнего сайта.")
 
         return render(request, self.template_name, {'product': product})
+
+
+
+
 
 
 
