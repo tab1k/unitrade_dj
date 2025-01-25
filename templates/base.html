@@ -60,31 +60,31 @@
     </style>
 
 </head>
-<body style="background-color: black;">
+<body style="background-color: #f5f7f8;">
 
 <script async="" src="{% static 'js/rumscript.js' %}"></script>
 
 <link href="{% static 'css/snow.min.css' %}" rel="stylesheet">
 
 
-<header class="header" style="background-color: black; box-shadow: 0 3px 8px rgba(255, 255, 255, 0.05);">
-    <div class="header-top container" style="backgground-color: black;">
-        <span style="color: #d9d9d9;">
+<header class="header" style="background-color: #f5f7f8; box-shadow: 0 3px 8px rgba(255, 255, 255, 0.05);">
+    <div class="header-top container" style="background-color: #f5f7f8;">
+        <span style="color: black;">
             Будни: 8:00 - 18:00, Суббота: 8:00 — 17:00
         </span>
         <span>
-            <a style="color: #d9d9d9;" href="mailto:metall@rozmet.ru">
+            <a style="color: black;" href="mailto:metall@rozmet.ru">
                 <i class="bi bi-envelope"></i> metall@rozmet.ru
             </a>
         </span>
     </div>
-    <div class="header__inner" style="background-color: black;">
+    <div class="header__inner" style="background-color: #f5f7f8;">
         <div class="header__middle-inner container">
 
-            <div class="header__middle" style="background-color: black; border-bottom: 1px solid #1f1f1f;">
+            <div class="header__middle" style="background-color: #f5f7f8; border-bottom: 1px solid #e2e6ed;">
 
                 <div class="logo">
-                    <a href="/"><img src="{% static 'images/logo_bg.png' %}" style="max-height: 130px; width: 130px;"
+                    <a href="/"><img src="{% static 'logo.png' %}" style="max-height: 130px; width: 130px;"
                                      alt="#"></a>
                 </div>
 
@@ -92,9 +92,9 @@
                 <div class="search-bar" style="position: relative; width: 100%;">
                     <input type="text"
                            id="search-input"
-                           style="background-color: #1a1a1a; border-radius: 7px; border: 1px solid #1a1a1a; color: white; padding: 8px 40px 8px 8px; width: 100%;"
+                           style="background-color: white; border-radius: 7px; border: 1px solid #e2e6ed; color: white; padding: 8px 40px 8px 8px; width: 100%;"
                            placeholder="Поиск в каталоге...">
-                    <button style="position: absolute; border-radius: 7px; right: 1px; top: 50%; transform: translateY(-50%); background-color: #333; color: white; border: none; padding: 8px 12px; cursor: pointer;">
+                    <button style="position: absolute; border-radius: 7px; right: 1px; top: 50%; transform: translateY(-50%); background-color: gray; color: white; border: none; padding: 8px 12px; cursor: pointer;">
                         Поиск
                     </button>
                     <ul id="search-results"
@@ -170,7 +170,7 @@
 
                         <div class="contacts">
                             <div style="position: relative; display: inline-block;">
-                                <h2 style="color: white; position: relative; z-index: 1;">8 707 777 28 17</h2>
+                                <h2 style="color: black; position: relative; z-index: 1;">8 707 777 28 17</h2>
                                 <div id="star-field"></div>
                             </div>
 
@@ -228,7 +228,7 @@
                                 setInterval(createStar, 400); // Каждые 400 мс создаётся звезда
                             </script>
 
-                            <div><span><a style="color: white; font-size: 14px;"
+                            <div><span><a style="color: black; font-size: 14px;"
                                           href="#">Заказать обратный звонок</a></span></div>
                         </div>
 
@@ -249,7 +249,7 @@
                 </span>
 
                 <a href="/category/" class="header__catalog btn-toggle">
-                    <span class="header__catalog-text" style="color: white;">Каталог</span>
+                    <span class="header__catalog-text" style="color: black;">Каталог</span>
                 </a>
 
                 <form class="header__search search" action="/search/?search=query&amp;json=true"
@@ -263,25 +263,25 @@
                 <ul class="header__menu">
 
                     <li class="header__menu-item">
-                        <a class="header__menu-link" style="color: white;" href="/">
+                        <a class="header__menu-link" style="color: black;" href="/">
                             Главная</a>
                     </li>
 
                     <li class="header__menu-item">
-                        <a class="header__menu-link" style="color: white;" href="{% url 'app:services' %}">
+                        <a class="header__menu-link" style="color: black;" href="{% url 'app:services' %}">
                             Услуги</a>
                     </li>
 
                     <li class="header__menu-item">
-                        <a class="header__menu-link" style="color: white;" href="{% url 'app:services' %}">
+                        <a class="header__menu-link" style="color: black;" href="{% url 'app:services' %}">
                             Покупателям</a>
                     </li>
 
                     <li class="header__menu-item">
-                        <a class="header__menu-link" href="{% url 'app:contacts' %}" style="color: white;">Контакты</a>
+                        <a class="header__menu-link" href="{% url 'app:contacts' %}" style="color: black;">Контакты</a>
                     </li>
                     <li class="header__menu-item drop-menu">
-                        <a class="header__menu-link with-arrow" href="{% url 'app:about' %}" style="color: white;">
+                        <a class="header__menu-link with-arrow" href="{% url 'app:about' %}" style="color: black;">
                             О компании
                         </a>
                     </li>
@@ -540,7 +540,7 @@
         color: #666;
         padding-top: 0.5rem;
         padding-bottom: 0.5rem;
-        border-bottom: 1px solid #1a1a1a;
+        border-bottom: 1px solid #e2e6ed;
         background-color: black;
     }
 
@@ -930,7 +930,7 @@
     <div class="footer-container">
         <div class="footer-column">
             <div class="footer-logo">
-                <img style="" src="{% static 'images/logo_bg.png' %}" alt="Logo"/>
+                <img style="" src="{% static 'logo.png' %}" alt="Logo"/>
             </div>
         </div>
         <div class="footer-column">

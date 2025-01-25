@@ -8440,60 +8440,34 @@
                     }
                 </style>
                 <div class="pagination-block" id="pagination-container">
-                    <div class="pagination-block__pagination">
+    <div class="pagination-block__pagination">
+        <div class="pagination" id="pagination">
+            <ul class="pagination__iner">
+                {% if page_obj.has_previous %}
+                    <li class="pagination__li pagination__previous">
+                        <a class="pagination__link" href="?page={{ page_obj.previous_page_number }}">Назад</a>
+                    </li>
+                {% endif %}
 
-                        <div class="pagination" id="pagination">
-                            <ul class="pagination__iner">
+                {% for page in page_range %}
+                    <li class="pagination__li {% if page == current_page %}pagination__active{% endif %}">
+                        <a class="pagination__link" href="?page={{ page }}">{{ page }}</a>
+                    </li>
+                {% endfor %}
 
-
-                                <li class="pagination__li pagination__active">
-
-                                    <a class="pagination__link" href="/catalog/stalnye-truby/">1</a>
-
-                                </li>
-
-
-                                <li class="pagination__li ">
-
-                                    <a class="pagination__link" href="/catalog/stalnye-truby/page__2/">2</a>
-
-                                </li>
-
-
-                                <li class="pagination__li pagination__disabled">
-                                    <a class="pagination__link" href="#">...</a>
-                                </li>
-
-
-                                <li class="pagination__li ">
-
-                                    <a class="pagination__link" href="/catalog/stalnye-truby/page__49868/">49868</a>
-
-                                </li>
-
-
-                                <li class="pagination__li ">
-
-                                    <a class="pagination__link" href="/catalog/stalnye-truby/page__49869/">49869</a>
-
-                                </li>
-
-
-                                <li class="pagination__li pagination__next">
-                                    <a class="pagination__link" href="/catalog/stalnye-truby/page__2/">
-
-                                    </a>
-                                </li>
-
-                            </ul>
-                        </div>
-
-                    </div>
-                    <div class="pagination-block__count">
-                        Показано 1–20 из
-                        <span>997374</span> товаров.
-                    </div>
-                </div>
+                {% if page_obj.has_next %}
+                    <li class="pagination__li pagination__next">
+                        <a class="pagination__link" href="?page={{ page_obj.next_page_number }}">Вперед</a>
+                    </li>
+                {% endif %}
+            </ul>
+        </div>
+    </div>
+    <div class="pagination-block__count">
+        Показано {{ page_obj.start_index }}–{{ page_obj.end_index }} из
+        <span>{{ page_obj.paginator.count }}</span> товаров.
+    </div>
+</div>
             </div>
         </div>
         <div class="not-found-product mt-5"

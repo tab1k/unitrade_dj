@@ -27,6 +27,9 @@ DEBUG = True
 
 ALLOWED_HOSTS = ['*', 'localhost', '127.0.0.1', '192.168.0.13']
 
+ASGI_APPLICATION = 'unitrade.asgi.application'
+
+
 
 # Application definition
 
