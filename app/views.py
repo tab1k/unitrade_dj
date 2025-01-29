@@ -10,7 +10,9 @@ from bs4 import BeautifulSoup
 from django.core.cache import cache
 from django.shortcuts import render
 from django.http import HttpResponseServerError
-
+from django.http import JsonResponse
+from django.template.loader import render_to_string
+from django.views.generic import TemplateView
 
 
 class IndexViewPage(TemplateView):
@@ -36,26 +38,50 @@ class ProcheeCategoryView(TemplateView):
         return context
 
 
-class ServiceViewPage(TemplateView):
+class AjaxableTemplateView(TemplateView):
+    """
+    Базовое представление, которое обрабатывает AJAX-запросы
+    и рендерит только часть страницы (если запрос AJAX).
+    """
+
+    def render_to_response(self, context, **kwargs):
+        if self.request.headers.get('X-Requested-With') == 'XMLHttpRequest':
+            # Рендерим только часть страницы с id="content"
+            html = render_to_string(self.get_template_names(), context)
+            # Если хочешь, можно добавить только часть контента:
+            new_content = self.extract_content(html)
+            return JsonResponse({'html': new_content})
+        else:
+            return super().render_to_response(context, **kwargs)
+
+    def extract_content(self, html):
+        # Берем только содержимое внутри элемента с id="content"
+        from bs4 import BeautifulSoup
+        soup = BeautifulSoup(html, 'html.parser')
+        content = soup.find(id="content")
+        return str(content) if content else ""
+
+class ServiceViewPage(AjaxableTemplateView):
     template_name = 'services.html'
 
 
-class AboutViewPage(TemplateView):
+class AboutViewPage(AjaxableTemplateView):
     template_name = 'about.html'
 
 
-class DeliveryViewPage(TemplateView):
+class DeliveryViewPage(AjaxableTemplateView):
     template_name = 'buyers/delivery.html'
 
 
-class PaymentViewPage(TemplateView):
+class PaymentViewPage(AjaxableTemplateView):
     template_name = 'buyers/payment.html'
 
 
-class RefundViewPage(TemplateView):
+class RefundViewPage(AjaxableTemplateView):
     template_name = 'buyers/refund.html'
 
-class ContactViewPage(TemplateView):
+
+class ContactViewPage(AjaxableTemplateView):
     template_name = 'buyers/contacts.html'
 
 
@@ -195,7 +221,6 @@ class ProxyProductDetailView(View):
 
                 soup = BeautifulSoup(response.text, 'html.parser')
 
-
                 # Попробуем другие селекторы для поиска названия
                 # Выводим все заголовки h1 для проверки
                 h1_tags = soup.find_all('h1')
@@ -204,8 +229,8 @@ class ProxyProductDetailView(View):
 
                 # Попробуем более универсальный способ
                 product_name_tag = soup.find('h1', {'itemprop': 'name'}) or \
-                                    soup.find('h1', {'class': 'product__title'}) or \
-                                    soup.find('h1')  # Добавим универсальный поиск по тэгу <h1>
+                                   soup.find('h1', {'class': 'product__title'}) or \
+                                   soup.find('h1')  # Добавим универсальный поиск по тэгу <h1>
 
                 # Проверяем, если product_name_tag найден, то извлекаем текст
                 if product_name_tag:
@@ -231,11 +256,6 @@ class ProxyProductDetailView(View):
                 return HttpResponseServerError("Ошибка при обработке данных с внешнего сайта.")
 
         return render(request, self.template_name, {'product': product})
-
-
-
-
-
 
 
 def search_products(request):
