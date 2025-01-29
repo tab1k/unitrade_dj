@@ -46,9 +46,8 @@ class AjaxableTemplateView(TemplateView):
 
     def render_to_response(self, context, **kwargs):
         if self.request.headers.get('X-Requested-With') == 'XMLHttpRequest':
-            # Рендерим только часть страницы с id="content"
             html = render_to_string(self.get_template_names(), context)
-            # Если хочешь, можно добавить только часть контента:
+
             new_content = self.extract_content(html)
             return JsonResponse({'html': new_content})
         else:
