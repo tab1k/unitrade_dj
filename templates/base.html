@@ -26,15 +26,18 @@
 
     <meta property="og:site_name" content="Казахстан">
 
-    <link rel="preload" as="image" href="{% static '/static/video/hero-poster.webp' %}">
-    <link rel="preload" as="video" href="{% static '/static/video/hero.mp4' %}">
+    <link rel="preload" as="image" href="{% static 'images/prof.webp' %}">
+    <link rel="preload" as="video" href="{% static 'video/video2.mp4' %}" type="video/mp4">
 
-<!--    <link rel="stylesheet" href="{% static 'css/fonts.css' %}">-->
+    <link rel="stylesheet" href="{% static 'css/fonts.css' %}">
     <link rel="stylesheet" href="{% static 'css/style.css' %}">
     <link rel='stylesheet' href='https://cdn-uicons.flaticon.com/2.6.0/uicons-brands/css/uicons-brands.css'>
     <link rel='stylesheet'
           href='https://cdn-uicons.flaticon.com/2.6.0/uicons-regular-rounded/css/uicons-regular-rounded.css'>
 
+
+    <!-- UpassistRUM -->
+    <script async="" src="{% static 'js/rumscript.js' %}"></script>
 
     <link href="{% static 'css/snow.min.css' %}" rel="stylesheet">
     <style>
@@ -502,7 +505,7 @@
             }
             @media (max-width: 991px) {
                 .header__bottom {
-                    border-bottom: 2px solid #1f1f1f;
+                    border-bottom: 1px solid #d3d6db;
                     padding: 5px 0;
                 }
             }
@@ -830,9 +833,7 @@
                 <label class="modal-order__form-field">
                         <span class="modal-order__form-field-title required">
                             Количество
-                              <svg class="icon icon_required-input">
-                                <use xlink:href="images/sprite.svg#required-input"></use>
-                              </svg>
+
                         </span>
                     <input class="modal-order__form-field-input input__input" type="text" name="quantity"
                            placeholder="10" required="">
@@ -854,9 +855,7 @@
                 <div class="modal-order__bottom">
                     <button class="modal-order__form_submit btn btn-primary btn_100 find_price" type="submit">
                         Отправить
-                        <svg class="icon icon_arrow-right">
-                            <use xlink:href="images/sprite.svg#arrow-right"></use>
-                        </svg>
+
                     </button>
                     <div class="modal-order__info-license">
                         Нажимая «Отправить», вы соглашаетесь с
@@ -1077,9 +1076,7 @@
     <div class="modal__dialog">
         <div class="modal__content">
             <div class="modal__success d-flex">
-                <svg class=" icon icon_success">
-                    <use xlink:href="images/sprite.svg#success"></use>
-                </svg>
+
                 <div class="modal__success_info">
                     <div class="modal__title">Заявка принята</div>
                     <div class="modal__subtitle mt-2">Благодарим за обращение в группу компаний «UniTrade»! Наш
@@ -1100,9 +1097,7 @@
         <div class="modal__content animate__animated animate__slideInUp">
             <div class="callback-modal__container container">
                 <button class="modal__close header-modal-close" aria-label="Закрыть окно">
-                    <svg class="icon icon_close">
-                        <use xlink:href="images/sprite.svg#close"></use>
-                    </svg>
+
                 </button>
                 <div class="modal__title">Связаться с нами</div>
                 <div class="drop-menu__content header__phone-menu">
@@ -1110,9 +1105,7 @@
                     <div class="header__phone-menu-block">
                         <div class="header__phone-main d-flex">
                             <div>
-                                <svg class="icon icon_time">
-                                    <use xlink:href="images/sprite.svg#time"></use>
-                                </svg>
+
                             </div>
                             <div class="header__phone-main_time">
                                 <p>Пн-Чт: с 9:00 до 18:00, Пт: с 9:00 до 17:00</p>
@@ -1137,9 +1130,7 @@
                             onclick="ym(window.isteels.ym_id, 'reachGoal', 'click_callback');"
                             data-modal-toggle="#modal-call">
                         Перезвонить
-                        <svg class=" icon icon_callback">
-                            <use xlink:href="images/sprite.svg#callback"></use>
-                        </svg>
+
                     </button>
                 </div>
             </div>
@@ -1151,9 +1142,7 @@
         <div class="modal__container">
             <div class="modal__content modal-order__container">
                 <div class="modal__close">
-                    <svg class=" icon icon_close">
-                        <use xlink:href="images/sprite.svg#close"></use>
-                    </svg>
+
                 </div>
                 <div class="modal__title">
                     <div>Оставить заявку</div>
@@ -1170,25 +1159,19 @@
                         <input class="order-form__form-item-input input__input" type="text" name="fio"
                                placeholder="Иванов Андрей">
                         <span class="input__error">
-                            <svg class="icon icon_error">
-                                <use xlink:href="images/sprite.svg#error"></use>
-                            </svg>
+
                         </span>
                     </label>
                     <label class="modal-order__form-field">
                         <span class="modal-order__form-field-title required">
                             Телефон
-                            <svg class="icon icon_required-input">
-                                <use xlink:href="images/sprite.svg#required-input"></use>
-                            </svg>
+
                         </span>
                         <input name="phone" maxlength="21" minlength="18"
                                class="order-form__form-item-input input__input" type="tel" required="required"
                                placeholder="+7 ( ___ ) ___ - __ - __">
                         <span class="input__error">
-                            <svg class="icon icon_error">
-                                <use xlink:href="images/sprite.svg#error"></use>
-                            </svg>
+
                             Введите корректный номер
                         </span>
                     </label>
@@ -1204,9 +1187,7 @@
                     <button class="modal-order__form_submit btn btn-primary btn_100 justify-content-center"
                             type="submit">
                         <span>Отправить</span>
-                        <svg class=" icon icon_arrow-right">
-                            <use xlink:href="images/sprite.svg#arrow-right"></use>
-                        </svg>
+
                     </button>
                 </form>
                 <p class="modal-order__info-license modal-call__politics">
@@ -1222,9 +1203,10 @@
 
 <!--/noindex-->
 
-
+<script src="{% static 'js/Snow.min.js' %}"></script>
+<script src="{% static 'js/libs.js' %}"></script>
 <script src="{% static 'js/index.js' %}"></script>
-
+<script src="{% static 'js/tools.js' %}"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.js"></script>
 <script>
     // Инициализация AOS
