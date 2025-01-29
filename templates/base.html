@@ -10,7 +10,7 @@
     <title itemprop="name">{% block title %}{% endblock %}</title>
 
     <link rel="canonical" href="https://uni-trade.kz/">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.css"/>
+
 
 
     <meta itemprop="description" name="description"
@@ -29,18 +29,12 @@
     <link rel="preload" as="image" href="{% static '/static/video/hero-poster.webp' %}">
     <link rel="preload" as="video" href="{% static '/static/video/hero.mp4' %}">
 
-    <script async="" src="{% static 'js/gtm.js' %}"></script>
-    <script async="" src="{% static 'js/tag.js' %}"></script>
-
-    <link rel="stylesheet" href="{% static 'css/fonts.css' %}">
+<!--    <link rel="stylesheet" href="{% static 'css/fonts.css' %}">-->
     <link rel="stylesheet" href="{% static 'css/style.css' %}">
     <link rel='stylesheet' href='https://cdn-uicons.flaticon.com/2.6.0/uicons-brands/css/uicons-brands.css'>
     <link rel='stylesheet'
           href='https://cdn-uicons.flaticon.com/2.6.0/uicons-regular-rounded/css/uicons-regular-rounded.css'>
 
-
-    <!-- UpassistRUM -->
-    <script async="" src="{% static 'js/rumscript.js' %}"></script>
 
     <link href="{% static 'css/snow.min.css' %}" rel="stylesheet">
     <style>
@@ -92,13 +86,10 @@
                 <div class="search-bar" style="position: relative; width: 100%;">
                     <input type="text"
                            id="search-input"
-                           style="border-radius: 7px; border: 1px solid #e2e6ed; color: white; padding: 8px 40px 8px 8px; width: 100%;"
+                           style="border-radius: 7px; border: 1px solid #e2e6ed; color: #262a31; padding: 8px 40px 8px 8px; width: 100%;"
                            placeholder="Поиск в каталоге...">
-                    <button style="position: absolute; border-radius: 7px; right: 1px; top: 50%; transform: translateY(-50%); background-color: #52ce5e; color: white; border: none; padding: 8px 12px; cursor: pointer;">
-                        Поиск
-                    </button>
                     <ul id="search-results"
-                        style="position: absolute; width: 100%; max-height: 200px; overflow-y: auto; z-index: 10; display: none; list-style: none; padding: 0; margin: 0; border-radius: 7px;"></ul>
+                        style="position: absolute; width: 100%; max-height: 200px; overflow-y: auto; z-index: 10; display: none; list-style: none; padding: 0; margin: 0; border-radius: 7px; background-color: white;"></ul>
                 </div>
 
                 <style>
@@ -109,10 +100,6 @@
                         padding: 10px;
 
                     }
-                    #search-results li a{
-                        color: white;
-
-                    }
                 </style>
 
                 <script>
@@ -120,7 +107,7 @@
                         const query = this.value.trim();
                         const resultsContainer = document.getElementById('search-results');
 
-                        if (query.length > 1) {  // Начинать поиск, если введено более 1 символа
+                        if (query.length > 0) {  // Начинать поиск, если введено более 1 символа
                             fetch(`/search/?query=${encodeURIComponent(query)}`)
                                 .then(response => response.json())
                                 .then(data => {
@@ -130,23 +117,23 @@
                                         data.results.forEach(result => {
                                             const li = document.createElement('li');
                                             li.style.padding = '8px';
-                                            li.style.borderBottom = '1px solid #333';
+                                            li.style.borderBottom = '1px solid #e2e6ed';
                                             if (result.type === 'product') {
                                                 // Если это продукт
                                                 li.innerHTML = `
-                                                    <a href="/product/${result.slug}" style="color: white; text-decoration: none;">
+                                                    <a href="/product/${result.slug}" style="color: #262a31; text-decoration: none;">
                                                          ${result.name}
                                                     </a>`;
                                             } else if (result.type === 'category') {
                                                 // Если это категория
                                                 li.innerHTML = `
-                                                    <a href="/category/${result.slug}" style="color: white; text-decoration: none;">
+                                                    <a href="/category/${result.slug}" style="color: #262a31; text-decoration: none;">
                                                          ${result.name}
                                                     </a>`;
                                             } else if (result.type === 'none') {
                                                 // Если ничего не найдено
                                                 li.innerHTML = `
-                                                    <span style="color: white;">${result.name}</span>`;
+                                                    <span style="color: #262a31;">${result.name}</span>`;
                                             }
                                             resultsContainer.appendChild(li);
                                         });
@@ -319,7 +306,7 @@
                 const query = this.value.trim();
                 const resultsContainer = document.getElementById('mobile-search-results');
 
-                if (query.length > 1) {  // Начинать поиск, если введено более 1 символа
+                if (query.length > 0) {  // Начинать поиск, если введено более 1 символа
                     fetch(`/search/?query=${encodeURIComponent(query)}`)
                         .then(response => response.json())
                         .then(data => {
@@ -1235,10 +1222,9 @@
 
 <!--/noindex-->
 
-<script src="{% static 'js/Snow.min.js' %}"></script>
-<script src="{% static 'js/libs.js' %}"></script>
+
 <script src="{% static 'js/index.js' %}"></script>
-<script src="{% static 'js/tools.js' %}"></script>
+
 <script src="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.js"></script>
 <script>
     // Инициализация AOS
