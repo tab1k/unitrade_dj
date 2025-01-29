@@ -11,9 +11,8 @@
     <!-- БЛОК ВИДЕО -->
     <section class="hero">
         <div class="hero__video">
-            <video class="lazy" autoplay muted playsinline poster="{% static 'images/prof.webp' %}" loop>
-                <!-- Убедись, что используешь src, а не data-src, если ты не используешь ленивую загрузку -->
-                <source src="{% static 'video/video2.mp4' %}" type="video/mp4">
+            <video class="lazy" autoplay muted loop playsinline poster="{% static 'images/prof.webp' %}">
+                <source data-src="{% static 'video/video2.mp4' %}" type="video/mp4">
             </video>
 
         </div>
@@ -171,14 +170,12 @@
                     </h2>
                     <div class="about__desc aos-init aos-animate" data-aos="fade-up" data-aos-delay="100"
                          style="color: #ddd;">
-                        <p style="color: black;">Build Line — ваш надежный партнер в строительстве. Мы предлагаем
-                            комплексные поставки
+                        <p style="color: black;">Build Line — ваш надежный партнер в строительстве. Мы предлагаем комплексные поставки
                             металлопроката, строительных материалов и оборудования. Обеспечивая качественные товары и
                             услуги, включая доставку, резку и гибку металла, мы помогаем успешно реализовать любой
                             проект.</p>
                         <br>
-                        <p style="color: black;">Мы работаем только с оптовыми покупателями – коммерческими и
-                            государственными организациями.
+                        <p style="color: black;">Мы работаем только с оптовыми покупателями – коммерческими и государственными организациями.
                             Высококвалифицированные эксперты коммерческого отдела помогают клиентам собрать заказ любой
                             сложности.</p>
                     </div>
