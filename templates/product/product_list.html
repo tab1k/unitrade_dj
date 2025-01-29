@@ -4,7 +4,9 @@
 {% block title %} {{ category.name }} {% endblock %}
 
 {% block content %}
-<main style="background-color: black; margin-top: 15px;">
+
+
+<main style="margin-top: 15px;">
 
 
     <div class="catalognew container">
@@ -13,26 +15,96 @@
             <div class="col-lg-2 pr-2">
                 <div class="img-wrapper">
                     <img class="catalog-top__img d-none d-lg-block"
-                         src="/media/uploads/catalog/category/%D0%AD%D0%BB%D0%B5%D0%BA%D1%82%D1%80%D0%BE%D1%81%D0%B2%D0%B0%D1%80%D0%BD%D0%B0%D1%8F_%D1%81%D1%82%D0%B0%D0%BB%D1%8C%D0%BD%D0%B0%D1%8F_%D1%82%D1%80%D1%83%D0%B1%D0%B0.png"
-                         alt="Электросварная стальная труба купить в Астане"
-                         title="Электросварная стальная труба купить в Астане">
-                    <div class="product__img_tippy">
-                        <p> Внешний вид изделия может отличаться от изображения, представленного на сайте</p>
+                         src="/media/uploads/catalog/category/%D0%93%D0%B0%D0%B7%D0%BB%D0%B8%D1%84%D1%82%D0%BD%D1%8B%D0%B5_%D1%82%D1%80%D1%83%D0%B1%D1%8B.png"
+                         alt="Газлифтные трубы купить в Астане" title="Газлифтные трубы купить в Астане">
+                    <div class="product__img_tippy"><p>Внешний вид изделия может отличаться от изображения,
+                        представленного на сайте</p>
+                        <svg class="icon icon_error">
+                            <use xlink:href="/static/img/svg/symbol/sprite.svg#error"></use>
+                        </svg>
                     </div>
                 </div>
             </div>
             <div class="col">
 
+                <div class="bread-crumbs">
+                    <div class="container">
+                        <ul class="bread-crumbs__list" itemscope="" itemtype="https://schema.org/BreadcrumbList">
 
-                <h1 class="title" style="color: white;">sdvsdvs</h1>
-                <a class="link-back link-back-mb d-lg-none" href="/catalog/stalnye-truby/">Назад</a>
+
+                            <li class="bread-crumbs__item" itemprop="itemListElement" itemscope=""
+                                itemtype="https://schema.org/ListItem">
+                                <a class="bread-crumbs__link" href="/" itemprop="item">
+                      <span itemprop="name">
+                          Главная
+                      </span>
+                                </a>
+                                <meta itemprop="position" content="1">
+                            </li>
+
+
+                            <li class="bread-crumbs__item" itemprop="itemListElement" itemscope=""
+                                itemtype="https://schema.org/ListItem">
+                                <a class="bread-crumbs__link" href="/catalog/" itemprop="item">
+                      <span itemprop="name">
+                          Каталог металлопроката
+                      </span>
+                                </a>
+                                <meta itemprop="position" content="2">
+                            </li>
+
+
+                            <li class="bread-crumbs__item" itemprop="itemListElement" itemscope=""
+                                itemtype="https://schema.org/ListItem">
+                                <a class="bread-crumbs__link" href="/catalog/chernyj-metalloprokat/" itemprop="item">
+                      <span itemprop="name">
+                          Черный металлопрокат
+                      </span>
+                                </a>
+                                <meta itemprop="position" content="3">
+                            </li>
+
+
+                            <li class="bread-crumbs__item bread-crumbs__item_popup">
+                                <a class="bread-crumbs__link bread-crumbs__link_popup">...</a>
+                                <div class="bread-crumbs__item_brcr hidden">
+                                    <div class="select__dropdown">
+                                        <div class="select__items">
+
+                                            <a class="select__item" itemprop="itemListElement"
+                                               itemtype="https://schema.org/ListItem" itemscope=""
+                                               href="/catalog/trubnyj-prokat/">Трубный прокат
+                                                <meta itemprop="name" content="Трубный прокат">
+                                                <meta itemprop="position" content="4">
+                                            </a>
+
+                                        </div>
+                                    </div>
+                                </div>
+                            </li>
+
+
+                            <li class="bread-crumbs__item" itemprop="itemListElement" itemscope=""
+                                itemtype="https://schema.org/ListItem">
+                                <div class="bread-crumbs__link" itemprop="item"><span
+                                        itemprop="name">Газлифтные трубы</span></div>
+                                <meta itemprop="position" content="5">
+                            </li>
+
+
+                        </ul>
+                    </div>
+                </div>
+
+                <h1 class="title" id="h1-target">Газлифтные трубы в Астане</h1>
+                <a class="link-back link-back-mb d-lg-none" href="/catalog/trubnyj-prokat/">Назад</a>
                 <div class="img-wrapper img-wrapper--mobile">
                     <img class="catalog-top__img d-lg-none mb-5"
-                         src="/media/uploads/catalog/category/%D0%AD%D0%BB%D0%B5%D0%BA%D1%82%D1%80%D0%BE%D1%81%D0%B2%D0%B0%D1%80%D0%BD%D0%B0%D1%8F_%D1%81%D1%82%D0%B0%D0%BB%D1%8C%D0%BD%D0%B0%D1%8F_%D1%82%D1%80%D1%83%D0%B1%D0%B0.png"
-                         alt="Электросварная стальная труба купить в Астане"
-                         title="Электросварная стальная труба купить в Астане" data-product-img="">
-                    <div class="product__img_tippy"><p> Внешний вид изделия может отличаться от изображения,
-                        представленного на сайте </p>
+                         src="/media/uploads/catalog/category/%D0%93%D0%B0%D0%B7%D0%BB%D0%B8%D1%84%D1%82%D0%BD%D1%8B%D0%B5_%D1%82%D1%80%D1%83%D0%B1%D1%8B.png"
+                         alt="Газлифтные трубы купить в Астане" title="Газлифтные трубы купить в Астане"
+                         data-product-img="">
+                    <div class="product__img_tippy"><p>Внешний вид изделия может отличаться от изображения,
+                        представленного на сайте</p>
                         <svg class="icon icon_error">
                             <use xlink:href="/static/img/svg/symbol/sprite.svg#error"></use>
                         </svg>
@@ -92,24 +164,26 @@
                 </div>
             </form>
         </div>
+
         <div class="listing-grid">
             <div class="listing-grid__aside">
                 <form><input type="hidden" name="csrfmiddlewaretoken"
-                             value="0SiNL3N263em7GuwgrcuPM2M20ONl5NAkhLydpB8oUhZCWE9JK1LySVQwkAtIZ8V">
+                             value="uzfIJMCx0A5UvbtUwQCd23cBqdZJqEKpOYItb8qDir8x0rDxZ9ruL95FUxLpNy5K">
                     <input type="hidden" name="category_id" value="1324" hidden="">
                     <div class="filter-aside">
 
                         <div class="filter-aside__item" data-filter-id="2" data-filter-slug="gost">
                             <div class="filter-aside__title">
-                                <a style="color: white;" href="#">ГОСТ</a>
+                                <a href="#">ГОСТ</a>
                                 <div class="filter-aside__arrow open">
-
+                                    <svg class="icon icon_arrow-down">
+                                        <use xlink:href="/static/img/svg/symbol/sprite.svg#arrow-down"></use>
+                                    </svg>
                                 </div>
                             </div>
                             <div class="filter-aside__content open">
                                 <label class="search__label visible">
-                                    <input class="search__input filter-aside__search" style="background-color: #1f1f1f;"
-                                           placeholder="Поиск...">
+                                    <input class="search__input filter-aside__search" placeholder="Поиск...">
                                 </label>
                                 <div class="filter-list">
 
@@ -753,13 +827,14 @@
                             <div class="filter-aside__title">
                                 <a href="#">Вид</a>
                                 <div class="filter-aside__arrow open">
-
+                                    <svg class="icon icon_arrow-down">
+                                        <use xlink:href="/static/img/svg/symbol/sprite.svg#arrow-down"></use>
+                                    </svg>
                                 </div>
                             </div>
                             <div class="filter-aside__content open">
                                 <label class="search__label">
-                                    <input class="search__input filter-aside__search" style="background-color: #1f1f1f;"
-                                           placeholder="Поиск...">
+                                    <input class="search__input filter-aside__search" placeholder="Поиск...">
                                 </label>
                                 <div class="filter-list">
 
@@ -787,13 +862,14 @@
                             <div class="filter-aside__title">
                                 <a href="#">Тип</a>
                                 <div class="filter-aside__arrow open">
-
+                                    <svg class="icon icon_arrow-down">
+                                        <use xlink:href="/static/img/svg/symbol/sprite.svg#arrow-down"></use>
+                                    </svg>
                                 </div>
                             </div>
                             <div class="filter-aside__content open">
                                 <label class="search__label visible">
-                                    <input class="search__input filter-aside__search" style="background-color: #1f1f1f;"
-                                           placeholder="Поиск...">
+                                    <input class="search__input filter-aside__search" placeholder="Поиск...">
                                 </label>
                                 <div class="filter-list">
 
@@ -869,13 +945,14 @@
                             <div class="filter-aside__title">
                                 <a href="#">Состав</a>
                                 <div class="filter-aside__arrow open">
-
+                                    <svg class="icon icon_arrow-down">
+                                        <use xlink:href="/static/img/svg/symbol/sprite.svg#arrow-down"></use>
+                                    </svg>
                                 </div>
                             </div>
                             <div class="filter-aside__content open">
                                 <label class="search__label visible">
-                                    <input class="search__input filter-aside__search" style="background-color: #1f1f1f;"
-                                           placeholder="Поиск...">
+                                    <input class="search__input filter-aside__search" placeholder="Поиск...">
                                 </label>
                                 <div class="filter-list">
 
@@ -935,13 +1012,14 @@
                             <div class="filter-aside__title">
                                 <a href="#">Толщина стенки, мм</a>
                                 <div class="filter-aside__arrow open">
-
+                                    <svg class="icon icon_arrow-down">
+                                        <use xlink:href="/static/img/svg/symbol/sprite.svg#arrow-down"></use>
+                                    </svg>
                                 </div>
                             </div>
                             <div class="filter-aside__content open">
                                 <label class="search__label visible">
-                                    <input class="search__input filter-aside__search" style="background-color: #1f1f1f;"
-                                           placeholder="Поиск...">
+                                    <input class="search__input filter-aside__search" placeholder="Поиск...">
                                 </label>
                                 <div class="filter-list">
 
@@ -3033,13 +3111,14 @@
                             <div class="filter-aside__title">
                                 <a href="#">Марка</a>
                                 <div class="filter-aside__arrow open">
-
+                                    <svg class="icon icon_arrow-down">
+                                        <use xlink:href="/static/img/svg/symbol/sprite.svg#arrow-down"></use>
+                                    </svg>
                                 </div>
                             </div>
                             <div class="filter-aside__content open">
                                 <label class="search__label visible">
-                                    <input class="search__input filter-aside__search" style="background-color: #1f1f1f;"
-                                           placeholder="Поиск...">
+                                    <input class="search__input filter-aside__search" placeholder="Поиск...">
                                 </label>
                                 <div class="filter-list">
 
@@ -5955,13 +6034,14 @@
                             <div class="filter-aside__title">
                                 <a href="#">Метод обработки</a>
                                 <div class="filter-aside__arrow open">
-
+                                    <svg class="icon icon_arrow-down">
+                                        <use xlink:href="/static/img/svg/symbol/sprite.svg#arrow-down"></use>
+                                    </svg>
                                 </div>
                             </div>
                             <div class="filter-aside__content open">
                                 <label class="search__label visible">
-                                    <input class="search__input filter-aside__search" style="background-color: #1f1f1f;"
-                                           placeholder="Поиск...">
+                                    <input class="search__input filter-aside__search" placeholder="Поиск...">
                                 </label>
                                 <div class="filter-list">
 
@@ -6029,13 +6109,14 @@
                             <div class="filter-aside__title">
                                 <a href="#">Покрытие</a>
                                 <div class="filter-aside__arrow open">
-
+                                    <svg class="icon icon_arrow-down">
+                                        <use xlink:href="/static/img/svg/symbol/sprite.svg#arrow-down"></use>
+                                    </svg>
                                 </div>
                             </div>
                             <div class="filter-aside__content open">
                                 <label class="search__label">
-                                    <input class="search__input filter-aside__search" style="background-color: #1f1f1f;"
-                                           placeholder="Поиск...">
+                                    <input class="search__input filter-aside__search" placeholder="Поиск...">
                                 </label>
                                 <div class="filter-list">
 
@@ -6063,13 +6144,14 @@
                             <div class="filter-aside__title">
                                 <a href="#">Тип стенки</a>
                                 <div class="filter-aside__arrow open">
-
+                                    <svg class="icon icon_arrow-down">
+                                        <use xlink:href="/static/img/svg/symbol/sprite.svg#arrow-down"></use>
+                                    </svg>
                                 </div>
                             </div>
                             <div class="filter-aside__content open">
                                 <label class="search__label">
-                                    <input class="search__input filter-aside__search" style="background-color: #1f1f1f;"
-                                           placeholder="Поиск...">
+                                    <input class="search__input filter-aside__search" placeholder="Поиск...">
                                 </label>
                                 <div class="filter-list">
 
@@ -6097,13 +6179,14 @@
                             <div class="filter-aside__title">
                                 <a href="#">Наружный диаметр, мм</a>
                                 <div class="filter-aside__arrow open">
-
+                                    <svg class="icon icon_arrow-down">
+                                        <use xlink:href="/static/img/svg/symbol/sprite.svg#arrow-down"></use>
+                                    </svg>
                                 </div>
                             </div>
                             <div class="filter-aside__content open">
                                 <label class="search__label visible">
-                                    <input class="search__input filter-aside__search" style="background-color: #1f1f1f;"
-                                           placeholder="Поиск...">
+                                    <input class="search__input filter-aside__search" placeholder="Поиск...">
                                 </label>
                                 <div class="filter-list">
 
@@ -8345,7 +8428,9 @@
 
                     </div>
                     <button class="filter-list__reset d-none" data-reset-filter="" type="button">Очистить фильтр
-
+                        <svg class="icon icon_clear-filt">
+                            <use xlink:href="/static/img/svg/symbol/sprite.svg#clear-filt"></use>
+                        </svg>
                     </button>
                 </form>
             </div>
@@ -8364,14 +8449,14 @@
                         </svg>
                     </div>
                 </div>
-                <div class="table-wrapper" style="border: 1px solid #1f1f1f; border-radius: 10px;">
+                <div class="table-wrapper" style="border-radius: 10px;">
                     <table class="product-table style-body style-card style-callback" itemscope=""
                            itemtype="https://schema.org/ItemList">
                         <tbody id="listing-table-target" data-pagination-target="">
 
                         {% for product in products %}
 
-                        <tr class="product-table__item" style="border-bottom: 1px solid #1f1f1f;">
+                        <tr class="product-table__item">
                             <td>
                                 <div class="short-product">
                                     <div class="short-product__photo">
@@ -8401,7 +8486,7 @@
 
 
                                     <div class="product-table__btn btn-find"
-                                         style="background-color: white; outline: 1px solid #1a1a1a;"
+                                         style="background-color: white;"
                                          data-call-modal="find-price"
                                          onclick="ym(window.isteels.ym_id, 'reachGoal', 'click_product_price');">
                                         Узнать цену
@@ -8409,10 +8494,10 @@
 
 
                                     <div class="callblock">
-                                        <div class="callblock__item" style="background-color: #1a1a1a;">
+                                        <div class="callblock__item">
                                             <span><i style="color: white;" class="fi fi-rr-phone-call"></i></span>
                                         </div>
-                                        <a class="callblock__item" style="background-color: #1a1a1a;" href="#">
+                                        <a class="callblock__item" href="#">
                                             <span><i style="color: white;" class="fi fi-brands-whatsapp"></i></span>
                                         </a>
                                     </div>
@@ -8440,34 +8525,35 @@
                     }
                 </style>
                 <div class="pagination-block" id="pagination-container">
-    <div class="pagination-block__pagination">
-        <div class="pagination" id="pagination">
-            <ul class="pagination__iner">
-                {% if page_obj.has_previous %}
-                    <li class="pagination__li pagination__previous">
-                        <a class="pagination__link" href="?page={{ page_obj.previous_page_number }}">Назад</a>
-                    </li>
-                {% endif %}
+                    <div class="pagination-block__pagination">
+                        <div class="pagination" id="pagination">
+                            <ul class="pagination__iner">
+                                {% if page_obj.has_previous %}
+                                <li class="pagination__li pagination__previous">
+                                    <a class="pagination__link"
+                                       href="?page={{ page_obj.previous_page_number }}">Назад</a>
+                                </li>
+                                {% endif %}
 
-                {% for page in page_range %}
-                    <li class="pagination__li {% if page == current_page %}pagination__active{% endif %}">
-                        <a class="pagination__link" href="?page={{ page }}">{{ page }}</a>
-                    </li>
-                {% endfor %}
+                                {% for page in page_range %}
+                                <li class="pagination__li {% if page == current_page %}pagination__active{% endif %}">
+                                    <a class="pagination__link" href="?page={{ page }}">{{ page }}</a>
+                                </li>
+                                {% endfor %}
 
-                {% if page_obj.has_next %}
-                    <li class="pagination__li pagination__next">
-                        <a class="pagination__link" href="?page={{ page_obj.next_page_number }}">Вперед</a>
-                    </li>
-                {% endif %}
-            </ul>
-        </div>
-    </div>
-    <div class="pagination-block__count">
-        Показано {{ page_obj.start_index }}–{{ page_obj.end_index }} из
-        <span>{{ page_obj.paginator.count }}</span> товаров.
-    </div>
-</div>
+                                {% if page_obj.has_next %}
+                                <li class="pagination__li pagination__next">
+                                    <a class="pagination__link" href="?page={{ page_obj.next_page_number }}">Вперед</a>
+                                </li>
+                                {% endif %}
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="pagination-block__count">
+                        Показано {{ page_obj.start_index }}–{{ page_obj.end_index }} из
+                        <span>{{ page_obj.paginator.count }}</span> товаров.
+                    </div>
+                </div>
             </div>
         </div>
         <div class="not-found-product mt-5"

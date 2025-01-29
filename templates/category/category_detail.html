@@ -4,7 +4,7 @@
 {% block title %}{{ category.name }}{% endblock %}
 
 {% block content %}
-<main style="background-color: black; margin-top: 15px;">
+<main style="margin-top: 15px;">
 
 
     <div class="catalog container">
@@ -24,7 +24,7 @@
 
                         <div class="category-sidebar__title accordion">
                             <div class="click-block-sidebar"></div>
-                            <a style="color: #d2cccc;" href="{{ category.get_absolute_url }}">
+                            <a style="color: #262a31;" href="{{ category.get_absolute_url }}">
                                 {{ category.name }}
                             </a>
                             <div class="accordion-svg accordion-img">
@@ -41,7 +41,7 @@
                             {% for subcategory in category.children.all %}
                             <li class="category-sidebar__submenu-item">
 
-                                <a style="color: #d2cccc;" class="category-sidebar__submenu-link"
+                                <a style="color: #262a31;" class="category-sidebar__submenu-link"
                                    href="{{ subcategory.get_absolute_url }}">
                                     {{ subcategory.name }}
                                 </a>
@@ -95,7 +95,7 @@
             </div>
             <div class="col-lg-9">
 
-                <h1 class="title title_page" style="color: white;">{{ category.name }}</h1>
+                <h1 class="title title_page" style="color: #262a31;">{{ category.name }}</h1>
                 <a class="link-back link-back-mb d-lg-none" href="{% if category.parent %}{{ category.parent.get_absolute_url }}{% else %}{% url 'app:category' %}{% endif %}">Назад</a>
                 <div class="news-container mb-5">
                     <div class="news-list">
