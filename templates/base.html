@@ -4,12 +4,15 @@
 <head itemscope="" itemtype="https://schema.org/WPHeader">
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="icon" type="image/svg+xml" style="border-radius: 50%;" href="{% static 'images/logo.jpeg' %}">
-    <link rel="icon" type="image/jpeg" style="border-radius: 50%;" href="{% static 'images/logo.jpeg' %}">
+    <link rel="icon" type="image/svg+xml" style="border-radius: 50%;" href="{% static 'favicon.png' %}">
+    <link rel="icon" type="image/jpeg" style="border-radius: 50%;" href="{% static 'favicon.png' %}">
 
     <title itemprop="name">{% block title %}{% endblock %}</title>
 
     <link rel="canonical" href="https://uni-trade.kz/">
+
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css">
+    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
 
 
     <meta itemprop="description" name="description"
@@ -21,7 +24,7 @@
           content="Черный и цветной металлопрокат купить оптом с доставкой в Астане. Изготовление деталей по чертежам, металлообработка ☎ +7 (717) 264 02 97">
     <meta property="og:url" content="https://uni-trade.kz/">
 
-    <meta property="og:image" content="{% static 'images/logo_bg.png' %}">
+    <meta property="og:image" content="{% static 'images/logo.png' %}">
 
 
     <meta property="og:site_name" content="Казахстан">
@@ -40,21 +43,7 @@
 
     <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
 
-    <style>
-        input.search__input.main-search {
-            background-color: #1f1f1f;
-        }
-        .cart-modal .my-modal__content {
-            background: #1f1f1f;
-            height: 103vh;
-        }
-        @media (max-width: 991px) {
-            .catalog .link-back-mb {
-                margin-bottom: 20px;
-                margin-top: 20px;
-            }
-        }
-    </style>
+
 
 </head>
 <body >
@@ -62,11 +51,11 @@
 <header class="header"
         style="background-color: white; box-shadow: 0 3px 8px #e2e6ed; border-bottom: 1px solid white;">
     <div class="header-top container">
-        <span style="color: black;">
+        <span style="color: #262a31;">
             Будни: 8:00 - 18:00, Суббота: 8:00 — 17:00
         </span>
         <span>
-            <a style="color: black;" href="mailto:metall@rozmet.ru">
+            <a style="color: #262a31;" href="mailto:metall@rozmet.ru">
                  metall@rozmet.ru
             </a>
         </span>
@@ -156,7 +145,7 @@
 
                         <div class="contacts">
                             <div style="position: relative; display: inline-block;">
-                                <h2 style="color: black; position: relative; z-index: 1;">8 707 777 28 17</h2>
+                                <h2 style="color: #262a31; position: relative; z-index: 1;">8 707 777 28 17</h2>
                                 <div id="star-field"></div>
                             </div>
 
@@ -223,7 +212,7 @@
                             </script>
 
 
-                            <div><span><a style="color: black; font-size: 14px;" href="#">Заказать обратный звонок</a></span></div>
+                            <div><span><a style="color: #262a31; font-size: 14px;" href="#">Заказать обратный звонок</a></span></div>
                         </div>
 
                     </div>
@@ -243,7 +232,7 @@
                 </span>
 
                 <a href="/category/" class="header__catalog btn-toggle">
-                    <span class="header__catalog-text" style="color: black;">Каталог</span>
+                    <span class="header__catalog-text" style="color: #262a31;">Каталог</span>
                 </a>
 
                 <form class="header__search search" action="/search/?search=query&amp;json=true"
@@ -257,25 +246,25 @@
                 <ul class="header__menu">
 
                     <li class="header__menu-item">
-                        <a class="header__menu-link" style="color: black;" href="/">
+                        <a class="header__menu-link" style="color: #262a31;" href="/">
                             Главная</a>
                     </li>
 
                     <li class="header__menu-item">
-                        <a class="header__menu-link" style="color: black;" href="{% url 'app:services' %}">
+                        <a class="header__menu-link" style="color: #262a31;" href="{% url 'app:services' %}">
                             Услуги</a>
                     </li>
 
                     <li class="header__menu-item">
-                        <a class="header__menu-link" style="color: black;" href="{% url 'app:services' %}">
+                        <a class="header__menu-link" style="color: #262a31;" href="{% url 'app:services' %}">
                             Покупателям</a>
                     </li>
 
                     <li class="header__menu-item">
-                        <a class="header__menu-link" href="{% url 'app:contacts' %}" style="color: black;">Контакты</a>
+                        <a class="header__menu-link" href="{% url 'app:contacts' %}" style="color: #262a31;">Контакты</a>
                     </li>
                     <li class="header__menu-item drop-menu">
-                        <a class="header__menu-link with-arrow" href="{% url 'app:about' %}" style="color: black;">
+                        <a class="header__menu-link with-arrow" href="{% url 'app:about' %}" style="color: #262a31;">
                             О компании
                         </a>
                     </li>
@@ -1249,7 +1238,7 @@
 
 <!--/noindex-->
 
-<script src="{% static 'js/Snow.min.js' %}"></script>
+<script src="{% static 'js/tag.js' %}"></script>
 <script src="{% static 'js/libs.js' %}"></script>
 <script src="{% static 'js/index.js' %}"></script>
 <script src="{% static 'js/tools.js' %}"></script>

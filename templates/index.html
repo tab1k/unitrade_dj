@@ -54,9 +54,9 @@
 
     <!-- БЛОК КАТЕГОРИЙ -->
     <section class="section-container mt-4 mt-lg-5">
-        <div class="container" data-aos="zoom-in">
+        <div class="container">
             <div class="about-company-bottom__sub-title" style="color: #ff740f;">Что на практике</div>
-            <h2 class="about-company-bottom__title" style="color: black;">ФАКТОРЫ УСПЕХА</h2>
+            <h2 class="about-company-bottom__title" style="color: #262a31;">ФАКТОРЫ УСПЕХА</h2>
             <div class="about-company-bottom__card row">
 
                 <div class="news-container">
@@ -156,48 +156,42 @@
 
 
     <!-- БЛОК О НАС -->
-    <section class="about" style=" padding: 50px 0; position: relative;">
+    <section class="about" style="position: relative;">
         <div class="container about__top-content" data-aos="zoom-in">
+            <div class="about-company-bottom__sub-title" style="color: #f44336;">Дополнительно</div>
+            <h2 class="about-company-bottom__title" style="color: #262a31;">Наши услуги</h2>
 
             <div class="row" style="position: relative; z-index: 1;">
-                <div class="col-lg-6 col-xl-6">
-                    <!-- О компании -->
-                    <p class="about__suptitle aos-init aos-animate" data-aos="fade-up" data-aos-delay="100"
-                       style="color: #f44336;">О компании</p>
-                    <h2 class="about__title title aos-init aos-animate" data-aos="fade-up" data-aos-delay="50"
-                        style="color: black;">
-                        ВАШ НАДЕЖНЫЙ ПАРТНЕР «Build Line»
-                    </h2>
-                    <div class="about__desc aos-init aos-animate" data-aos="fade-up" data-aos-delay="100"
-                         style="color: #ddd;">
-                        <p style="color: black;">Build Line — ваш надежный партнер в строительстве. Мы предлагаем комплексные поставки
-                            металлопроката, строительных материалов и оборудования. Обеспечивая качественные товары и
-                            услуги, включая доставку, резку и гибку металла, мы помогаем успешно реализовать любой
-                            проект.</p>
-                        <br>
-                        <p style="color: black;">Мы работаем только с оптовыми покупателями – коммерческими и государственными организациями.
-                            Высококвалифицированные эксперты коммерческого отдела помогают клиентам собрать заказ любой
-                            сложности.</p>
-                    </div>
-                </div>
-
-                <div class="col-lg-6 col-xl-6">
+                <div class="container">
                     <!-- Сотрудничество -->
-                    <div class="about__box" style="background-color: gray; border-radius: 8px; padding: 25px;">
-                        <h3 class="about__box-title aos-init aos-animate" data-aos="fade-up" data-aos-delay="50"
-                            style="color: white;">
-                            Сотрудничество с командой «Build Line»
-                        </h3>
-                        <div class="about__box-desc aos-init aos-animate" data-aos="fade-up" data-aos-delay="100"
-                             style="color: #ddd;">
-                            <p>Благодаря широкой сети филиалов в крупнейших городах Казахстана мы доставляем заказы до
-                                любого производственного или складского объекта точно в срок, и с соблюдением всех
-                                условий перевозки данного вида груза.</p>
-                            <br>
-                            <p>У нас в наличии всегда имеется широкий ассортимент готовой продукции – всего более 6 млн
-                                наименований. Весь товар произведен в строгом соответствии с отраслевыми стандартами и
-                                имеет сертификаты качества.</p>
+                    <div class="about__box"
+                         style="background-color: #d5d5d5; border-radius: 8px; padding: 25px; display: flex; flex-wrap: wrap;">
+
+                        <div class="left_side">
+                            <h3 class="about__box-title aos-init aos-animate" data-aos="fade-up" data-aos-delay="50"
+                                style="color: #262a31;">
+                                Сотрудничество с командой «Build Line»
+                            </h3>
+                            <div class="about__box-desc aos-init aos-animate" data-aos="fade-up" data-aos-delay="100"
+                                 style="color: #262a31;">
+                                <p>Благодаря широкой сети филиалов в крупнейших городах Казахстана мы доставляем заказы
+                                    до
+                                    любого производственного или складского объекта точно в срок, и с соблюдением всех
+                                    условий перевозки данного вида груза.</p>
+                                <br>
+                                <p>У нас в наличии всегда имеется широкий ассортимент готовой продукции – всего более 6
+                                    млн наименований. Весь товар произведен в строгом соответствии с отраслевыми
+                                    стандартами
+                                    и имеет сертификаты качества.</p>
+                            </div>
                         </div>
+
+                        <div class="rigth_side">
+                            <img src="{% static 'images/metalls.png' %}"
+                                 style="transform: rotate(290deg); transform-origin: top;">
+                            <img class="sec" src="{% static 'images/trubi.png' %}" style="position: absolute;">
+                        </div>
+
                     </div>
                 </div>
             </div>
@@ -205,10 +199,29 @@
     </section>
 
     <style>
+        .sec {
+            width: 50%;
+            right: 240px;
+            bottom: -55px;
+        }
+
+        .left_side {
+            width: 50%;
+            padding-right: 20px;
+        }
+
+        .rigth_side {
+            width: 50%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            position: relative;
+        }
+
         .about-company-bottom {
-            color: #fff; /* Белый цвет текста */
+            color: #fff;
             padding: 30px;
-            border-radius: 10px; /* Мягкие углы */
+            border-radius: 10px;
             position: relative;
             z-index: 1;
             margin-bottom: 100px;
@@ -216,9 +229,9 @@
 
         .about-company-bottom__card-item {
             position: relative;
-            background-color: #212121; /* Темный фон карточки */
+            background-color: #212121;
             color: #fff;
-            border-radius: 10px; /* Мягкие углы карточки */
+            border-radius: 10px;
             margin: 10px;
             padding: 20px;
             text-align: center;
@@ -236,14 +249,62 @@
         .about-company-bottom__card-item-desc {
             font-size: 14px;
             margin-top: 10px;
-            color: #ddd; /* Серый текст */
+            color: #ddd;
         }
 
         .about-company-bottom__sub-title, .about-company-bottom__title {
             font-weight: bold;
             margin: 20px 0;
         }
+
+        /* Адаптация для мобильных устройств */
+        @media (max-width: 768px) {
+            .about__box {
+                flex-direction: column;
+                padding: 15px;
+            }
+
+            .left_side, .rigth_side {
+                width: 100%;
+                padding: 0;
+            }
+
+            .rigth_side img {
+
+                display: none;
+            }
+
+            .sec {
+                width: 50%;
+                bottom: -30px;
+                right: 0;
+            }
+
+            .about__box-title {
+                font-size: 20px;
+            }
+
+            .about__box-desc {
+                font-size: 14px;
+            }
+        }
+
+        @media (max-width: 480px) {
+            .about__box-title {
+                font-size: 18px;
+            }
+
+            .about__box-desc {
+                font-size: 12px;
+            }
+
+            .sec {
+                width: 60%;
+                bottom: -20px;
+            }
+        }
     </style>
+
 
     <!-- КОНЕЦ БЛОК О НАС -->
 
@@ -252,7 +313,7 @@
 
     <div class="catalog container mt-5">
         <div class="about-company-bottom__sub-title" style="color: #f44336;">Дополнительно</div>
-        <h2 class="about-company-bottom__title" style="color: black;">Наши услуги</h2>
+        <h2 class="about-company-bottom__title" style="color: #262a31;">Наши услуги</h2>
         <div class="row" data-aos="zoom-in">
             <div class="col-lg-12">
 
@@ -260,70 +321,83 @@
 
                 <div style="display: flex; gap: 20px; flex-wrap: wrap; justify-content: center; margin-bottom: 70px;">
                     <!-- Карточка 1 -->
-                    <div style="background-color: gray; border-radius: 16px; padding: 20px; width: 23%; display: flex; flex-direction: column; justify-content: space-between; align-items: center; box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); margin-bottom: 20px;">
-                        <img src="{% static 'images/proizvodstvo-metallokonstrukcij.png' %}" alt="DelPapa"
-                             style="border-radius: 50%; width: 80px; height: 80px; margin-bottom: 15px;">
-                        <h3 style="font-size: 15px; text-align: center; margin-bottom: 10px; color: #ccc;">Производство
-                            металлоконструкций</h3>
+                    <div style="background-color: #d5d5d5; border-radius: 10px; padding: 10px; width: 23%;
+                        display: flex; flex-direction: column; justify-content: center;
+                        align-items: center; box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+                        margin-bottom: 20px; position: relative; overflow: visible; text-align: center; height: 185px;">
+
+                        <img src="{% static 'images/konstruktor.png' %}" alt="DelPapa"
+                             style="width: 150px; height: 150px; position: absolute; top: -30px; left: 50%; transform: translateX(-50%);">
+
+                        <h3 style="font-size: 15px; text-align: center; margin-top: auto; color: #262a31;">
+                            Производство металлоконструкций
+                        </h3>
                     </div>
 
+
                     <!-- Карточка 2 -->
-                    <div style="background-color: gray; border-radius: 16px; padding: 20px; width: 23%; display: flex; flex-direction: column; justify-content: space-between; align-items: center; box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); margin-bottom: 20px;">
-                        <img src="{% static 'images/fundamentnyh-boltov.jpg' %}" alt="BB"
-                             style="border-radius: 50%; width: 80px; height: 80px; margin-bottom: 15px;">
-                        <h3 style="font-size: 15px; text-align: center; margin-bottom: 10px; color: #ccc;">Производство
-                            фундаментных болтов</h3>
+                    <div style="background-color: #d5d5d5; border-radius: 10px; padding: 10px; width: 23%;
+                        display: flex; flex-direction: column; justify-content: center;
+                        align-items: center; box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+                        margin-bottom: 20px; position: relative; overflow: visible; text-align: center; height: 185px;">
+
+                        <img src="{% static 'images/bolt.png' %}" alt="DelPapa"
+                             style="width: 150px; height: 150px; position: absolute; top: -30px; transform: rotate(162deg);">
+
+                        <h3 style="font-size: 15px; text-align: center; margin-top: auto; color: #262a31;">
+                            Производство металлоконструкций
+                        </h3>
                     </div>
 
                     <!-- Карточка 3 -->
-                    <div style="background-color: gray; border-radius: 16px; padding: 20px; width: 23%; display: flex; flex-direction: column; justify-content: space-between; align-items: center; box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); margin-bottom: 20px;">
+                    <div style="background-color: #d5d5d5; border-radius: 10px; padding: 20px; width: 23%; display: flex; flex-direction: column; justify-content: space-between; align-items: center; box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); margin-bottom: 20px;">
                         <img src="{% static 'images/armaturnye-karkai.jpg' %}" alt="Coco"
                              style="border-radius: 50%; width: 80px; height: 80px; margin-bottom: 15px;">
-                        <h3 style="font-size: 15px; text-align: center; margin-bottom: 10px; color: #ccc;">Производство
+                        <h3 style="font-size: 15px; text-align: center; margin-bottom: 10px; color: #262a31;">
+                            Производство
                             арматурных каркасов</h3>
 
                     </div>
 
                     <!-- Карточка 4 -->
-                    <div style="background-color: gray; border-radius: 16px; padding: 20px; width: 23%; display: flex; flex-direction: column; justify-content: space-between; align-items: center; box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); margin-bottom: 20px;">
+                    <div style="background-color: #d5d5d5; border-radius: 10px; padding: 20px; width: 23%; display: flex; flex-direction: column; justify-content: space-between; align-items: center; box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); margin-bottom: 20px;">
                         <img src="{% static 'images/sendvich-panel.jpg' %}" alt="Food"
                              style="border-radius: 50%; width: 80px; height: 80px; margin-bottom: 15px;">
-                        <h3 style="font-size: 15px; text-align: center; margin-bottom: 10px; color: #ccc;">Производство
+                        <h3 style="font-size: 15px; text-align: center; margin-bottom: 10px; color: #262a31;">
+                            Производство
                             сэндвич-панелей</h3>
                     </div>
 
-                    <div style="background-color: gray; border-radius: 16px; padding: 20px; width: 23%; display: flex; flex-direction: column; justify-content: space-between; align-items: center; box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); margin-bottom: 20px;">
+                    <div style="background-color: #d5d5d5; border-radius: 10px; padding: 20px; width: 23%; display: flex; flex-direction: column; justify-content: space-between; align-items: center; box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); margin-bottom: 20px;">
                         <img src="{% static 'images/vzryvozashishenny-elektronagrevatel.jpg' %}" alt="Food"
                              style="border-radius: 50%; width: 80px; height: 80px; margin-bottom: 15px;">
-                        <h3 style="font-size: 15px; text-align: center; margin-bottom: 10px; color: #ccc;">Производство
+                        <h3 style="font-size: 15px; text-align: center; margin-bottom: 10px; color: #262a31;">
+                            Производство
                             взрывозащищенных электронагревателей</h3>
 
                     </div>
 
-                    <div style="background-color: gray; border-radius: 16px; padding: 20px; width: 23%; display: flex; flex-direction: column; justify-content: space-between; align-items: center; box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); margin-bottom: 20px;">
+                    <div style="background-color: #d5d5d5; border-radius: 10px; padding: 20px; width: 23%; display: flex; flex-direction: column; justify-content: space-between; align-items: center; box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); margin-bottom: 20px;">
                         <img src="{% static 'images/protivopozharnyh-sistem.jpg' %}" alt="Food"
                              style="border-radius: 50%; width: 80px; height: 80px; margin-bottom: 15px;">
-                        <h3 style="font-size: 15px; text-align: center; margin-bottom: 10px; color: #ccc;">Производство
+                        <h3 style="font-size: 15px; text-align: center; margin-bottom: 10px; color: #262a31;">
+                            Производство
                             противопожарных систем</h3>
                     </div>
 
-                    <div style="background-color: gray; border-radius: 16px; padding: 20px; width: 23%; display: flex; flex-direction: column; justify-content: space-between; align-items: center; box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); margin-bottom: 20px;">
+                    <div style="background-color: #d5d5d5; border-radius: 10px; padding: 20px; width: 23%; display: flex; flex-direction: column; justify-content: space-between; align-items: center; box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); margin-bottom: 20px;">
                         <img src="{% static 'images/cinkovanie.jpg' %}" alt="Food"
                              style="border-radius: 50%; width: 80px; height: 80px; margin-bottom: 15px;">
-                        <h3 style="font-size: 15px; text-align: center; margin-bottom: 10px; color: #ccc;">Цинкование
+                        <h3 style="font-size: 15px; text-align: center; margin-bottom: 10px; color: #262a31;">Цинкование
                             металлоконструкций</h3>
                     </div>
 
-                    <div style="background-color: gray; border-radius: 16px; padding: 20px; width: 23%; display: flex; flex-direction: column; justify-content: space-between; align-items: center; box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); margin-bottom: 20px;">
+                    <div style="background-color: #d5d5d5; border-radius: 10px; padding: 20px; width: 23%; display: flex; flex-direction: column; justify-content: space-between; align-items: center; box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); margin-bottom: 20px;">
                         <img src="{% static 'images/trubchatyh-svaj.jpg' %}" alt="Food"
                              style="border-radius: 50%; width: 80px; height: 80px; margin-bottom: 15px;">
-                        <h3 style="font-size: 15px; text-align: center; margin-bottom: 10px; color: #ccc;">Производство
+                        <h3 style="font-size: 15px; text-align: center; margin-bottom: 10px; color: #262a31;">
+                            Производство
                             свай из трубы</h3>
-                        <!--                        <a href="#"-->
-                        <!--                           style="text-decoration: none; font-size: 16px; color: #fff; background-color: #333; padding: 10px 15px; border-radius: 50px; display: flex; align-items: center; justify-content: center; gap: 10px; transition: background-color 0.3s ease;">-->
-                        <!--                            Презентация-->
-                        <!--                            <span style="font-size: 18px; font-weight: bold; margin-left: 5px;">➔</span>-->
-                        <!--                        </a>-->
                     </div>
 
                 </div>
@@ -347,102 +421,240 @@
 
     <!-- КОНЕЦ УСЛУГИ -->
 
+    <!-- СЛАЙДЕР -->
+    <style>
 
-    <!-- ДОПОЛНИТЕЛЬНЫЙ БЛОК О НАС -->
-    <section class="container about-company__bottom">
-        <div class="about-company-bottom" data-aos="zoom-in"> <!-- Темный фон -->
-            <div class="about-company-bottom__sub-title" style="color: #ff740f;">Что на практике</div>
-            <h2 class="about-company-bottom__title" style="color: white;">ФАКТОРЫ УСПЕХА</h2>
+        /* Кнопки управления */
+        .slider__controls {
+            display: flex;
+            gap: 10px;
+        }
 
-            <div class="about-company-bottom__card row">
+        .btn-control {
+            background: none;
+            border: none;
+            cursor: pointer;
+        }
 
-                <div class="col-lg-4">
-                    <div class="about-company-bottom__card-item"
-                         style="
+        .swiper {
+            width: 100%;
+            padding-bottom: 30px;
+        }
+
+        .swiper-slide {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        /* Карточка товара */
+        .sentence-card {
+            width: auto;
+
+            text-align: center;
+            background: #fff;
+        }
+
+        .sentence-card img {
+            max-width: 100%;
+            border-radius: 8px;
+        }
+
+        .swiper-button-prev, .swiper-button-next {
+            background: rgba(0, 0, 0, 0.5);
+            padding: 10px;
+            border-radius: 50%;
+            color: white;
+        }
+
+        /* Верхний блок карточки */
+        .sentence-card__top {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .sentence-card__img img {
+            width: 100%;
+            border-radius: 8px;
+        }
+
+        .sentence-card__info-btn {
+            background: none;
+            border: none;
+            cursor: pointer;
+        }
+
+        .sentence-card__info {
+            display: block;
+            font-weight: bold;
+            margin-top: 10px;
+        }
+
+        .sentence-card__characteristics table {
+            width: 100%;
+            margin-top: 10px;
+            font-size: 14px;
+        }
+
+        .sentence-card__characteristics td {
+            padding: 5px;
+            border-bottom: 1px solid #ddd;
+        }
+
+        .sentence-card__price {
+            margin-top: 10px;
+            font-size: 16px;
+            font-weight: bold;
+        }
+
+        .sentence-card__footer {
+            margin-top: 10px;
+        }
+
+        .btn-slide {
+            background: #007bff;
+            color: white;
+            border: none;
+            padding: 10px;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+
+        .btn-slide:hover {
+            background: #0056b3;
+        }
+    </style>
+
+    <div class="container mb-5" data-aos="zoom-in">
+        <div class="slider">
+            <div class="about-company-bottom__sub-title" style="color: #f44336;">Дополнительно</div>
+            <h2 class="about-company-bottom__title" style="color: #262a31;">Наши услуги</h2>
+
+            <!-- Сам слайдер -->
+            <div class="swiper" style="margin: 0px;">
+                <div class="swiper-wrapper">
+
+                    <!-- Слайды -->
+                    <div class="swiper-slide" style="margin-right: 0px;">
+                        <div class="sentence-card">
+                            <div class="">
+                                <div class="about-company-bottom__card-item"
+                                     style="
                      background-image: url({% static 'images/icon-today-1.webp' %});
                      background-size: contain;
                      background-repeat: no-repeat;
                      background-position: center;">
-                        <div class="about-company-bottom__card-item-title">Команда ГК «UniTrade»</div>
-                        <div class="about-company-bottom__card-item-desc">
-                            Наши сотрудники - эксперты в области проката металла, сталей и сплавов...
+                                    <div class="about-company-bottom__card-item-title">Команда ГК «UniTrade»</div>
+                                    <div class="about-company-bottom__card-item-desc">
+                                        Наши сотрудники - эксперты в области проката металла, сталей и сплавов...
+                                    </div>
+                                </div>
+                            </div>
                         </div>
                     </div>
-                </div>
 
-                <div class="col-lg-4">
-                    <div class="about-company-bottom__card-item"
-                         style="background-size: cover;">
-                        <div class="about-company-bottom__card-item-title">Быстрая и бережная доставка</div>
-                        <div class="about-company-bottom__card-item-desc">
-                            Сеть региональных складов и партнёрство с крупнейшими транспортными компаниями...
+                    <div class="swiper-slide" style="margin-right: 0px;">
+                        <div class="sentence-card">
+                            <div class="">
+                                <div class="about-company-bottom__card-item"
+                                     style="
+                     background-image: url({% static 'images/icon-today-1.webp' %});
+                     background-size: contain;
+                     background-repeat: no-repeat;
+                     background-position: center;">
+                                    <div class="about-company-bottom__card-item-title">Команда ГК «UniTrade»</div>
+                                    <div class="about-company-bottom__card-item-desc">
+                                        Наши сотрудники - эксперты в области проката металла, сталей и сплавов...
+                                    </div>
+                                </div>
+                            </div>
                         </div>
                     </div>
-                </div>
 
-                <div class="col-lg-4">
-                    <div class="about-company-bottom__card-item"
-                         style="background-image: url(); background-size: cover;">
-                        <div class="about-company-bottom__card-item-title">Уникальная база поставщиков</div>
-                        <div class="about-company-bottom__card-item-desc">
-                            Мы производим широкий спектр изделий из черного, цветного и нержавеющего проката...
+                    <div class="swiper-slide" style="margin-right: 0px;">
+                        <div class="sentence-card">
+                            <div class="">
+                                <div class="about-company-bottom__card-item"
+                                     style="
+                     background-image: url({% static 'images/icon-today-1.webp' %});
+                     background-size: contain;
+                     background-repeat: no-repeat;
+                     background-position: center;">
+                                    <div class="about-company-bottom__card-item-title">Команда ГК «UniTrade»</div>
+                                    <div class="about-company-bottom__card-item-desc">
+                                        Наши сотрудники - эксперты в области проката металла, сталей и сплавов...
+                                    </div>
+                                </div>
+                            </div>
                         </div>
                     </div>
+
+                    <div class="swiper-slide" style="margin-right: 0px;">
+                        <div class="sentence-card">
+                            <div class="">
+                                <div class="about-company-bottom__card-item"
+                                     style="
+                     background-image: url({% static 'images/icon-today-1.webp' %});
+                     background-size: contain;
+                     background-repeat: no-repeat;
+                     background-position: center;">
+                                    <div class="about-company-bottom__card-item-title">Команда ГК «UniTrade»</div>
+                                    <div class="about-company-bottom__card-item-desc">
+                                        Наши сотрудники - эксперты в области проката металла, сталей и сплавов...
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
                 </div>
             </div>
         </div>
-    </section>
 
-    <style>
-        .about-company-bottom {
-            color: #fff; /* Белый цвет текста */
-            padding: 30px;
-            border-radius: 10px; /* Мягкие углы */
-        }
+        <div class="catalog__promo-help-white promo-help-white"
+             style="">
+            <div class="promo-help-white__inner">
+                <div class="promo-help-white__title">Нужна помощь?</div>
+                <div class="promo-help-white__desc">
+                    <p>Обсудить все вопросы, рассчитать стоимость доставки и договориться о способе оплаты вы можете с
+                        нашими специалистами.</p>
+                </div>
+                <div class="promo-help-white__controls">
+                    <button class="promo-help-white__order btn" data-modal-toggle="#modal-request">
+                        Оставить заявку
+                    </button>
+                    <a class="promo-help-white__consultant btn btn_outline" href="javascript:void(0);"
+                       onclick="jivo_api.open()">
+                        Онлайн консультант
+                    </a>
+                </div>
+            </div>
+        </div>
+    </div>
 
-        .about-company-bottom__card-item {
-            position: relative;
-            background-color: gray; /* Темный фон карточки */
-            color: #fff;
-            border-radius: 10px; /* Мягкие углы карточки */
-            margin: 10px;
-            padding: 20px;
-            text-align: center;
-            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-            height: 220px; /* Уменьшенная высота карточки */
-        }
+    <!-- Подключаем Swiper JS -->
+    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
 
-        .about-company-bottom__card-item-title {
-            font-size: 18px;
-            font-weight: bold;
-            margin-top: 10px;
-            color: white;
-        }
-
-        .about-company-bottom__card-item-desc {
-            font-size: 14px;
-            margin-top: 10px;
-            color: #ddd; /* Серый текст */
-        }
-
-        .about-company-bottom__sub-title, .about-company-bottom__title {
-            font-weight: bold;
-            margin: 20px 0;
-        }
-
-        /* Уточнение текста в карточке */
-        .about-company-bottom__card-item-desc {
-            overflow: hidden; /* Обрезает текст, если слишком длинный */
-            text-overflow: ellipsis; /* Указывает многоточие, если текст выходит за пределы */
-            display: -webkit-box;
-            -webkit-line-clamp: 3; /* Количество строк, отображаемых для описания */
-            -webkit-box-orient: vertical;
-        }
-    </style>
-
-    <!-- КОНЕЦ ДОПОЛНИТЕЛЬНЫЙ БЛОК О НАС -->
-
-
+    <script>
+        document.addEventListener("DOMContentLoaded", function () {
+            new Swiper(".swiper", {
+                slidesPerView: 3,
+                spaceBetween: 24,
+                loop: true,
+                navigation: {
+                    nextEl: ".slider-next",
+                    prevEl: ".slider-prev",
+                },
+                breakpoints: {
+                    320: { slidesPerView: 1 },
+                    768: { slidesPerView: 2 },
+                    1024: { slidesPerView: 3 },
+                },
+            });
+        });
+    </script>
+    <!-- КОНЕЦ СЛАЙДЕРА-->
 
 
 </main>
