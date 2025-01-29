@@ -27,6 +27,9 @@
     <meta property="og:site_name" content="Казахстан">
 
     <link rel="preload" as="image" href="{% static 'images/prof.webp' %}">
+    <link rel="preload" as="video" href="{% static 'video/video2.mp4' %}">
+
+    <link rel="preload" as="image" href="{% static 'images/prof.webp' %}">
 
 
     <link rel="stylesheet" href="{% static 'css/style.css' %}">
@@ -55,11 +58,6 @@
 
 </head>
 <body style="background-color: white;">
-
-<script async="" src="{% static 'js/rumscript.js' %}"></script>
-
-<link href="{% static 'css/snow.min.css' %}" rel="stylesheet">
-
 
 <header class="header"
         style="background-color: white; box-shadow: 0 3px 8px rgba(255, 255, 255, 0.05); border-bottom: 1px solid white;">
@@ -513,6 +511,17 @@
 
 <style>
 
+    .order-click-modal .my-modal__content {
+        background-color: #1a1a1a;
+    }
+    .order-click-modal .modal-order__bottom {
+        background-color: #1a1a1a;
+    }
+
+    .my-modal.cart-modal.open {
+        margin-top: 28px;
+    }
+
 
     .header-top {
         display: flex;
@@ -772,11 +781,7 @@
         </div>
     </div>
 </div>
-<style>
-    .my-modal.cart-modal.open {
-        margin-top: 28px;
-    }
-</style>
+
 
 <div class="my-modal order-processed" data-modal="order-processed">
     <div class="my-modal__content">
@@ -886,14 +891,7 @@
         </div>
     </div>
 </div>
-<style>
-    .order-click-modal .my-modal__content {
-        background-color: #1a1a1a;
-    }
-    .order-click-modal .modal-order__bottom {
-        background-color: #1a1a1a;
-    }
-</style>
+
 
 <!--/noindex-->
 <div id="content">
