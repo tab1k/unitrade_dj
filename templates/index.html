@@ -11,7 +11,7 @@
     <!-- БЛОК ВИДЕО -->
     <section class="hero">
         <div class="hero__video">
-            <video class="lazy" autoplay muted loop playsinline poster="{% static 'images/prof.webp' %}">
+            <video class="lazy" autoplay muted loop playsinline poster="{% static 'images/kzjpg' %}">
                 <source data-src="{% static 'video/video2.mp4' %}" type="video/mp4">
             </video>
 
@@ -170,7 +170,7 @@
                         <div class="left_side">
                             <h3 class="about__box-title aos-init aos-animate" data-aos="fade-up" data-aos-delay="50"
                                 style="color: #262a31;">
-                                Сотрудничество с командой «Build Line»
+                                Сотрудничество с командой «Стальная федерация»
                             </h3>
                             <div class="about__box-desc aos-init aos-animate" data-aos="fade-up" data-aos-delay="100"
                                  style="color: #262a31;">
@@ -190,6 +190,7 @@
                             <img src="{% static 'images/metalls.png' %}"
                                  style="transform: rotate(290deg); transform-origin: top;">
                             <img class="sec" src="{% static 'images/trubi.png' %}" style="position: absolute;">
+                            <img class="secs" src="{% static 'images/rulon.png' %}" style="position: absolute;">
                         </div>
 
                     </div>
@@ -203,6 +204,12 @@
             width: 50%;
             right: 240px;
             bottom: -55px;
+        }
+
+        .secs {
+            width: 50%;
+            right: 0px;
+            bottom: -90px;
         }
 
         .left_side {

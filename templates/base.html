@@ -183,33 +183,6 @@
                                 }
                             </style>
 
-                            <script>
-                                const starField = document.getElementById('star-field');
-
-                                // Функция для создания золотых ромбиков
-                                function createStar() {
-                                    const star = document.createElement('div');
-                                    star.className = 'star';
-
-                                    // Случайное положение звезды вокруг номера
-                                    const x = Math.random() * 100; // проценты
-                                    const y = Math.random() * 100; // проценты
-
-                                    star.style.top = `${y}%`;
-                                    star.style.left = `${x}%`;
-                                    star.style.animationDelay = `${Math.random() * 2}s`; // Рандомная задержка мерцания
-
-                                    starField.appendChild(star);
-
-                                    // Удаляем звезду через 4 секунды
-                                    setTimeout(() => {
-                                        star.remove();
-                                    }, 4000); // Существование звезды
-                                }
-
-                                // Периодическое создание звёзд
-                                setInterval(createStar, 400); // Каждые 400 мс создаётся звезда
-                            </script>
 
 
                             <div><span><a style="color: #262a31; font-size: 14px;" href="#">Заказать обратный звонок</a></span></div>
