@@ -158,8 +158,10 @@ class ProxyProductListView(View):
         # Проверяем, есть ли данные в кэше
         cache_key = f'products_{slug}'
         products = cache.get(cache_key)
+        filters_cache_key = f'filters_{slug}'
+        filters = cache.get(filters_cache_key)
 
-        if not products:
+        if not products or not filters:
             # Формируем правильный URL для категории
             external_url = f'https://isteels.kz/catalog/{slug}/'
             headers = {
@@ -186,8 +188,21 @@ class ProxyProductListView(View):
                         'url': product_url,
                     })
 
+                # Парсим фильтры
+                filters = {}
+                filter_form = soup.find('form')  # Находим сам `form`, без использования классов
+                if filter_form:
+                    filter_blocks = filter_form.find_all('div', class_='filter-aside__item')  # Ищем все блоки фильтров по классу
+                    for block in filter_blocks:
+                        filter_title = block.find('div', class_='filter-aside__title')  # Заголовок фильтра
+                        if filter_title:
+                            filter_name = filter_title.get_text(strip=True)
+                            filter_values = [label.get_text(strip=True) for label in block.find_all('label')]  # Опции фильтра
+                            filters[filter_name] = filter_values
+
                 # Сохраняем данные в кэш на 1 час
                 cache.set(cache_key, products, 3600)
+                cache.set(filters_cache_key, filters, 3600)
 
             except requests.exceptions.RequestException as e:
                 print(f"Ошибка при запросе к {external_url}: {e}")
@@ -196,7 +211,8 @@ class ProxyProductListView(View):
                 print(f"Ошибка при парсинге HTML: {e}")
                 return HttpResponseServerError("Ошибка при обработке данных с внешнего сайта.")
 
-        return render(request, self.template_name, {'products': products, 'category_slug': slug})
+        return render(request, self.template_name, {'products': products, 'filters': filters, 'category_slug': slug})
+
 
 
 class ProxyProductDetailView(View):

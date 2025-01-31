@@ -315,107 +315,83 @@
         <div class="about-company-bottom__sub-title" style="color: #f44336;">Дополнительно</div>
         <h2 class="about-company-bottom__title" style="color: #262a31;">Наши услуги</h2>
         <div class="row" data-aos="zoom-in">
-            <div class="col-lg-12">
+            <div class="news-container" style="width: 90%;">
+                    <div class="news-list" style="gap: 5px;">
 
-                <a class="link-back link-back-mb d-lg-none mt-0" href="{% url 'app:services' %}">Услуги</a>
+                        <a class="news-list__item" href="{{ category.get_absolute_url }}">
+                            <div class="news-list__photo"
+                                 style="background-image: url({% static 'images/service/lazer.jpeg' %})">
+                                <div class="news-list__info">
+                                    <h2 class="news-list__title">Лазерная резка металла</h2>
+                                </div>
+                            </div>
+                        </a>
 
-                <div style="display: flex; gap: 20px; flex-wrap: wrap; justify-content: center; margin-bottom: 70px;">
-                    <!-- Карточка 1 -->
-                    <div style="background-color: #d5d5d5; border-radius: 10px; padding: 10px; width: 23%;
-                        display: flex; flex-direction: column; justify-content: center;
-                        align-items: center; box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
-                        margin-bottom: 20px; position: relative; overflow: visible; text-align: center; height: 185px;">
+                        <a class="news-list__item" href="{{ category.get_absolute_url }}">
+                            <div class="news-list__photo"
+                                 style="background-image: url({% static 'images/service/gibka.jpeg' %})">
+                                <div class="news-list__info">
+                                    <h2 class="news-list__title">Гибка листового металла</h2>
+                                </div>
+                            </div>
+                        </a>
 
-                        <img src="{% static 'images/konstruktor.png' %}" alt="DelPapa"
-                             style="width: 150px; height: 150px; position: absolute; top: -30px; left: 50%; transform: translateX(-50%);">
+                        <a class="news-list__item" href="{{ category.get_absolute_url }}">
+                            <div class="news-list__photo"
+                                 style="background-image: url({% static 'images/service/polimer.jpeg' %})">
+                                <div class="news-list__info">
+                                    <h2 class="news-list__title">Полимерная покраска</h2>
+                                </div>
+                            </div>
+                        </a>
 
-                        <h3 style="font-size: 15px; text-align: center; margin-top: auto; color: #262a31;">
-                            Производство металлоконструкций
-                        </h3>
+                        <a class="news-list__item" href="{{ category.get_absolute_url }}">
+                            <div class="news-list__photo"
+                                 style="background-image: url({% static 'images/service/decor.jpeg' %})">
+                                <div class="news-list__info">
+                                    <h2 class="news-list__title">Декоративная резка металла</h2>
+                                </div>
+                            </div>
+                        </a>
+
+                        <a class="news-list__item" href="{{ category.get_absolute_url }}">
+                            <div class="news-list__photo"
+                                 style="background-image: url({% static 'images/service/tokar.jpeg' %})">
+                                <div class="news-list__info">
+                                    <h2 class="news-list__title">Токарные работы</h2>
+                                </div>
+                            </div>
+                        </a>
+
+                        <a class="news-list__item" href="{{ category.get_absolute_url }}">
+                            <div class="news-list__photo"
+                                 style="background-image: url({% static 'images/service/mechanics.jpeg' %})">
+                                <div class="news-list__info">
+                                    <h2 class="news-list__title">Механические работы</h2>
+                                </div>
+                            </div>
+                        </a>
+
+                        <a class="news-list__item" href="{{ category.get_absolute_url }}">
+                            <div class="news-list__photo"
+                                 style="background-image: url({% static 'images/service/svarks.jpeg' %})">
+                                <div class="news-list__info">
+                                    <h2 class="news-list__title">Сварочные работы</h2>
+                                </div>
+                            </div>
+                        </a>
+
+                        <a class="news-list__item" href="{{ category.get_absolute_url }}">
+                            <div class="news-list__photo"
+                                 style="background-image: url({% static 'images/service/dostavka.jpeg' %})">
+                                <div class="news-list__info">
+                                    <h2 class="news-list__title">Доставка</h2>
+                                </div>
+                            </div>
+                        </a>
+
                     </div>
-
-
-                    <!-- Карточка 2 -->
-                    <div style="background-color: #d5d5d5; border-radius: 10px; padding: 10px; width: 23%;
-                        display: flex; flex-direction: column; justify-content: center;
-                        align-items: center; box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
-                        margin-bottom: 20px; position: relative; overflow: visible; text-align: center; height: 185px;">
-
-                        <img src="{% static 'images/bolt.png' %}" alt="DelPapa"
-                             style="width: 150px; height: 150px; position: absolute; top: -30px; transform: rotate(162deg);">
-
-                        <h3 style="font-size: 15px; text-align: center; margin-top: auto; color: #262a31;">
-                            Производство металлоконструкций
-                        </h3>
-                    </div>
-
-                    <!-- Карточка 3 -->
-                    <div style="background-color: #d5d5d5; border-radius: 10px; padding: 20px; width: 23%; display: flex; flex-direction: column; justify-content: space-between; align-items: center; box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); margin-bottom: 20px;">
-                        <img src="{% static 'images/armaturnye-karkai.jpg' %}" alt="Coco"
-                             style="border-radius: 50%; width: 80px; height: 80px; margin-bottom: 15px;">
-                        <h3 style="font-size: 15px; text-align: center; margin-bottom: 10px; color: #262a31;">
-                            Производство
-                            арматурных каркасов</h3>
-
-                    </div>
-
-                    <!-- Карточка 4 -->
-                    <div style="background-color: #d5d5d5; border-radius: 10px; padding: 20px; width: 23%; display: flex; flex-direction: column; justify-content: space-between; align-items: center; box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); margin-bottom: 20px;">
-                        <img src="{% static 'images/sendvich-panel.jpg' %}" alt="Food"
-                             style="border-radius: 50%; width: 80px; height: 80px; margin-bottom: 15px;">
-                        <h3 style="font-size: 15px; text-align: center; margin-bottom: 10px; color: #262a31;">
-                            Производство
-                            сэндвич-панелей</h3>
-                    </div>
-
-                    <div style="background-color: #d5d5d5; border-radius: 10px; padding: 20px; width: 23%; display: flex; flex-direction: column; justify-content: space-between; align-items: center; box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); margin-bottom: 20px;">
-                        <img src="{% static 'images/vzryvozashishenny-elektronagrevatel.jpg' %}" alt="Food"
-                             style="border-radius: 50%; width: 80px; height: 80px; margin-bottom: 15px;">
-                        <h3 style="font-size: 15px; text-align: center; margin-bottom: 10px; color: #262a31;">
-                            Производство
-                            взрывозащищенных электронагревателей</h3>
-
-                    </div>
-
-                    <div style="background-color: #d5d5d5; border-radius: 10px; padding: 20px; width: 23%; display: flex; flex-direction: column; justify-content: space-between; align-items: center; box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); margin-bottom: 20px;">
-                        <img src="{% static 'images/protivopozharnyh-sistem.jpg' %}" alt="Food"
-                             style="border-radius: 50%; width: 80px; height: 80px; margin-bottom: 15px;">
-                        <h3 style="font-size: 15px; text-align: center; margin-bottom: 10px; color: #262a31;">
-                            Производство
-                            противопожарных систем</h3>
-                    </div>
-
-                    <div style="background-color: #d5d5d5; border-radius: 10px; padding: 20px; width: 23%; display: flex; flex-direction: column; justify-content: space-between; align-items: center; box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); margin-bottom: 20px;">
-                        <img src="{% static 'images/cinkovanie.jpg' %}" alt="Food"
-                             style="border-radius: 50%; width: 80px; height: 80px; margin-bottom: 15px;">
-                        <h3 style="font-size: 15px; text-align: center; margin-bottom: 10px; color: #262a31;">Цинкование
-                            металлоконструкций</h3>
-                    </div>
-
-                    <div style="background-color: #d5d5d5; border-radius: 10px; padding: 20px; width: 23%; display: flex; flex-direction: column; justify-content: space-between; align-items: center; box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); margin-bottom: 20px;">
-                        <img src="{% static 'images/trubchatyh-svaj.jpg' %}" alt="Food"
-                             style="border-radius: 50%; width: 80px; height: 80px; margin-bottom: 15px;">
-                        <h3 style="font-size: 15px; text-align: center; margin-bottom: 10px; color: #262a31;">
-                            Производство
-                            свай из трубы</h3>
-                    </div>
-
                 </div>
-
-                <script>
-                    // Адаптивность: на мобильных устройствах будет по 3 карточки на строке
-                    if (window.innerWidth <= 768) {
-                      const cards = document.querySelectorAll('div[style*="width: 23%"]');
-                      cards.forEach(card => card.style.width = '30%');
-                    }
-
-                    // На экранах до 480px по 2 карточки на строке
-                    if (window.innerWidth <= 480) {
-                      const cards = document.querySelectorAll('div[style*="width: 30%"]');
-                      cards.forEach(card => card.style.width = '45%');
-                    }
-                </script>
-            </div>
         </div>
     </div>
 
