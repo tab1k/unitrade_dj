@@ -11,21 +11,19 @@
         <section class="about-company__head">
             <div class="about-company-head">
                 <div class="container">
-                    <h1 class="about-company-head__title">Контакты</h1>
-                    <div class="about-company-head__desc" style="color: #262a31;">
-                        Группа компаний «Интерстилс» поставляет металлопрокат и сопутствующие товары заказчикам в
-                        России, Казахстане,
-                        Узбекистане, а также других странах ближнего и дальнего зарубежья.
+                    <h1 class="about-company-head__title" style="color: white;">Контакты</h1>
+                    <div class="about-company-head__desc" style="color: white;">
+                        Благодаря большим объёмам выпускаемой продукции и прямым поставкам с заводов, Стальная Федерация может предложить лучшие цены на металлоизделия.
                     </div>
                 </div>
             </div>
         </section>
         <style>
             .about-company-head {
-                height: 270px;
+                height: 300px;
                 width: 100%;
                 background-color: #ededed;
-                background-image: url(#);
+                background-image: url({% static 'images/kz.jpg' %});
                 background-repeat: no-repeat;
                 background-position: right;
                 padding-top: 25px;
@@ -48,14 +46,62 @@
                     <section class="contacts__map">
                         <div class="contacts-map">
                             <div id="contacts-map">
-                                <iframe src="https://yandex.ru/map-widget/v1/?lang=ru_RU&amp;scroll=true&amp;source=constructor-api&amp;um=constructor%3A273ef57fd2e3fe3fcb2f8c72d2c9123564330b69e804eb8b16efab4b0ba9cca5"
-                                        frameborder="0" allowfullscreen="true" width="100%" height="330px"
-                                        style="display: block; max-width: 1180px; margin: 0 auto;"></iframe>
+                                <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2905.4273235047276!2d76.89413371232594!3d43.26342267100286!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3883695fb8e9401f%3A0x648292358dfb7453!2zMSwg0L_RgC3Rgi4g0KDQsNC50YvQvNCx0LXQutCwIDI1MSwg0JDQu9C80LDRgtGLIDA1MDAwMA!5e0!3m2!1sru!2skz!4v1738606701691!5m2!1sru!2skz"
+                                        class="map-frame" allowfullscreen="" loading="lazy"
+                                        referrerpolicy="no-referrer-when-downgrade"></iframe>
 
                                 <div id="ymap_ctrl_display">
                                     <h4>Чтобы изменить масштаб, прокручивайте карту, удерживая клавишу Ctrl.</h4>
                                 </div>
                             </div>
+
+                            <style>
+                                #contacts-map {
+                                    position: relative;
+                                    width: 100%;
+                                    max-width: 1180px;
+                                    margin: 0 auto;
+                                }
+
+                                .map-frame {
+                                    width: 100%;
+                                    height: 330px;
+                                    border: 0;
+                                    border-radius: 10px;
+                                }
+
+                                #ymap_ctrl_display {
+                                    text-align: center;
+                                    padding: 10px;
+                                }
+
+                                /* Адаптация для мобильных устройств */
+                                @media (max-width: 768px) {
+                                    .map-frame {
+                                        height: 250px;
+                                    }
+
+                                    #ymap_ctrl_display h4 {
+                                        font-size: 14px;
+                                    }
+                                }
+
+                                @media (max-width: 480px) {
+                                    .map-frame {
+                                        height: 200px;
+                                    }
+
+                                    #ymap_ctrl_display h4 {
+                                        font-size: 12px;
+                                    }
+                                }
+                                @media (max-width: 991px) {
+                                    .contacts__map {
+                                        margin-bottom: -100px;
+                                    }
+                                }
+                            </style>
+
                         </div>
                     </section>
                 </div>
@@ -68,32 +114,36 @@
                                 <div class="col-lg-5">
                                     <h2 class="col-lg-12 contacts-adress__office">Отдел продаж</h2>
                                     <div class="col-lg-12 contacts-adress__time">
-                                        <p>Пн-Чт: с 9:00 до 18:00, Пт: с 9:00 до 17:00</p>
+                                        <p>Пн-Пт: с 9:00 до 18:00</p>
                                     </div>
                                 </div>
                                 <div class="col-lg-7">
                                     <div class="row">
                                         <div class="col-lg-12 contacts-adress__title">Адрес</div>
-                                        <div class="col-lg-12 contacts-adress__desc">Улица Сыганак, 54а, БЦ "А", офис
-                                            1001, 10 этаж
+                                        <div class="col-lg-12 contacts-adress__desc">Республика Казахстан, город Алматы,
+                                            Проспект Райымбека 251/1
                                         </div>
                                     </div>
                                     <div class="row">
+
                                         <div class="col-lg">
                                             <div class="contacts-adress__title">
-                                                для Астаны
+                                                Телефон
                                             </div>
-                                            <div class="contacts-adress__desc">+7 (717) 264 02 97</div>
+                                            <div class="contacts-adress__desc">+7 (747) 562 05 16</div>
+                                        </div>
+
+                                        <div class="col-lg">
+                                            <div class="contacts-adress__title">
+                                                <span><i class="fi fi-brands-whatsapp"></i></span>
+                                                Whatsapp
+                                            </div>
+                                            <div class="contacts-adress__desc">+7 (747) 562 05 16</div>
                                         </div>
                                         <div class="col-lg">
                                             <div class="contacts-adress__title">Email</div>
                                             <div class="contacts-adress__desc mgo-email" id="contacts-adress__email">
-                                                <span class="mgo-email">astana@isteels.kz</span>
-                                                <span data-tippy-content="Cкопировать">
-                                                    <svg class="icon icon_copy">
-                                                      <use xlink:href="/static/img/svg/symbol/sprite.svg#copy"></use>
-                                                    </svg>
-                                                </span>
+                                                <span class="mgo-email">zakaz@steelfed.kz</span>
                                             </div>
                                         </div>
                                     </div>
@@ -151,38 +201,50 @@
                     </section>
                 </div>
             </div>
-            <div class="row mb-5">
-                <div class="col-12">
-                    <div class="catalog__promo-help-white promo-help-white"
-                         style="background-image: url(/static/img/content/promo-help-white.webp);">
-                        <div class="promo-help-white__inner">
-                            <div class="promo-help-white__title">Нужна помощь?</div>
-                            <div class="promo-help-white__desc">
-                                <p>Обсудить все вопросы, рассчитать стоимость доставки и договориться о способе оплаты
-                                    вы можете с
-                                    нашими специалистами.</p>
-                            </div>
-                            <div class="promo-help-white__controls">
-                                <button class="promo-help-white__order btn" data-modal-toggle="#modal-request">
-                                    Оставить заявку
-                                    <svg class="icon icon_arrow-right">
-                                        <use xlink:href="/static/img/svg/symbol/sprite.svg#arrow-right"></use>
-                                    </svg>
-                                </button>
-                                <a class="promo-help-white__consultant btn btn_outline" href="javascript:void(0);"
-                                   onclick="jivo_api.open()">
-                                    Онлайн консультант
-                                    <svg class="icon icon_chat">
-                                        <use xlink:href="/static/img/svg/symbol/sprite.svg#chat"></use>
-                                    </svg>
-                                </a>
-                            </div>
-                        </div>
-                    </div>
+
+            <style>
+                @media (max-width: 480px) {
+                    .contacts div {
+                        font-size: 1rem;
+                        text-align: left;
+                    }
+                }
+            </style>
+        </div>
+    </div>
+
+    <div class="container">
+        <div class="catalog__promo-help-white promo-help-white mb-5 mt-2"
+             style="background-image: url({% static 'images/kz.jpg' %})">
+            <div class="promo-help-white__inner">
+                <div class="promo-help-white__title" style="color: white;">Нужна помощь?</div>
+                <div class="promo-help-white__desc">
+                    <p style="color: white;">Обсудить все вопросы, рассчитать стоимость доставки и договориться о
+                        способе оплаты вы можете с
+                        нашими специалистами.</p>
+                </div>
+                <div class="promo-help-white__controls" style="gap: 7px;">
+                    <button class="promo-help-white__order btn" data-modal-toggle="#modal-request"
+                            style="background-color: #ff740f; color: white;">
+                        Оставить заявку
+                    </button>
+                    <a class="promo-help-white__consultant btn btn_outline" href="javascript:void(0);"
+                       onclick="jivo_api.open()" style="background-color: #383a44; color: white;">
+                        Онлайн консультант
+                    </a>
                 </div>
             </div>
         </div>
     </div>
+
+    <style>
+        @media (max-width: 991px) {
+        .promo-help-white__inner {
+            background-image: url({% static 'images/kz.jpg' %});
+            border-radius: 10px;
+        }
+    }
+    </style>
 
 
 </main>

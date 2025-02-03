@@ -44,19 +44,18 @@
     <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
 
 
-
 </head>
-<body >
+<body>
 
 <header class="header"
         style="background-color: white; box-shadow: 0 3px 8px #e2e6ed; border-bottom: 1px solid white;">
     <div class="header-top container">
         <span style="color: #262a31;">
-            Будни: 8:00 - 18:00, Суббота: 8:00 — 17:00
+            Будни: 9:00 - 18:00, Суббота: 10:00 — 17:00
         </span>
         <span>
-            <a style="color: #262a31;" href="mailto:metall@rozmet.ru">
-                 metall@rozmet.ru
+            <a style="color: #262a31;" href="mailto:zakaz@steelfed.kz">
+                 zakaz@steelfed.kz
             </a>
         </span>
     </div>
@@ -145,7 +144,10 @@
 
                         <div class="contacts">
                             <div style="position: relative; display: inline-block;">
-                                <h2 style="color: #262a31; position: relative; z-index: 1;">8 707 777 28 17</h2>
+                                <h2 style="color: #262a31; position: relative; z-index: 1;"><a style="color: black;"
+                                                                                               type="tel"
+                                                                                               href="tel:+7 (747) 562 05 16">+7
+                                    (747) 562 05 16</a></h2>
                                 <div id="star-field"></div>
                             </div>
 
@@ -184,8 +186,8 @@
                             </style>
 
 
-
-                            <div><span><a style="color: #262a31; font-size: 14px;" href="#">Заказать обратный звонок</a></span></div>
+                            <div><span><a style="color: #262a31; font-size: 14px;" href="#">Заказать обратный звонок</a></span>
+                            </div>
                         </div>
 
                     </div>
@@ -195,7 +197,8 @@
         </div>
         <div class="header__bottom">
             <div class="header__bottom-inner container" style="padding-top: 5px;">
-                <button class="header__show-menu show-menu" style="color: white; margin-bottom: 5px; margin-right: 7px;" type="button"
+                <button class="header__show-menu show-menu" style="color: white; margin-bottom: 5px; margin-right: 7px;"
+                        type="button"
                         data-modal-toggle="#modal-mobile-menu">
                     <span></span>
                 </button>
@@ -228,13 +231,14 @@
                             Услуги</a>
                     </li>
 
-                    <li class="header__menu-item">
-                        <a class="header__menu-link" style="color: #262a31;" href="{% url 'app:services' %}">
-                            Покупателям</a>
-                    </li>
+<!--                    <li class="header__menu-item">-->
+<!--                        <a class="header__menu-link" style="color: #262a31;" href="{% url 'app:services' %}">-->
+<!--                            Покупателям</a>-->
+<!--                    </li>-->
 
                     <li class="header__menu-item">
-                        <a class="header__menu-link" href="{% url 'app:contacts' %}" style="color: #262a31;">Контакты</a>
+                        <a class="header__menu-link" href="{% url 'app:contacts' %}"
+                           style="color: #262a31;">Контакты</a>
                     </li>
                     <li class="header__menu-item drop-menu">
                         <a class="header__menu-link with-arrow" href="{% url 'app:about' %}" style="color: #262a31;">
@@ -358,29 +362,40 @@
                         </ol>
 
 
-                        <a class="mobile-menu__email link mgo-email" href="mailto:info@uni-trade.kz">
-                            <span class="mgo-email">info@uni-trade.kz</span>
-                            <span class="link__icon">
+                        <div class="contactsс">
+                            <a class="mobile-menu__email link mgo-email" href="mailto:zakaz@steelfed.kz">
+                                <span class="mgo-email">zakaz@steelfed.kz</span>
+                                <span class="link__icon"></span>
+                            </a>
 
-                    </span>
-                        </a>
+                            <a class="mobile-menu__phone link" href="https://wa.me/+77475620516">WhatsApp
+                                <span class="link__icon"></span>
+                            </a>
+                        </div>
 
-                        <a class="mobile-menu__phone link" href="https://t.me/uni-trade.kz">Telegram
-                            <span class="link__icon">
+                        <style>
+                            .contactsс {
+                                display: flex;
+                                justify-content: flex-end; /* WhatsApp справа */
+                                align-items: center;
+                                width: 100%;
+                                max-width: 500px; /* Подбери под размер дизайна */
+                                margin: 0 auto;
+                            }
 
-                        </span>
-                        </a>
+                            .mobile-menu__email {
+                                margin-right: auto; /* Email слева */
+                            }
 
-                        <a class="mobile-menu__phone link" href="https://wa.me/77005330150">WhatsApp
-                            <span class="link__icon">
+                            .contactsс a {
+                                text-decoration: none;
+                                color: #000; /* Можно поменять цвет */
+                                font-weight: bold;
+                                font-size: 16px;
+                            }
+                        </style>
 
-                        </span>
-                        </a>
 
-                        <button class="mobile-menu__callback" data-modal-show="#modal-callback">
-                            Обратный звонок
-
-                        </button>
                     </div>
                 </div>
             </div>
@@ -425,7 +440,7 @@
             /* Для iPhone 12 Pro, 13 Pro, 14 Pro, 15 Pro, 16 Pro (ширина экрана от 390px до 430px) */
             @media screen and (min-width: 390px) and (max-width: 430px) {
               .modal__overlay {
-                margin-top: 51px;
+                margin-top: 57px;
               }
               .modal__dialog {
                 margin-top: 51px;
@@ -480,13 +495,6 @@
 </header>
 
 <style>
-
-    .order-click-modal .my-modal__content {
-        background-color: #1a1a1a;
-    }
-    .order-click-modal .modal-order__bottom {
-        background-color: #1a1a1a;
-    }
 
     .my-modal.cart-modal.open {
         margin-top: 28px;
@@ -658,75 +666,59 @@
             </svg>
         </button>
         <div class="filling-step">
-            <form class="form order-click-form" data-action="/informer/form_send/speed-request/"
-                  onsubmit="ym(window.uni-trade.ym_id, 'reachGoal', 'sent_fast_order');">
-                <p class="order-click-form__name" style="color: white;">Заказ в 1 клик</p>
+            <form class="form order-click-form" onsubmit="ym(window.isteels.ym_id, 'reachGoal', 'sent_fast_order');"
+                  action="/informer/form_send/speed-request/"><input type="hidden" name="csrfmiddlewaretoken"
+                                                                     value="NQXeCfjgFxKO4EipGxhWq9jZ5dV2ENoD7fqZ4B7mXoNrzUs29Q6d9fc3zxHI1HJY">
+                <p class="order-click-form__name">Заказ в 1 клик</p>
                 <label class="modal-order__form-field">
-                        <span class="modal-order__form-field-title required" style="color: white;">
+                        <span class="modal-order__form-field-title required">
                             Товар
-
+                            <svg class="icon icon_required-input">
+                              <use xlink:href="/static/img/svg/symbol/sprite.svg#required-input"></use>
+                            </svg>
                         </span>
-                    <input class="modal-order__form-field-input input__input"
-                           style="background-color: #262a31; color: white;" type="text" name="product"
-                           placeholder="Что вы хотите заказать?" required="" autocomplete="off">
+                    <input class="modal-order__form-field-input input__input" type="text" name="product"
+                           placeholder="Кабель силовой медный" required="" autocomplete="off">
                 </label>
                 <label class="modal-order__form-field">
-                        <span class="modal-order__form-field-title required" style="color: white;">
+                        <span class="modal-order__form-field-title required">
                             Количество
-
+                            <svg class="icon icon_required-input">
+                              <use xlink:href="/static/img/svg/symbol/sprite.svg#required-input"></use>
+                            </svg>
                         </span>
-                    <input class="modal-order__form-field-input input__input"
-                           style="background-color: #262a31; color: white;" type="text" name="quantity"
+                    <input class="modal-order__form-field-input input__input" type="text" name="quantity"
                            placeholder="20" required="" autocomplete="off">
                 </label>
                 <label class="modal-order__form-field">
-                        <span class="modal-order__form-field-title" style="color: white;">
+                        <span class="modal-order__form-field-title">
                             Номер телефона
                         </span>
-                    <input class="modal-order__form-field-input input__input"
-                           style="background-color: #262a31; color: white;" type="tel" name="phone" maxlength="21"
-                           minlength="18" required="">
+                    <input class="modal-order__form-field-input input__input" type="tel" name="phone" maxlength="21"
+                           minlength="18" required="" placeholder="+7 ( ___ ) ___ - __ - __">
+                </label>
+                <label class="modal-order__form-field">
+                        <span class="modal-order__form-field-title">
+                            Email
+                        </span>
+                    <input class="modal-order__form-field-input input__input" type="email" name="email"
+                           placeholder="example@email.com" maxlength="100"
+                           pattern="^([A-z0-9_-]+.)*[A-z0-9_-]+@[a-z0-9_-]+(.[a-z0-9_-]+)*.[a-z]{2,6}$">
                 </label>
                 <div class="file-container"></div>
                 <div class="modal-order__bottom">
-                    <button class="modal-order__form_submit btn btn-primary btn_100 send_fast_order" type="submit"
+                    <button class="modal-order__form_submit btn btn-primary btn_100 send_fast_order" style="background-color: #ff740f;" type="submit"
                             data-call-modal="order-processed">
-                        Отправить
+                        <span style="color: white;">Отправить</span>
                     </button>
-                    <div class="modal-order__info-license">
-                        Нажимая «Отправить», вы соглашаетесь с
-                        <a href="/policy/" target="_blank"> политикой обработки персональных данных</a>
-                    </div>
+                    <style>
+                        .order-click-modal .modal-order__bottom {
+                        border-top: none;
+                        }
+                    </style>
                 </div>
             </form>
         </div>
-
-        <style>
-            .order-click-modal .modal-order__bottom {
-                position: absolute;
-                bottom: 0;
-                right: 0;
-                margin: 0;
-                padding: 32px 40px;
-                border-top: 1px solid #1a1a1a;
-                background: #fff;
-            }
-            .btn {
-                display: inline-flex;
-                justify-content: space-between;
-                align-items: center;
-                margin: 0;
-                padding: 10px 16px;
-                color: #262a31;
-                font-size: 16px;
-                font-weight: 700;
-                line-height: 20px;
-                background-color: white;
-                border: none;
-                border-radius: 8px;
-            }
-        </style>
-
         <div class="data-sent-step hidden">
             <svg xmlns="http://www.w3.org/2000/svg" width="80" height="80" viewBox="0 0 80 80" fill="none">
                 <g clip-path="url(#clip0_10585_65552)">
@@ -1099,52 +1091,6 @@
     </div>
 </div>
 
-
-<div class="modal header-modal callback-modal" id="modal-callback">
-    <div class="modal__dialog">
-        <div class="modal__content animate__animated animate__slideInUp">
-            <div class="callback-modal__container container">
-                <button class="modal__close header-modal-close" aria-label="Закрыть окно">
-
-                </button>
-                <div class="modal__title">Связаться с нами</div>
-                <div class="drop-menu__content header__phone-menu">
-
-                    <div class="header__phone-menu-block">
-                        <div class="header__phone-main d-flex">
-                            <div>
-
-                            </div>
-                            <div class="header__phone-main_time">
-                                <p>Пн-Чт: с 9:00 до 18:00, Пт: с 9:00 до 17:00</p>
-                            </div>
-                        </div>
-                        <div class="header__phone-lable">Время работы</div>
-                    </div>
-                    <div class="d-flex header__phone-menu-block_social">
-
-                        <a class="btn btn_light" href="https://t.me/isteelskz_bot" target="_blank">
-                            <span>Telegram</span>
-                            <img loading="lazy" src="{% static 'images/telegram.png' %}" alt="Telegram">
-                        </a>
-
-                        <a class="btn btn_light" href="https://wa.me/77005330150" target="_blank">
-                            <span>WhatsApp</span>
-                            <img loading="lazy" src="{% static 'images/whatsapp.png' %}" alt="WhatsApp">
-                        </a>
-
-                    </div>
-                    <button class="btn btn_light-black header__phone-menu-block_btn"
-                            onclick="ym(window.isteels.ym_id, 'reachGoal', 'click_callback');"
-                            data-modal-toggle="#modal-call">
-                        Перезвонить
-
-                    </button>
-                </div>
-            </div>
-        </div>
-    </div>
-</div>
 <div class="modal modal-order" id="modal-request">
     <div class="modal__dialog">
         <div class="modal__container">
@@ -1155,8 +1101,7 @@
                 <div class="modal__title">
                     <div>Оставить заявку</div>
                     <div class="product__price_min">
-                        Минимальная сумма заказа
-                        100 000 ₸
+
                     </div>
                 </div>
                 <form class="modal-order__form need-validate" data-need-notification="true" id="request" method="POST"
@@ -1165,7 +1110,7 @@
                     <label class="modal-order__form-field">
                         <span class="modal-order__form-field-title">Фамилия Имя</span>
                         <input class="order-form__form-item-input input__input" type="text" name="fio"
-                               placeholder="Иванов Андрей">
+                               placeholder="Табик Карбаев">
                         <span class="input__error">
 
                         </span>
@@ -1192,22 +1137,27 @@
                                   name="comment" placeholder="" maxlength="2000"
                                   data-tippy-content="Максимум 2 000 символов"></textarea>
                     </label>
-                    <button class="modal-order__form_submit btn btn-primary btn_100 justify-content-center"
+                    <button style="border-radius: 7px; background-color: #ff740f;"
+                            class="modal-order__form_submit btn btn-primary btn_100 justify-content-center"
                             type="submit">
-                        <span>Отправить</span>
-
+                        <span style="color: white;">Отправить</span>
                     </button>
                 </form>
-                <p class="modal-order__info-license modal-call__politics">
-                        <span>
-                            Нажимая на кнопку “Отправить”, вы соглашаетесь с
-                            <a href="/policy/" target="_blank">политикой обработки персональных данных</a>
-                        </span>
-                </p>
             </div>
         </div>
     </div>
 </div>
+<style>
+    @media (max-width: 765px) {
+        .modal-order .modal__dialog {
+            align-items: normal;
+        }
+        .modal-order .modal__content {
+            border-radius: 10px;
+        }
+    }
+
+</style>
 
 <!--/noindex-->
 

@@ -9,21 +9,20 @@
     <section class="about-company__head">
         <div class="about-company-head">
             <div class="container">
-                <h1 class="about-company-head__title">Услуги</h1>
-                <div class="about-company-head__desc" style="color: #262a31;">
-                    Группа компаний «Интерстилс» поставляет металлопрокат и сопутствующие товары заказчикам в
-                    России, Казахстане,
-                    Узбекистане, а также других странах ближнего и дальнего зарубежья.
+                <h1 class="about-company-head__title" style="color: white;">Услуги</h1>
+                <div class="about-company-head__desc" style="color: white;">
+                    Мы предлагаем широкий спектр услуг по обработке и доставке металлопроката. Современное оборудование
+                    и квалифицированные специалисты гарантируют высокое качество выполнения работ.
                 </div>
             </div>
         </div>
     </section>
     <style>
         .about-company-head {
-            height: 270px;
+            height: 300px;
             width: 100%;
             background-color: #ededed;
-            background-image: url(#);
+            background-image: url({% static 'images/kz.jpg' %});
             background-repeat: no-repeat;
             background-position: right;
             padding-top: 25px;
@@ -39,111 +38,251 @@
     </style>
 
 
-    <div class="catalog container">
+    <div class="catalog container mt-2">
         <div class="row" data-aos="zoom-in">
-            <div class="col-lg-12">
-
-                <a class="link-back link-back-mb d-lg-none mt-0" href="{% url 'app:services' %}">Услуги</a>
-
-                <div style="display: flex; gap: 20px; flex-wrap: wrap; justify-content: center; margin-bottom: 70px;">
-                    <!-- Карточка 1 -->
-                    <div style="background-color: #d5d5d5; border-radius: 10px; padding: 10px; width: 23%;
-                        display: flex; flex-direction: column; justify-content: center;
-                        align-items: center; box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
-                        margin-bottom: 20px; position: relative; overflow: visible; text-align: center; height: 185px;">
-
-                        <img src="{% static 'images/konstruktor.png' %}" alt="DelPapa"
-                             style="width: 150px; height: 150px; position: absolute; top: -30px; left: 50%; transform: translateX(-50%);">
-
-                        <h3 style="font-size: 15px; text-align: center; margin-top: auto; color: #262a31;">
-                            Производство металлоконструкций
-                        </h3>
+            <div class="news-container" style="width: 90%;">
+                <div class="news-list" style="gap: 5px;">
+                    <!-- Карточка 1 - Лазерная резка металла -->
+                    <div class="news-list__item">
+                        <div class="card">
+                            <div class="card__front"
+                                 style="background-image: url({% static 'images/service/lazer.jpeg' %})">
+                                <div class="card__info">
+                                    <h2 class="news-list__title">Лазерная резка металла</h2>
+                                </div>
+                            </div>
+                            <div class="card__back">
+                                <p>Высокоточная резка металла с минимальными потерями материала. Лазерная технология
+                                    позволяет создавать сложные контуры с идеально ровными краями.</p>
+                            </div>
+                        </div>
                     </div>
 
-
-                    <!-- Карточка 2 -->
-                    <div style="background-color: #d5d5d5; border-radius: 10px; padding: 10px; width: 23%;
-                        display: flex; flex-direction: column; justify-content: center;
-                        align-items: center; box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
-                        margin-bottom: 20px; position: relative; overflow: visible; text-align: center; height: 185px;">
-
-                        <img src="{% static 'images/bolt.png' %}" alt="DelPapa"
-                             style="width: 150px; height: 150px; position: absolute; top: -30px; transform: rotate(162deg);">
-
-                        <h3 style="font-size: 15px; text-align: center; margin-top: auto; color: #262a31;">
-                            Производство металлоконструкций
-                        </h3>
+                    <!-- Карточка 2 - Гибка листового металла -->
+                    <div class="news-list__item">
+                        <div class="card">
+                            <div class="card__front"
+                                 style="background-image: url({% static 'images/service/gibka.jpeg' %})">
+                                <div class="card__info">
+                                    <h2 class="news-list__title">Гибка листового металла</h2>
+                                </div>
+                            </div>
+                            <div class="card__back">
+                                <p>Придаём металлическим листам нужную форму с высокой точностью. Используем современные
+                                    листогибочные станки для достижения идеального угла.</p>
+                            </div>
+                        </div>
                     </div>
 
-                    <!-- Карточка 3 -->
-                    <div style="background-color: #d5d5d5; border-radius: 10px; padding: 20px; width: 23%; display: flex; flex-direction: column; justify-content: space-between; align-items: center; box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); margin-bottom: 20px;">
-                        <img src="{% static 'images/armaturnye-karkai.jpg' %}" alt="Coco"
-                             style="border-radius: 50%; width: 80px; height: 80px; margin-bottom: 15px;">
-                        <h3 style="font-size: 15px; text-align: center; margin-bottom: 10px; color: #262a31;">
-                            Производство
-                            арматурных каркасов</h3>
-
+                    <!-- Карточка 3 - Полимерная покраска -->
+                    <div class="news-list__item">
+                        <div class="card">
+                            <div class="card__front"
+                                 style="background-image: url({% static 'images/service/polimer.jpeg' %})">
+                                <div class="card__info">
+                                    <h2 class="news-list__title">Полимерная покраска</h2>
+                                </div>
+                            </div>
+                            <div class="card__back">
+                                <p>Нанесение защитного и декоративного полимерного покрытия, устойчивого к механическим
+                                    повреждениям, коррозии и погодным условиям.</p>
+                            </div>
+                        </div>
                     </div>
 
-                    <!-- Карточка 4 -->
-                    <div style="background-color: #d5d5d5; border-radius: 10px; padding: 20px; width: 23%; display: flex; flex-direction: column; justify-content: space-between; align-items: center; box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); margin-bottom: 20px;">
-                        <img src="{% static 'images/sendvich-panel.jpg' %}" alt="Food"
-                             style="border-radius: 50%; width: 80px; height: 80px; margin-bottom: 15px;">
-                        <h3 style="font-size: 15px; text-align: center; margin-bottom: 10px; color: #262a31;">
-                            Производство
-                            сэндвич-панелей</h3>
+                    <!-- Карточка 4 - Декоративная резка металла -->
+                    <div class="news-list__item">
+                        <div class="card">
+                            <div class="card__front"
+                                 style="background-image: url({% static 'images/service/decor.jpeg' %})">
+                                <div class="card__info">
+                                    <h2 class="news-list__title">Декоративная резка металла</h2>
+                                </div>
+                            </div>
+                            <div class="card__back">
+                                <p>Создание уникальных узоров и орнаментов на металле для дизайнерских и архитектурных
+                                    решений. Подходит для фасадов, ограждений, мебели и декора.</p>
+                            </div>
+                        </div>
                     </div>
 
-                    <div style="background-color: #d5d5d5; border-radius: 10px; padding: 20px; width: 23%; display: flex; flex-direction: column; justify-content: space-between; align-items: center; box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); margin-bottom: 20px;">
-                        <img src="{% static 'images/vzryvozashishenny-elektronagrevatel.jpg' %}" alt="Food"
-                             style="border-radius: 50%; width: 80px; height: 80px; margin-bottom: 15px;">
-                        <h3 style="font-size: 15px; text-align: center; margin-bottom: 10px; color: #262a31;">
-                            Производство
-                            взрывозащищенных электронагревателей</h3>
-
+                    <!-- Карточка 5 - Токарные работы -->
+                    <div class="news-list__item">
+                        <div class="card">
+                            <div class="card__front"
+                                 style="background-image: url({% static 'images/service/tokar.jpeg' %})">
+                                <div class="card__info">
+                                    <h2 class="news-list__title">Токарные работы</h2>
+                                </div>
+                            </div>
+                            <div class="card__back">
+                                <p>Обработка металла на токарных станках – точное изготовление деталей, нарезка резьбы и
+                                    создание сложных геометрических форм.</p>
+                            </div>
+                        </div>
                     </div>
 
-                    <div style="background-color: #d5d5d5; border-radius: 10px; padding: 20px; width: 23%; display: flex; flex-direction: column; justify-content: space-between; align-items: center; box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); margin-bottom: 20px;">
-                        <img src="{% static 'images/protivopozharnyh-sistem.jpg' %}" alt="Food"
-                             style="border-radius: 50%; width: 80px; height: 80px; margin-bottom: 15px;">
-                        <h3 style="font-size: 15px; text-align: center; margin-bottom: 10px; color: #262a31;">
-                            Производство
-                            противопожарных систем</h3>
+                    <!-- Карточка 6 - Механические работы -->
+                    <div class="news-list__item">
+                        <div class="card">
+                            <div class="card__front"
+                                 style="background-image: url({% static 'images/service/mechanics.jpeg' %})">
+                                <div class="card__info">
+                                    <h2 class="news-list__title">Механические работы</h2>
+                                </div>
+                            </div>
+                            <div class="card__back">
+                                <p>Фрезеровка, сверление, шлифовка и другие механические виды обработки металла.
+                                    Обеспечиваем высокую точность и качество исполнения.</p>
+                            </div>
+                        </div>
                     </div>
 
-                    <div style="background-color: #d5d5d5; border-radius: 10px; padding: 20px; width: 23%; display: flex; flex-direction: column; justify-content: space-between; align-items: center; box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); margin-bottom: 20px;">
-                        <img src="{% static 'images/cinkovanie.jpg' %}" alt="Food"
-                             style="border-radius: 50%; width: 80px; height: 80px; margin-bottom: 15px;">
-                        <h3 style="font-size: 15px; text-align: center; margin-bottom: 10px; color: #262a31;">Цинкование
-                            металлоконструкций</h3>
+                    <!-- Карточка 7 - Сварочные работы -->
+                    <div class="news-list__item">
+                        <div class="card">
+                            <div class="card__front"
+                                 style="background-image: url({% static 'images/service/svarks.jpeg' %})">
+                                <div class="card__info">
+                                    <h2 class="news-list__title">Сварочные работы</h2>
+                                </div>
+                            </div>
+                            <div class="card__back">
+                                <p>Профессиональная сварка различных видов металла. Создаём надёжные и прочные
+                                    металлические конструкции любой сложности.</p>
+                            </div>
+                        </div>
                     </div>
 
-                    <div style="background-color: #d5d5d5; border-radius: 10px; padding: 20px; width: 23%; display: flex; flex-direction: column; justify-content: space-between; align-items: center; box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); margin-bottom: 20px;">
-                        <img src="{% static 'images/trubchatyh-svaj.jpg' %}" alt="Food"
-                             style="border-radius: 50%; width: 80px; height: 80px; margin-bottom: 15px;">
-                        <h3 style="font-size: 15px; text-align: center; margin-bottom: 10px; color: #262a31;">
-                            Производство
-                            свай из трубы</h3>
+                    <!-- Карточка 8 - Доставка -->
+                    <div class="news-list__item">
+                        <div class="card">
+                            <div class="card__front"
+                                 style="background-image: url({% static 'images/service/dostavka.jpeg' %})">
+                                <div class="card__info">
+                                    <h2 class="news-list__title">Доставка</h2>
+                                </div>
+                            </div>
+                            <div class="card__back">
+                                <p>Оперативная и безопасная доставка металлопроката и готовых изделий по городу и
+                                    регионам. Доставляем в удобное для вас время.</p>
+                            </div>
+                        </div>
                     </div>
 
                 </div>
-
-                <script>
-                    // Адаптивность: на мобильных устройствах будет по 3 карточки на строке
-                    if (window.innerWidth <= 768) {
-                      const cards = document.querySelectorAll('div[style*="width: 23%"]');
-                      cards.forEach(card => card.style.width = '30%');
-                    }
-
-                    // На экранах до 480px по 2 карточки на строке
-                    if (window.innerWidth <= 480) {
-                      const cards = document.querySelectorAll('div[style*="width: 30%"]');
-                      cards.forEach(card => card.style.width = '45%');
-                    }
-                </script>
             </div>
         </div>
     </div>
+
+    <style>
+        .news-container {
+            width: 100%;
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 16px;
+        }
+
+        .news-list {
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            gap: 16px;
+        }
+
+        .news-list__item {
+            position: relative;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .card {
+            position: relative;
+            width: 100%;
+            height: 100%;
+            max-width: 400px;  /* Устанавливаем максимальную ширину карточки */
+            aspect-ratio: 1;  /* Сохраняем квадратную форму карточки */
+            perspective: 1000px; /* Добавляем перспективу для 3D эффекта */
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .card__front, .card__back {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            backface-visibility: hidden;
+            border-radius: 8px;
+            transition: transform 0.5s;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .card__front {
+            background-size: cover;
+            background-position: center;
+        }
+
+        .card__back {
+            background-color: gray;
+            color: #fff;
+            padding: 20px;
+            text-align: center;
+            transform: rotateY(180deg); /* Поворачиваем заднюю сторону */
+        }
+
+        .card:hover .card__front {
+            transform: rotateY(180deg); /* Поворот передней стороны при наведении */
+        }
+
+        .card:hover .card__back {
+            transform: rotateY(0); /* Поворот задней стороны при наведении */
+        }
+
+        .card__info {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            text-align: center;
+            color: white;
+            font-weight: bold;
+            font-size: 20px;
+        }
+
+        .news-list__title {
+            font-size: 25px;
+            font-weight: bold;
+            color: white;
+            text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.6);
+        }
+
+        @media (max-width: 992px) {
+            .news-list {
+                grid-template-columns: repeat(3, 1fr);
+            }
+        }
+
+        @media (max-width: 768px) {
+            .news-list {
+                grid-template-columns: repeat(2, 1fr);
+            }
+        }
+
+        @media (max-width: 480px) {
+            .card__back p {
+                font-size: 11px;
+            }
+
+            .news-list__title {
+                font-size: 16px;
+            }
+        }
+    </style>
 
 
 </main>

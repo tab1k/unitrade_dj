@@ -20,25 +20,26 @@
         <div class="hero__box" style="min-height: 450px;">
             <div class="hero__box-inner container">
                 <div class="hero__wrapper-title">
-                    <h1 class="hero__title">ВАШ НАДЕЖНЫЙ ПАРТНЕР В СТРОИТЕЛЬСТВЕ</h1>
+                    <h2 class="hero__title">Ведущий транстерминальный поставщик металлопроката
+                        по всему Казахстану </h2>
                 </div>
                 <div class="hero__bottom">
                     <div class="hero__application">
                         <div class="dealership__contacts">
-                            <div class="dealership__contacts-item" style="border-left: 4px solid ff740f;">
+                            <div class="dealership__contacts-item" style="border-left: 4px solid #ff740f;">
                                 <div class="dealership__contacts-title" style="color: white;">Звоните нам</div>
                                 <div>
 
                                     <a class="mgo-number" href="tel:+77077772817" style="color: white;">
-                                        +7 (707) 777 28 17</a>
+                                        +7 (747) 562 05 16</a>
 
                                 </div>
                             </div>
-                            <div class="dealership__contacts-item" style="border-left: 4px solid ff740f;">
+                            <div class="dealership__contacts-item" style="border-left: 4px solid #ff740f;">
                                 <div class="dealership__contacts-title" style="color: white;">Пишите нам</div>
                                 <div>
 
-                                    <a class="mgo-email" href="mailto:astana@isteels.kz" style="color: white;">info@uni-trade.kz</a>
+                                    <a class="mgo-email" href="mailto:astana@isteels.kz" style="color: white;">zakaz@steelfed.kz</a>
 
                                 </div>
                             </div>
@@ -49,6 +50,26 @@
             </div>
         </div>
     </section>
+
+    <style>
+        @media (max-width: 992px) {
+            .hero__title {
+                font-size: 32px;
+            }
+        }
+
+        @media (max-width: 768px) {
+            .hero__title {
+                font-size: 30px;
+            }
+        }
+
+        @media (max-width: 480px) {
+            .hero__title {
+                font-size: 27px;
+            }
+        }
+    </style>
     <!-- КОНЕЦ БЛОК ВИДЕО -->
 
 
@@ -57,9 +78,23 @@
         <div class="container">
             <div class="about-company-bottom__sub-title" style="color: #ff740f;">Что на практике</div>
             <h2 class="about-company-bottom__title" style="color: #262a31;">ФАКТОРЫ УСПЕХА</h2>
+            <div class="toggle toggle_reverse d-lg-flex"
+                 style="padding-left: 66.5px; margin-bottom: 10px; justify-content: end;">
+                <label for="catalog-checkbox"></label>
+                <input type="checkbox" name="name-234" id="catalog-checkbox">
+                <label class="toggle_label" for="catalog-checkbox" style="color: #262a31;">По сфере
+                    деятельности</label>
+            </div>
+            <style>
+                .toggle input:checked+label::before {
+                    background: #ff740f;
+                }
+            </style>
+
+
             <div class="about-company-bottom__card row">
 
-                <div class="news-container">
+                <div class="news-container" id="news-container">
                     <div class="news-list">
                         {% for category in categories|slice:":8" %}
                         <a class="news-list__item" href="{{ category.get_absolute_url }}">
@@ -73,6 +108,34 @@
                         {% endfor %}
                     </div>
                 </div>
+
+                <script>
+                    document.getElementById('catalog-checkbox').addEventListener('change', function () {
+                        const isChecked = this.checked;
+                        const url = isChecked ? '/sfera-deyatelnosty/' : '/';
+
+                        fetch(url)
+                            .then(response => {
+                                if (!response.ok) {
+                                    throw new Error('Ошибка сети');
+                                }
+                                return response.text();
+                            })
+                            .then(html => {
+                                const parser = new DOMParser();
+                                const doc = parser.parseFromString(html, 'text/html');
+                                const newContent = doc.querySelector('.news-list');
+
+                                if (newContent) {
+                                    document.getElementById('news-container').innerHTML = newContent.outerHTML;
+                                } else {
+                                    console.error('Ошибка: .news-list не найдена');
+                                }
+                            })
+                            .catch(error => console.error('Ошибка загрузки:', error));
+                    });
+                </script>
+
 
                 <style>
                     .news-container {
@@ -156,10 +219,11 @@
 
 
     <!-- БЛОК О НАС -->
-    <section class="about" style="position: relative;">
+    <section class="about mb-5" style="position: relative;">
         <div class="container about__top-content" data-aos="zoom-in">
-            <div class="about-company-bottom__sub-title" style="color: #f44336;">Дополнительно</div>
-            <h2 class="about-company-bottom__title" style="color: #262a31;">Наши услуги</h2>
+            <div class="about-company-bottom__sub-title" style="color: #ff740f;">о компании</div>
+            <h2 class="about-company-bottom__title" style="color: #262a31;">Крупнейший поставщик металлопроката в
+                Казахстане</h2>
 
             <div class="row" style="position: relative; z-index: 1;">
                 <div class="container">
@@ -234,13 +298,18 @@
             margin-bottom: 100px;
         }
 
+        .sentence-card__characteristics td:first-child {
+            text-align: justify;
+        }
+
         .about-company-bottom__card-item {
+            min-height: 620px;
             position: relative;
-            background-color: #212121;
+            background-color: #f5f7f8;
             color: #fff;
             border-radius: 10px;
             margin: 10px;
-            padding: 20px;
+            padding: 0px;
             text-align: center;
             box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
             z-index: 2;
@@ -250,13 +319,14 @@
             font-size: 18px;
             font-weight: bold;
             margin-top: 10px;
+            margin-bottom: 0px;
             color: white;
         }
 
         .about-company-bottom__card-item-desc {
             font-size: 14px;
-            margin-top: 10px;
             color: #ddd;
+            padding: 10px;
         }
 
         .about-company-bottom__sub-title, .about-company-bottom__title {
@@ -266,6 +336,10 @@
 
         /* Адаптация для мобильных устройств */
         @media (max-width: 768px) {
+            .about-company-bottom__title {
+                text-align: center;
+            }
+
             .about__box {
                 flex-direction: column;
                 padding: 15px;
@@ -318,87 +392,87 @@
 
     <!-- УСЛУГИ -->
 
-    <div class="catalog container mt-5">
-        <div class="about-company-bottom__sub-title" style="color: #f44336;">Дополнительно</div>
+    <div class="catalog container mt-5 mb-3">
+        <div class="about-company-bottom__sub-title" style="color: #ff740f;">Дополнительно</div>
         <h2 class="about-company-bottom__title" style="color: #262a31;">Наши услуги</h2>
-        <div class="row" data-aos="zoom-in">
+        <div class="row mb-3" data-aos="zoom-in">
             <div class="news-container" style="width: 90%;">
-                    <div class="news-list" style="gap: 5px;">
+                <div class="news-list" style="gap: 5px;">
 
-                        <a class="news-list__item" href="{{ category.get_absolute_url }}">
-                            <div class="news-list__photo"
-                                 style="background-image: url({% static 'images/service/lazer.jpeg' %})">
-                                <div class="news-list__info">
-                                    <h2 class="news-list__title">Лазерная резка металла</h2>
-                                </div>
+                    <a class="news-list__item" href="{% url 'app:services' %}">
+                        <div class="news-list__photo"
+                             style="background-image: url({% static 'images/service/lazer.jpeg' %})">
+                            <div class="news-list__info">
+                                <h2 class="news-list__title">Лазерная резка металла</h2>
                             </div>
-                        </a>
+                        </div>
+                    </a>
 
-                        <a class="news-list__item" href="{{ category.get_absolute_url }}">
-                            <div class="news-list__photo"
-                                 style="background-image: url({% static 'images/service/gibka.jpeg' %})">
-                                <div class="news-list__info">
-                                    <h2 class="news-list__title">Гибка листового металла</h2>
-                                </div>
+                    <a class="news-list__item" href="{% url 'app:services' %}">
+                        <div class="news-list__photo"
+                             style="background-image: url({% static 'images/service/gibka.jpeg' %})">
+                            <div class="news-list__info">
+                                <h2 class="news-list__title">Гибка листового металла</h2>
                             </div>
-                        </a>
+                        </div>
+                    </a>
 
-                        <a class="news-list__item" href="{{ category.get_absolute_url }}">
-                            <div class="news-list__photo"
-                                 style="background-image: url({% static 'images/service/polimer.jpeg' %})">
-                                <div class="news-list__info">
-                                    <h2 class="news-list__title">Полимерная покраска</h2>
-                                </div>
+                    <a class="news-list__item" href="{% url 'app:services' %}">
+                        <div class="news-list__photo"
+                             style="background-image: url({% static 'images/service/polimer.jpeg' %})">
+                            <div class="news-list__info">
+                                <h2 class="news-list__title">Полимерная покраска</h2>
                             </div>
-                        </a>
+                        </div>
+                    </a>
 
-                        <a class="news-list__item" href="{{ category.get_absolute_url }}">
-                            <div class="news-list__photo"
-                                 style="background-image: url({% static 'images/service/decor.jpeg' %})">
-                                <div class="news-list__info">
-                                    <h2 class="news-list__title">Декоративная резка металла</h2>
-                                </div>
+                    <a class="news-list__item" href="{% url 'app:services' %}">
+                        <div class="news-list__photo"
+                             style="background-image: url({% static 'images/service/decor.jpeg' %})">
+                            <div class="news-list__info">
+                                <h2 class="news-list__title">Декоративная резка металла</h2>
                             </div>
-                        </a>
+                        </div>
+                    </a>
 
-                        <a class="news-list__item" href="{{ category.get_absolute_url }}">
-                            <div class="news-list__photo"
-                                 style="background-image: url({% static 'images/service/tokar.jpeg' %})">
-                                <div class="news-list__info">
-                                    <h2 class="news-list__title">Токарные работы</h2>
-                                </div>
+                    <a class="news-list__item" href="{% url 'app:services' %}">
+                        <div class="news-list__photo"
+                             style="background-image: url({% static 'images/service/tokar.jpeg' %})">
+                            <div class="news-list__info">
+                                <h2 class="news-list__title">Токарные работы</h2>
                             </div>
-                        </a>
+                        </div>
+                    </a>
 
-                        <a class="news-list__item" href="{{ category.get_absolute_url }}">
-                            <div class="news-list__photo"
-                                 style="background-image: url({% static 'images/service/mechanics.jpeg' %})">
-                                <div class="news-list__info">
-                                    <h2 class="news-list__title">Механические работы</h2>
-                                </div>
+                    <a class="news-list__item" href="{% url 'app:services' %}">
+                        <div class="news-list__photo"
+                             style="background-image: url({% static 'images/service/mechanics.jpeg' %})">
+                            <div class="news-list__info">
+                                <h2 class="news-list__title">Механические работы</h2>
                             </div>
-                        </a>
+                        </div>
+                    </a>
 
-                        <a class="news-list__item" href="{{ category.get_absolute_url }}">
-                            <div class="news-list__photo"
-                                 style="background-image: url({% static 'images/service/svarks.jpeg' %})">
-                                <div class="news-list__info">
-                                    <h2 class="news-list__title">Сварочные работы</h2>
-                                </div>
+                    <a class="news-list__item" href="{% url 'app:services' %}">
+                        <div class="news-list__photo"
+                             style="background-image: url({% static 'images/service/svarks.jpeg' %})">
+                            <div class="news-list__info">
+                                <h2 class="news-list__title">Сварочные работы</h2>
                             </div>
-                        </a>
+                        </div>
+                    </a>
 
-                        <a class="news-list__item" href="{{ category.get_absolute_url }}">
-                            <div class="news-list__photo"
-                                 style="background-image: url({% static 'images/service/dostavka.jpeg' %})">
-                                <div class="news-list__info">
-                                    <h2 class="news-list__title">Доставка</h2>
-                                </div>
+                    <a class="news-list__item" href="{% url 'app:services' %}">
+                        <div class="news-list__photo"
+                             style="background-image: url({% static 'images/service/dostavka.jpeg' %})">
+                            <div class="news-list__info">
+                                <h2 class="news-list__title">Доставка</h2>
                             </div>
-                        </a>
+                        </div>
+                    </a>
 
-                    </div>
                 </div>
+            </div>
         </div>
     </div>
 
@@ -432,7 +506,7 @@
 
         /* Карточка товара */
         .sentence-card {
-            width: auto;
+            width: 350px;
 
             text-align: center;
             background: #fff;
@@ -440,7 +514,7 @@
 
         .sentence-card img {
             max-width: 100%;
-            border-radius: 8px;
+            border-radius: 8px 8px 0px 0px;
         }
 
         .swiper-button-prev, .swiper-button-next {
@@ -471,7 +545,6 @@
         .sentence-card__info {
             display: block;
             font-weight: bold;
-            margin-top: 10px;
         }
 
         .sentence-card__characteristics table {
@@ -509,10 +582,9 @@
         }
     </style>
 
-    <div class="container mb-5" data-aos="zoom-in">
+    <div class="container mb-5 mt-5" data-aos="zoom-in">
         <div class="slider">
-            <div class="about-company-bottom__sub-title" style="color: #f44336;">Дополнительно</div>
-            <h2 class="about-company-bottom__title" style="color: #262a31;">Наши услуги</h2>
+            <h2 class="about-company-bottom__title" style="color: #262a31;">Специальные предложения</h2>
 
             <!-- Сам слайдер -->
             <div class="swiper" style="margin: 0px;">
@@ -523,14 +595,64 @@
                         <div class="sentence-card">
                             <div class="">
                                 <div class="about-company-bottom__card-item"
-                                     style="
-                     background-image: url({% static 'images/icon-today-1.webp' %});
-                     background-size: contain;
-                     background-repeat: no-repeat;
-                     background-position: center;">
-                                    <div class="about-company-bottom__card-item-title">Команда ГК «UniTrade»</div>
+                                     style="background-size: contain; background-repeat: no-repeat; background-position: center;">
+                                    <div class="about-company-bottom__card-item-title">
+                                        <img src="{% static 'images/armaturnye-karkai.jpg' %}">
+                                    </div>
                                     <div class="about-company-bottom__card-item-desc">
-                                        Наши сотрудники - эксперты в области проката металла, сталей и сплавов...
+                                        <a class="sentence-card__info"
+                                           href="/product/pretsizionnyj-krug-s-vysokim-elektricheskim-soprotivleniem-10-mm-h27ju5t-gost-12766-4-90/"
+                                           style="height: 73px;">
+                                            <span class="sentence-card__title ellipsis-js-50">Прецизионный круг с высоким электрическим сопротив...</span>
+                                        </a>
+                                        <a class="sentence-card__characteristics">
+                                            <table>
+
+                                                <tbody>
+                                                <tr>
+                                                    <td>Диаметр</td>
+                                                    <td>10 мм</td>
+                                                </tr>
+
+                                                <tr>
+                                                    <td>ГОСТ</td>
+                                                    <td>ГОСТ 12766.4-90</td>
+                                                </tr>
+
+                                                <tr>
+                                                    <td>Тип сплава</td>
+                                                    <td>с высоким электрическим сопротивлением</td>
+                                                </tr>
+
+                                                <tr>
+                                                    <td>Марка</td>
+                                                    <td>Х27Ю5Т</td>
+                                                </tr>
+
+                                                </tbody>
+                                            </table>
+                                        </a>
+                                        <div class="sentence-card__price">
+                                            <span class="sentence-card__price-link">
+                                                <span class="sentence-card__price-label">
+                                                    Цена
+                                                </span>
+                                                <b class="sentence-card__price-price">
+                                                    По уточнению
+                                                </b>
+                                                <span class="sentence-card__price-info"
+                                                      data-tippy-content="Не является публичной офертой">
+                                                    <svg class="icon icon_question">
+                                                      <use xlink:href="/static/img/svg/symbol/sprite.svg#question"></use>
+                                                    </svg>
+                                                </span>
+                                            </span>
+                                        </div>
+                                        <div style="background-color: #ff740f; height: 35px; border-radius: 7px; display: flex; align-items: center; justify-content: center;"
+                                             class="sentence-card__footer">
+                                            <a href="" style="color: white; text-decoration: none;">Купить</a>
+                                        </div>
+
                                     </div>
                                 </div>
                             </div>
@@ -541,14 +663,64 @@
                         <div class="sentence-card">
                             <div class="">
                                 <div class="about-company-bottom__card-item"
-                                     style="
-                     background-image: url({% static 'images/icon-today-1.webp' %});
-                     background-size: contain;
-                     background-repeat: no-repeat;
-                     background-position: center;">
-                                    <div class="about-company-bottom__card-item-title">Команда ГК «UniTrade»</div>
+                                     style="background-size: contain; background-repeat: no-repeat; background-position: center;">
+                                    <div class="about-company-bottom__card-item-title">
+                                        <img src="{% static 'images/armaturnye-karkai.jpg' %}">
+                                    </div>
                                     <div class="about-company-bottom__card-item-desc">
-                                        Наши сотрудники - эксперты в области проката металла, сталей и сплавов...
+                                        <a class="sentence-card__info"
+                                           href="/product/pretsizionnyj-krug-s-vysokim-elektricheskim-soprotivleniem-10-mm-h27ju5t-gost-12766-4-90/"
+                                           style="height: 73px;">
+                                            <span class="sentence-card__title ellipsis-js-50">Прецизионный круг с высоким электрическим сопротив...</span>
+                                        </a>
+                                        <a class="sentence-card__characteristics">
+                                            <table>
+
+                                                <tbody>
+                                                <tr>
+                                                    <td>Диаметр</td>
+                                                    <td>10 мм</td>
+                                                </tr>
+
+                                                <tr>
+                                                    <td>ГОСТ</td>
+                                                    <td>ГОСТ 12766.4-90</td>
+                                                </tr>
+
+                                                <tr>
+                                                    <td>Тип сплава</td>
+                                                    <td>с высоким электрическим сопротивлением</td>
+                                                </tr>
+
+                                                <tr>
+                                                    <td>Марка</td>
+                                                    <td>Х27Ю5Т</td>
+                                                </tr>
+
+                                                </tbody>
+                                            </table>
+                                        </a>
+                                        <div class="sentence-card__price">
+                                            <span class="sentence-card__price-link">
+                                                <span class="sentence-card__price-label">
+                                                    Цена
+                                                </span>
+                                                <b class="sentence-card__price-price">
+                                                    По уточнению
+                                                </b>
+                                                <span class="sentence-card__price-info"
+                                                      data-tippy-content="Не является публичной офертой">
+                                                    <svg class="icon icon_question">
+                                                      <use xlink:href="/static/img/svg/symbol/sprite.svg#question"></use>
+                                                    </svg>
+                                                </span>
+                                            </span>
+                                        </div>
+                                        <div style="background-color: #ff740f; height: 35px; border-radius: 7px; display: flex; align-items: center; justify-content: center;"
+                                             class="sentence-card__footer">
+                                            <a href="" style="color: white; text-decoration: none;">Купить</a>
+                                        </div>
+
                                     </div>
                                 </div>
                             </div>
@@ -559,14 +731,64 @@
                         <div class="sentence-card">
                             <div class="">
                                 <div class="about-company-bottom__card-item"
-                                     style="
-                     background-image: url({% static 'images/icon-today-1.webp' %});
-                     background-size: contain;
-                     background-repeat: no-repeat;
-                     background-position: center;">
-                                    <div class="about-company-bottom__card-item-title">Команда ГК «UniTrade»</div>
+                                     style="background-size: contain; background-repeat: no-repeat; background-position: center;">
+                                    <div class="about-company-bottom__card-item-title">
+                                        <img src="{% static 'images/armaturnye-karkai.jpg' %}">
+                                    </div>
                                     <div class="about-company-bottom__card-item-desc">
-                                        Наши сотрудники - эксперты в области проката металла, сталей и сплавов...
+                                        <a class="sentence-card__info"
+                                           href="/product/pretsizionnyj-krug-s-vysokim-elektricheskim-soprotivleniem-10-mm-h27ju5t-gost-12766-4-90/"
+                                           style="height: 73px;">
+                                            <span class="sentence-card__title ellipsis-js-50">Прецизионный круг с высоким электрическим сопротив...</span>
+                                        </a>
+                                        <a class="sentence-card__characteristics">
+                                            <table>
+
+                                                <tbody>
+                                                <tr>
+                                                    <td>Диаметр</td>
+                                                    <td>10 мм</td>
+                                                </tr>
+
+                                                <tr>
+                                                    <td>ГОСТ</td>
+                                                    <td>ГОСТ 12766.4-90</td>
+                                                </tr>
+
+                                                <tr>
+                                                    <td>Тип сплава</td>
+                                                    <td>с высоким электрическим сопротивлением</td>
+                                                </tr>
+
+                                                <tr>
+                                                    <td>Марка</td>
+                                                    <td>Х27Ю5Т</td>
+                                                </tr>
+
+                                                </tbody>
+                                            </table>
+                                        </a>
+                                        <div class="sentence-card__price">
+                                            <span class="sentence-card__price-link">
+                                                <span class="sentence-card__price-label">
+                                                    Цена
+                                                </span>
+                                                <b class="sentence-card__price-price">
+                                                    По уточнению
+                                                </b>
+                                                <span class="sentence-card__price-info"
+                                                      data-tippy-content="Не является публичной офертой">
+                                                    <svg class="icon icon_question">
+                                                      <use xlink:href="/static/img/svg/symbol/sprite.svg#question"></use>
+                                                    </svg>
+                                                </span>
+                                            </span>
+                                        </div>
+                                        <div style="background-color: #ff740f; height: 35px; border-radius: 7px; display: flex; align-items: center; justify-content: center;"
+                                             class="sentence-card__footer">
+                                            <a href="" style="color: white; text-decoration: none;">Купить</a>
+                                        </div>
+
                                     </div>
                                 </div>
                             </div>
@@ -577,40 +799,138 @@
                         <div class="sentence-card">
                             <div class="">
                                 <div class="about-company-bottom__card-item"
-                                     style="
-                     background-image: url({% static 'images/icon-today-1.webp' %});
-                     background-size: contain;
-                     background-repeat: no-repeat;
-                     background-position: center;">
-                                    <div class="about-company-bottom__card-item-title">Команда ГК «UniTrade»</div>
+                                     style="background-size: contain; background-repeat: no-repeat; background-position: center;">
+                                    <div class="about-company-bottom__card-item-title">
+                                        <img src="{% static 'images/armaturnye-karkai.jpg' %}">
+                                    </div>
                                     <div class="about-company-bottom__card-item-desc">
-                                        Наши сотрудники - эксперты в области проката металла, сталей и сплавов...
+                                        <a class="sentence-card__info"
+                                           href="/product/pretsizionnyj-krug-s-vysokim-elektricheskim-soprotivleniem-10-mm-h27ju5t-gost-12766-4-90/"
+                                           style="height: 73px;">
+                                            <span class="sentence-card__title ellipsis-js-50">Прецизионный круг с высоким электрическим сопротив...</span>
+                                        </a>
+                                        <a class="sentence-card__characteristics">
+                                            <table>
+
+                                                <tbody>
+                                                <tr>
+                                                    <td>Диаметр</td>
+                                                    <td>10 мм</td>
+                                                </tr>
+
+                                                <tr>
+                                                    <td>ГОСТ</td>
+                                                    <td>ГОСТ 12766.4-90</td>
+                                                </tr>
+
+                                                <tr>
+                                                    <td>Тип сплава</td>
+                                                    <td>с высоким электрическим сопротивлением</td>
+                                                </tr>
+
+                                                <tr>
+                                                    <td>Марка</td>
+                                                    <td>Х27Ю5Т</td>
+                                                </tr>
+
+                                                </tbody>
+                                            </table>
+                                        </a>
+                                        <div class="sentence-card__price">
+                                            <span class="sentence-card__price-link">
+                                                <span class="sentence-card__price-label">
+                                                    Цена
+                                                </span>
+                                                <b class="sentence-card__price-price">
+                                                    По уточнению
+                                                </b>
+                                                <span class="sentence-card__price-info"
+                                                      data-tippy-content="Не является публичной офертой">
+                                                    <svg class="icon icon_question">
+                                                      <use xlink:href="/static/img/svg/symbol/sprite.svg#question"></use>
+                                                    </svg>
+                                                </span>
+                                            </span>
+                                        </div>
+                                        <div style="background-color: #ff740f; height: 35px; border-radius: 7px; display: flex; align-items: center; justify-content: center;"
+                                             class="sentence-card__footer">
+                                            <a href="" style="color: white; text-decoration: none;">Купить</a>
+                                        </div>
+
                                     </div>
                                 </div>
                             </div>
                         </div>
                     </div>
 
-                </div>
-            </div>
-        </div>
+                    <div class="swiper-slide" style="margin-right: 0px;">
+                        <div class="sentence-card">
+                            <div class="">
+                                <div class="about-company-bottom__card-item"
+                                     style="background-size: contain; background-repeat: no-repeat; background-position: center;">
+                                    <div class="about-company-bottom__card-item-title">
+                                        <img src="{% static 'images/armaturnye-karkai.jpg' %}">
+                                    </div>
+                                    <div class="about-company-bottom__card-item-desc">
+                                        <a class="sentence-card__info"
+                                           href="/product/pretsizionnyj-krug-s-vysokim-elektricheskim-soprotivleniem-10-mm-h27ju5t-gost-12766-4-90/"
+                                           style="height: 73px;">
+                                            <span class="sentence-card__title ellipsis-js-50">Прецизионный круг с высоким электрическим сопротив...</span>
+                                        </a>
+                                        <a class="sentence-card__characteristics">
+                                            <table>
 
-        <div class="catalog__promo-help-white promo-help-white"
-             style="">
-            <div class="promo-help-white__inner">
-                <div class="promo-help-white__title">Нужна помощь?</div>
-                <div class="promo-help-white__desc">
-                    <p>Обсудить все вопросы, рассчитать стоимость доставки и договориться о способе оплаты вы можете с
-                        нашими специалистами.</p>
-                </div>
-                <div class="promo-help-white__controls">
-                    <button class="promo-help-white__order btn" data-modal-toggle="#modal-request">
-                        Оставить заявку
-                    </button>
-                    <a class="promo-help-white__consultant btn btn_outline" href="javascript:void(0);"
-                       onclick="jivo_api.open()">
-                        Онлайн консультант
-                    </a>
+                                                <tbody>
+                                                <tr>
+                                                    <td>Диаметр</td>
+                                                    <td>10 мм</td>
+                                                </tr>
+
+                                                <tr>
+                                                    <td>ГОСТ</td>
+                                                    <td>ГОСТ 12766.4-90</td>
+                                                </tr>
+
+                                                <tr>
+                                                    <td>Тип сплава</td>
+                                                    <td>с высоким электрическим сопротивлением</td>
+                                                </tr>
+
+                                                <tr>
+                                                    <td>Марка</td>
+                                                    <td>Х27Ю5Т</td>
+                                                </tr>
+
+                                                </tbody>
+                                            </table>
+                                        </a>
+                                        <div class="sentence-card__price">
+                                            <span class="sentence-card__price-link">
+                                                <span class="sentence-card__price-label">
+                                                    Цена
+                                                </span>
+                                                <b class="sentence-card__price-price">
+                                                    По уточнению
+                                                </b>
+                                                <span class="sentence-card__price-info"
+                                                      data-tippy-content="Не является публичной офертой">
+                                                    <svg class="icon icon_question">
+                                                      <use xlink:href="/static/img/svg/symbol/sprite.svg#question"></use>
+                                                    </svg>
+                                                </span>
+                                            </span>
+                                        </div>
+                                        <div style="background-color: #ff740f; height: 35px; border-radius: 7px; display: flex; align-items: center; justify-content: center;"
+                                             class="sentence-card__footer">
+                                            <a href="" style="color: white; text-decoration: none;">Купить</a>
+                                        </div>
+
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
                 </div>
             </div>
         </div>
@@ -638,6 +958,37 @@
         });
     </script>
     <!-- КОНЕЦ СЛАЙДЕРА-->
+
+    <div class="container">
+        <div class="catalog__promo-help-white promo-help-white mb-5 mt-2"
+             style="background-image: url({% static 'images/kz.jpg' %})">
+            <div class="promo-help-white__inner">
+                <div class="promo-help-white__title" style="color: white;">Нужна помощь?</div>
+                <div class="promo-help-white__desc">
+                    <p style="color: white;">Обсудить все вопросы, рассчитать стоимость доставки и договориться о способе оплаты вы можете с
+                        нашими специалистами.</p>
+                </div>
+                <div class="promo-help-white__controls" style="gap: 7px;">
+                    <button class="promo-help-white__order btn" data-modal-toggle="#modal-request" style="background-color: #ff740f; color: white;">
+                        Оставить заявку
+                    </button>
+                    <a class="promo-help-white__consultant btn btn_outline" href="javascript:void(0);"
+                       onclick="jivo_api.open()" style="background-color: #383a44; color: white;">
+                        Онлайн консультант
+                    </a>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <style>
+        @media (max-width: 991px) {
+        .promo-help-white__inner {
+            background-image: url({% static 'images/kz.jpg' %});
+            border-radius: 10px;
+        }
+    }
+    </style>
 
 
 </main>
