@@ -28,7 +28,7 @@
                 <h1 class="title" id="h1-target">{{ category.name }}</h1>
 
                 <div class="for-juridical">
-                    <p><span style="font-size: 14pt;"><strong>Минимальный заказ - 100 000 ₸.</strong></span></p>
+                    <p class="mb-2"><span style="font-size: 14pt;"><strong>Минимальный заказ - 100 000 ₸.</strong></span></p>
                     <p><strong>С тендерами и физическими лицами не работаем!</strong></p>
                 </div>
             </div>
@@ -40,21 +40,7 @@
                     {{ filter.form.search }}
                 </label>
             </form>
-            <style>
-                .search__label::before {
-                    content: "";
-                    position: absolute;
-                    top: 12px;
-                    right: 14px;
-                    display: block;
-                    width: 16px;
-                    height: 16px;
-                    background-image: url(../images/search.svg);
-                    background-repeat: no-repeat;
-                    background-size: contain;
-                    z-index: 1;
-                }
-            </style>
+
         </div>
 
 
@@ -86,7 +72,34 @@
                                     </div>
                                 </div>
                             </td>
+                            <td itemprop="offers" itemscope="" itemtype="http://schema.org/Offer">
+                                <link itemprop="availability" href="http://schema.org/InStock">
+                                <meta itemprop="priceCurrency" content="KZT">
+                                <div class="product-table__actions callback">
+
+
+                                    <div class="product-table__btn btn-find"
+                                         style="background-color: rgba(254,209,49,.15); outline: 1px solid rgba(254, 209, 49, .15);"
+                                         data-call-modal="find-price"
+                                         onclick="ym(window.isteels.ym_id, 'reachGoal', 'click_product_price');">
+                                        Узнать цену
+                                    </div>
+
+
+                                    <div class="callblock">
+                                        <a class="callblock__item" style="background-color: #19a7a4;">
+                                            <span><i style="color: white;" class="fi fi-rr-phone-call"></i></span>
+                                        </a>
+                                        <a class="callblock__item" style="background-color: #25d366;" href="#">
+                                            <span><i style="color: white;" class="fi fi-brands-whatsapp"></i></span>
+                                        </a>
+                                    </div>
+
+
+                                </div>
+                            </td>
                         </tr>
+
                         {% empty %}
                         <tr>
                             <td colspan="2">Товары не найдены</td>
@@ -170,9 +183,6 @@
                         <li class="pagination__li">
                             <a class="pagination__link" href="?page=1">1</a>
                         </li>
-                        {% if page_range.start > 2 %}
-                        <li class="pagination__li disabled"><p style="color: black;">...</p></li>
-                        {% endif %}
                         {% endif %}
 
                         {% for page in page_range %}
@@ -182,9 +192,6 @@
                         {% endfor %}
 
                         {% if page_range.stop <= page_obj.paginator.num_pages %}
-                        {% if page_range.stop < page_obj.paginator.num_pages %}
-                        <li class="pagination__li disabled"><p style="color: black;">...</p></li>
-                        {% endif %}
                         <li class="pagination__li">
                             <a class="pagination__link" href="?page={{ page_obj.paginator.num_pages }}">{{ page_obj.paginator.num_pages }}</a>
                         </li>

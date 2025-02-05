@@ -790,7 +790,7 @@
                   onsubmit="ym(window.isteels.ym_id, 'reachGoal', 'sent_product_price');">
                 <label class="modal-order__form-field modal-order__form_head">
                     <div class="modal-order__form_img">
-                        <img data-modal-img="" src="" alt="Товар">
+                        <img data-modal-img="" src="{% static 'favicon.png' %}" alt="Товар">
                     </div>
                     <input class="d-none" name="product">
                     <span data-modal-title=""></span>
@@ -802,7 +802,7 @@
                         </span>
                     <input class="modal-order__form-field-input input__input" type="text" name="quantity"
                            placeholder="10" required="">
-                </label>
+                </label>т
                 <label class="modal-order__form-field">
                         <span class="modal-order__form-field-title">
                             Номер телефона
@@ -818,14 +818,10 @@
                            placeholder="example@mail.com">
                 </label>
                 <div class="modal-order__bottom">
-                    <button class="modal-order__form_submit btn btn-primary btn_100 find_price" type="submit">
-                        Отправить
-
+                    <button class="modal-order__form_submit btn btn-primary btn_100 find_price"  style="background-color: #ff740f;" type="submit">
+                        <span style="color: white;">Отправить</span>
                     </button>
-                    <div class="modal-order__info-license">
-                        Нажимая «Отправить», вы соглашаетесь с
-                        <a href="/policy/" target="_blank"> политикой обработки персональных данных</a>
-                    </div>
+
                 </div>
             </form>
         </div>
