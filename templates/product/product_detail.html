@@ -12,13 +12,11 @@
                 <div class="product-grid__aside">
                     <div class="details-product">
                         <div class="details-product__photo">
-                            <img src="/resize/400/media/uploads/catalog/category/%D0%AD%D0%BB%D0%B5%D0%BA%D1%82%D1%80%D0%BE%D1%81%D0%B2%D0%B0%D1%80%D0%BD%D0%B0%D1%8F_%D1%81%D1%82%D0%B0%D0%BB%D1%8C%D0%BD%D0%B0%D1%8F_%D1%82%D1%80%D1%83%D0%B1%D0%B0.png"
+                            <img src="{% if category.image %}{{ category.image.url }}{% else %} {% static 'favicon.png' %} {% endif %}"
                                  data-product-img=""
-                                 alt="Электросварная стальная труба холоднодеформированная 48х1.6 мм 20кп ГОСТ 10707-80 купить в Астане"
+                                 alt="{{ product.name }}"
                                  itemprop="image"
-                                 title="Электросварная стальная труба холоднодеформированная 48х1.6 мм 20кп ГОСТ 10707-80 купить в Астане">
-                            <div class="details-product__photo-tippy"><p>Внешний вид изделия может отличаться от изображения, представленного на сайте</p>
-                            </div>
+                                 title="{{ product.name }}">
                         </div>
                         <div class="details-product__info">
                             <div class="attention-note">
@@ -125,7 +123,7 @@
                 </div>
                 <div class="product-grid__content">
                     <div class="product-grid__header">
-                        <h1 class="product__title title" style="color: white;">{{ product.name }} </h1>
+                        <h1 class="product__title title">{{ product.name }} </h1>
                         <div class="tags-list">
                             <div class="tags-list__item tags-list__item--many">
                                 Наличие: Много
@@ -185,38 +183,28 @@
                     <div class="product-grid__char">
                         <div class="section-title">Характеристики</div>
                         <ul class="char-list">
-
                             <li class="char-list__item">
                                 <div class="char-list__item-char">Толщина стенки</div>
-                                <div class="char-list__item-value">1.6 мм</div>
+                                <div class="char-list__item-value">{{ parsed_data.thickness }}</div>
                             </li>
 
                             <li class="char-list__item">
                                 <div class="char-list__item-char">Марка</div>
-                                <div class="char-list__item-value">20кп</div>
-                            </li>
-
-                            <li class="char-list__item">
-                                <div class="char-list__item-char">Наружный диаметр</div>
-                                <div class="char-list__item-value">48 мм</div>
+                                <div class="char-list__item-value">{{ parsed_data.mark }}</div>
                             </li>
 
                             <li class="char-list__item">
                                 <div class="char-list__item-char">ГОСТ</div>
-                                <div class="char-list__item-value">ГОСТ 10707-80</div>
-                            </li>
-
-                            <li class="char-list__item">
-                                <div class="char-list__item-char">Состав</div>
-                                <div class="char-list__item-value">углеродистая</div>
+                                <div class="char-list__item-value">{{ parsed_data.gost }}</div>
                             </li>
 
                             <li class="char-list__item">
                                 <div class="char-list__item-char">Тип</div>
-                                <div class="char-list__item-value">холоднодеформированная</div>
+                                <div class="char-list__item-value">{{ parsed_data.product_type }}</div>
                             </li>
-
                         </ul>
+
+
                     </div>
                     <div class="product-content">
                         <div class="details-nav">
@@ -231,16 +219,14 @@
                         <div class="product-content__block" id="about">
                             <div class="purchase-details">
                                 <div class="purchase-details__section" itemprop="description">
-                                    <p>Электросварная стальная труба холоднодеформированная 48х1.6 мм 20кп ГОСТ 10707-80
-                                        поставляется со склада в Астане. Для заказа позвоните по телефону <a
-                                                class="mgo-number" href="tel:+7 (717) 264 02 97"><span
-                                                class="mgo-number-text">+7 (717) 264 02 97</span></a>, напишите нам на
-                                        почту <a class="mgo-email" href="mailto:astana@isteels.kz">astana@isteels.kz</a>
+                                    <p>{{ product.name }}
+                                        поставляется со складов по всему Казахстану. Для заказа позвоните по телефону <a
+                                                class="mgo-number" href="tel:+7 (747) 562 05 16"><span
+                                                class="mgo-number-text">+7 (747) 562 05 16</span></a>, напишите нам на
+                                        почту <a class="mgo-email" href="mailto:zakaz@steelfed.kz">zakaz@steelfed.kz</a>
                                         или оставьте заявку на сайте.</p>
 
-                                    <p>Группа компаний «Интерстилс» занимается комплексным обеспечением производственных
-                                        и строительных объектов в Казахстане, Узбекистане, России, а также других
-                                        странах ближнего и дальнего зарубежья. </p>
+                                    <p>Благодаря большим объёмам выпускаемой продукции и прямым поставкам с заводов, Стальная Федерация может предложить лучшие цены на металлоизделия.</p>
 
                                     <h4>Факторы успеха</h4>
 

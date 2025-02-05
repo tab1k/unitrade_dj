@@ -4,9 +4,10 @@ from slugify import slugify
 
 
 class Category(models.Model):
-    name = models.CharField(max_length=255, verbose_name="Название категории")
+    name = models.CharField(max_length=255, verbose_name="Название категории", db_index=True)
     image = models.ImageField(max_length=255, blank=True, null=True, verbose_name="Картинка категории")
     slug = models.SlugField(unique=True, verbose_name="Слаг")
+    about = models.TextField(max_length=255, blank=True, null=True)
     parent = models.ForeignKey(
         'self',
         on_delete=models.CASCADE,

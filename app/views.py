@@ -14,6 +14,9 @@ from django.shortcuts import get_object_or_404
 from django_filters.views import FilterView
 from .models import Product, Category
 from .filters import ProductFilter
+import re
+from django.views.generic import DetailView
+
 
 
 class IndexViewPage(TemplateView):
@@ -322,10 +325,42 @@ class ProductListView(FilterView, ListView):
 #
 #         return render(request, self.template_name, {'product': product})
 
+
+
+
 class ProductDetailView(DetailView):
     model = Product
     template_name = 'product/product_detail.html'
     context_object_name = 'product'
+
+    def get_context_data(self, **kwargs):
+        context = super().get_context_data(**kwargs)
+        product = self.object  # Сохраняем объект, чтобы не делать повторные запросы к БД
+        context['parsed_data'] = self.parse_product_name(product.name)
+        return context
+
+    @staticmethod
+    def parse_product_name(product_name):
+        # Извлекаем толщину стенки
+        thickness = next(iter(re.findall(r"(\d+(\.\d+)?)\s*мм", product_name)), ("Не указано",))[0] + " мм"
+
+        # Извлекаем марку стали
+        mark = next(iter(re.findall(r"(Ст\d+[пс|кп]?)", product_name)), "Не указано")
+
+        # Извлекаем ГОСТ
+        gost = next(iter(re.findall(r"(ГОСТ\s*\d+-\d+)", product_name)), "Не указано")
+
+        # Определяем тип проката
+        product_type = "горячекатаная" if "горячекатаная" in product_name else \
+                       "холоднокатаная" if "холоднокатаная" in product_name else "Не указано"
+
+        return {
+            "thickness": thickness,
+            "mark": mark,
+            "gost": gost,
+            "product_type": product_type,
+        }
+
 
 
 def search_products(request):
