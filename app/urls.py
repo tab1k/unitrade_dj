@@ -17,8 +17,8 @@ urlpatterns = [
     path('category/', CategoryViewPage.as_view(), name='category'),
 
     path('category/<slug:slug>/', CategoryDetailView.as_view(), name='category_detail'),
-    path('<slug:slug>/products/', ProxyProductListView.as_view(), name='product_list'),
-    path('product/<slug:slug>/', ProxyProductDetailView.as_view(), name='product_detail'),
+    path('<slug:slug>/products/', ProductListView.as_view(), name='product_list'),
+    path('product/<slug:slug>/', ProductDetailView.as_view(), name='product_detail'),
 
 
     path('search/', search_products, name='search_products'),

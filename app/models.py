@@ -40,7 +40,6 @@ class Product(models.Model):
     )
     slug = models.SlugField(unique=True, verbose_name="Слаг", blank=True, null=True)
     description = models.TextField(blank=True, verbose_name="Описание")
-    image = models.ImageField(upload_to='products/', verbose_name="Фото продукта")
 
     class Meta:
         verbose_name = "Продукт"
@@ -51,10 +50,18 @@ class Product(models.Model):
 
     def save(self, *args, **kwargs):
         if not self.slug:
-            self.slug = slugify(self.name)  # Генерируем slug из названия
+            base_slug = slugify(self.name)
+            slug = base_slug
+            counter = 1
+
+            while Product.objects.filter(slug=slug).exists():
+                slug = f"{base_slug}-{counter}"
+                counter += 1
+
+            self.slug = slug
+
         super().save(*args, **kwargs)
 
     def get_absolute_url(self):
         return reverse('app:product_detail', kwargs={'slug': self.slug})
-
 
