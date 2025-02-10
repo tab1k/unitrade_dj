@@ -1,5 +1,12 @@
 #!/bin/bash
 
+# Ждём, пока база данных будет доступна
+echo "Waiting for PostgreSQL..."
+while ! nc -z $DB_HOST $DB_PORT; do
+  sleep 1
+done
+echo "PostgreSQL started"
+
 # Применение миграций
 echo "Applying migrations..."
 python manage.py migrate
@@ -8,6 +15,6 @@ python manage.py migrate
 echo "Collecting static files..."
 python manage.py collectstatic --noinput
 
-# Запуск сервера
-echo "Starting server..."
-exec "$@"
+# Запуск Gunicorn
+echo "Starting Gunicorn..."
+exec gunicorn unitrade.wsgi:application --bind 0.0.0.0:8000

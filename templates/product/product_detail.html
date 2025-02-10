@@ -20,9 +20,9 @@
                         </div>
                         <div class="details-product__info">
                             <div class="attention-note">
-                                <p><span style="font-size: 14pt;"><strong>Минимальный заказ - 100 000 ₸.</strong></span>
+                                <p><span style="font-size: 14pt;"><strong>{{ product.name }}.</strong></span>
                                 </p>
-                                <p><strong>С тендерами и физическими лицами не работаем!</strong></p>
+                                <p><strong>Договориться по цене вы можете позвонив нам.</strong></p>
                             </div>
                             <div class="price-actions" itemprop="offers" itemscope=""
                                  itemtype="http://schema.org/Offer">
@@ -35,7 +35,6 @@
                                         </div>
                                         <div class="price-actions__price-info"
                                              data-tippy-content-p="<span>Не является публичной офертой</span>">
-
                                         </div>
                                     </div>
 
@@ -52,14 +51,11 @@
 
 
                                         <div class="callblock">
-                                            <div class="callblock__item" data-modal-toggle="#modal-call"
-                                                 onclick="ym(window.isteels.ym_id, 'reachGoal', 'pricelist_phone');">
-
-                                            </div>
-                                            <a class="callblock__item mgo-email" href="mailto:astana@isteels.kz"
-                                               onclick="ym(window.isteels.ym_id, 'reachGoal', 'pricelist_email');">
-
-                                                <span class="d-none">astana@isteels.kz</span>
+                                            <a class="callblock__item" style="background-color: #36b37e;">
+                                                <span><i style="color: white;" class="fi fi-rr-phone-call"></i></span>
+                                            </a>
+                                            <a class="callblock__item" style="background-color: #25d366;" href="#">
+                                                <span><i style="color: white;" class="fi fi-brands-whatsapp"></i></span>
                                             </a>
                                         </div>
 
@@ -89,20 +85,18 @@
                                 <div class="price-actions__btns product-table__actions">
 
                                     <div class="product-table__btn btn-find" data-call-modal="find-price"
+                                         style="background-color: rgba(254,209,49,.15); outline: 1px solid rgba(254, 209, 49, .15);"
                                          onclick="ym(window.isteels.ym_id, 'reachGoal', 'click_product_price');">
                                         Узнать цену
                                     </div>
 
 
                                     <div class="callblock">
-                                        <div class="callblock__item" data-modal-toggle="#modal-call"
-                                             onclick="ym(window.isteels.ym_id, 'reachGoal', 'pricelist_phone');">
-
-                                        </div>
-                                        <a class="callblock__item mgo-email" href="mailto:astana@isteels.kz"
-                                           onclick="ym(window.isteels.ym_id, 'reachGoal', 'pricelist_email');">
-
-                                            <span class="d-none">astana@isteels.kz</span>
+                                        <a class="callblock__item" style="background-color: #36b37e;">
+                                            <span><i style="color: white;" class="fi fi-rr-phone-call"></i></span>
+                                        </a>
+                                        <a class="callblock__item" style="background-color: #25d366;" href="#">
+                                            <span><i style="color: white;" class="fi fi-brands-whatsapp"></i></span>
                                         </a>
                                     </div>
 
@@ -115,9 +109,6 @@
 
                             <a class="details-nav__item" href="#delivery">Доставка</a>
                             <a class="details-nav__item" href="#payment">Оплата</a>
-                            <a class="details-nav__item" href="#reviews">Отзывы</a>
-                            <a class="details-nav__item" href="#faq">Вопрос-ответ</a>
-                            <a class="details-nav__item" href="#analogs">Аналоги</a>
                         </div>
                     </div>
                 </div>
@@ -146,9 +137,9 @@
                             </div>
 
                             <div class="attention-note">
-                                <p><span style="font-size: 14pt;"><strong>Минимальный заказ - 100 000 ₸.</strong></span>
+                                <p><span style="font-size: 14pt;"><strong>{{ product.name }}.</strong></span>
                                 </p>
-                                <p><strong>С тендерами и физическими лицами не работаем!</strong></p>
+                                <p><strong>Договориться по цене вы можете позвонив нам.</strong></p>
                             </div>
                         </div>
                         <div class="price-actions__bottom">
@@ -156,23 +147,18 @@
 
                             <div class="price-actions__btns product-table__actions">
 
-                                <div class="product-table__btn btn-find" data-call-modal="find-price"
+                                <div class="product-table__btn btn-find" data-call-modal="find-price" style="background-color: rgba(254,209,49,.15); outline: 1px solid rgba(254, 209, 49, .15);"
                                      onclick="ym(window.isteels.ym_id, 'reachGoal', 'click_product_price');">
                                     Узнать цену
                                 </div>
 
 
                                 <div class="callblock">
-                                    <div class="callblock__item" data-modal-toggle="#modal-call"
-                                         onclick="ym(window.isteels.ym_id, 'reachGoal', 'pricelist_phone');">
-
-                                    </div>
-                                    <a class="callblock__item mgo-email" href="mailto:astana@isteels.kz"
-                                       onclick="ym(window.isteels.ym_id, 'reachGoal', 'pricelist_email');">
-                                        <svg class="icon icon_email">
-                                            <use xlink:href="svg/symbol/#email"></use>
-                                        </svg>
-                                        <span class="d-none">astana@isteels.kz</span>
+                                    <a class="callblock__item" style="background-color: #36b37e;">
+                                        <span><i style="color: white;" class="fi fi-rr-phone-call"></i></span>
+                                    </a>
+                                    <a class="callblock__item" style="background-color: #25d366;" href="#">
+                                        <span><i style="color: white;" class="fi fi-brands-whatsapp"></i></span>
                                     </a>
                                 </div>
 
@@ -212,48 +198,47 @@
 
                             <a class="details-nav__item" href="#delivery">Доставка</a>
                             <a class="details-nav__item" href="#payment">Оплата</a>
-                            <a class="details-nav__item" href="#reviews">Отзывы</a>
-                            <a class="details-nav__item" href="#faq">Вопрос-ответ</a>
-                            <a class="details-nav__item" href="#analogs">Аналоги</a>
                         </div>
                         <div class="product-content__block" id="about">
                             <div class="purchase-details">
                                 <div class="purchase-details__section" itemprop="description">
-                                    <p>{{ product.name }}
-                                        поставляется со складов по всему Казахстану. Для заказа позвоните по телефону <a
-                                                class="mgo-number" href="tel:+7 (747) 562 05 16"><span
-                                                class="mgo-number-text">+7 (747) 562 05 16</span></a>, напишите нам на
-                                        почту <a class="mgo-email" href="mailto:zakaz@steelfed.kz">zakaz@steelfed.kz</a>
+                                    <p><b>{{ product.name }}</b>
+                                        поставляется со складов по всему Казахстану.
+
+                                        <br>
+
+                                    <p>Позвоните нам по телефону
+                                        <a class="mgo-number" href="tel:+7 (747) 562 05 16">
+                                            <span class="mgo-number-text">+7 (747) 562 05 16</span>
+                                        </a>, напишите нам на почту
+                                        <a class="mgo-email" href="mailto:zakaz@steelfed.kz">zakaz@steelfed.kz</a>
                                         или оставьте заявку на сайте.</p>
 
-                                    <p>Благодаря большим объёмам выпускаемой продукции и прямым поставкам с заводов, Стальная Федерация может предложить лучшие цены на металлоизделия.</p>
+                                    <p><b>«Стальная Федерация»</b>– ваш надежный поставщик металла.</p>
 
-                                    <h4>Факторы успеха</h4>
+                                    <p>Мы обеспечиваем предприятия Казахстана металлопрокатом для строительства и
+                                        производства. Работаем с проверенными поставщиками, гарантируя качество и
+                                        оперативность.</p>
+
+                                    <h4>Наши преимущества:</h4>
 
                                     <ol>
-                                        <li>Помимо собственного производства, мы работаем с лучшими поставщиками
-                                            металлопроката: от лидеров отрасли до небольших мануфактур, от крупнейших
-                                            складских комплексов до региональных металлобаз.
+                                        <li><b>Прямые контракты</b> с ведущими производителями металла и локальными
+                                            поставщиками.
                                         </li>
-                                        <li>Предоставляем выгодные ценовые условия от наших партнеров благодаря высокому
-                                            ежемесячному обороту всей компании.
+                                        <li><b>Конкурентные цены</b> благодаря высоким объемам закупок.</li>
+                                        <li>Более <b>5 миллионов</b> позиций в ассортименте, быстрый подбор под любые
+                                            задачи.
                                         </li>
-                                        <li>Сортамент превышает 6 млн номенклатурных позиций. Поэтому мы можем в
-                                            короткие сроки исполнить заявку любой сложности.
+                                        <li><b>Сертифицированная продукция</b>, соответствующая всем отраслевым
+                                            стандартам.
                                         </li>
-                                        <li>Вся продукция производится в строгом соответствии с отраслевыми стандартами
-                                            и имеет соответствующие сертификаты качества.
+                                        <li>Быстрая обработка заказов – <b>отклик в течение часа</b>.</li>
+                                        <li><b>Эксперты</b> в области металлопроката помогут подобрать оптимальное
+                                            решение.
                                         </li>
-                                        <li>Коммерческий отдел принимает Ваши заявки по будням с 9:00 до 18:00.
-                                            Складские комплексы действуют во всех крупных городах Казахстана и
-                                            Узбекистана.
-                                        </li>
-                                        <li>В нашей команде работают эксперты в области проката металла, сталей и
-                                            сплавов. Обработка заявки занимает не более одного часа.
-                                        </li>
-                                        <li>Мы сотрудничаем с надёжными транспортными компаниями. Доставка
-                                            осуществляется точно в срок и с соблюдением требований к перевозке данного
-                                            вида груза.
+                                        <li><b>Склады</b> в ключевых городах Казахстана и Узбекистана.</li>
+                                        <li><b>Надежная логистика</b> – партнерство с крупными транспортными компаниями.
                                         </li>
                                     </ol>
                                 </div>
@@ -265,37 +250,36 @@
                             <div class="delivery-card__card row">
                                 <div class="col-lg-8">
                                     <div class="d-flex delivery-card__card_line">
-                                        <div class="delivery-card__card-item-img">
-                                            <img loading="lazy" src="/media/uploads/brick/delivery3.png"
-                                                 alt="Доставка3">
+                                        <div class="delivery-card__card-item-img" style="width: 50%;">
+                                            <img loading="lazy" src="{% static 'images/delivery2.webp' %}"
+                                                 alt="Доставка3" width="90%;">
                                         </div>
                                         <div class="delivery-card__card-item">
-                                            <div class="delivery-card__card-item-title">Ж/д, авиа- и морские перевозки
+                                            <div class="delivery-card__card-item-title">Железнодорожная, авиа- и морская
+                                                перевозка
                                             </div>
                                             <div class="delivery-card__card-item-desc">
-                                                При необходимости мы организуем доставку
-                                                любым видом транспорта и возьмем на себя хлопоты, связанные с таможенным
-                                                оформлением груза.
+                                                Организуем доставку любыми доступными способами, включая таможенное
+                                                оформление.
                                             </div>
                                         </div>
                                     </div>
-                                    <div class="d-flex delivery-card__card_line">
-                                        <div class="delivery-card__card-item-img">
-                                            <img loading="lazy" src="/media/uploads/brick/delivery2.png"
-                                                 alt="Доставка2">
+                                    <div class="d-flex delivery-card__card_line" style="gap: 20px;">
+                                        <div class="delivery-card__card-item-img"
+                                             style="width: 65%; margin-right: 0px;">
+                                            <img loading="lazy" src="{% static 'images/delivery.webp' %}"
+                                                 alt="Доставка3" width="90%;">
                                         </div>
                                         <div class="delivery-card__card-item">
-                                            <div class="delivery-card__card-item-title">Доставка транспортными
-                                                компаниями
+                                            <div class="delivery-card__card-item-title">Автоперевозки
                                             </div>
                                             <div class="delivery-card__card-item-desc">
-                                                Многолетнее партнерство с крупными
-                                                транспортными компаниями позволяет доставлять любую продукцию в точно
-                                                установленные сроки и с соблюдением всех технических требований к
-                                                перевозке данного вида груза.
+                                                Точные сроки и соблюдение всех технических требований благодаря
+                                                проверенным логистическим партнерам.
                                             </div>
                                         </div>
                                     </div>
+
                                 </div>
                             </div>
                         </div>
@@ -306,42 +290,37 @@
                                     <div class="d-flex delivery-card__card_line">
                                         <div class="delivery-card__card-item-img">
                                             <img loading="lazy"
-                                                 src="/media/uploads/brick/markus-winkler-ahjzVINkuCs-unsplash.jpg"
+                                                 src="{% static 'images/beznal.webp' %}"
                                                  alt="Оплата">
                                         </div>
                                         <div class="delivery-card__card-item">
-                                            <div class="delivery-card__card-item-title">На расчетный счет</div>
-                                            <div class="delivery-card__card-item-desc">Оплата товара производится по
-                                                выставленному на ИП или ООО счету - через офис Вашего банка или личный
-                                                онлайн-кабинет. Для получения товара необходимо выслать платежное
-                                                поручение с отметкой банка.
+                                            <div class="delivery-card__card-item-title">Безналичный расчёт</div>
+                                            <div class="delivery-card__card-item-desc">Удобная оплата через банк или
+                                                онлайн-кабинет, получение товара после подтверждения платежа.
                                             </div>
                                         </div>
                                     </div>
                                     <div class="d-flex delivery-card__card_line">
                                         <div class="delivery-card__card-item-img">
-                                            <img loading="lazy" src="/media/uploads/brick/delivery4.png"
+                                            <img loading="lazy" src="{% static 'images/udobstvo.webp' %}"
                                                  alt="Доставка4">
                                         </div>
                                         <div class="delivery-card__card-item">
-                                            <div class="delivery-card__card-item-title">Отсрочка платежа</div>
+                                            <div class="delivery-card__card-item-title">Гибкие условия</div>
                                             <div class="delivery-card__card-item-desc">
-                                                Мы всегда готовы идти навстречу нашим
-                                                клиентам. При заказе большого объема продукции оплата может быть
-                                                осуществлена по факту получения груза.
+                                                Возможность отсрочки платежа для постоянных клиентов.
                                             </div>
                                         </div>
                                     </div>
                                     <div class="d-flex delivery-card__card_line">
                                         <div class="delivery-card__card-item-img">
-                                            <img loading="lazy" src="/media/uploads/brick/delivery6.png"
+                                            <img loading="lazy" src="{% static 'images/individ.webp' %}"
                                                  alt="Доставка6">
                                         </div>
                                         <div class="delivery-card__card-item">
-                                            <div class="delivery-card__card-item-title">Способ оплаты</div>
-                                            <div class="delivery-card__card-item-desc">Уточнить характеристики товара,
-                                                рассчитать стоимость доставки и договориться об ином способе оплаты Вы
-                                                можете с экспертами наших коммерческих отделов.
+                                            <div class="delivery-card__card-item-title">Индивидуальный подход</div>
+                                            <div class="delivery-card__card-item-desc">Поможем подобрать удобный способ
+                                                оплаты и рассчитаем стоимость доставки.
                                             </div>
                                         </div>
                                     </div>
@@ -349,1036 +328,1022 @@
                             </div>
                         </div>
 
-                        <div class="product-content__block" id="analogs">
-                            <h3 class="product-content__title">Аналоги</h3>
-                            <div class="table-wrapper">
-                                <table class="product-table style-body" id="listing-table-target">
-                                    <tbody>
-
-                                    <tr class="product-table__item">
-                                        <td>
-                                            <div class="short-product">
-                                                <div class="short-product__info">
-                                                    <div class="short-product__title"
-                                                         data-href="/product/elektrosvarnaja_stalnaja_truba_holodnodeformirovannaja_43h16_mm_20kp_gost_10707_80/"
-                                                         data-product-title="">
-                                                        Электросварная стальная труба холоднодеформированная 43х1.6 мм
-                                                        20кп ГОСТ 10707-80
-                                                    </div>
-
-                                                </div>
-                                                <div class="product-table__battery product-table__battery--many"
-                                                     data-tippy-content-p-no-arrow="<p>Много</p>">
-                                                    <svg class="icon icon_battery-many">
-                                                        <use xlink:href="svg/symbol/#battery-many"></use>
-                                                    </svg>
-                                                </div>
-                                            </div>
-                                        </td>
-                                        <td>
-                                            <div class="price-actions__btns product-table__actions callback">
-
-
-                                                <div class="product-table__btn btn-find" data-call-modal="find-price"
-                                                     onclick="ym(window.isteels.ym_id, 'reachGoal', 'click_product_price');">
-                                                    Узнать цену
-                                                </div>
-
-
-                                                <div class="callblock">
-                                                    <div class="callblock__item" data-modal-toggle="#modal-call"
-                                                         onclick="ym(window.isteels.ym_id, 'reachGoal', 'pricelist_phone');">
-                                                        <svg class="icon icon_phone">
-                                                            <use xlink:href="svg/symbol/#phone"></use>
-                                                        </svg>
-                                                    </div>
-                                                    <a class="callblock__item mgo-email" href="mailto:astana@isteels.kz"
-                                                       onclick="ym(window.isteels.ym_id, 'reachGoal', 'pricelist_email');">
-                                                        <svg class="icon icon_email">
-                                                            <use xlink:href="svg/symbol/#email"></use>
-                                                        </svg>
-                                                        <span class="d-none">astana@isteels.kz</span>
-                                                    </a>
-                                                </div>
-
-
-                                            </div>
-                                        </td>
-                                    </tr>
-
-                                    <tr class="product-table__item">
-                                        <td>
-                                            <div class="short-product">
-                                                <div class="short-product__info">
-                                                    <div class="short-product__title"
-                                                         data-href="/product/elektrosvarnaja_stalnaja_truba_holodnodeformirovannaja_45h16_mm_20kp_gost_10707_80/"
-                                                         data-product-title="">
-                                                        Электросварная стальная труба холоднодеформированная 45х1.6 мм
-                                                        20кп ГОСТ 10707-80
-                                                    </div>
-
-                                                </div>
-                                                <div class="product-table__battery product-table__battery--many"
-                                                     data-tippy-content-p-no-arrow="<p>Много</p>">
-                                                    <svg class="icon icon_battery-many">
-                                                        <use xlink:href="svg/symbol/#battery-many"></use>
-                                                    </svg>
-                                                </div>
-                                            </div>
-                                        </td>
-                                        <td>
-                                            <div class="price-actions__btns product-table__actions callback">
-
-
-                                                <div class="product-table__btn btn-find" data-call-modal="find-price"
-                                                     onclick="ym(window.isteels.ym_id, 'reachGoal', 'click_product_price');">
-                                                    Узнать цену
-                                                </div>
-
-
-                                                <div class="callblock">
-                                                    <div class="callblock__item" data-modal-toggle="#modal-call"
-                                                         onclick="ym(window.isteels.ym_id, 'reachGoal', 'pricelist_phone');">
-                                                        <svg class="icon icon_phone">
-                                                            <use xlink:href="svg/symbol/#phone"></use>
-                                                        </svg>
-                                                    </div>
-                                                    <a class="callblock__item mgo-email" href="mailto:astana@isteels.kz"
-                                                       onclick="ym(window.isteels.ym_id, 'reachGoal', 'pricelist_email');">
-                                                        <svg class="icon icon_email">
-                                                            <use xlink:href="svg/symbol/#email"></use>
-                                                        </svg>
-                                                        <span class="d-none">astana@isteels.kz</span>
-                                                    </a>
-                                                </div>
-
-
-                                            </div>
-                                        </td>
-                                    </tr>
-
-                                    <tr class="product-table__item">
-                                        <td>
-                                            <div class="short-product">
-                                                <div class="short-product__info">
-                                                    <div class="short-product__title"
-                                                         data-href="/product/elektrosvarnaja_stalnaja_truba_holodnodeformirovannaja_50h16_mm_20kp_gost_10707_80/"
-                                                         data-product-title="">
-                                                        Электросварная стальная труба холоднодеформированная 50х1.6 мм
-                                                        20кп ГОСТ 10707-80
-                                                    </div>
-
-                                                </div>
-                                                <div class="product-table__battery product-table__battery--many"
-                                                     data-tippy-content-p-no-arrow="<p>Много</p>">
-                                                    <svg class="icon icon_battery-many">
-                                                        <use xlink:href="svg/symbol/#battery-many"></use>
-                                                    </svg>
-                                                </div>
-                                            </div>
-                                        </td>
-                                        <td>
-                                            <div class="price-actions__btns product-table__actions callback">
-
-
-                                                <div class="product-table__btn btn-find" data-call-modal="find-price"
-                                                     onclick="ym(window.isteels.ym_id, 'reachGoal', 'click_product_price');">
-                                                    Узнать цену
-                                                </div>
-
-
-                                                <div class="callblock">
-                                                    <div class="callblock__item" data-modal-toggle="#modal-call"
-                                                         onclick="ym(window.isteels.ym_id, 'reachGoal', 'pricelist_phone');">
-                                                        <svg class="icon icon_phone">
-                                                            <use xlink:href="svg/symbol/#phone"></use>
-                                                        </svg>
-                                                    </div>
-                                                    <a class="callblock__item mgo-email" href="mailto:astana@isteels.kz"
-                                                       onclick="ym(window.isteels.ym_id, 'reachGoal', 'pricelist_email');">
-                                                        <svg class="icon icon_email">
-                                                            <use xlink:href="svg/symbol/#email"></use>
-                                                        </svg>
-                                                        <span class="d-none">astana@isteels.kz</span>
-                                                    </a>
-                                                </div>
-
-
-                                            </div>
-                                        </td>
-                                    </tr>
-
-                                    <tr class="product-table__item">
-                                        <td>
-                                            <div class="short-product">
-                                                <div class="short-product__info">
-                                                    <div class="short-product__title"
-                                                         data-href="/product/elektrosvarnaja_stalnaja_truba_holodnodeformirovannaja_51h16_mm_20kp_gost_10707_80/"
-                                                         data-product-title="">
-                                                        Электросварная стальная труба холоднодеформированная 51х1.6 мм
-                                                        20кп ГОСТ 10707-80
-                                                    </div>
-
-                                                </div>
-                                                <div class="product-table__battery product-table__battery--many"
-                                                     data-tippy-content-p-no-arrow="<p>Много</p>">
-                                                    <svg class="icon icon_battery-many">
-                                                        <use xlink:href="svg/symbol/#battery-many"></use>
-                                                    </svg>
-                                                </div>
-                                            </div>
-                                        </td>
-                                        <td>
-                                            <div class="price-actions__btns product-table__actions callback">
-
-
-                                                <div class="product-table__btn btn-find" data-call-modal="find-price"
-                                                     onclick="ym(window.isteels.ym_id, 'reachGoal', 'click_product_price');">
-                                                    Узнать цену
-                                                </div>
-
-
-                                                <div class="callblock">
-                                                    <div class="callblock__item" data-modal-toggle="#modal-call"
-                                                         onclick="ym(window.isteels.ym_id, 'reachGoal', 'pricelist_phone');">
-                                                        <svg class="icon icon_phone">
-                                                            <use xlink:href="svg/symbol/#phone"></use>
-                                                        </svg>
-                                                    </div>
-                                                    <a class="callblock__item mgo-email" href="mailto:astana@isteels.kz"
-                                                       onclick="ym(window.isteels.ym_id, 'reachGoal', 'pricelist_email');">
-                                                        <svg class="icon icon_email">
-                                                            <use xlink:href="svg/symbol/#email"></use>
-                                                        </svg>
-                                                        <span class="d-none">astana@isteels.kz</span>
-                                                    </a>
-                                                </div>
-
-
-                                            </div>
-                                        </td>
-                                    </tr>
-
-                                    <tr class="product-table__item">
-                                        <td>
-                                            <div class="short-product">
-                                                <div class="short-product__info">
-                                                    <div class="short-product__title"
-                                                         data-href="/product/elektrosvarnaja_stalnaja_truba_holodnodeformirovannaja_53h16_mm_20kp_gost_10707_80/"
-                                                         data-product-title="">
-                                                        Электросварная стальная труба холоднодеформированная 53х1.6 мм
-                                                        20кп ГОСТ 10707-80
-                                                    </div>
-
-                                                </div>
-                                                <div class="product-table__battery product-table__battery--many"
-                                                     data-tippy-content-p-no-arrow="<p>Много</p>">
-                                                    <svg class="icon icon_battery-many">
-                                                        <use xlink:href="svg/symbol/#battery-many"></use>
-                                                    </svg>
-                                                </div>
-                                            </div>
-                                        </td>
-                                        <td>
-                                            <div class="price-actions__btns product-table__actions callback">
-
-
-                                                <div class="product-table__btn btn-find" data-call-modal="find-price"
-                                                     onclick="ym(window.isteels.ym_id, 'reachGoal', 'click_product_price');">
-                                                    Узнать цену
-                                                </div>
-
-
-                                                <div class="callblock">
-                                                    <div class="callblock__item" data-modal-toggle="#modal-call"
-                                                         onclick="ym(window.isteels.ym_id, 'reachGoal', 'pricelist_phone');">
-                                                        <svg class="icon icon_phone">
-                                                            <use xlink:href="svg/symbol/#phone"></use>
-                                                        </svg>
-                                                    </div>
-                                                    <a class="callblock__item mgo-email" href="mailto:astana@isteels.kz"
-                                                       onclick="ym(window.isteels.ym_id, 'reachGoal', 'pricelist_email');">
-                                                        <svg class="icon icon_email">
-                                                            <use xlink:href="svg/symbol/#email"></use>
-                                                        </svg>
-                                                        <span class="d-none">astana@isteels.kz</span>
-                                                    </a>
-                                                </div>
-
-
-                                            </div>
-                                        </td>
-                                    </tr>
-
-                                    <tr class="product-table__item">
-                                        <td>
-                                            <div class="short-product">
-                                                <div class="short-product__info">
-                                                    <div class="short-product__title"
-                                                         data-href="/product/elektrosvarnaja_stalnaja_truba_holodnodeformirovannaja_54h16_mm_20kp_gost_10707_80/"
-                                                         data-product-title="">
-                                                        Электросварная стальная труба холоднодеформированная 54х1.6 мм
-                                                        20кп ГОСТ 10707-80
-                                                    </div>
-
-                                                </div>
-                                                <div class="product-table__battery product-table__battery--many"
-                                                     data-tippy-content-p-no-arrow="<p>Много</p>">
-                                                    <svg class="icon icon_battery-many">
-                                                        <use xlink:href="svg/symbol/#battery-many"></use>
-                                                    </svg>
-                                                </div>
-                                            </div>
-                                        </td>
-                                        <td>
-                                            <div class="price-actions__btns product-table__actions callback">
-
-
-                                                <div class="product-table__btn btn-find" data-call-modal="find-price"
-                                                     onclick="ym(window.isteels.ym_id, 'reachGoal', 'click_product_price');">
-                                                    Узнать цену
-                                                </div>
-
-
-                                                <div class="callblock">
-                                                    <div class="callblock__item" data-modal-toggle="#modal-call"
-                                                         onclick="ym(window.isteels.ym_id, 'reachGoal', 'pricelist_phone');">
-                                                        <svg class="icon icon_phone">
-                                                            <use xlink:href="svg/symbol/#phone"></use>
-                                                        </svg>
-                                                    </div>
-                                                    <a class="callblock__item mgo-email" href="mailto:astana@isteels.kz"
-                                                       onclick="ym(window.isteels.ym_id, 'reachGoal', 'pricelist_email');">
-                                                        <svg class="icon icon_email">
-                                                            <use xlink:href="svg/symbol/#email"></use>
-                                                        </svg>
-                                                        <span class="d-none">astana@isteels.kz</span>
-                                                    </a>
-                                                </div>
-
-
-                                            </div>
-                                        </td>
-                                    </tr>
-
-                                    <tr class="product-table__item">
-                                        <td>
-                                            <div class="short-product">
-                                                <div class="short-product__info">
-                                                    <div class="short-product__title"
-                                                         data-href="/product/elektrosvarnaja_stalnaja_truba_holodnodeformirovannaja_55h16_mm_20kp_gost_10707_80/"
-                                                         data-product-title="">
-                                                        Электросварная стальная труба холоднодеформированная 55х1.6 мм
-                                                        20кп ГОСТ 10707-80
-                                                    </div>
-
-                                                </div>
-                                                <div class="product-table__battery product-table__battery--many"
-                                                     data-tippy-content-p-no-arrow="<p>Много</p>">
-                                                    <svg class="icon icon_battery-many">
-                                                        <use xlink:href="svg/symbol/#battery-many"></use>
-                                                    </svg>
-                                                </div>
-                                            </div>
-                                        </td>
-                                        <td>
-                                            <div class="price-actions__btns product-table__actions callback">
-
-
-                                                <div class="product-table__btn btn-find" data-call-modal="find-price"
-                                                     onclick="ym(window.isteels.ym_id, 'reachGoal', 'click_product_price');">
-                                                    Узнать цену
-                                                </div>
-
-
-                                                <div class="callblock">
-                                                    <div class="callblock__item" data-modal-toggle="#modal-call"
-                                                         onclick="ym(window.isteels.ym_id, 'reachGoal', 'pricelist_phone');">
-                                                        <svg class="icon icon_phone">
-                                                            <use xlink:href="svg/symbol/#phone"></use>
-                                                        </svg>
-                                                    </div>
-                                                    <a class="callblock__item mgo-email" href="mailto:astana@isteels.kz"
-                                                       onclick="ym(window.isteels.ym_id, 'reachGoal', 'pricelist_email');">
-                                                        <svg class="icon icon_email">
-                                                            <use xlink:href="svg/symbol/#email"></use>
-                                                        </svg>
-                                                        <span class="d-none">astana@isteels.kz</span>
-                                                    </a>
-                                                </div>
-
-
-                                            </div>
-                                        </td>
-                                    </tr>
-
-                                    <tr class="product-table__item">
-                                        <td>
-                                            <div class="short-product">
-                                                <div class="short-product__info">
-                                                    <div class="short-product__title"
-                                                         data-href="/product/elektrosvarnaja_stalnaja_truba_holodnodeformirovannaja_56h16_mm_20kp_gost_10707_80/"
-                                                         data-product-title="">
-                                                        Электросварная стальная труба холоднодеформированная 56х1.6 мм
-                                                        20кп ГОСТ 10707-80
-                                                    </div>
-
-                                                </div>
-                                                <div class="product-table__battery product-table__battery--many"
-                                                     data-tippy-content-p-no-arrow="<p>Много</p>">
-                                                    <svg class="icon icon_battery-many">
-                                                        <use xlink:href="svg/symbol/#battery-many"></use>
-                                                    </svg>
-                                                </div>
-                                            </div>
-                                        </td>
-                                        <td>
-                                            <div class="price-actions__btns product-table__actions callback">
-
-
-                                                <div class="product-table__btn btn-find" data-call-modal="find-price"
-                                                     onclick="ym(window.isteels.ym_id, 'reachGoal', 'click_product_price');">
-                                                    Узнать цену
-                                                </div>
-
-
-                                                <div class="callblock">
-                                                    <div class="callblock__item" data-modal-toggle="#modal-call"
-                                                         onclick="ym(window.isteels.ym_id, 'reachGoal', 'pricelist_phone');">
-                                                        <svg class="icon icon_phone">
-                                                            <use xlink:href="svg/symbol/#phone"></use>
-                                                        </svg>
-                                                    </div>
-                                                    <a class="callblock__item mgo-email" href="mailto:astana@isteels.kz"
-                                                       onclick="ym(window.isteels.ym_id, 'reachGoal', 'pricelist_email');">
-                                                        <svg class="icon icon_email">
-                                                            <use xlink:href="svg/symbol/#email"></use>
-                                                        </svg>
-                                                        <span class="d-none">astana@isteels.kz</span>
-                                                    </a>
-                                                </div>
-
-
-                                            </div>
-                                        </td>
-                                    </tr>
-
-                                    <tr class="product-table__item">
-                                        <td>
-                                            <div class="short-product">
-                                                <div class="short-product__info">
-                                                    <div class="short-product__title"
-                                                         data-href="/product/elektrosvarnaja_stalnaja_truba_holodnodeformirovannaja_57h16_mm_20kp_gost_10707_80/"
-                                                         data-product-title="">
-                                                        Электросварная стальная труба холоднодеформированная 57х1.6 мм
-                                                        20кп ГОСТ 10707-80
-                                                    </div>
-
-                                                </div>
-                                                <div class="product-table__battery product-table__battery--many"
-                                                     data-tippy-content-p-no-arrow="<p>Много</p>">
-                                                    <svg class="icon icon_battery-many">
-                                                        <use xlink:href="svg/symbol/#battery-many"></use>
-                                                    </svg>
-                                                </div>
-                                            </div>
-                                        </td>
-                                        <td>
-                                            <div class="price-actions__btns product-table__actions callback">
-
-
-                                                <div class="product-table__btn btn-find" data-call-modal="find-price"
-                                                     onclick="ym(window.isteels.ym_id, 'reachGoal', 'click_product_price');">
-                                                    Узнать цену
-                                                </div>
-
-
-                                                <div class="callblock">
-                                                    <div class="callblock__item" data-modal-toggle="#modal-call"
-                                                         onclick="ym(window.isteels.ym_id, 'reachGoal', 'pricelist_phone');">
-                                                        <svg class="icon icon_phone">
-                                                            <use xlink:href="svg/symbol/#phone"></use>
-                                                        </svg>
-                                                    </div>
-                                                    <a class="callblock__item mgo-email" href="mailto:astana@isteels.kz"
-                                                       onclick="ym(window.isteels.ym_id, 'reachGoal', 'pricelist_email');">
-                                                        <svg class="icon icon_email">
-                                                            <use xlink:href="svg/symbol/#email"></use>
-                                                        </svg>
-                                                        <span class="d-none">astana@isteels.kz</span>
-                                                    </a>
-                                                </div>
-
-
-                                            </div>
-                                        </td>
-                                    </tr>
-
-                                    <tr class="product-table__item">
-                                        <td>
-                                            <div class="short-product">
-                                                <div class="short-product__info">
-                                                    <div class="short-product__title"
-                                                         data-href="/product/elektrosvarnaja_stalnaja_truba_holodnodeformirovannaja_60h16_mm_20kp_gost_10707_80/"
-                                                         data-product-title="">
-                                                        Электросварная стальная труба холоднодеформированная 60х1.6 мм
-                                                        20кп ГОСТ 10707-80
-                                                    </div>
-
-                                                </div>
-                                                <div class="product-table__battery product-table__battery--many"
-                                                     data-tippy-content-p-no-arrow="<p>Много</p>">
-                                                    <svg class="icon icon_battery-many">
-                                                        <use xlink:href="svg/symbol/#battery-many"></use>
-                                                    </svg>
-                                                </div>
-                                            </div>
-                                        </td>
-                                        <td>
-                                            <div class="price-actions__btns product-table__actions callback">
-
-
-                                                <div class="product-table__btn btn-find" data-call-modal="find-price"
-                                                     onclick="ym(window.isteels.ym_id, 'reachGoal', 'click_product_price');">
-                                                    Узнать цену
-                                                </div>
-
-
-                                                <div class="callblock">
-                                                    <div class="callblock__item" data-modal-toggle="#modal-call"
-                                                         onclick="ym(window.isteels.ym_id, 'reachGoal', 'pricelist_phone');">
-                                                        <svg class="icon icon_phone">
-                                                            <use xlink:href="svg/symbol/#phone"></use>
-                                                        </svg>
-                                                    </div>
-                                                    <a class="callblock__item mgo-email" href="mailto:astana@isteels.kz"
-                                                       onclick="ym(window.isteels.ym_id, 'reachGoal', 'pricelist_email');">
-                                                        <svg class="icon icon_email">
-                                                            <use xlink:href="svg/symbol/#email"></use>
-                                                        </svg>
-                                                        <span class="d-none">astana@isteels.kz</span>
-                                                    </a>
-                                                </div>
-
-
-                                            </div>
-                                        </td>
-                                    </tr>
-
-                                    <tr class="product-table__item">
-                                        <td>
-                                            <div class="short-product">
-                                                <div class="short-product__info">
-                                                    <div class="short-product__title"
-                                                         data-href="/product/elektrosvarnaja_stalnaja_truba_holodnodeformirovannaja_63h16_mm_20kp_gost_10707_80/"
-                                                         data-product-title="">
-                                                        Электросварная стальная труба холоднодеформированная 63х1.6 мм
-                                                        20кп ГОСТ 10707-80
-                                                    </div>
-
-                                                </div>
-                                                <div class="product-table__battery product-table__battery--many"
-                                                     data-tippy-content-p-no-arrow="<p>Много</p>">
-                                                    <svg class="icon icon_battery-many">
-                                                        <use xlink:href="svg/symbol/#battery-many"></use>
-                                                    </svg>
-                                                </div>
-                                            </div>
-                                        </td>
-                                        <td>
-                                            <div class="price-actions__btns product-table__actions callback">
-
-
-                                                <div class="product-table__btn btn-find" data-call-modal="find-price"
-                                                     onclick="ym(window.isteels.ym_id, 'reachGoal', 'click_product_price');">
-                                                    Узнать цену
-                                                </div>
-
-
-                                                <div class="callblock">
-                                                    <div class="callblock__item" data-modal-toggle="#modal-call"
-                                                         onclick="ym(window.isteels.ym_id, 'reachGoal', 'pricelist_phone');">
-                                                        <svg class="icon icon_phone">
-                                                            <use xlink:href="svg/symbol/#phone"></use>
-                                                        </svg>
-                                                    </div>
-                                                    <a class="callblock__item mgo-email" href="mailto:astana@isteels.kz"
-                                                       onclick="ym(window.isteels.ym_id, 'reachGoal', 'pricelist_email');">
-                                                        <svg class="icon icon_email">
-                                                            <use xlink:href="svg/symbol/#email"></use>
-                                                        </svg>
-                                                        <span class="d-none">astana@isteels.kz</span>
-                                                    </a>
-                                                </div>
-
-
-                                            </div>
-                                        </td>
-                                    </tr>
-
-                                    <tr class="product-table__item">
-                                        <td>
-                                            <div class="short-product">
-                                                <div class="short-product__info">
-                                                    <div class="short-product__title"
-                                                         data-href="/product/elektrosvarnaja_stalnaja_truba_holodnodeformirovannaja_65h16_mm_20kp_gost_10707_80/"
-                                                         data-product-title="">
-                                                        Электросварная стальная труба холоднодеформированная 65х1.6 мм
-                                                        20кп ГОСТ 10707-80
-                                                    </div>
-
-                                                </div>
-                                                <div class="product-table__battery product-table__battery--many"
-                                                     data-tippy-content-p-no-arrow="<p>Много</p>">
-                                                    <svg class="icon icon_battery-many">
-                                                        <use xlink:href="svg/symbol/#battery-many"></use>
-                                                    </svg>
-                                                </div>
-                                            </div>
-                                        </td>
-                                        <td>
-                                            <div class="price-actions__btns product-table__actions callback">
-
-
-                                                <div class="product-table__btn btn-find" data-call-modal="find-price"
-                                                     onclick="ym(window.isteels.ym_id, 'reachGoal', 'click_product_price');">
-                                                    Узнать цену
-                                                </div>
-
-
-                                                <div class="callblock">
-                                                    <div class="callblock__item" data-modal-toggle="#modal-call"
-                                                         onclick="ym(window.isteels.ym_id, 'reachGoal', 'pricelist_phone');">
-                                                        <svg class="icon icon_phone">
-                                                            <use xlink:href="svg/symbol/#phone"></use>
-                                                        </svg>
-                                                    </div>
-                                                    <a class="callblock__item mgo-email" href="mailto:astana@isteels.kz"
-                                                       onclick="ym(window.isteels.ym_id, 'reachGoal', 'pricelist_email');">
-                                                        <svg class="icon icon_email">
-                                                            <use xlink:href="svg/symbol/#email"></use>
-                                                        </svg>
-                                                        <span class="d-none">astana@isteels.kz</span>
-                                                    </a>
-                                                </div>
-
-
-                                            </div>
-                                        </td>
-                                    </tr>
-
-                                    <tr class="product-table__item">
-                                        <td>
-                                            <div class="short-product">
-                                                <div class="short-product__info">
-                                                    <div class="short-product__title"
-                                                         data-href="/product/elektrosvarnaja_stalnaja_truba_holodnodeformirovannaja_68h16_mm_20kp_gost_10707_80/"
-                                                         data-product-title="">
-                                                        Электросварная стальная труба холоднодеформированная 68х1.6 мм
-                                                        20кп ГОСТ 10707-80
-                                                    </div>
-
-                                                </div>
-                                                <div class="product-table__battery product-table__battery--many"
-                                                     data-tippy-content-p-no-arrow="<p>Много</p>">
-                                                    <svg class="icon icon_battery-many">
-                                                        <use xlink:href="svg/symbol/#battery-many"></use>
-                                                    </svg>
-                                                </div>
-                                            </div>
-                                        </td>
-                                        <td>
-                                            <div class="price-actions__btns product-table__actions callback">
-
-
-                                                <div class="product-table__btn btn-find" data-call-modal="find-price"
-                                                     onclick="ym(window.isteels.ym_id, 'reachGoal', 'click_product_price');">
-                                                    Узнать цену
-                                                </div>
-
-
-                                                <div class="callblock">
-                                                    <div class="callblock__item" data-modal-toggle="#modal-call"
-                                                         onclick="ym(window.isteels.ym_id, 'reachGoal', 'pricelist_phone');">
-                                                        <svg class="icon icon_phone">
-                                                            <use xlink:href="svg/symbol/#phone"></use>
-                                                        </svg>
-                                                    </div>
-                                                    <a class="callblock__item mgo-email" href="mailto:astana@isteels.kz"
-                                                       onclick="ym(window.isteels.ym_id, 'reachGoal', 'pricelist_email');">
-                                                        <svg class="icon icon_email">
-                                                            <use xlink:href="svg/symbol/#email"></use>
-                                                        </svg>
-                                                        <span class="d-none">astana@isteels.kz</span>
-                                                    </a>
-                                                </div>
-
-
-                                            </div>
-                                        </td>
-                                    </tr>
-
-                                    <tr class="product-table__item">
-                                        <td>
-                                            <div class="short-product">
-                                                <div class="short-product__info">
-                                                    <div class="short-product__title"
-                                                         data-href="/product/elektrosvarnaja_stalnaja_truba_holodnodeformirovannaja_70h16_mm_20kp_gost_10707_80/"
-                                                         data-product-title="">
-                                                        Электросварная стальная труба холоднодеформированная 70х1.6 мм
-                                                        20кп ГОСТ 10707-80
-                                                    </div>
-
-                                                </div>
-                                                <div class="product-table__battery product-table__battery--many"
-                                                     data-tippy-content-p-no-arrow="<p>Много</p>">
-                                                    <svg class="icon icon_battery-many">
-                                                        <use xlink:href="svg/symbol/#battery-many"></use>
-                                                    </svg>
-                                                </div>
-                                            </div>
-                                        </td>
-                                        <td>
-                                            <div class="price-actions__btns product-table__actions callback">
-
-
-                                                <div class="product-table__btn btn-find" data-call-modal="find-price"
-                                                     onclick="ym(window.isteels.ym_id, 'reachGoal', 'click_product_price');">
-                                                    Узнать цену
-                                                </div>
-
-
-                                                <div class="callblock">
-                                                    <div class="callblock__item" data-modal-toggle="#modal-call"
-                                                         onclick="ym(window.isteels.ym_id, 'reachGoal', 'pricelist_phone');">
-                                                        <svg class="icon icon_phone">
-                                                            <use xlink:href="svg/symbol/#phone"></use>
-                                                        </svg>
-                                                    </div>
-                                                    <a class="callblock__item mgo-email" href="mailto:astana@isteels.kz"
-                                                       onclick="ym(window.isteels.ym_id, 'reachGoal', 'pricelist_email');">
-                                                        <svg class="icon icon_email">
-                                                            <use xlink:href="svg/symbol/#email"></use>
-                                                        </svg>
-                                                        <span class="d-none">astana@isteels.kz</span>
-                                                    </a>
-                                                </div>
-
-
-                                            </div>
-                                        </td>
-                                    </tr>
-
-                                    <tr class="product-table__item">
-                                        <td>
-                                            <div class="short-product">
-                                                <div class="short-product__info">
-                                                    <div class="short-product__title"
-                                                         data-href="/product/elektrosvarnaja_stalnaja_truba_holodnodeformirovannaja_73h16_mm_20kp_gost_10707_80/"
-                                                         data-product-title="">
-                                                        Электросварная стальная труба холоднодеформированная 73х1.6 мм
-                                                        20кп ГОСТ 10707-80
-                                                    </div>
-
-                                                </div>
-                                                <div class="product-table__battery product-table__battery--many"
-                                                     data-tippy-content-p-no-arrow="<p>Много</p>">
-                                                    <svg class="icon icon_battery-many">
-                                                        <use xlink:href="svg/symbol/#battery-many"></use>
-                                                    </svg>
-                                                </div>
-                                            </div>
-                                        </td>
-                                        <td>
-                                            <div class="price-actions__btns product-table__actions callback">
-
-
-                                                <div class="product-table__btn btn-find" data-call-modal="find-price"
-                                                     onclick="ym(window.isteels.ym_id, 'reachGoal', 'click_product_price');">
-                                                    Узнать цену
-                                                </div>
-
-
-                                                <div class="callblock">
-                                                    <div class="callblock__item" data-modal-toggle="#modal-call"
-                                                         onclick="ym(window.isteels.ym_id, 'reachGoal', 'pricelist_phone');">
-                                                        <svg class="icon icon_phone">
-                                                            <use xlink:href="svg/symbol/#phone"></use>
-                                                        </svg>
-                                                    </div>
-                                                    <a class="callblock__item mgo-email" href="mailto:astana@isteels.kz"
-                                                       onclick="ym(window.isteels.ym_id, 'reachGoal', 'pricelist_email');">
-                                                        <svg class="icon icon_email">
-                                                            <use xlink:href="svg/symbol/#email"></use>
-                                                        </svg>
-                                                        <span class="d-none">astana@isteels.kz</span>
-                                                    </a>
-                                                </div>
-
-
-                                            </div>
-                                        </td>
-                                    </tr>
-
-                                    <tr class="product-table__item">
-                                        <td>
-                                            <div class="short-product">
-                                                <div class="short-product__info">
-                                                    <div class="short-product__title"
-                                                         data-href="/product/elektrosvarnaja_stalnaja_truba_holodnodeformirovannaja_75h16_mm_20kp_gost_10707_80/"
-                                                         data-product-title="">
-                                                        Электросварная стальная труба холоднодеформированная 75х1.6 мм
-                                                        20кп ГОСТ 10707-80
-                                                    </div>
-
-                                                </div>
-                                                <div class="product-table__battery product-table__battery--many"
-                                                     data-tippy-content-p-no-arrow="<p>Много</p>">
-                                                    <svg class="icon icon_battery-many">
-                                                        <use xlink:href="svg/symbol/#battery-many"></use>
-                                                    </svg>
-                                                </div>
-                                            </div>
-                                        </td>
-                                        <td>
-                                            <div class="price-actions__btns product-table__actions callback">
-
-
-                                                <div class="product-table__btn btn-find" data-call-modal="find-price"
-                                                     onclick="ym(window.isteels.ym_id, 'reachGoal', 'click_product_price');">
-                                                    Узнать цену
-                                                </div>
-
-
-                                                <div class="callblock">
-                                                    <div class="callblock__item" data-modal-toggle="#modal-call"
-                                                         onclick="ym(window.isteels.ym_id, 'reachGoal', 'pricelist_phone');">
-                                                        <svg class="icon icon_phone">
-                                                            <use xlink:href="svg/symbol/#phone"></use>
-                                                        </svg>
-                                                    </div>
-                                                    <a class="callblock__item mgo-email" href="mailto:astana@isteels.kz"
-                                                       onclick="ym(window.isteels.ym_id, 'reachGoal', 'pricelist_email');">
-                                                        <svg class="icon icon_email">
-                                                            <use xlink:href="svg/symbol/#email"></use>
-                                                        </svg>
-                                                        <span class="d-none">astana@isteels.kz</span>
-                                                    </a>
-                                                </div>
-
-
-                                            </div>
-                                        </td>
-                                    </tr>
-
-                                    <tr class="product-table__item">
-                                        <td>
-                                            <div class="short-product">
-                                                <div class="short-product__info">
-                                                    <div class="short-product__title"
-                                                         data-href="/product/elektrosvarnaja_stalnaja_truba_holodnodeformirovannaja_76h16_mm_20kp_gost_10707_80/"
-                                                         data-product-title="">
-                                                        Электросварная стальная труба холоднодеформированная 76х1.6 мм
-                                                        20кп ГОСТ 10707-80
-                                                    </div>
-
-                                                </div>
-                                                <div class="product-table__battery product-table__battery--many"
-                                                     data-tippy-content-p-no-arrow="<p>Много</p>">
-                                                    <svg class="icon icon_battery-many">
-                                                        <use xlink:href="svg/symbol/#battery-many"></use>
-                                                    </svg>
-                                                </div>
-                                            </div>
-                                        </td>
-                                        <td>
-                                            <div class="price-actions__btns product-table__actions callback">
-
-
-                                                <div class="product-table__btn btn-find" data-call-modal="find-price"
-                                                     onclick="ym(window.isteels.ym_id, 'reachGoal', 'click_product_price');">
-                                                    Узнать цену
-                                                </div>
-
-
-                                                <div class="callblock">
-                                                    <div class="callblock__item" data-modal-toggle="#modal-call"
-                                                         onclick="ym(window.isteels.ym_id, 'reachGoal', 'pricelist_phone');">
-                                                        <svg class="icon icon_phone">
-                                                            <use xlink:href="svg/symbol/#phone"></use>
-                                                        </svg>
-                                                    </div>
-                                                    <a class="callblock__item mgo-email" href="mailto:astana@isteels.kz"
-                                                       onclick="ym(window.isteels.ym_id, 'reachGoal', 'pricelist_email');">
-                                                        <svg class="icon icon_email">
-                                                            <use xlink:href="svg/symbol/#email"></use>
-                                                        </svg>
-                                                        <span class="d-none">astana@isteels.kz</span>
-                                                    </a>
-                                                </div>
-
-
-                                            </div>
-                                        </td>
-                                    </tr>
-
-                                    <tr class="product-table__item">
-                                        <td>
-                                            <div class="short-product">
-                                                <div class="short-product__info">
-                                                    <div class="short-product__title"
-                                                         data-href="/product/elektrosvarnaja_stalnaja_truba_holodnodeformirovannaja_11h18_mm_20kp_gost_10707_80/"
-                                                         data-product-title="">
-                                                        Электросварная стальная труба холоднодеформированная 11х1.8 мм
-                                                        20кп ГОСТ 10707-80
-                                                    </div>
-
-                                                </div>
-                                                <div class="product-table__battery product-table__battery--many"
-                                                     data-tippy-content-p-no-arrow="<p>Много</p>">
-                                                    <svg class="icon icon_battery-many">
-                                                        <use xlink:href="svg/symbol/#battery-many"></use>
-                                                    </svg>
-                                                </div>
-                                            </div>
-                                        </td>
-                                        <td>
-                                            <div class="price-actions__btns product-table__actions callback">
-
-
-                                                <div class="product-table__btn btn-find" data-call-modal="find-price"
-                                                     onclick="ym(window.isteels.ym_id, 'reachGoal', 'click_product_price');">
-                                                    Узнать цену
-                                                </div>
-
-
-                                                <div class="callblock">
-                                                    <div class="callblock__item" data-modal-toggle="#modal-call"
-                                                         onclick="ym(window.isteels.ym_id, 'reachGoal', 'pricelist_phone');">
-                                                        <svg class="icon icon_phone">
-                                                            <use xlink:href="svg/symbol/#phone"></use>
-                                                        </svg>
-                                                    </div>
-                                                    <a class="callblock__item mgo-email" href="mailto:astana@isteels.kz"
-                                                       onclick="ym(window.isteels.ym_id, 'reachGoal', 'pricelist_email');">
-                                                        <svg class="icon icon_email">
-                                                            <use xlink:href="svg/symbol/#email"></use>
-                                                        </svg>
-                                                        <span class="d-none">astana@isteels.kz</span>
-                                                    </a>
-                                                </div>
-
-
-                                            </div>
-                                        </td>
-                                    </tr>
-
-                                    <tr class="product-table__item">
-                                        <td>
-                                            <div class="short-product">
-                                                <div class="short-product__info">
-                                                    <div class="short-product__title"
-                                                         data-href="/product/elektrosvarnaja_stalnaja_truba_holodnodeformirovannaja_13h18_mm_20kp_gost_10707_80/"
-                                                         data-product-title="">
-                                                        Электросварная стальная труба холоднодеформированная 13х1.8 мм
-                                                        20кп ГОСТ 10707-80
-                                                    </div>
-
-                                                </div>
-                                                <div class="product-table__battery product-table__battery--many"
-                                                     data-tippy-content-p-no-arrow="<p>Много</p>">
-                                                    <svg class="icon icon_battery-many">
-                                                        <use xlink:href="svg/symbol/#battery-many"></use>
-                                                    </svg>
-                                                </div>
-                                            </div>
-                                        </td>
-                                        <td>
-                                            <div class="price-actions__btns product-table__actions callback">
-
-
-                                                <div class="product-table__btn btn-find" data-call-modal="find-price"
-                                                     onclick="ym(window.isteels.ym_id, 'reachGoal', 'click_product_price');">
-                                                    Узнать цену
-                                                </div>
-
-
-                                                <div class="callblock">
-                                                    <div class="callblock__item" data-modal-toggle="#modal-call"
-                                                         onclick="ym(window.isteels.ym_id, 'reachGoal', 'pricelist_phone');">
-                                                        <svg class="icon icon_phone">
-                                                            <use xlink:href="svg/symbol/#phone"></use>
-                                                        </svg>
-                                                    </div>
-                                                    <a class="callblock__item mgo-email" href="mailto:astana@isteels.kz"
-                                                       onclick="ym(window.isteels.ym_id, 'reachGoal', 'pricelist_email');">
-                                                        <svg class="icon icon_email">
-                                                            <use xlink:href="svg/symbol/#email"></use>
-                                                        </svg>
-                                                        <span class="d-none">astana@isteels.kz</span>
-                                                    </a>
-                                                </div>
-
-
-                                            </div>
-                                        </td>
-                                    </tr>
-
-                                    <tr class="product-table__item">
-                                        <td>
-                                            <div class="short-product">
-                                                <div class="short-product__info">
-                                                    <div class="short-product__title"
-                                                         data-href="/product/elektrosvarnaja_stalnaja_truba_holodnodeformirovannaja_14h18_mm_20kp_gost_10707_80/"
-                                                         data-product-title="">
-                                                        Электросварная стальная труба холоднодеформированная 14х1.8 мм
-                                                        20кп ГОСТ 10707-80
-                                                    </div>
-
-                                                </div>
-                                                <div class="product-table__battery product-table__battery--many"
-                                                     data-tippy-content-p-no-arrow="<p>Много</p>">
-                                                    <svg class="icon icon_battery-many">
-                                                        <use xlink:href="svg/symbol/#battery-many"></use>
-                                                    </svg>
-                                                </div>
-                                            </div>
-                                        </td>
-                                        <td>
-                                            <div class="price-actions__btns product-table__actions callback">
-
-
-                                                <div class="product-table__btn btn-find" data-call-modal="find-price"
-                                                     onclick="ym(window.isteels.ym_id, 'reachGoal', 'click_product_price');">
-                                                    Узнать цену
-                                                </div>
-
-
-                                                <div class="callblock">
-                                                    <div class="callblock__item" data-modal-toggle="#modal-call"
-                                                         onclick="ym(window.isteels.ym_id, 'reachGoal', 'pricelist_phone');">
-                                                        <svg class="icon icon_phone">
-                                                            <use xlink:href="svg/symbol/#phone"></use>
-                                                        </svg>
-                                                    </div>
-                                                    <a class="callblock__item mgo-email" href="mailto:astana@isteels.kz"
-                                                       onclick="ym(window.isteels.ym_id, 'reachGoal', 'pricelist_email');">
-                                                        <svg class="icon icon_email">
-                                                            <use xlink:href="svg/symbol/#email"></use>
-                                                        </svg>
-                                                        <span class="d-none">astana@isteels.kz</span>
-                                                    </a>
-                                                </div>
-
-
-                                            </div>
-                                        </td>
-                                    </tr>
-
-                                    </tbody>
-                                </table>
-                            </div>
-                        </div>
+                        <!--                        <div class="product-content__block" id="analogs">-->
+                        <!--                            <h3 class="product-content__title">Аналоги</h3>-->
+                        <!--                            <div class="table-wrapper">-->
+                        <!--                                <table class="product-table style-body" id="listing-table-target">-->
+                        <!--                                    <tbody>-->
+
+                        <!--                                    <tr class="product-table__item">-->
+                        <!--                                        <td>-->
+                        <!--                                            <div class="short-product">-->
+                        <!--                                                <div class="short-product__info">-->
+                        <!--                                                    <div class="short-product__title"-->
+                        <!--                                                         data-href="/product/elektrosvarnaja_stalnaja_truba_holodnodeformirovannaja_43h16_mm_20kp_gost_10707_80/"-->
+                        <!--                                                         data-product-title="">-->
+                        <!--                                                        Электросварная стальная труба холоднодеформированная 43х1.6 мм-->
+                        <!--                                                        20кп ГОСТ 10707-80-->
+                        <!--                                                    </div>-->
+
+                        <!--                                                </div>-->
+                        <!--                                                <div class="product-table__battery product-table__battery&#45;&#45;many"-->
+                        <!--                                                     data-tippy-content-p-no-arrow="<p>Много</p>">-->
+                        <!--                                                    <svg class="icon icon_battery-many">-->
+                        <!--                                                        <use xlink:href="svg/symbol/#battery-many"></use>-->
+                        <!--                                                    </svg>-->
+                        <!--                                                </div>-->
+                        <!--                                            </div>-->
+                        <!--                                        </td>-->
+                        <!--                                        <td>-->
+                        <!--                                            <div class="price-actions__btns product-table__actions callback">-->
+
+
+                        <!--                                                <div class="product-table__btn btn-find" data-call-modal="find-price"-->
+                        <!--                                                     onclick="ym(window.isteels.ym_id, 'reachGoal', 'click_product_price');">-->
+                        <!--                                                    Узнать цену-->
+                        <!--                                                </div>-->
+
+
+                        <!--                                                <div class="callblock">-->
+                        <!--                                                    <a class="callblock__item" style="background-color: #36b37e;">-->
+                        <!--                                            <span><i style="color: white;" class="fi fi-rr-phone-call"></i></span>-->
+                        <!--                                        </a>-->
+                        <!--                                        <a class="callblock__item" style="background-color: #25d366;" href="#">-->
+                        <!--                                            <span><i style="color: white;" class="fi fi-brands-whatsapp"></i></span>-->
+                        <!--                                        </a>-->
+                        <!--                                                </div>-->
+
+
+                        <!--                                            </div>-->
+                        <!--                                        </td>-->
+                        <!--                                    </tr>-->
+
+                        <!--                                    <tr class="product-table__item">-->
+                        <!--                                        <td>-->
+                        <!--                                            <div class="short-product">-->
+                        <!--                                                <div class="short-product__info">-->
+                        <!--                                                    <div class="short-product__title"-->
+                        <!--                                                         data-href="/product/elektrosvarnaja_stalnaja_truba_holodnodeformirovannaja_45h16_mm_20kp_gost_10707_80/"-->
+                        <!--                                                         data-product-title="">-->
+                        <!--                                                        Электросварная стальная труба холоднодеформированная 45х1.6 мм-->
+                        <!--                                                        20кп ГОСТ 10707-80-->
+                        <!--                                                    </div>-->
+
+                        <!--                                                </div>-->
+                        <!--                                                <div class="product-table__battery product-table__battery&#45;&#45;many"-->
+                        <!--                                                     data-tippy-content-p-no-arrow="<p>Много</p>">-->
+                        <!--                                                    <svg class="icon icon_battery-many">-->
+                        <!--                                                        <use xlink:href="svg/symbol/#battery-many"></use>-->
+                        <!--                                                    </svg>-->
+                        <!--                                                </div>-->
+                        <!--                                            </div>-->
+                        <!--                                        </td>-->
+                        <!--                                        <td>-->
+                        <!--                                            <div class="price-actions__btns product-table__actions callback">-->
+
+
+                        <!--                                                <div class="product-table__btn btn-find" data-call-modal="find-price"-->
+                        <!--                                                     onclick="ym(window.isteels.ym_id, 'reachGoal', 'click_product_price');">-->
+                        <!--                                                    Узнать цену-->
+                        <!--                                                </div>-->
+
+
+                        <!--                                                <div class="callblock">-->
+                        <!--                                                    <a class="callblock__item" style="background-color: #36b37e;">-->
+                        <!--                                            <span><i style="color: white;" class="fi fi-rr-phone-call"></i></span>-->
+                        <!--                                        </a>-->
+                        <!--                                        <a class="callblock__item" style="background-color: #25d366;" href="#">-->
+                        <!--                                            <span><i style="color: white;" class="fi fi-brands-whatsapp"></i></span>-->
+                        <!--                                        </a>-->
+                        <!--                                                </div>-->
+
+
+                        <!--                                            </div>-->
+                        <!--                                        </td>-->
+                        <!--                                    </tr>-->
+
+                        <!--                                    <tr class="product-table__item">-->
+                        <!--                                        <td>-->
+                        <!--                                            <div class="short-product">-->
+                        <!--                                                <div class="short-product__info">-->
+                        <!--                                                    <div class="short-product__title"-->
+                        <!--                                                         data-href="/product/elektrosvarnaja_stalnaja_truba_holodnodeformirovannaja_50h16_mm_20kp_gost_10707_80/"-->
+                        <!--                                                         data-product-title="">-->
+                        <!--                                                        Электросварная стальная труба холоднодеформированная 50х1.6 мм-->
+                        <!--                                                        20кп ГОСТ 10707-80-->
+                        <!--                                                    </div>-->
+
+                        <!--                                                </div>-->
+                        <!--                                                <div class="product-table__battery product-table__battery&#45;&#45;many"-->
+                        <!--                                                     data-tippy-content-p-no-arrow="<p>Много</p>">-->
+                        <!--                                                    <svg class="icon icon_battery-many">-->
+                        <!--                                                        <use xlink:href="svg/symbol/#battery-many"></use>-->
+                        <!--                                                    </svg>-->
+                        <!--                                                </div>-->
+                        <!--                                            </div>-->
+                        <!--                                        </td>-->
+                        <!--                                        <td>-->
+                        <!--                                            <div class="price-actions__btns product-table__actions callback">-->
+
+
+                        <!--                                                <div class="product-table__btn btn-find" data-call-modal="find-price"-->
+                        <!--                                                     onclick="ym(window.isteels.ym_id, 'reachGoal', 'click_product_price');">-->
+                        <!--                                                    Узнать цену-->
+                        <!--                                                </div>-->
+
+
+                        <!--                                                <div class="callblock">-->
+                        <!--                                                    <div class="callblock__item" data-modal-toggle="#modal-call"-->
+                        <!--                                                         onclick="ym(window.isteels.ym_id, 'reachGoal', 'pricelist_phone');">-->
+                        <!--                                                        <svg class="icon icon_phone">-->
+                        <!--                                                            <use xlink:href="svg/symbol/#phone"></use>-->
+                        <!--                                                        </svg>-->
+                        <!--                                                    </div>-->
+                        <!--                                                    <a class="callblock__item mgo-email" href="mailto:astana@isteels.kz"-->
+                        <!--                                                       onclick="ym(window.isteels.ym_id, 'reachGoal', 'pricelist_email');">-->
+                        <!--                                                        <svg class="icon icon_email">-->
+                        <!--                                                            <use xlink:href="svg/symbol/#email"></use>-->
+                        <!--                                                        </svg>-->
+                        <!--                                                        <span class="d-none">astana@isteels.kz</span>-->
+                        <!--                                                    </a>-->
+                        <!--                                                </div>-->
+
+
+                        <!--                                            </div>-->
+                        <!--                                        </td>-->
+                        <!--                                    </tr>-->
+
+                        <!--                                    <tr class="product-table__item">-->
+                        <!--                                        <td>-->
+                        <!--                                            <div class="short-product">-->
+                        <!--                                                <div class="short-product__info">-->
+                        <!--                                                    <div class="short-product__title"-->
+                        <!--                                                         data-href="/product/elektrosvarnaja_stalnaja_truba_holodnodeformirovannaja_51h16_mm_20kp_gost_10707_80/"-->
+                        <!--                                                         data-product-title="">-->
+                        <!--                                                        Электросварная стальная труба холоднодеформированная 51х1.6 мм-->
+                        <!--                                                        20кп ГОСТ 10707-80-->
+                        <!--                                                    </div>-->
+
+                        <!--                                                </div>-->
+                        <!--                                                <div class="product-table__battery product-table__battery&#45;&#45;many"-->
+                        <!--                                                     data-tippy-content-p-no-arrow="<p>Много</p>">-->
+                        <!--                                                    <svg class="icon icon_battery-many">-->
+                        <!--                                                        <use xlink:href="svg/symbol/#battery-many"></use>-->
+                        <!--                                                    </svg>-->
+                        <!--                                                </div>-->
+                        <!--                                            </div>-->
+                        <!--                                        </td>-->
+                        <!--                                        <td>-->
+                        <!--                                            <div class="price-actions__btns product-table__actions callback">-->
+
+
+                        <!--                                                <div class="product-table__btn btn-find" data-call-modal="find-price"-->
+                        <!--                                                     onclick="ym(window.isteels.ym_id, 'reachGoal', 'click_product_price');">-->
+                        <!--                                                    Узнать цену-->
+                        <!--                                                </div>-->
+
+
+                        <!--                                                <div class="callblock">-->
+                        <!--                                                    <div class="callblock__item" data-modal-toggle="#modal-call"-->
+                        <!--                                                         onclick="ym(window.isteels.ym_id, 'reachGoal', 'pricelist_phone');">-->
+                        <!--                                                        <svg class="icon icon_phone">-->
+                        <!--                                                            <use xlink:href="svg/symbol/#phone"></use>-->
+                        <!--                                                        </svg>-->
+                        <!--                                                    </div>-->
+                        <!--                                                    <a class="callblock__item mgo-email" href="mailto:astana@isteels.kz"-->
+                        <!--                                                       onclick="ym(window.isteels.ym_id, 'reachGoal', 'pricelist_email');">-->
+                        <!--                                                        <svg class="icon icon_email">-->
+                        <!--                                                            <use xlink:href="svg/symbol/#email"></use>-->
+                        <!--                                                        </svg>-->
+                        <!--                                                        <span class="d-none">astana@isteels.kz</span>-->
+                        <!--                                                    </a>-->
+                        <!--                                                </div>-->
+
+
+                        <!--                                            </div>-->
+                        <!--                                        </td>-->
+                        <!--                                    </tr>-->
+
+                        <!--                                    <tr class="product-table__item">-->
+                        <!--                                        <td>-->
+                        <!--                                            <div class="short-product">-->
+                        <!--                                                <div class="short-product__info">-->
+                        <!--                                                    <div class="short-product__title"-->
+                        <!--                                                         data-href="/product/elektrosvarnaja_stalnaja_truba_holodnodeformirovannaja_53h16_mm_20kp_gost_10707_80/"-->
+                        <!--                                                         data-product-title="">-->
+                        <!--                                                        Электросварная стальная труба холоднодеформированная 53х1.6 мм-->
+                        <!--                                                        20кп ГОСТ 10707-80-->
+                        <!--                                                    </div>-->
+
+                        <!--                                                </div>-->
+                        <!--                                                <div class="product-table__battery product-table__battery&#45;&#45;many"-->
+                        <!--                                                     data-tippy-content-p-no-arrow="<p>Много</p>">-->
+                        <!--                                                    <svg class="icon icon_battery-many">-->
+                        <!--                                                        <use xlink:href="svg/symbol/#battery-many"></use>-->
+                        <!--                                                    </svg>-->
+                        <!--                                                </div>-->
+                        <!--                                            </div>-->
+                        <!--                                        </td>-->
+                        <!--                                        <td>-->
+                        <!--                                            <div class="price-actions__btns product-table__actions callback">-->
+
+
+                        <!--                                                <div class="product-table__btn btn-find" data-call-modal="find-price"-->
+                        <!--                                                     onclick="ym(window.isteels.ym_id, 'reachGoal', 'click_product_price');">-->
+                        <!--                                                    Узнать цену-->
+                        <!--                                                </div>-->
+
+
+                        <!--                                                <div class="callblock">-->
+                        <!--                                                    <div class="callblock__item" data-modal-toggle="#modal-call"-->
+                        <!--                                                         onclick="ym(window.isteels.ym_id, 'reachGoal', 'pricelist_phone');">-->
+                        <!--                                                        <svg class="icon icon_phone">-->
+                        <!--                                                            <use xlink:href="svg/symbol/#phone"></use>-->
+                        <!--                                                        </svg>-->
+                        <!--                                                    </div>-->
+                        <!--                                                    <a class="callblock__item mgo-email" href="mailto:astana@isteels.kz"-->
+                        <!--                                                       onclick="ym(window.isteels.ym_id, 'reachGoal', 'pricelist_email');">-->
+                        <!--                                                        <svg class="icon icon_email">-->
+                        <!--                                                            <use xlink:href="svg/symbol/#email"></use>-->
+                        <!--                                                        </svg>-->
+                        <!--                                                        <span class="d-none">astana@isteels.kz</span>-->
+                        <!--                                                    </a>-->
+                        <!--                                                </div>-->
+
+
+                        <!--                                            </div>-->
+                        <!--                                        </td>-->
+                        <!--                                    </tr>-->
+
+                        <!--                                    <tr class="product-table__item">-->
+                        <!--                                        <td>-->
+                        <!--                                            <div class="short-product">-->
+                        <!--                                                <div class="short-product__info">-->
+                        <!--                                                    <div class="short-product__title"-->
+                        <!--                                                         data-href="/product/elektrosvarnaja_stalnaja_truba_holodnodeformirovannaja_54h16_mm_20kp_gost_10707_80/"-->
+                        <!--                                                         data-product-title="">-->
+                        <!--                                                        Электросварная стальная труба холоднодеформированная 54х1.6 мм-->
+                        <!--                                                        20кп ГОСТ 10707-80-->
+                        <!--                                                    </div>-->
+
+                        <!--                                                </div>-->
+                        <!--                                                <div class="product-table__battery product-table__battery&#45;&#45;many"-->
+                        <!--                                                     data-tippy-content-p-no-arrow="<p>Много</p>">-->
+                        <!--                                                    <svg class="icon icon_battery-many">-->
+                        <!--                                                        <use xlink:href="svg/symbol/#battery-many"></use>-->
+                        <!--                                                    </svg>-->
+                        <!--                                                </div>-->
+                        <!--                                            </div>-->
+                        <!--                                        </td>-->
+                        <!--                                        <td>-->
+                        <!--                                            <div class="price-actions__btns product-table__actions callback">-->
+
+
+                        <!--                                                <div class="product-table__btn btn-find" data-call-modal="find-price"-->
+                        <!--                                                     onclick="ym(window.isteels.ym_id, 'reachGoal', 'click_product_price');">-->
+                        <!--                                                    Узнать цену-->
+                        <!--                                                </div>-->
+
+
+                        <!--                                                <div class="callblock">-->
+                        <!--                                                    <div class="callblock__item" data-modal-toggle="#modal-call"-->
+                        <!--                                                         onclick="ym(window.isteels.ym_id, 'reachGoal', 'pricelist_phone');">-->
+                        <!--                                                        <svg class="icon icon_phone">-->
+                        <!--                                                            <use xlink:href="svg/symbol/#phone"></use>-->
+                        <!--                                                        </svg>-->
+                        <!--                                                    </div>-->
+                        <!--                                                    <a class="callblock__item mgo-email" href="mailto:astana@isteels.kz"-->
+                        <!--                                                       onclick="ym(window.isteels.ym_id, 'reachGoal', 'pricelist_email');">-->
+                        <!--                                                        <svg class="icon icon_email">-->
+                        <!--                                                            <use xlink:href="svg/symbol/#email"></use>-->
+                        <!--                                                        </svg>-->
+                        <!--                                                        <span class="d-none">astana@isteels.kz</span>-->
+                        <!--                                                    </a>-->
+                        <!--                                                </div>-->
+
+
+                        <!--                                            </div>-->
+                        <!--                                        </td>-->
+                        <!--                                    </tr>-->
+
+                        <!--                                    <tr class="product-table__item">-->
+                        <!--                                        <td>-->
+                        <!--                                            <div class="short-product">-->
+                        <!--                                                <div class="short-product__info">-->
+                        <!--                                                    <div class="short-product__title"-->
+                        <!--                                                         data-href="/product/elektrosvarnaja_stalnaja_truba_holodnodeformirovannaja_55h16_mm_20kp_gost_10707_80/"-->
+                        <!--                                                         data-product-title="">-->
+                        <!--                                                        Электросварная стальная труба холоднодеформированная 55х1.6 мм-->
+                        <!--                                                        20кп ГОСТ 10707-80-->
+                        <!--                                                    </div>-->
+
+                        <!--                                                </div>-->
+                        <!--                                                <div class="product-table__battery product-table__battery&#45;&#45;many"-->
+                        <!--                                                     data-tippy-content-p-no-arrow="<p>Много</p>">-->
+                        <!--                                                    <svg class="icon icon_battery-many">-->
+                        <!--                                                        <use xlink:href="svg/symbol/#battery-many"></use>-->
+                        <!--                                                    </svg>-->
+                        <!--                                                </div>-->
+                        <!--                                            </div>-->
+                        <!--                                        </td>-->
+                        <!--                                        <td>-->
+                        <!--                                            <div class="price-actions__btns product-table__actions callback">-->
+
+
+                        <!--                                                <div class="product-table__btn btn-find" data-call-modal="find-price"-->
+                        <!--                                                     onclick="ym(window.isteels.ym_id, 'reachGoal', 'click_product_price');">-->
+                        <!--                                                    Узнать цену-->
+                        <!--                                                </div>-->
+
+
+                        <!--                                                <div class="callblock">-->
+                        <!--                                                    <div class="callblock__item" data-modal-toggle="#modal-call"-->
+                        <!--                                                         onclick="ym(window.isteels.ym_id, 'reachGoal', 'pricelist_phone');">-->
+                        <!--                                                        <svg class="icon icon_phone">-->
+                        <!--                                                            <use xlink:href="svg/symbol/#phone"></use>-->
+                        <!--                                                        </svg>-->
+                        <!--                                                    </div>-->
+                        <!--                                                    <a class="callblock__item mgo-email" href="mailto:astana@isteels.kz"-->
+                        <!--                                                       onclick="ym(window.isteels.ym_id, 'reachGoal', 'pricelist_email');">-->
+                        <!--                                                        <svg class="icon icon_email">-->
+                        <!--                                                            <use xlink:href="svg/symbol/#email"></use>-->
+                        <!--                                                        </svg>-->
+                        <!--                                                        <span class="d-none">astana@isteels.kz</span>-->
+                        <!--                                                    </a>-->
+                        <!--                                                </div>-->
+
+
+                        <!--                                            </div>-->
+                        <!--                                        </td>-->
+                        <!--                                    </tr>-->
+
+                        <!--                                    <tr class="product-table__item">-->
+                        <!--                                        <td>-->
+                        <!--                                            <div class="short-product">-->
+                        <!--                                                <div class="short-product__info">-->
+                        <!--                                                    <div class="short-product__title"-->
+                        <!--                                                         data-href="/product/elektrosvarnaja_stalnaja_truba_holodnodeformirovannaja_56h16_mm_20kp_gost_10707_80/"-->
+                        <!--                                                         data-product-title="">-->
+                        <!--                                                        Электросварная стальная труба холоднодеформированная 56х1.6 мм-->
+                        <!--                                                        20кп ГОСТ 10707-80-->
+                        <!--                                                    </div>-->
+
+                        <!--                                                </div>-->
+                        <!--                                                <div class="product-table__battery product-table__battery&#45;&#45;many"-->
+                        <!--                                                     data-tippy-content-p-no-arrow="<p>Много</p>">-->
+                        <!--                                                    <svg class="icon icon_battery-many">-->
+                        <!--                                                        <use xlink:href="svg/symbol/#battery-many"></use>-->
+                        <!--                                                    </svg>-->
+                        <!--                                                </div>-->
+                        <!--                                            </div>-->
+                        <!--                                        </td>-->
+                        <!--                                        <td>-->
+                        <!--                                            <div class="price-actions__btns product-table__actions callback">-->
+
+
+                        <!--                                                <div class="product-table__btn btn-find" data-call-modal="find-price"-->
+                        <!--                                                     onclick="ym(window.isteels.ym_id, 'reachGoal', 'click_product_price');">-->
+                        <!--                                                    Узнать цену-->
+                        <!--                                                </div>-->
+
+
+                        <!--                                                <div class="callblock">-->
+                        <!--                                                    <div class="callblock__item" data-modal-toggle="#modal-call"-->
+                        <!--                                                         onclick="ym(window.isteels.ym_id, 'reachGoal', 'pricelist_phone');">-->
+                        <!--                                                        <svg class="icon icon_phone">-->
+                        <!--                                                            <use xlink:href="svg/symbol/#phone"></use>-->
+                        <!--                                                        </svg>-->
+                        <!--                                                    </div>-->
+                        <!--                                                    <a class="callblock__item mgo-email" href="mailto:astana@isteels.kz"-->
+                        <!--                                                       onclick="ym(window.isteels.ym_id, 'reachGoal', 'pricelist_email');">-->
+                        <!--                                                        <svg class="icon icon_email">-->
+                        <!--                                                            <use xlink:href="svg/symbol/#email"></use>-->
+                        <!--                                                        </svg>-->
+                        <!--                                                        <span class="d-none">astana@isteels.kz</span>-->
+                        <!--                                                    </a>-->
+                        <!--                                                </div>-->
+
+
+                        <!--                                            </div>-->
+                        <!--                                        </td>-->
+                        <!--                                    </tr>-->
+
+                        <!--                                    <tr class="product-table__item">-->
+                        <!--                                        <td>-->
+                        <!--                                            <div class="short-product">-->
+                        <!--                                                <div class="short-product__info">-->
+                        <!--                                                    <div class="short-product__title"-->
+                        <!--                                                         data-href="/product/elektrosvarnaja_stalnaja_truba_holodnodeformirovannaja_57h16_mm_20kp_gost_10707_80/"-->
+                        <!--                                                         data-product-title="">-->
+                        <!--                                                        Электросварная стальная труба холоднодеформированная 57х1.6 мм-->
+                        <!--                                                        20кп ГОСТ 10707-80-->
+                        <!--                                                    </div>-->
+
+                        <!--                                                </div>-->
+                        <!--                                                <div class="product-table__battery product-table__battery&#45;&#45;many"-->
+                        <!--                                                     data-tippy-content-p-no-arrow="<p>Много</p>">-->
+                        <!--                                                    <svg class="icon icon_battery-many">-->
+                        <!--                                                        <use xlink:href="svg/symbol/#battery-many"></use>-->
+                        <!--                                                    </svg>-->
+                        <!--                                                </div>-->
+                        <!--                                            </div>-->
+                        <!--                                        </td>-->
+                        <!--                                        <td>-->
+                        <!--                                            <div class="price-actions__btns product-table__actions callback">-->
+
+
+                        <!--                                                <div class="product-table__btn btn-find" data-call-modal="find-price"-->
+                        <!--                                                     onclick="ym(window.isteels.ym_id, 'reachGoal', 'click_product_price');">-->
+                        <!--                                                    Узнать цену-->
+                        <!--                                                </div>-->
+
+
+                        <!--                                                <div class="callblock">-->
+                        <!--                                                    <div class="callblock__item" data-modal-toggle="#modal-call"-->
+                        <!--                                                         onclick="ym(window.isteels.ym_id, 'reachGoal', 'pricelist_phone');">-->
+                        <!--                                                        <svg class="icon icon_phone">-->
+                        <!--                                                            <use xlink:href="svg/symbol/#phone"></use>-->
+                        <!--                                                        </svg>-->
+                        <!--                                                    </div>-->
+                        <!--                                                    <a class="callblock__item mgo-email" href="mailto:astana@isteels.kz"-->
+                        <!--                                                       onclick="ym(window.isteels.ym_id, 'reachGoal', 'pricelist_email');">-->
+                        <!--                                                        <svg class="icon icon_email">-->
+                        <!--                                                            <use xlink:href="svg/symbol/#email"></use>-->
+                        <!--                                                        </svg>-->
+                        <!--                                                        <span class="d-none">astana@isteels.kz</span>-->
+                        <!--                                                    </a>-->
+                        <!--                                                </div>-->
+
+
+                        <!--                                            </div>-->
+                        <!--                                        </td>-->
+                        <!--                                    </tr>-->
+
+                        <!--                                    <tr class="product-table__item">-->
+                        <!--                                        <td>-->
+                        <!--                                            <div class="short-product">-->
+                        <!--                                                <div class="short-product__info">-->
+                        <!--                                                    <div class="short-product__title"-->
+                        <!--                                                         data-href="/product/elektrosvarnaja_stalnaja_truba_holodnodeformirovannaja_60h16_mm_20kp_gost_10707_80/"-->
+                        <!--                                                         data-product-title="">-->
+                        <!--                                                        Электросварная стальная труба холоднодеформированная 60х1.6 мм-->
+                        <!--                                                        20кп ГОСТ 10707-80-->
+                        <!--                                                    </div>-->
+
+                        <!--                                                </div>-->
+                        <!--                                                <div class="product-table__battery product-table__battery&#45;&#45;many"-->
+                        <!--                                                     data-tippy-content-p-no-arrow="<p>Много</p>">-->
+                        <!--                                                    <svg class="icon icon_battery-many">-->
+                        <!--                                                        <use xlink:href="svg/symbol/#battery-many"></use>-->
+                        <!--                                                    </svg>-->
+                        <!--                                                </div>-->
+                        <!--                                            </div>-->
+                        <!--                                        </td>-->
+                        <!--                                        <td>-->
+                        <!--                                            <div class="price-actions__btns product-table__actions callback">-->
+
+
+                        <!--                                                <div class="product-table__btn btn-find" data-call-modal="find-price"-->
+                        <!--                                                     onclick="ym(window.isteels.ym_id, 'reachGoal', 'click_product_price');">-->
+                        <!--                                                    Узнать цену-->
+                        <!--                                                </div>-->
+
+
+                        <!--                                                <div class="callblock">-->
+                        <!--                                                    <div class="callblock__item" data-modal-toggle="#modal-call"-->
+                        <!--                                                         onclick="ym(window.isteels.ym_id, 'reachGoal', 'pricelist_phone');">-->
+                        <!--                                                        <svg class="icon icon_phone">-->
+                        <!--                                                            <use xlink:href="svg/symbol/#phone"></use>-->
+                        <!--                                                        </svg>-->
+                        <!--                                                    </div>-->
+                        <!--                                                    <a class="callblock__item mgo-email" href="mailto:astana@isteels.kz"-->
+                        <!--                                                       onclick="ym(window.isteels.ym_id, 'reachGoal', 'pricelist_email');">-->
+                        <!--                                                        <svg class="icon icon_email">-->
+                        <!--                                                            <use xlink:href="svg/symbol/#email"></use>-->
+                        <!--                                                        </svg>-->
+                        <!--                                                        <span class="d-none">astana@isteels.kz</span>-->
+                        <!--                                                    </a>-->
+                        <!--                                                </div>-->
+
+
+                        <!--                                            </div>-->
+                        <!--                                        </td>-->
+                        <!--                                    </tr>-->
+
+                        <!--                                    <tr class="product-table__item">-->
+                        <!--                                        <td>-->
+                        <!--                                            <div class="short-product">-->
+                        <!--                                                <div class="short-product__info">-->
+                        <!--                                                    <div class="short-product__title"-->
+                        <!--                                                         data-href="/product/elektrosvarnaja_stalnaja_truba_holodnodeformirovannaja_63h16_mm_20kp_gost_10707_80/"-->
+                        <!--                                                         data-product-title="">-->
+                        <!--                                                        Электросварная стальная труба холоднодеформированная 63х1.6 мм-->
+                        <!--                                                        20кп ГОСТ 10707-80-->
+                        <!--                                                    </div>-->
+
+                        <!--                                                </div>-->
+                        <!--                                                <div class="product-table__battery product-table__battery&#45;&#45;many"-->
+                        <!--                                                     data-tippy-content-p-no-arrow="<p>Много</p>">-->
+                        <!--                                                    <svg class="icon icon_battery-many">-->
+                        <!--                                                        <use xlink:href="svg/symbol/#battery-many"></use>-->
+                        <!--                                                    </svg>-->
+                        <!--                                                </div>-->
+                        <!--                                            </div>-->
+                        <!--                                        </td>-->
+                        <!--                                        <td>-->
+                        <!--                                            <div class="price-actions__btns product-table__actions callback">-->
+
+
+                        <!--                                                <div class="product-table__btn btn-find" data-call-modal="find-price"-->
+                        <!--                                                     onclick="ym(window.isteels.ym_id, 'reachGoal', 'click_product_price');">-->
+                        <!--                                                    Узнать цену-->
+                        <!--                                                </div>-->
+
+
+                        <!--                                                <div class="callblock">-->
+                        <!--                                                    <div class="callblock__item" data-modal-toggle="#modal-call"-->
+                        <!--                                                         onclick="ym(window.isteels.ym_id, 'reachGoal', 'pricelist_phone');">-->
+                        <!--                                                        <svg class="icon icon_phone">-->
+                        <!--                                                            <use xlink:href="svg/symbol/#phone"></use>-->
+                        <!--                                                        </svg>-->
+                        <!--                                                    </div>-->
+                        <!--                                                    <a class="callblock__item mgo-email" href="mailto:astana@isteels.kz"-->
+                        <!--                                                       onclick="ym(window.isteels.ym_id, 'reachGoal', 'pricelist_email');">-->
+                        <!--                                                        <svg class="icon icon_email">-->
+                        <!--                                                            <use xlink:href="svg/symbol/#email"></use>-->
+                        <!--                                                        </svg>-->
+                        <!--                                                        <span class="d-none">astana@isteels.kz</span>-->
+                        <!--                                                    </a>-->
+                        <!--                                                </div>-->
+
+
+                        <!--                                            </div>-->
+                        <!--                                        </td>-->
+                        <!--                                    </tr>-->
+
+                        <!--                                    <tr class="product-table__item">-->
+                        <!--                                        <td>-->
+                        <!--                                            <div class="short-product">-->
+                        <!--                                                <div class="short-product__info">-->
+                        <!--                                                    <div class="short-product__title"-->
+                        <!--                                                         data-href="/product/elektrosvarnaja_stalnaja_truba_holodnodeformirovannaja_65h16_mm_20kp_gost_10707_80/"-->
+                        <!--                                                         data-product-title="">-->
+                        <!--                                                        Электросварная стальная труба холоднодеформированная 65х1.6 мм-->
+                        <!--                                                        20кп ГОСТ 10707-80-->
+                        <!--                                                    </div>-->
+
+                        <!--                                                </div>-->
+                        <!--                                                <div class="product-table__battery product-table__battery&#45;&#45;many"-->
+                        <!--                                                     data-tippy-content-p-no-arrow="<p>Много</p>">-->
+                        <!--                                                    <svg class="icon icon_battery-many">-->
+                        <!--                                                        <use xlink:href="svg/symbol/#battery-many"></use>-->
+                        <!--                                                    </svg>-->
+                        <!--                                                </div>-->
+                        <!--                                            </div>-->
+                        <!--                                        </td>-->
+                        <!--                                        <td>-->
+                        <!--                                            <div class="price-actions__btns product-table__actions callback">-->
+
+
+                        <!--                                                <div class="product-table__btn btn-find" data-call-modal="find-price"-->
+                        <!--                                                     onclick="ym(window.isteels.ym_id, 'reachGoal', 'click_product_price');">-->
+                        <!--                                                    Узнать цену-->
+                        <!--                                                </div>-->
+
+
+                        <!--                                                <div class="callblock">-->
+                        <!--                                                    <div class="callblock__item" data-modal-toggle="#modal-call"-->
+                        <!--                                                         onclick="ym(window.isteels.ym_id, 'reachGoal', 'pricelist_phone');">-->
+                        <!--                                                        <svg class="icon icon_phone">-->
+                        <!--                                                            <use xlink:href="svg/symbol/#phone"></use>-->
+                        <!--                                                        </svg>-->
+                        <!--                                                    </div>-->
+                        <!--                                                    <a class="callblock__item mgo-email" href="mailto:astana@isteels.kz"-->
+                        <!--                                                       onclick="ym(window.isteels.ym_id, 'reachGoal', 'pricelist_email');">-->
+                        <!--                                                        <svg class="icon icon_email">-->
+                        <!--                                                            <use xlink:href="svg/symbol/#email"></use>-->
+                        <!--                                                        </svg>-->
+                        <!--                                                        <span class="d-none">astana@isteels.kz</span>-->
+                        <!--                                                    </a>-->
+                        <!--                                                </div>-->
+
+
+                        <!--                                            </div>-->
+                        <!--                                        </td>-->
+                        <!--                                    </tr>-->
+
+                        <!--                                    <tr class="product-table__item">-->
+                        <!--                                        <td>-->
+                        <!--                                            <div class="short-product">-->
+                        <!--                                                <div class="short-product__info">-->
+                        <!--                                                    <div class="short-product__title"-->
+                        <!--                                                         data-href="/product/elektrosvarnaja_stalnaja_truba_holodnodeformirovannaja_68h16_mm_20kp_gost_10707_80/"-->
+                        <!--                                                         data-product-title="">-->
+                        <!--                                                        Электросварная стальная труба холоднодеформированная 68х1.6 мм-->
+                        <!--                                                        20кп ГОСТ 10707-80-->
+                        <!--                                                    </div>-->
+
+                        <!--                                                </div>-->
+                        <!--                                                <div class="product-table__battery product-table__battery&#45;&#45;many"-->
+                        <!--                                                     data-tippy-content-p-no-arrow="<p>Много</p>">-->
+                        <!--                                                    <svg class="icon icon_battery-many">-->
+                        <!--                                                        <use xlink:href="svg/symbol/#battery-many"></use>-->
+                        <!--                                                    </svg>-->
+                        <!--                                                </div>-->
+                        <!--                                            </div>-->
+                        <!--                                        </td>-->
+                        <!--                                        <td>-->
+                        <!--                                            <div class="price-actions__btns product-table__actions callback">-->
+
+
+                        <!--                                                <div class="product-table__btn btn-find" data-call-modal="find-price"-->
+                        <!--                                                     onclick="ym(window.isteels.ym_id, 'reachGoal', 'click_product_price');">-->
+                        <!--                                                    Узнать цену-->
+                        <!--                                                </div>-->
+
+
+                        <!--                                                <div class="callblock">-->
+                        <!--                                                    <div class="callblock__item" data-modal-toggle="#modal-call"-->
+                        <!--                                                         onclick="ym(window.isteels.ym_id, 'reachGoal', 'pricelist_phone');">-->
+                        <!--                                                        <svg class="icon icon_phone">-->
+                        <!--                                                            <use xlink:href="svg/symbol/#phone"></use>-->
+                        <!--                                                        </svg>-->
+                        <!--                                                    </div>-->
+                        <!--                                                    <a class="callblock__item mgo-email" href="mailto:astana@isteels.kz"-->
+                        <!--                                                       onclick="ym(window.isteels.ym_id, 'reachGoal', 'pricelist_email');">-->
+                        <!--                                                        <svg class="icon icon_email">-->
+                        <!--                                                            <use xlink:href="svg/symbol/#email"></use>-->
+                        <!--                                                        </svg>-->
+                        <!--                                                        <span class="d-none">astana@isteels.kz</span>-->
+                        <!--                                                    </a>-->
+                        <!--                                                </div>-->
+
+
+                        <!--                                            </div>-->
+                        <!--                                        </td>-->
+                        <!--                                    </tr>-->
+
+                        <!--                                    <tr class="product-table__item">-->
+                        <!--                                        <td>-->
+                        <!--                                            <div class="short-product">-->
+                        <!--                                                <div class="short-product__info">-->
+                        <!--                                                    <div class="short-product__title"-->
+                        <!--                                                         data-href="/product/elektrosvarnaja_stalnaja_truba_holodnodeformirovannaja_70h16_mm_20kp_gost_10707_80/"-->
+                        <!--                                                         data-product-title="">-->
+                        <!--                                                        Электросварная стальная труба холоднодеформированная 70х1.6 мм-->
+                        <!--                                                        20кп ГОСТ 10707-80-->
+                        <!--                                                    </div>-->
+
+                        <!--                                                </div>-->
+                        <!--                                                <div class="product-table__battery product-table__battery&#45;&#45;many"-->
+                        <!--                                                     data-tippy-content-p-no-arrow="<p>Много</p>">-->
+                        <!--                                                    <svg class="icon icon_battery-many">-->
+                        <!--                                                        <use xlink:href="svg/symbol/#battery-many"></use>-->
+                        <!--                                                    </svg>-->
+                        <!--                                                </div>-->
+                        <!--                                            </div>-->
+                        <!--                                        </td>-->
+                        <!--                                        <td>-->
+                        <!--                                            <div class="price-actions__btns product-table__actions callback">-->
+
+
+                        <!--                                                <div class="product-table__btn btn-find" data-call-modal="find-price"-->
+                        <!--                                                     onclick="ym(window.isteels.ym_id, 'reachGoal', 'click_product_price');">-->
+                        <!--                                                    Узнать цену-->
+                        <!--                                                </div>-->
+
+
+                        <!--                                                <div class="callblock">-->
+                        <!--                                                    <div class="callblock__item" data-modal-toggle="#modal-call"-->
+                        <!--                                                         onclick="ym(window.isteels.ym_id, 'reachGoal', 'pricelist_phone');">-->
+                        <!--                                                        <svg class="icon icon_phone">-->
+                        <!--                                                            <use xlink:href="svg/symbol/#phone"></use>-->
+                        <!--                                                        </svg>-->
+                        <!--                                                    </div>-->
+                        <!--                                                    <a class="callblock__item mgo-email" href="mailto:astana@isteels.kz"-->
+                        <!--                                                       onclick="ym(window.isteels.ym_id, 'reachGoal', 'pricelist_email');">-->
+                        <!--                                                        <svg class="icon icon_email">-->
+                        <!--                                                            <use xlink:href="svg/symbol/#email"></use>-->
+                        <!--                                                        </svg>-->
+                        <!--                                                        <span class="d-none">astana@isteels.kz</span>-->
+                        <!--                                                    </a>-->
+                        <!--                                                </div>-->
+
+
+                        <!--                                            </div>-->
+                        <!--                                        </td>-->
+                        <!--                                    </tr>-->
+
+                        <!--                                    <tr class="product-table__item">-->
+                        <!--                                        <td>-->
+                        <!--                                            <div class="short-product">-->
+                        <!--                                                <div class="short-product__info">-->
+                        <!--                                                    <div class="short-product__title"-->
+                        <!--                                                         data-href="/product/elektrosvarnaja_stalnaja_truba_holodnodeformirovannaja_73h16_mm_20kp_gost_10707_80/"-->
+                        <!--                                                         data-product-title="">-->
+                        <!--                                                        Электросварная стальная труба холоднодеформированная 73х1.6 мм-->
+                        <!--                                                        20кп ГОСТ 10707-80-->
+                        <!--                                                    </div>-->
+
+                        <!--                                                </div>-->
+                        <!--                                                <div class="product-table__battery product-table__battery&#45;&#45;many"-->
+                        <!--                                                     data-tippy-content-p-no-arrow="<p>Много</p>">-->
+                        <!--                                                    <svg class="icon icon_battery-many">-->
+                        <!--                                                        <use xlink:href="svg/symbol/#battery-many"></use>-->
+                        <!--                                                    </svg>-->
+                        <!--                                                </div>-->
+                        <!--                                            </div>-->
+                        <!--                                        </td>-->
+                        <!--                                        <td>-->
+                        <!--                                            <div class="price-actions__btns product-table__actions callback">-->
+
+
+                        <!--                                                <div class="product-table__btn btn-find" data-call-modal="find-price"-->
+                        <!--                                                     onclick="ym(window.isteels.ym_id, 'reachGoal', 'click_product_price');">-->
+                        <!--                                                    Узнать цену-->
+                        <!--                                                </div>-->
+
+
+                        <!--                                                <div class="callblock">-->
+                        <!--                                                    <div class="callblock__item" data-modal-toggle="#modal-call"-->
+                        <!--                                                         onclick="ym(window.isteels.ym_id, 'reachGoal', 'pricelist_phone');">-->
+                        <!--                                                        <svg class="icon icon_phone">-->
+                        <!--                                                            <use xlink:href="svg/symbol/#phone"></use>-->
+                        <!--                                                        </svg>-->
+                        <!--                                                    </div>-->
+                        <!--                                                    <a class="callblock__item mgo-email" href="mailto:astana@isteels.kz"-->
+                        <!--                                                       onclick="ym(window.isteels.ym_id, 'reachGoal', 'pricelist_email');">-->
+                        <!--                                                        <svg class="icon icon_email">-->
+                        <!--                                                            <use xlink:href="svg/symbol/#email"></use>-->
+                        <!--                                                        </svg>-->
+                        <!--                                                        <span class="d-none">astana@isteels.kz</span>-->
+                        <!--                                                    </a>-->
+                        <!--                                                </div>-->
+
+
+                        <!--                                            </div>-->
+                        <!--                                        </td>-->
+                        <!--                                    </tr>-->
+
+                        <!--                                    <tr class="product-table__item">-->
+                        <!--                                        <td>-->
+                        <!--                                            <div class="short-product">-->
+                        <!--                                                <div class="short-product__info">-->
+                        <!--                                                    <div class="short-product__title"-->
+                        <!--                                                         data-href="/product/elektrosvarnaja_stalnaja_truba_holodnodeformirovannaja_75h16_mm_20kp_gost_10707_80/"-->
+                        <!--                                                         data-product-title="">-->
+                        <!--                                                        Электросварная стальная труба холоднодеформированная 75х1.6 мм-->
+                        <!--                                                        20кп ГОСТ 10707-80-->
+                        <!--                                                    </div>-->
+
+                        <!--                                                </div>-->
+                        <!--                                                <div class="product-table__battery product-table__battery&#45;&#45;many"-->
+                        <!--                                                     data-tippy-content-p-no-arrow="<p>Много</p>">-->
+                        <!--                                                    <svg class="icon icon_battery-many">-->
+                        <!--                                                        <use xlink:href="svg/symbol/#battery-many"></use>-->
+                        <!--                                                    </svg>-->
+                        <!--                                                </div>-->
+                        <!--                                            </div>-->
+                        <!--                                        </td>-->
+                        <!--                                        <td>-->
+                        <!--                                            <div class="price-actions__btns product-table__actions callback">-->
+
+
+                        <!--                                                <div class="product-table__btn btn-find" data-call-modal="find-price"-->
+                        <!--                                                     onclick="ym(window.isteels.ym_id, 'reachGoal', 'click_product_price');">-->
+                        <!--                                                    Узнать цену-->
+                        <!--                                                </div>-->
+
+
+                        <!--                                                <div class="callblock">-->
+                        <!--                                                    <div class="callblock__item" data-modal-toggle="#modal-call"-->
+                        <!--                                                         onclick="ym(window.isteels.ym_id, 'reachGoal', 'pricelist_phone');">-->
+                        <!--                                                        <svg class="icon icon_phone">-->
+                        <!--                                                            <use xlink:href="svg/symbol/#phone"></use>-->
+                        <!--                                                        </svg>-->
+                        <!--                                                    </div>-->
+                        <!--                                                    <a class="callblock__item mgo-email" href="mailto:astana@isteels.kz"-->
+                        <!--                                                       onclick="ym(window.isteels.ym_id, 'reachGoal', 'pricelist_email');">-->
+                        <!--                                                        <svg class="icon icon_email">-->
+                        <!--                                                            <use xlink:href="svg/symbol/#email"></use>-->
+                        <!--                                                        </svg>-->
+                        <!--                                                        <span class="d-none">astana@isteels.kz</span>-->
+                        <!--                                                    </a>-->
+                        <!--                                                </div>-->
+
+
+                        <!--                                            </div>-->
+                        <!--                                        </td>-->
+                        <!--                                    </tr>-->
+
+                        <!--                                    <tr class="product-table__item">-->
+                        <!--                                        <td>-->
+                        <!--                                            <div class="short-product">-->
+                        <!--                                                <div class="short-product__info">-->
+                        <!--                                                    <div class="short-product__title"-->
+                        <!--                                                         data-href="/product/elektrosvarnaja_stalnaja_truba_holodnodeformirovannaja_76h16_mm_20kp_gost_10707_80/"-->
+                        <!--                                                         data-product-title="">-->
+                        <!--                                                        Электросварная стальная труба холоднодеформированная 76х1.6 мм-->
+                        <!--                                                        20кп ГОСТ 10707-80-->
+                        <!--                                                    </div>-->
+
+                        <!--                                                </div>-->
+                        <!--                                                <div class="product-table__battery product-table__battery&#45;&#45;many"-->
+                        <!--                                                     data-tippy-content-p-no-arrow="<p>Много</p>">-->
+                        <!--                                                    <svg class="icon icon_battery-many">-->
+                        <!--                                                        <use xlink:href="svg/symbol/#battery-many"></use>-->
+                        <!--                                                    </svg>-->
+                        <!--                                                </div>-->
+                        <!--                                            </div>-->
+                        <!--                                        </td>-->
+                        <!--                                        <td>-->
+                        <!--                                            <div class="price-actions__btns product-table__actions callback">-->
+
+
+                        <!--                                                <div class="product-table__btn btn-find" data-call-modal="find-price"-->
+                        <!--                                                     onclick="ym(window.isteels.ym_id, 'reachGoal', 'click_product_price');">-->
+                        <!--                                                    Узнать цену-->
+                        <!--                                                </div>-->
+
+
+                        <!--                                                <div class="callblock">-->
+                        <!--                                                    <div class="callblock__item" data-modal-toggle="#modal-call"-->
+                        <!--                                                         onclick="ym(window.isteels.ym_id, 'reachGoal', 'pricelist_phone');">-->
+                        <!--                                                        <svg class="icon icon_phone">-->
+                        <!--                                                            <use xlink:href="svg/symbol/#phone"></use>-->
+                        <!--                                                        </svg>-->
+                        <!--                                                    </div>-->
+                        <!--                                                    <a class="callblock__item mgo-email" href="mailto:astana@isteels.kz"-->
+                        <!--                                                       onclick="ym(window.isteels.ym_id, 'reachGoal', 'pricelist_email');">-->
+                        <!--                                                        <svg class="icon icon_email">-->
+                        <!--                                                            <use xlink:href="svg/symbol/#email"></use>-->
+                        <!--                                                        </svg>-->
+                        <!--                                                        <span class="d-none">astana@isteels.kz</span>-->
+                        <!--                                                    </a>-->
+                        <!--                                                </div>-->
+
+
+                        <!--                                            </div>-->
+                        <!--                                        </td>-->
+                        <!--                                    </tr>-->
+
+                        <!--                                    <tr class="product-table__item">-->
+                        <!--                                        <td>-->
+                        <!--                                            <div class="short-product">-->
+                        <!--                                                <div class="short-product__info">-->
+                        <!--                                                    <div class="short-product__title"-->
+                        <!--                                                         data-href="/product/elektrosvarnaja_stalnaja_truba_holodnodeformirovannaja_11h18_mm_20kp_gost_10707_80/"-->
+                        <!--                                                         data-product-title="">-->
+                        <!--                                                        Электросварная стальная труба холоднодеформированная 11х1.8 мм-->
+                        <!--                                                        20кп ГОСТ 10707-80-->
+                        <!--                                                    </div>-->
+
+                        <!--                                                </div>-->
+                        <!--                                                <div class="product-table__battery product-table__battery&#45;&#45;many"-->
+                        <!--                                                     data-tippy-content-p-no-arrow="<p>Много</p>">-->
+                        <!--                                                    <svg class="icon icon_battery-many">-->
+                        <!--                                                        <use xlink:href="svg/symbol/#battery-many"></use>-->
+                        <!--                                                    </svg>-->
+                        <!--                                                </div>-->
+                        <!--                                            </div>-->
+                        <!--                                        </td>-->
+                        <!--                                        <td>-->
+                        <!--                                            <div class="price-actions__btns product-table__actions callback">-->
+
+
+                        <!--                                                <div class="product-table__btn btn-find" data-call-modal="find-price"-->
+                        <!--                                                     onclick="ym(window.isteels.ym_id, 'reachGoal', 'click_product_price');">-->
+                        <!--                                                    Узнать цену-->
+                        <!--                                                </div>-->
+
+
+                        <!--                                                <div class="callblock">-->
+                        <!--                                                    <div class="callblock__item" data-modal-toggle="#modal-call"-->
+                        <!--                                                         onclick="ym(window.isteels.ym_id, 'reachGoal', 'pricelist_phone');">-->
+                        <!--                                                        <svg class="icon icon_phone">-->
+                        <!--                                                            <use xlink:href="svg/symbol/#phone"></use>-->
+                        <!--                                                        </svg>-->
+                        <!--                                                    </div>-->
+                        <!--                                                    <a class="callblock__item mgo-email" href="mailto:astana@isteels.kz"-->
+                        <!--                                                       onclick="ym(window.isteels.ym_id, 'reachGoal', 'pricelist_email');">-->
+                        <!--                                                        <svg class="icon icon_email">-->
+                        <!--                                                            <use xlink:href="svg/symbol/#email"></use>-->
+                        <!--                                                        </svg>-->
+                        <!--                                                        <span class="d-none">astana@isteels.kz</span>-->
+                        <!--                                                    </a>-->
+                        <!--                                                </div>-->
+
+
+                        <!--                                            </div>-->
+                        <!--                                        </td>-->
+                        <!--                                    </tr>-->
+
+                        <!--                                    <tr class="product-table__item">-->
+                        <!--                                        <td>-->
+                        <!--                                            <div class="short-product">-->
+                        <!--                                                <div class="short-product__info">-->
+                        <!--                                                    <div class="short-product__title"-->
+                        <!--                                                         data-href="/product/elektrosvarnaja_stalnaja_truba_holodnodeformirovannaja_13h18_mm_20kp_gost_10707_80/"-->
+                        <!--                                                         data-product-title="">-->
+                        <!--                                                        Электросварная стальная труба холоднодеформированная 13х1.8 мм-->
+                        <!--                                                        20кп ГОСТ 10707-80-->
+                        <!--                                                    </div>-->
+
+                        <!--                                                </div>-->
+                        <!--                                                <div class="product-table__battery product-table__battery&#45;&#45;many"-->
+                        <!--                                                     data-tippy-content-p-no-arrow="<p>Много</p>">-->
+                        <!--                                                    <svg class="icon icon_battery-many">-->
+                        <!--                                                        <use xlink:href="svg/symbol/#battery-many"></use>-->
+                        <!--                                                    </svg>-->
+                        <!--                                                </div>-->
+                        <!--                                            </div>-->
+                        <!--                                        </td>-->
+                        <!--                                        <td>-->
+                        <!--                                            <div class="price-actions__btns product-table__actions callback">-->
+
+
+                        <!--                                                <div class="product-table__btn btn-find" data-call-modal="find-price"-->
+                        <!--                                                     onclick="ym(window.isteels.ym_id, 'reachGoal', 'click_product_price');">-->
+                        <!--                                                    Узнать цену-->
+                        <!--                                                </div>-->
+
+
+                        <!--                                                <div class="callblock">-->
+                        <!--                                                    <div class="callblock__item" data-modal-toggle="#modal-call"-->
+                        <!--                                                         onclick="ym(window.isteels.ym_id, 'reachGoal', 'pricelist_phone');">-->
+                        <!--                                                        <svg class="icon icon_phone">-->
+                        <!--                                                            <use xlink:href="svg/symbol/#phone"></use>-->
+                        <!--                                                        </svg>-->
+                        <!--                                                    </div>-->
+                        <!--                                                    <a class="callblock__item mgo-email" href="mailto:astana@isteels.kz"-->
+                        <!--                                                       onclick="ym(window.isteels.ym_id, 'reachGoal', 'pricelist_email');">-->
+                        <!--                                                        <svg class="icon icon_email">-->
+                        <!--                                                            <use xlink:href="svg/symbol/#email"></use>-->
+                        <!--                                                        </svg>-->
+                        <!--                                                        <span class="d-none">astana@isteels.kz</span>-->
+                        <!--                                                    </a>-->
+                        <!--                                                </div>-->
+
+
+                        <!--                                            </div>-->
+                        <!--                                        </td>-->
+                        <!--                                    </tr>-->
+
+                        <!--                                    <tr class="product-table__item">-->
+                        <!--                                        <td>-->
+                        <!--                                            <div class="short-product">-->
+                        <!--                                                <div class="short-product__info">-->
+                        <!--                                                    <div class="short-product__title"-->
+                        <!--                                                         data-href="/product/elektrosvarnaja_stalnaja_truba_holodnodeformirovannaja_14h18_mm_20kp_gost_10707_80/"-->
+                        <!--                                                         data-product-title="">-->
+                        <!--                                                        Электросварная стальная труба холоднодеформированная 14х1.8 мм-->
+                        <!--                                                        20кп ГОСТ 10707-80-->
+                        <!--                                                    </div>-->
+
+                        <!--                                                </div>-->
+                        <!--                                                <div class="product-table__battery product-table__battery&#45;&#45;many"-->
+                        <!--                                                     data-tippy-content-p-no-arrow="<p>Много</p>">-->
+                        <!--                                                    <svg class="icon icon_battery-many">-->
+                        <!--                                                        <use xlink:href="svg/symbol/#battery-many"></use>-->
+                        <!--                                                    </svg>-->
+                        <!--                                                </div>-->
+                        <!--                                            </div>-->
+                        <!--                                        </td>-->
+                        <!--                                        <td>-->
+                        <!--                                            <div class="price-actions__btns product-table__actions callback">-->
+
+
+                        <!--                                                <div class="product-table__btn btn-find" data-call-modal="find-price"-->
+                        <!--                                                     onclick="ym(window.isteels.ym_id, 'reachGoal', 'click_product_price');">-->
+                        <!--                                                    Узнать цену-->
+                        <!--                                                </div>-->
+
+
+                        <!--                                                <div class="callblock">-->
+                        <!--                                                    <div class="callblock__item" data-modal-toggle="#modal-call"-->
+                        <!--                                                         onclick="ym(window.isteels.ym_id, 'reachGoal', 'pricelist_phone');">-->
+                        <!--                                                        <svg class="icon icon_phone">-->
+                        <!--                                                            <use xlink:href="svg/symbol/#phone"></use>-->
+                        <!--                                                        </svg>-->
+                        <!--                                                    </div>-->
+                        <!--                                                    <a class="callblock__item mgo-email" href="mailto:astana@isteels.kz"-->
+                        <!--                                                       onclick="ym(window.isteels.ym_id, 'reachGoal', 'pricelist_email');">-->
+                        <!--                                                        <svg class="icon icon_email">-->
+                        <!--                                                            <use xlink:href="svg/symbol/#email"></use>-->
+                        <!--                                                        </svg>-->
+                        <!--                                                        <span class="d-none">astana@isteels.kz</span>-->
+                        <!--                                                    </a>-->
+                        <!--                                                </div>-->
+
+
+                        <!--                                            </div>-->
+                        <!--                                        </td>-->
+                        <!--                                    </tr>-->
+
+                        <!--                                    </tbody>-->
+                        <!--                                </table>-->
+                        <!--                            </div>-->
+                        <!--                        </div>-->
                     </div>
                 </div>
             </div>
