@@ -34,13 +34,13 @@ services:
     restart: always
     volumes:
       - .:/code
-      - static_data:/code/unitrade_dj/staticfiles
-      - media_data:/code/unitrade_dj/media
+      - static:/code/staticfiles
+      - media:/code/media
     ports: # Добавляем этот блок
       - "8000:8000"
     expose:
       - "8000"
-  
+
 
   nginx:
     image: nginx
