@@ -3,17 +3,55 @@
 
 {% block title %} Металлопрокат оптом, цены, наличие | ГК UniTrade {% endblock %}
 
+{% block preloader %}
+
+<div id="preloader">
+    <img src="{% static 'images/six.webp' %}" alt="Loading..." id="gear">
+</div>
+<style>
+    #preloader {
+        position: fixed;
+        width: 100%;
+        height: 100%;
+        background: #fff; /* Белый фон */
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        z-index: 9999;
+    }
+
+    #gear {
+        width: 80px;
+        height: 80px;
+        animation: rotate 2s linear infinite;
+        filter: drop-shadow(0px 0px 10px rgba(0, 0, 0, 0.2)); /* Легкая тень для контраста */
+    }
+
+    @keyframes rotate {
+        0% { transform: rotate(0deg); }
+        100% { transform: rotate(360deg); }
+    }
+</style>
+<script>
+    setTimeout(() => document.getElementById("preloader").style.display = "none", 1500);
+</script>
+
+{% endblock %}
+
 {% block content %}
 
 <main class="page-index">
 
 
+
+
     <!-- БЛОК ВИДЕО -->
     <section class="hero">
         <div class="hero__video">
-            <video class="lazy" autoplay muted loop playsinline poster="{% static 'images/kzjpg' %}">
-                <source data-src="{% static 'video/video2.mp4' %}" type="video/mp4">
+            <video autoplay muted loop playsinline preload="auto" poster="{% static 'images/kz.jpg' %}">
+                <source src="{% static 'video/video2.mp4' %}" type="video/mp4">
             </video>
+
 
         </div>
         <button class="hero__video-control" aria-label="video control"></button>
@@ -638,9 +676,7 @@
                                                 </b>
                                                 <span class="sentence-card__price-info"
                                                       data-tippy-content="Не является публичной офертой">
-                                                    <svg class="icon icon_question">
-                                                      <use xlink:href="/static/img/svg/symbol/sprite.svg#question"></use>
-                                                    </svg>
+
                                                 </span>
                                             </span>
                                         </div>
@@ -706,9 +742,7 @@
                                                 </b>
                                                 <span class="sentence-card__price-info"
                                                       data-tippy-content="Не является публичной офертой">
-                                                    <svg class="icon icon_question">
-                                                      <use xlink:href="/static/img/svg/symbol/sprite.svg#question"></use>
-                                                    </svg>
+
                                                 </span>
                                             </span>
                                         </div>
@@ -774,9 +808,7 @@
                                                 </b>
                                                 <span class="sentence-card__price-info"
                                                       data-tippy-content="Не является публичной офертой">
-                                                    <svg class="icon icon_question">
-                                                      <use xlink:href="/static/img/svg/symbol/sprite.svg#question"></use>
-                                                    </svg>
+
                                                 </span>
                                             </span>
                                         </div>
@@ -842,9 +874,7 @@
                                                 </b>
                                                 <span class="sentence-card__price-info"
                                                       data-tippy-content="Не является публичной офертой">
-                                                    <svg class="icon icon_question">
-                                                      <use xlink:href="/static/img/svg/symbol/sprite.svg#question"></use>
-                                                    </svg>
+
                                                 </span>
                                             </span>
                                         </div>
@@ -910,9 +940,7 @@
                                                 </b>
                                                 <span class="sentence-card__price-info"
                                                       data-tippy-content="Не является публичной офертой">
-                                                    <svg class="icon icon_question">
-                                                      <use xlink:href="/static/img/svg/symbol/sprite.svg#question"></use>
-                                                    </svg>
+
                                                 </span>
                                             </span>
                                         </div>
@@ -961,18 +989,30 @@
             <div class="promo-help-white__inner">
                 <div class="promo-help-white__title" style="color: white;">Нужна помощь?</div>
                 <div class="promo-help-white__desc">
-                    <p style="color: white;">Обсудить все вопросы, рассчитать стоимость доставки и договориться о способе оплаты вы можете с
+                    <p style="color: white;">Обсудить все вопросы, рассчитать стоимость доставки и договориться о
+                        способе оплаты вы можете с
                         нашими специалистами.</p>
                 </div>
                 <div class="promo-help-white__controls" style="gap: 7px;">
-                    <button class="promo-help-white__order btn" data-modal-toggle="#modal-request" style="background-color: #ff740f; color: white;">
+                    <script data-b24-form="click/51/kppspk" data-skip-moving="true">
+                        (function(w,d,u){
+                        var s=d.createElement('script');s.async=true;s.src=u+'?'+(Date.now()/180000|0);
+                        var h=d.getElementsByTagName('script')[0];h.parentNode.insertBefore(s,h);
+                        })(window,document,'https://cdn-ru.bitrix24.kz/b17734044/crm/form/loader_51.js');
+                    </script>
+                    <button class="promo-help-white__order btn"
+                            data-b24-form="click/51/kppspk"
+                            style="background-color: #ff740f; color: white;">
                         Оставить заявку
                     </button>
+
                     <a class="promo-help-white__consultant btn btn_outline" href="javascript:void(0);"
                        onclick="jivo_api.open()" style="background-color: white; color: #383a44;">
                         Онлайн консультант
                     </a>
                 </div>
+
+
             </div>
         </div>
     </div>

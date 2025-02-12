@@ -11,9 +11,6 @@
 
     <link rel="canonical" href="https://uni-trade.kz/">
 
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css">
-    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
-
 
     <meta itemprop="description" name="description"
           content="Черный и цветной металлопрокат купить оптом с доставкой. Изготовление деталей по чертежам, металлообработка ☎ +7 (717) 264 02 97">
@@ -36,16 +33,17 @@
 
 
     <link rel="stylesheet" href="{% static 'css/style.css' %}">
-    <link rel='stylesheet' href='https://cdn-uicons.flaticon.com/2.6.0/uicons-brands/css/uicons-brands.css'>
-    <link rel='stylesheet'
-          href='https://cdn-uicons.flaticon.com/2.6.0/uicons-regular-rounded/css/uicons-regular-rounded.css'>
-
+    <link rel="stylesheet" href="{% static 'css/widget.css' %}">
 
     <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
 
 
 </head>
 <body>
+
+{% block preloader %}
+
+{% endblock %}
 
 <header class="header"
         style="background-color: white; box-shadow: 0 3px 8px #e2e6ed; border-bottom: 1px solid white;">
@@ -215,8 +213,15 @@
                       data-action="/search/?search=query&amp;json=true" data-ignore-fields="">
                     <button class="header__search-button search__button" type="button"
                             data-modal-toggle="#modal-search">
-                        <span><i style="color: #262a31;" class="fi fi-rr-search"></i></span>
+                        <svg class="icon icon_search" width="24" height="24" fill="currentColor">
+                            <!-- Вставь содержимое файла search.svg сюда -->
+                            <path fill-rule="evenodd" style="color: black;" clip-rule="evenodd"
+                                  d="M10.9 3.527A5.213 5.213 0 103.526 10.9a5.213 5.213 0 007.372-7.373zM2.112 2.113a7.213 7.213 0 0110.86 9.445l3.734 3.735-1.414 1.414-3.735-3.735a7.215 7.215 0 01-9.445-10.86z"
+                                  fill="#9DA1A6"/>
+                        </svg>
                     </button>
+
+
                 </form>
 
                 <ul class="header__menu">
@@ -231,10 +236,10 @@
                             Услуги</a>
                     </li>
 
-<!--                    <li class="header__menu-item">-->
-<!--                        <a class="header__menu-link" style="color: #262a31;" href="{% url 'app:services' %}">-->
-<!--                            Покупателям</a>-->
-<!--                    </li>-->
+                    <!--                    <li class="header__menu-item">-->
+                    <!--                        <a class="header__menu-link" style="color: #262a31;" href="{% url 'app:services' %}">-->
+                    <!--                            Покупателям</a>-->
+                    <!--                    </li>-->
 
                     <li class="header__menu-item">
                         <a class="header__menu-link" href="{% url 'app:contacts' %}"
@@ -332,9 +337,14 @@
                            type="button">
                             Каталог
                         </a>
+                        <script data-b24-form="click/51/kppspk" data-skip-moving="true">
+                            (function(w,d,u){
+                            var s=d.createElement('script');s.async=true;s.src=u+'?'+(Date.now()/180000|0);
+                            var h=d.getElementsByTagName('script')[0];h.parentNode.insertBefore(s,h);
+                            })(window,document,'https://cdn-ru.bitrix24.kz/b17734044/crm/form/loader_51.js');
+                        </script>
                         <span class="mobile-menu__button header__menu-link"
-                              onclick="ym(window.uni-trade.ym_id, 'reachGoal', 'click_fast_order');"
-                              data-call-modal="order-click">Заказ в 1 клик</span>
+                              data-b24-form="click/51/kppspk">Заказ в 1 клик</span>
                         <ol class="mobile-menu__menu" style="padding-bottom: 15px;">
                             <li class="mobile-menu__menu-item"></li>
                             <li class="mobile-menu__menu-item">
@@ -673,9 +683,6 @@
                 <label class="modal-order__form-field">
                         <span class="modal-order__form-field-title required">
                             Товар
-                            <svg class="icon icon_required-input">
-                              <use xlink:href="/static/img/svg/symbol/sprite.svg#required-input"></use>
-                            </svg>
                         </span>
                     <input class="modal-order__form-field-input input__input" type="text" name="product"
                            placeholder="Кабель силовой медный" required="" autocomplete="off">
@@ -683,9 +690,6 @@
                 <label class="modal-order__form-field">
                         <span class="modal-order__form-field-title required">
                             Количество
-                            <svg class="icon icon_required-input">
-                              <use xlink:href="/static/img/svg/symbol/sprite.svg#required-input"></use>
-                            </svg>
                         </span>
                     <input class="modal-order__form-field-input input__input" type="text" name="quantity"
                            placeholder="20" required="" autocomplete="off">
@@ -707,7 +711,8 @@
                 </label>
                 <div class="file-container"></div>
                 <div class="modal-order__bottom">
-                    <button class="modal-order__form_submit btn btn-primary btn_100 send_fast_order" style="background-color: #ff740f;" type="submit"
+                    <button class="modal-order__form_submit btn btn-primary btn_100 send_fast_order"
+                            style="background-color: #ff740f;" type="submit"
                             data-call-modal="order-processed">
                         <span style="color: white;">Отправить</span>
                     </button>
@@ -818,7 +823,8 @@
                            placeholder="example@mail.com">
                 </label>
                 <div class="modal-order__bottom">
-                    <button class="modal-order__form_submit btn btn-primary btn_100 find_price"  style="background-color: #ff740f;" type="submit">
+                    <button class="modal-order__form_submit btn btn-primary btn_100 find_price"
+                            style="background-color: #ff740f;" type="submit">
                         <span style="color: white;">Отправить</span>
                     </button>
 
@@ -857,6 +863,51 @@
 
     {% endblock %}
 </div>
+<div class="chat-bubble" id="chatBubble">Вам подсказать по наличию и стоимости?</div>
+<div class="chat-toggle" onclick="toggleChat()">💬</div>
+<div class="chat-widget" id="chatWidget">
+    <div class="chat-header">
+        <div style="display: flex; align-items: center;">
+            <img src="{% static 'images/ava.webp' %}" alt="Аватар">
+            <h6 class="ms-2">Табигат Карбаев</h6>
+        </div>
+        <button style="color: white;" onclick="toggleChat()">×</button>
+    </div>
+    <div class="chat-body">
+        <p>Здравствуйте! Вам подсказать по наличию и стоимости?</p>
+        <div class="d-flex" style="justify-content: space-between;">
+            <button class="product-table__btn" style="border: none; width: 49%; background-color: #eeeeee;">Нет</button>
+            <button class="product-table__btn" style="border: none; width: 49%; background-color: #eeeeee;">Да</button>
+        </div>
+        <button class="product-table__btn mt-2" style="border: none; width: 100%; background-color: #eeeeee;">Связаться
+            с оператором
+        </button>
+
+    </div>
+</div>
+
+</div>
+<script>
+    function toggleChat() {
+        let chat = document.getElementById("chatWidget");
+        chat.style.display = (chat.style.display === "none" || chat.style.display === "") ? "block" : "none";
+    }
+
+    document.addEventListener("DOMContentLoaded", function() {
+        let bubble = document.getElementById("chatBubble");
+        let showCount = localStorage.getItem("bubbleShowCount") || 0;
+
+        if (showCount < 3) { // Показывать только 3 раза за сессию
+            bubble.style.display = "block";
+            setTimeout(() => {
+                bubble.style.display = "none";
+            }, 5000); // Скрываем через 5 секунд
+
+            localStorage.setItem("bubbleShowCount", Number(showCount) + 1);
+        }
+    });
+</script>
+
 <script>
     $(document).ready(function() {
         $("body").on("click", "a", function(e) {
@@ -1155,13 +1206,11 @@
 
 </style>
 
-<!--/noindex-->
 
-<script src="{% static 'js/tag.js' %}"></script>
-<script src="{% static 'js/libs.js' %}"></script>
 <script src="{% static 'js/index.js' %}"></script>
-<script src="{% static 'js/tools.js' %}"></script>
+
 <script src="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.js"></script>
+
 <script>
     // Инициализация AOS
     document.addEventListener("DOMContentLoaded", function () {
@@ -1173,4 +1222,6 @@
     });
 </script>
 </body>
+
+
 </html>
