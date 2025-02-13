@@ -1,7 +1,7 @@
 version: '3.8'
 
 volumes:
-  static_data:  # Добавляем недостающие тома
+  static_data:
   media_data:
   postgres_data:
 
@@ -29,8 +29,6 @@ services:
       DB_PASSWORD: TOBI8585
       DB_HOST: db
       DB_PORT: "5432"
-    command: >
-      bash -c "./docker-entrypoint.sh"
     restart: always
     volumes:
       - .:/code
@@ -40,6 +38,7 @@ services:
       - "8000:8000"
     expose:
       - "8000"
+    command: ["/code/docker-entrypoint.sh", "gunicorn", "unitrade.wsgi:application", "--bind", "0.0.0.0:8000"]
 
   nginx:
     image: nginx

@@ -2,7 +2,7 @@
 
 # Ждём, пока база данных будет доступна
 echo "Waiting for PostgreSQL..."
-while ! nc -z $DB_HOST $DB_PORT; do
+while ! nc -z "$DB_HOST" "$DB_PORT"; do
   sleep 1
 done
 echo "PostgreSQL started"
@@ -15,6 +15,5 @@ python manage.py migrate
 echo "Collecting static files..."
 python manage.py collectstatic --noinput
 
-# Запуск Gunicorn
-echo "Starting Gunicorn..."
-exec gunicorn unitrade.wsgi:application --bind 0.0.0.0:8000
+# Передаём управление основной команде контейнера
+exec "$@"
