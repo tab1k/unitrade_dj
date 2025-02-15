@@ -6,7 +6,7 @@ from slugify import slugify
 class Category(models.Model):
     name = models.CharField(max_length=255, verbose_name="Название категории", db_index=True)
     image = models.ImageField(max_length=255, blank=True, null=True, verbose_name="Картинка категории")
-    slug = models.SlugField(unique=True, verbose_name="Слаг")
+    slug = models.SlugField(unique=True, verbose_name="Слаг", max_length=255)
     about = models.TextField(max_length=255, blank=True, null=True)
     parent = models.ForeignKey(
         'self',
@@ -32,14 +32,14 @@ class Category(models.Model):
 class Product(models.Model):
     name = models.CharField(max_length=255, verbose_name="Название продукта", db_index=True)
     image = models.ImageField(upload_to='products/', verbose_name="Фото продукта")
-    external_url = models.URLField(max_length=500, null=True, blank=True)
+    external_url = models.URLField(max_length=500, null=True, blank=True, max_length=255)
     category = models.ForeignKey(
         Category,
         on_delete=models.CASCADE,
         related_name='products',
         verbose_name="Категория"
     )
-    slug = models.SlugField(unique=True, verbose_name="Слаг", blank=True, null=True)
+    slug = models.SlugField(unique=True, verbose_name="Слаг", blank=True, null=True, max_length=255)
     description = models.TextField(blank=True, verbose_name="Описание")
 
     class Meta:
