@@ -876,12 +876,20 @@
     <div class="chat-body">
         <p>Здравствуйте! Вам подсказать по наличию и стоимости?</p>
         <div class="d-flex" style="justify-content: space-between;">
-            <button class="product-table__btn" style="border: none; width: 49%; background-color: #eeeeee;">Нет</button>
-            <button class="product-table__btn" style="border: none; width: 49%; background-color: #eeeeee;">Да</button>
+            <button class="product-table__btn" id="chatWidget" style="border: none; width: 49%; background-color: #eeeeee;">Нет</button>
+            <script data-b24-form="click/51/kppspk" data-skip-moving="true">
+                (function(w,d,u){
+                var s=d.createElement('script');s.async=true;s.src=u+'?'+(Date.now()/180000|0);
+                var h=d.getElementsByTagName('script')[0];h.parentNode.insertBefore(s,h);
+                })(window,document,'https://cdn-ru.bitrix24.kz/b17734044/crm/form/loader_51.js');
+            </script>
+            <button  data-b24-form="click/51/kppspk" class="product-table__btn" style="border: none; width: 49%; background-color: #eeeeee;">Да</button>
         </div>
-        <button class="product-table__btn mt-2" style="border: none; width: 100%; background-color: #eeeeee;">Связаться
-            с оператором
-        </button>
+        <a href="tel:+77475620516">
+            <button class="product-table__btn mt-2" style="border: none; width: 100%; background-color: #eeeeee;">
+                Связаться с оператором
+            </button>
+        </a>        
 
     </div>
 </div>
@@ -906,6 +914,33 @@
             localStorage.setItem("bubbleShowCount", Number(showCount) + 1);
         }
     });
+
+    
+</script>
+
+<script>
+    window.onpopstate = function() {
+    // Закрываем чат-виджет
+    let chat = document.getElementById("chatWidget");
+    if (chat.style.display === "block") {
+        chat.style.display = "none";
+    }
+
+    // Загружаем предыдущую страницу
+    $.ajax({
+        url: window.location.pathname,
+        type: "GET",
+        success: function(response) {
+            if (response.html) {
+                $("#content").html(response.html); // Обновляем контент
+            }
+        },
+        error: function() {
+            alert("Ошибка загрузки страницы");
+        }
+    });
+};
+
 </script>
 
 <script>
