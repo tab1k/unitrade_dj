@@ -568,7 +568,7 @@
         }
 
         .add-btn {
-            background: #9da1a6;
+            background: #7f8081;
             color: white;
             border: none;
             padding: 8px 15px;
@@ -894,11 +894,11 @@
 
     <div class="container">
         <div class="catalog__promo-help-white promo-help-white mb-5 mt-2"
-             style="background-image: url({% static 'images/kz.jpg' %})">
+             style="background-image: url({% static 'images/met_banneer.png' %})">
             <div class="promo-help-white__inner">
-                <div class="promo-help-white__title" style="color: white;">Нужна помощь?</div>
+                <div class="promo-help-white__title" style="color: black;">Нужна помощь?</div>
                 <div class="promo-help-white__desc">
-                    <p style="color: white;">Обсудить все вопросы, рассчитать стоимость доставки и договориться о
+                    <p style="color: black; width: 50%;">Обсудить все вопросы, рассчитать стоимость доставки и договориться о
                         способе оплаты вы можете с
                         нашими специалистами.</p>
                 </div>
@@ -924,9 +924,19 @@
 
             </div>
         </div>
+        
     </div>
 
     <style>
+        .catalog__promo-help-white {
+            background-size: cover;  /* Растягивает изображение на весь блок */
+            background-position: center;  /* Центрирует изображение */
+            background-repeat: no-repeat;  /* Отключает повторение */
+            width: 100%;  /* Делает блок на всю ширину */
+            height: 100%;  /* Автоматически подстраивает высоту */
+            min-height: 300px;  /* Можно задать минимальную высоту */
+        }
+
         @media (max-width: 991px) {
             .promo-help-white__controls {
                 display: flex;
