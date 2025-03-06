@@ -2,6 +2,7 @@
 venv/
 __pycache__/
 *.pyc
+*.pyo
 
 # Игнорирование файла базы данных Django (если используется SQLite)
 db.sqlite3
@@ -19,3 +20,4 @@ db.sqlite3
 # Игнорирование конфигураций системы
 .DS_Store
 Thumbs.db
+
