@@ -200,10 +200,6 @@
         "slug": "shirokopolochnye-dvutavry"
     },
     {
-        "url": "https://isteels.kz/catalog/shirokopolochnye-dvutavry/",
-        "slug": "shirokopolochnye-dvutavry"
-    },
-    {
         "url": "https://isteels.kz/catalog/kolonnye-dvutavry/",
         "slug": "kolonnye-dvutavry"
     },
@@ -900,10 +896,6 @@
         "slug": "nerzhaveyushie-svarnye-setki"
     },
     {
-        "url": "https://isteels.kz/catalog/nerzhaveyushie-svarnye-setki/",
-        "slug": "nerzhaveyushie-svarnye-setki"
-    },
-    {
         "url": "https://isteels.kz/catalog/nerzhaveyushie-pruzhinnye-provoloki/",
         "slug": "nerzhaveyushie-pruzhinnye-provoloki"
     },
@@ -918,10 +910,6 @@
     {
         "url": "https://isteels.kz/catalog/nerzhaveyushaya-svarochnaya-provoloka/",
         "slug": "nerzhaveyushaya-svarochnaya-provoloka"
-    },
-    {
-        "url": "https://isteels.kz/catalog/nerzhaveyushie-pruzhinnye-provoloki/",
-        "slug": "nerzhaveyushie-pruzhinnye-provoloki"
     },
     {
         "url": "https://isteels.kz/catalog/nerzhaveyushie-shestigrannye-bolty/",
@@ -1616,10 +1604,6 @@
         "slug": "renievyj-poroshok"
     },
     {
-        "url": "https://isteels.kz/catalog/renievyj-poroshok/",
-        "slug": "renievyj-poroshok"
-    },
-    {
         "url": "https://isteels.kz/catalog/renievye-prutki/",
         "slug": "renievye-prutki"
     },
@@ -1758,5 +1742,1513 @@
     {
         "url": "https://isteels.kz/catalog/cinkovye-lenty/",
         "slug": "cinkovye-lenty"
+    },
+    {
+        "url": "https://isteels.kz/catalog/instrumentalnye-provoloki/",
+        "slug": "instrumentalnye-provoloki"
+    },
+    {
+        "url": "https://isteels.kz/catalog/instrumentalnye-legirovannye-pokovki/",
+        "slug": "instrumentalnye-legirovannye-pokovki"
+    },
+    {
+        "url": "https://isteels.kz/catalog/instrumentalnye-uglerodistye-pokovki/",
+        "slug": "instrumentalnye-uglerodistye-pokovki"
+    },
+    {
+        "url": "https://isteels.kz/catalog/instrumentalnye-legirovannye-shestigranniki/",
+        "slug": "instrumentalnye-legirovannye-shestigranniki"
+    },
+    {
+        "url": "https://isteels.kz/catalog/instrumentalnye-uglerodistye-shestigranniki/",
+        "slug": "instrumentalnye-uglerodistye-shestigranniki"
+    },
+    {
+        "url": "https://isteels.kz/catalog/bimetallicheskie-truby/",
+        "slug": "bimetallicheskie-truby"
+    },
+    {
+        "url": "https://isteels.kz/catalog/medno-nikelevye-perforirovannye-listy/",
+        "slug": "medno-nikelevye-perforirovannye-listy"
+    },
+    {
+        "url": "https://isteels.kz/catalog/olovyanno-mednye-pripoi/",
+        "slug": "olovyanno-mednye-pripoi"
+    },
+    {
+        "url": "https://isteels.kz/catalog/olovyanno-cinkovye-pripoi/",
+        "slug": "olovyanno-cinkovye-pripoi"
+    },
+    {
+        "url": "https://isteels.kz/catalog/olovyannyj-poroshok/",
+        "slug": "olovyannyj-poroshok"
+    },
+    {
+        "url": "https://isteels.kz/catalog/renievye-polosy/",
+        "slug": "renievye-polosy"
+    },
+    {
+        "url": "https://isteels.kz/catalog/svincovyj-listy-dlya-rentgenkabineta/",
+        "slug": "svincovyj-listy-dlya-rentgenkabineta"
+    },
+    {
+        "url": "https://isteels.kz/catalog/kabeli-gorodskie-telefonnye/",
+        "slug": "kabeli-gorodskie-telefonnye"
+    },
+    {
+        "url": "https://isteels.kz/catalog/kabeli-svyazi-stancionnye/",
+        "slug": "kabeli-svyazi-stancionnye"
+    },
+    {
+        "url": "https://isteels.kz/catalog/kabeli-mestnoj-svyazi-vysokochastotnye/",
+        "slug": "kabeli-mestnoj-svyazi-vysokochastotnye"
+    },
+    {
+        "url": "https://isteels.kz/catalog/kabeli-radiochastotnye/",
+        "slug": "kabeli-radiochastotnye"
+    },
+    {
+        "url": "https://isteels.kz/catalog/kabeli-svyazi/",
+        "slug": "kabeli-svyazi"
+    },
+    {
+        "url": "https://isteels.kz/catalog/kabeli-svyazi-telefonnye-shahtnye/",
+        "slug": "kabeli-svyazi-telefonnye-shahtnye"
+    },
+    {
+        "url": "https://isteels.kz/catalog/provoda-obmotochnye/",
+        "slug": "provoda-obmotochnye"
+    },
+    {
+        "url": "https://isteels.kz/catalog/provoda-bortovye/",
+        "slug": "provoda-bortovye"
+    },
+    {
+        "url": "https://isteels.kz/catalog/kabeli-dlya-vozdushnyh-linij-elektroperedach/",
+        "slug": "kabeli-dlya-vozdushnyh-linij-elektroperedach"
+    },
+    {
+        "url": "https://isteels.kz/catalog/provoda-silovye/",
+        "slug": "provoda-silovye"
+    },
+    {
+        "url": "https://isteels.kz/catalog/kabel-silovoj-mednyj/",
+        "slug": "kabel-silovoj-mednyj"
+    },
+    {
+        "url": "https://isteels.kz/catalog/kabel-silovoj-alyuminievyj/",
+        "slug": "kabel-silovoj-alyuminievyj"
+    },
+    {
+        "url": "https://isteels.kz/catalog/kabel-silovoj-s-bumazhnoj-izolyaciej/",
+        "slug": "kabel-silovoj-s-bumazhnoj-izolyaciej"
+    },
+    {
+        "url": "https://isteels.kz/catalog/kabeli-silovye-s-plastmassovoj-izolyaciej/",
+        "slug": "kabeli-silovye-s-plastmassovoj-izolyaciej"
+    },
+    {
+        "url": "https://isteels.kz/catalog/kabel-silovoj-s-rezinovoj-izolyaciej/",
+        "slug": "kabel-silovoj-s-rezinovoj-izolyaciej"
+    },
+    {
+        "url": "https://isteels.kz/catalog/kabeli-silovye-s-izolyaciej-iz-sshitogo-polietilena/",
+        "slug": "kabeli-silovye-s-izolyaciej-iz-sshitogo-polietilena"
+    },
+    {
+        "url": "https://isteels.kz/catalog/kabeli-i-provoda-ustanovochnye/",
+        "slug": "kabeli-i-provoda-ustanovochnye"
+    },
+    {
+        "url": "https://isteels.kz/catalog/kabeli-dlya-promyshlennoj-avtomatizacii-i-sistem-upravleniya/",
+        "slug": "kabeli-dlya-promyshlennoj-avtomatizacii-i-sistem-upravleniya"
+    },
+    {
+        "url": "https://isteels.kz/catalog/kabeli-dlya-signalizacii-i-blokirovki/",
+        "slug": "kabeli-dlya-signalizacii-i-blokirovki"
+    },
+    {
+        "url": "https://isteels.kz/catalog/kabeli-dlya-sistem-pozharnoj-i-ohrannoj-signalizacii/",
+        "slug": "kabeli-dlya-sistem-pozharnoj-i-ohrannoj-signalizacii"
+    },
+    {
+        "url": "https://isteels.kz/catalog/kabeli-shahtnye-i-ekskavatornyj/",
+        "slug": "kabeli-shahtnye-i-ekskavatornyj"
+    },
+    {
+        "url": "https://isteels.kz/catalog/kabeli-termoparnye/",
+        "slug": "kabeli-termoparnye"
+    },
+    {
+        "url": "https://isteels.kz/catalog/kabeli-nagrevatelnye/",
+        "slug": "kabeli-nagrevatelnye"
+    },
+    {
+        "url": "https://isteels.kz/catalog/samoreguliruyushiesya-greyushie-kabeli/",
+        "slug": "samoreguliruyushiesya-greyushie-kabeli"
+    },
+    {
+        "url": "https://isteels.kz/catalog/omednennaya-svarochnaya-provoloka/",
+        "slug": "omednennaya-svarochnaya-provoloka"
+    },
+    {
+        "url": "https://isteels.kz/catalog/poroshkovaya-svarochnaya-provoloka/",
+        "slug": "poroshkovaya-svarochnaya-provoloka"
+    },
+    {
+        "url": "https://isteels.kz/catalog/alyuminievye-svarochnye-provoloki/",
+        "slug": "alyuminievye-svarochnye-provoloki"
+    },
+    {
+        "url": "https://isteels.kz/catalog/polirovannaya-svarochnaya-provoloka/",
+        "slug": "polirovannaya-svarochnaya-provoloka"
+    },
+    {
+        "url": "https://isteels.kz/catalog/alyuminievye-prisadochnye-prutki/",
+        "slug": "alyuminievye-prisadochnye-prutki"
+    },
+    {
+        "url": "https://isteels.kz/catalog/mednye-prisadochnye-prutki/",
+        "slug": "mednye-prisadochnye-prutki"
+    },
+    {
+        "url": "https://isteels.kz/catalog/nerzhaveyushie-prisadochnye-prutki/",
+        "slug": "nerzhaveyushie-prisadochnye-prutki"
+    },
+    {
+        "url": "https://isteels.kz/catalog/omednyonnye-prisadochnyj-prutki/",
+        "slug": "omednyonnye-prisadochnyj-prutki"
+    },
+    {
+        "url": "https://isteels.kz/catalog/kobaltovye-prisadochnye-prutki/",
+        "slug": "kobaltovye-prisadochnye-prutki"
+    },
+    {
+        "url": "https://isteels.kz/catalog/flancevye-mehanicheskie-filtry/",
+        "slug": "flancevye-mehanicheskie-filtry"
+    },
+    {
+        "url": "https://isteels.kz/catalog/muftovye-mehanicheskie-filtry/",
+        "slug": "muftovye-mehanicheskie-filtry"
+    },
+    {
+        "url": "https://isteels.kz/catalog/muftovye-magnitnye-filtry/",
+        "slug": "muftovye-magnitnye-filtry"
+    },
+    {
+        "url": "https://isteels.kz/catalog/flancevye-magnitnye-filtry/",
+        "slug": "flancevye-magnitnye-filtry"
+    },
+    {
+        "url": "https://isteels.kz/catalog/gazovye-muftovye-krany/",
+        "slug": "gazovye-muftovye-krany"
+    },
+    {
+        "url": "https://isteels.kz/catalog/gazovye-probkovye-krany/",
+        "slug": "gazovye-probkovye-krany"
+    },
+    {
+        "url": "https://isteels.kz/catalog/gazovye-flancevye-krany/",
+        "slug": "gazovye-flancevye-krany"
+    },
+    {
+        "url": "https://isteels.kz/catalog/sharovye-krany-dlya-gaza/",
+        "slug": "sharovye-krany-dlya-gaza"
+    },
+    {
+        "url": "https://isteels.kz/catalog/latunnye-krany-dlya-manometra/",
+        "slug": "latunnye-krany-dlya-manometra"
+    },
+    {
+        "url": "https://isteels.kz/catalog/muftovye-krany-dlya-manometra/",
+        "slug": "muftovye-krany-dlya-manometra"
+    },
+    {
+        "url": "https://isteels.kz/catalog/stalnye-krany-dlya-manometra/",
+        "slug": "stalnye-krany-dlya-manometra"
+    },
+    {
+        "url": "https://isteels.kz/catalog/trehhodovye-krany-dlya-manometra/",
+        "slug": "trehhodovye-krany-dlya-manometra"
+    },
+    {
+        "url": "https://isteels.kz/catalog/vodorazbornye-krany-so-shtucerom/",
+        "slug": "vodorazbornye-krany-so-shtucerom"
+    },
+    {
+        "url": "https://isteels.kz/catalog/vodorazbornye-sharovye-krany/",
+        "slug": "vodorazbornye-sharovye-krany"
+    },
+    {
+        "url": "https://isteels.kz/catalog/latunnye-vodorazbornye-krany/",
+        "slug": "latunnye-vodorazbornye-krany"
+    },
+    {
+        "url": "https://isteels.kz/catalog/pozharnye-krany/",
+        "slug": "pozharnye-krany"
+    },
+    {
+        "url": "https://isteels.kz/catalog/protivopozharnye-sharovye-krany/",
+        "slug": "protivopozharnye-sharovye-krany"
+    },
+    {
+        "url": "https://isteels.kz/catalog/uglovye-pozharnye-krany/",
+        "slug": "uglovye-pozharnye-krany"
+    },
+    {
+        "url": "https://isteels.kz/catalog/flancevye-zaslonki/",
+        "slug": "flancevye-zaslonki"
+    },
+    {
+        "url": "https://isteels.kz/catalog/kolcevye-pishevye-lyuki/",
+        "slug": "kolcevye-pishevye-lyuki"
+    },
+    {
+        "url": "https://isteels.kz/catalog/lyuki-lazy/",
+        "slug": "lyuki-lazy"
+    },
+    {
+        "url": "https://isteels.kz/catalog/zamernye-lyuki/",
+        "slug": "zamernye-lyuki"
+    },
+    {
+        "url": "https://isteels.kz/catalog/svetovye-lyuki/",
+        "slug": "svetovye-lyuki"
+    },
+    {
+        "url": "https://isteels.kz/catalog/gazovye-ventili-vysokogo-davleniya/",
+        "slug": "gazovye-ventili-vysokogo-davleniya"
+    },
+    {
+        "url": "https://isteels.kz/catalog/igolchatye-gazovye-ventili/",
+        "slug": "igolchatye-gazovye-ventili"
+    },
+    {
+        "url": "https://isteels.kz/catalog/gazovye-zapornye-ventili/",
+        "slug": "gazovye-zapornye-ventili"
+    },
+    {
+        "url": "https://isteels.kz/catalog/pozharnye-zapornye-ventili/",
+        "slug": "pozharnye-zapornye-ventili"
+    },
+    {
+        "url": "https://isteels.kz/catalog/latunnye-pozharnye-ventili/",
+        "slug": "latunnye-pozharnye-ventili"
+    },
+    {
+        "url": "https://isteels.kz/catalog/chugunnye-pozharnye-ventili/",
+        "slug": "chugunnye-pozharnye-ventili"
+    },
+    {
+        "url": "https://isteels.kz/catalog/pozharnye-ventili/",
+        "slug": "pozharnye-ventili"
+    },
+    {
+        "url": "https://isteels.kz/catalog/muftovye-pozharnye-ventili/",
+        "slug": "muftovye-pozharnye-ventili"
+    },
+    {
+        "url": "https://isteels.kz/catalog/uglovye-pozharnye-ventili/",
+        "slug": "uglovye-pozharnye-ventili"
+    },
+    {
+        "url": "https://isteels.kz/catalog/klinovye-zadvizhki-s-ruchnym-upravleniem/",
+        "slug": "klinovye-zadvizhki-s-ruchnym-upravleniem"
+    },
+    {
+        "url": "https://isteels.kz/catalog/klinovye-muftovye-zadvizhki/",
+        "slug": "klinovye-muftovye-zadvizhki"
+    },
+    {
+        "url": "https://isteels.kz/catalog/klinovye-flancevye-zadvizhki/",
+        "slug": "klinovye-flancevye-zadvizhki"
+    },
+    {
+        "url": "https://isteels.kz/catalog/latunnye-muftovye-zadvizhki/",
+        "slug": "latunnye-muftovye-zadvizhki"
+    },
+    {
+        "url": "https://isteels.kz/catalog/stalnye-muftovye-zadvizhki/",
+        "slug": "stalnye-muftovye-zadvizhki"
+    },
+    {
+        "url": "https://isteels.kz/catalog/stalnye-flancevye-zadvizhki/",
+        "slug": "stalnye-flancevye-zadvizhki"
+    },
+    {
+        "url": "https://isteels.kz/catalog/ruchnye-flancevye-zadvizhki/",
+        "slug": "ruchnye-flancevye-zadvizhki"
+    },
+    {
+        "url": "https://isteels.kz/catalog/shibernye-flancevye-zadvizhki/",
+        "slug": "shibernye-flancevye-zadvizhki"
+    },
+    {
+        "url": "https://isteels.kz/catalog/flancevye-zadvizhki/",
+        "slug": "flancevye-zadvizhki"
+    },
+    {
+        "url": "https://isteels.kz/catalog/diskovye-zatvory-pod-rezbu/",
+        "slug": "diskovye-zatvory-pod-rezbu"
+    },
+    {
+        "url": "https://isteels.kz/catalog/diskovye-trehhodovye-zatvory/",
+        "slug": "diskovye-trehhodovye-zatvory"
+    },
+    {
+        "url": "https://isteels.kz/catalog/kruglye-linzovye-kompensatory/",
+        "slug": "kruglye-linzovye-kompensatory"
+    },
+    {
+        "url": "https://isteels.kz/catalog/pryamougolnye-linzovye-kompensatory/",
+        "slug": "pryamougolnye-linzovye-kompensatory"
+    },
+    {
+        "url": "https://isteels.kz/catalog/kruglye-tkanevye-kompensatory/",
+        "slug": "kruglye-tkanevye-kompensatory"
+    },
+    {
+        "url": "https://isteels.kz/catalog/pryamougolnye-tkanevye-kompensatory/",
+        "slug": "pryamougolnye-tkanevye-kompensatory"
+    },
+    {
+        "url": "https://isteels.kz/catalog/mufty-elektrosvarnye/",
+        "slug": "mufty-elektrosvarnye"
+    },
+    {
+        "url": "https://isteels.kz/catalog/mufty-pnd-kompressionnye/",
+        "slug": "mufty-pnd-kompressionnye"
+    },
+    {
+        "url": "https://isteels.kz/catalog/hromonikelevye-mufty/",
+        "slug": "hromonikelevye-mufty"
+    },
+    {
+        "url": "https://isteels.kz/catalog/stalnye-mufty/",
+        "slug": "stalnye-mufty"
+    },
+    {
+        "url": "https://isteels.kz/catalog/mednye-mufty/",
+        "slug": "mednye-mufty"
+    },
+    {
+        "url": "https://isteels.kz/catalog/nerzhaveyushie-mufty/",
+        "slug": "nerzhaveyushie-mufty"
+    },
+    {
+        "url": "https://isteels.kz/catalog/mufty-elektrosvarnye-pe-100/",
+        "slug": "mufty-elektrosvarnye-pe-100"
+    },
+    {
+        "url": "https://isteels.kz/catalog/stalnye-vorotniki/",
+        "slug": "stalnye-vorotniki"
+    },
+    {
+        "url": "https://isteels.kz/catalog/nerzhaveyushie-vorotniki/",
+        "slug": "nerzhaveyushie-vorotniki"
+    },
+    {
+        "url": "https://isteels.kz/catalog/hromonikelevye-vorotniki/",
+        "slug": "hromonikelevye-vorotniki"
+    },
+    {
+        "url": "https://isteels.kz/catalog/alyuminievoe-dnishe/",
+        "slug": "alyuminievoe-dnishe"
+    },
+    {
+        "url": "https://isteels.kz/catalog/nerzhaveyushie-dnisha/",
+        "slug": "nerzhaveyushie-dnisha"
+    },
+    {
+        "url": "https://isteels.kz/catalog/stalnye-dnisha/",
+        "slug": "stalnye-dnisha"
+    },
+    {
+        "url": "https://isteels.kz/catalog/hromonikelevye-nippeli/",
+        "slug": "hromonikelevye-nippeli"
+    },
+    {
+        "url": "https://isteels.kz/catalog/nerzhaveyushie-nippeli/",
+        "slug": "nerzhaveyushie-nippeli"
+    },
+    {
+        "url": "https://isteels.kz/catalog/nippeli-pnd/",
+        "slug": "nippeli-pnd"
+    },
+    {
+        "url": "https://isteels.kz/catalog/stalnye-nippeli/",
+        "slug": "stalnye-nippeli"
+    },
+    {
+        "url": "https://isteels.kz/catalog/stalnye-bobyshki/",
+        "slug": "stalnye-bobyshki"
+    },
+    {
+        "url": "https://isteels.kz/catalog/nerzhaveyushie-bobyshki/",
+        "slug": "nerzhaveyushie-bobyshki"
+    },
+    {
+        "url": "https://isteels.kz/catalog/hromonikelevye-bobyshki/",
+        "slug": "hromonikelevye-bobyshki"
+    },
+    {
+        "url": "https://isteels.kz/catalog/stalnye-polumufty/",
+        "slug": "stalnye-polumufty"
+    },
+    {
+        "url": "https://isteels.kz/catalog/nerzhaveyushie-polumufty/",
+        "slug": "nerzhaveyushie-polumufty"
+    },
+    {
+        "url": "https://isteels.kz/catalog/hromonikelevye-privarnye-kolca/",
+        "slug": "hromonikelevye-privarnye-kolca"
+    },
+    {
+        "url": "https://isteels.kz/catalog/stalnye-privarnye-kolca/",
+        "slug": "stalnye-privarnye-kolca"
+    },
+    {
+        "url": "https://isteels.kz/catalog/nerzhaveyushie-privarnye-kolca/",
+        "slug": "nerzhaveyushie-privarnye-kolca"
+    },
+    {
+        "url": "https://isteels.kz/catalog/trojniki-v-vus-izolyacii/",
+        "slug": "trojniki-v-vus-izolyacii"
+    },
+    {
+        "url": "https://isteels.kz/catalog/otvody-sektornye-svarnye-v-vus-izolyacii/",
+        "slug": "otvody-sektornye-svarnye-v-vus-izolyacii"
+    },
+    {
+        "url": "https://isteels.kz/catalog/perehody-svarnye-v-vus-izolyacii/",
+        "slug": "perehody-svarnye-v-vus-izolyacii"
+    },
+    {
+        "url": "https://isteels.kz/catalog/otvody-v-cpp-izolyacii/",
+        "slug": "otvody-v-cpp-izolyacii"
+    },
+    {
+        "url": "https://isteels.kz/catalog/trojniki-v-cpp-izolyacii/",
+        "slug": "trojniki-v-cpp-izolyacii"
+    },
+    {
+        "url": "https://isteels.kz/catalog/perehody-v-cpp-izolyacii/",
+        "slug": "perehody-v-cpp-izolyacii"
+    },
+    {
+        "url": "https://isteels.kz/catalog/otvody-s-epoksidnym-pokrytiem/",
+        "slug": "otvody-s-epoksidnym-pokrytiem"
+    },
+    {
+        "url": "https://isteels.kz/catalog/trojniki-s-epoksidnym-pokrytiem/",
+        "slug": "trojniki-s-epoksidnym-pokrytiem"
+    },
+    {
+        "url": "https://isteels.kz/catalog/perehody-s-epoksidnym-pokrytiem/",
+        "slug": "perehody-s-epoksidnym-pokrytiem"
+    },
+    {
+        "url": "https://isteels.kz/catalog/zaglushki-s-epoksidnym-pokrytiem/",
+        "slug": "zaglushki-s-epoksidnym-pokrytiem"
+    },
+    {
+        "url": "https://isteels.kz/catalog/negoryuchie-kashirovannye-cilindry/",
+        "slug": "negoryuchie-kashirovannye-cilindry"
+    },
+    {
+        "url": "https://isteels.kz/catalog/otvody-bez-pokrytiya/",
+        "slug": "otvody-bez-pokrytiya"
+    },
+    {
+        "url": "https://isteels.kz/catalog/trojniki-bez-pokrytiya/",
+        "slug": "trojniki-bez-pokrytiya"
+    },
+    {
+        "url": "https://isteels.kz/catalog/cilindry-bez-pokrytiya/",
+        "slug": "cilindry-bez-pokrytiya"
+    },
+    {
+        "url": "https://isteels.kz/catalog/stalnye-vtulki/",
+        "slug": "stalnye-vtulki"
+    },
+    {
+        "url": "https://isteels.kz/catalog/ankernyj-bolt-s-kolcom/",
+        "slug": "ankernyj-bolt-s-kolcom"
+    },
+    {
+        "url": "https://isteels.kz/catalog/ankernyj-bolt-s-kryukom/",
+        "slug": "ankernyj-bolt-s-kryukom"
+    },
+    {
+        "url": "https://isteels.kz/catalog/raspornyj-ankernyj-bolt/",
+        "slug": "raspornyj-ankernyj-bolt"
+    },
+    {
+        "url": "https://isteels.kz/catalog/dvuhraspornyj-ankernyj-bolt/",
+        "slug": "dvuhraspornyj-ankernyj-bolt"
+    },
+    {
+        "url": "https://isteels.kz/catalog/anker-t-obraznyj/",
+        "slug": "anker-t-obraznyj"
+    },
+    {
+        "url": "https://isteels.kz/catalog/zaklepki-s-polukrugloj-golovkoj/",
+        "slug": "zaklepki-s-polukrugloj-golovkoj"
+    },
+    {
+        "url": "https://isteels.kz/catalog/zaklepki-s-potajnoj-golovkoj/",
+        "slug": "zaklepki-s-potajnoj-golovkoj"
+    },
+    {
+        "url": "https://isteels.kz/catalog/zaklepki-s-ploskoj-golovkoj/",
+        "slug": "zaklepki-s-ploskoj-golovkoj"
+    },
+    {
+        "url": "https://isteels.kz/catalog/shurupy-s-shestigrannoj-golovkoj/",
+        "slug": "shurupy-s-shestigrannoj-golovkoj"
+    },
+    {
+        "url": "https://isteels.kz/catalog/shurupy-s-potajnoj-golovkoj/",
+        "slug": "shurupy-s-potajnoj-golovkoj"
+    },
+    {
+        "url": "https://isteels.kz/catalog/shurupy-s-polukrugloj-golovkoj/",
+        "slug": "shurupy-s-polukrugloj-golovkoj"
+    },
+    {
+        "url": "https://isteels.kz/catalog/shurupy-s-polupotajnoj-golovkoj/",
+        "slug": "shurupy-s-polupotajnoj-golovkoj"
+    },
+    {
+        "url": "https://isteels.kz/catalog/cilindricheskie-shtifty/",
+        "slug": "cilindricheskie-shtifty"
+    },
+    {
+        "url": "https://isteels.kz/catalog/pruzhinnye-shtifty/",
+        "slug": "pruzhinnye-shtifty"
+    },
+    {
+        "url": "https://isteels.kz/catalog/konicheskie-shtifty/",
+        "slug": "konicheskie-shtifty"
+    },
+    {
+        "url": "https://isteels.kz/catalog/stopornye-pruzhinnye-kolca-naruzhnye-koncentricheskie/",
+        "slug": "stopornye-pruzhinnye-kolca-naruzhnye-koncentricheskie"
+    },
+    {
+        "url": "https://isteels.kz/catalog/stopornye-pruzhinnye-kolca-vnutrennie-koncentricheskie/",
+        "slug": "stopornye-pruzhinnye-kolca-vnutrennie-koncentricheskie"
+    },
+    {
+        "url": "https://isteels.kz/catalog/stopornye-pruzhinnye-kolca-naruzhnye-ekscentricheskie/",
+        "slug": "stopornye-pruzhinnye-kolca-naruzhnye-ekscentricheskie"
+    },
+    {
+        "url": "https://isteels.kz/catalog/stopornye-pruzhinnye-kolca-vnutrennie-ekscentricheskie/",
+        "slug": "stopornye-pruzhinnye-kolca-vnutrennie-ekscentricheskie"
+    },
+    {
+        "url": "https://isteels.kz/catalog/armaturnye-setki/",
+        "slug": "armaturnye-setki"
+    },
+    {
+        "url": "https://isteels.kz/catalog/dorozhnye-setki/",
+        "slug": "dorozhnye-setki"
+    },
+    {
+        "url": "https://isteels.kz/catalog/kladochnye-svarnye-setki/",
+        "slug": "kladochnye-svarnye-setki"
+    },
+    {
+        "url": "https://isteels.kz/catalog/shtukaturnye-setki/",
+        "slug": "shtukaturnye-setki"
+    },
+    {
+        "url": "https://isteels.kz/catalog/galunnye-filtrovannye-setki/",
+        "slug": "galunnye-filtrovannye-setki"
+    },
+    {
+        "url": "https://isteels.kz/catalog/sarzhevye-filtrovye-setki/",
+        "slug": "sarzhevye-filtrovye-setki"
+    },
+    {
+        "url": "https://isteels.kz/catalog/pressovannye-reshetchatye-nastily/",
+        "slug": "pressovannye-reshetchatye-nastily"
+    },
+    {
+        "url": "https://isteels.kz/catalog/svarnye-nastily/",
+        "slug": "svarnye-nastily"
+    },
+    {
+        "url": "https://isteels.kz/catalog/prizmaticheskie-shponki/",
+        "slug": "prizmaticheskie-shponki"
+    },
+    {
+        "url": "https://isteels.kz/catalog/segmentnye-shponki/",
+        "slug": "segmentnye-shponki"
+    },
+    {
+        "url": "https://isteels.kz/catalog/klinovye-shponki/",
+        "slug": "klinovye-shponki"
+    },
+    {
+        "url": "https://isteels.kz/catalog/ocinkovannye-ravnopolochnye-ugolki/",
+        "slug": "ocinkovannye-ravnopolochnye-ugolki"
+    },
+    {
+        "url": "https://isteels.kz/catalog/ocinkovannye-neravnopolochnye-ugolki/",
+        "slug": "ocinkovannye-neravnopolochnye-ugolki"
+    },
+    {
+        "url": "https://isteels.kz/catalog/ocinkovannye-truby/",
+        "slug": "ocinkovannye-truby"
+    },
+    {
+        "url": "https://isteels.kz/catalog/profilnye-ocinkovannye-truby/",
+        "slug": "profilnye-ocinkovannye-truby"
+    },
+    {
+        "url": "https://isteels.kz/catalog/kvadratnye-ocinkovannye-truby/",
+        "slug": "kvadratnye-ocinkovannye-truby"
+    },
+    {
+        "url": "https://isteels.kz/catalog/pryamougolnye-ocinkovannye-truby/",
+        "slug": "pryamougolnye-ocinkovannye-truby"
+    },
+    {
+        "url": "https://isteels.kz/catalog/ocinkovannye-gidravlicheskie-trubki/",
+        "slug": "ocinkovannye-gidravlicheskie-trubki"
+    },
+    {
+        "url": "https://isteels.kz/catalog/konvejernye-metallokordnye-lenty/",
+        "slug": "konvejernye-metallokordnye-lenty"
+    },
+    {
+        "url": "https://isteels.kz/catalog/konvejernye-rezinotkanevye-lenty/",
+        "slug": "konvejernye-rezinotkanevye-lenty"
+    },
+    {
+        "url": "https://isteels.kz/catalog/konvejernye-shevronnye-lenty/",
+        "slug": "konvejernye-shevronnye-lenty"
+    },
+    {
+        "url": "https://isteels.kz/catalog/konvejernye-elevatornye-lenty/",
+        "slug": "konvejernye-elevatornye-lenty"
+    },
+    {
+        "url": "https://isteels.kz/catalog/rezinotkanevye-udaroprochnye-lenty-s-utkom/",
+        "slug": "rezinotkanevye-udaroprochnye-lenty-s-utkom"
+    },
+    {
+        "url": "https://isteels.kz/catalog/bury-bks/",
+        "slug": "bury-bks"
+    },
+    {
+        "url": "https://isteels.kz/catalog/bury-bsu/",
+        "slug": "bury-bsu"
+    },
+    {
+        "url": "https://isteels.kz/catalog/bury-bts/",
+        "slug": "bury-bts"
+    },
+    {
+        "url": "https://isteels.kz/catalog/shnekovye-bury-bks/",
+        "slug": "shnekovye-bury-bks"
+    },
+    {
+        "url": "https://isteels.kz/catalog/shnekovye-bury-bl/",
+        "slug": "shnekovye-bury-bl"
+    },
+    {
+        "url": "https://isteels.kz/catalog/zaburniki/",
+        "slug": "zaburniki"
+    },
+    {
+        "url": "https://isteels.kz/catalog/izmelchiteli-pnej/",
+        "slug": "izmelchiteli-pnej"
+    },
+    {
+        "url": "https://isteels.kz/catalog/kruglye-rezcy/",
+        "slug": "kruglye-rezcy"
+    },
+    {
+        "url": "https://isteels.kz/catalog/ploskie-rezcy/",
+        "slug": "ploskie-rezcy"
+    },
+    {
+        "url": "https://isteels.kz/catalog/shneki-vstavki/",
+        "slug": "shneki-vstavki"
+    },
+    {
+        "url": "https://isteels.kz/catalog/shneki-teleskopicheskie/",
+        "slug": "shneki-teleskopicheskie"
+    },
+    {
+        "url": "https://isteels.kz/catalog/udliniteli-shnekov/",
+        "slug": "udliniteli-shnekov"
+    },
+    {
+        "url": "https://isteels.kz/catalog/tormoznye-rezistory/",
+        "slug": "tormoznye-rezistory"
+    },
+    {
+        "url": "https://isteels.kz/catalog/tormoznye-bloki/",
+        "slug": "tormoznye-bloki"
+    },
+    {
+        "url": "https://isteels.kz/catalog/chastotnye-preobrazovateli-dlya-paneli-upravleniya/",
+        "slug": "chastotnye-preobrazovateli-dlya-paneli-upravleniya"
+    },
+    {
+        "url": "https://isteels.kz/catalog/pulty-distancionnogo-upravleniya/",
+        "slug": "pulty-distancionnogo-upravleniya"
+    },
+    {
+        "url": "https://isteels.kz/catalog/bloki-manifolda/",
+        "slug": "bloki-manifolda"
+    },
+    {
+        "url": "https://isteels.kz/catalog/manifoldy-burovye/",
+        "slug": "manifoldy-burovye"
+    },
+    {
+        "url": "https://isteels.kz/catalog/manifoldy-protivovybrosovye/",
+        "slug": "manifoldy-protivovybrosovye"
+    },
+    {
+        "url": "https://isteels.kz/catalog/truby-manifolda/",
+        "slug": "truby-manifolda"
+    },
+    {
+        "url": "https://isteels.kz/catalog/nasosno-kompressornye-truby/",
+        "slug": "nasosno-kompressornye-truby"
+    },
+    {
+        "url": "https://isteels.kz/catalog/mufty-nasosno-kompressornyh-trub/",
+        "slug": "mufty-nasosno-kompressornyh-trub"
+    },
+    {
+        "url": "https://isteels.kz/catalog/trubnye-zagotovki-dlya-nkt/",
+        "slug": "trubnye-zagotovki-dlya-nkt"
+    },
+    {
+        "url": "https://isteels.kz/catalog/truby-nkb/",
+        "slug": "truby-nkb"
+    },
+    {
+        "url": "https://isteels.kz/catalog/truby-nkv/",
+        "slug": "truby-nkv"
+    },
+    {
+        "url": "https://isteels.kz/catalog/truby-nkm/",
+        "slug": "truby-nkm"
+    },
+    {
+        "url": "https://isteels.kz/catalog/mufty-nkb/",
+        "slug": "mufty-nkb"
+    },
+    {
+        "url": "https://isteels.kz/catalog/mufty-nkv/",
+        "slug": "mufty-nkv"
+    },
+    {
+        "url": "https://isteels.kz/catalog/mufty-nkm/",
+        "slug": "mufty-nkm"
+    },
+    {
+        "url": "https://isteels.kz/catalog/mufty-nkt/",
+        "slug": "mufty-nkt"
+    },
+    {
+        "url": "https://isteels.kz/catalog/ruchnye-tali/",
+        "slug": "ruchnye-tali"
+    },
+    {
+        "url": "https://isteels.kz/catalog/elektricheskie-tali/",
+        "slug": "elektricheskie-tali"
+    },
+    {
+        "url": "https://isteels.kz/catalog/pnevmaticheskie-tali/",
+        "slug": "pnevmaticheskie-tali"
+    },
+    {
+        "url": "https://isteels.kz/catalog/koshki-s-ruchnym-privodom/",
+        "slug": "koshki-s-ruchnym-privodom"
+    },
+    {
+        "url": "https://isteels.kz/catalog/orebrennye-trubchatye-radiatory/",
+        "slug": "orebrennye-trubchatye-radiatory"
+    },
+    {
+        "url": "https://isteels.kz/catalog/kozhuhotrubchatye-teploobmenniki/",
+        "slug": "kozhuhotrubchatye-teploobmenniki"
+    },
+    {
+        "url": "https://isteels.kz/catalog/razbornye-plastinchatye-teploobmenniki/",
+        "slug": "razbornye-plastinchatye-teploobmenniki"
+    },
+    {
+        "url": "https://isteels.kz/catalog/svarnye-plastinchatye-teploobmenniki/",
+        "slug": "svarnye-plastinchatye-teploobmenniki"
+    },
+    {
+        "url": "https://isteels.kz/catalog/vodovodyanye-podogrevateli/",
+        "slug": "vodovodyanye-podogrevateli"
+    },
+    {
+        "url": "https://isteels.kz/catalog/podogrevateli-kozhuhotrubnye-vodo-vodyanye/",
+        "slug": "podogrevateli-kozhuhotrubnye-vodo-vodyanye"
+    },
+    {
+        "url": "https://isteels.kz/catalog/podogrevateli-setevoj-vody/",
+        "slug": "podogrevateli-setevoj-vody"
+    },
+    {
+        "url": "https://isteels.kz/catalog/vodyanye-kalorifery/",
+        "slug": "vodyanye-kalorifery"
+    },
+    {
+        "url": "https://isteels.kz/catalog/parovye-kalorifery/",
+        "slug": "parovye-kalorifery"
+    },
+    {
+        "url": "https://isteels.kz/catalog/stalnye-kalorifery/",
+        "slug": "stalnye-kalorifery"
+    },
+    {
+        "url": "https://isteels.kz/catalog/vodogrejnye-kotly-naruzhnogo-razmesheniya/",
+        "slug": "vodogrejnye-kotly-naruzhnogo-razmesheniya"
+    },
+    {
+        "url": "https://isteels.kz/catalog/gazovye-vodogrejnye-kotly/",
+        "slug": "gazovye-vodogrejnye-kotly"
+    },
+    {
+        "url": "https://isteels.kz/catalog/parovye-vodogrejnye-kotly/",
+        "slug": "parovye-vodogrejnye-kotly"
+    },
+    {
+        "url": "https://isteels.kz/catalog/tverdotoplivnye-vodogrejnye-kotly/",
+        "slug": "tverdotoplivnye-vodogrejnye-kotly"
+    },
+    {
+        "url": "https://isteels.kz/catalog/registry-otopleniya-ploskie/",
+        "slug": "registry-otopleniya-ploskie"
+    },
+    {
+        "url": "https://isteels.kz/catalog/registry-otopleniya-ellipticheskie/",
+        "slug": "registry-otopleniya-ellipticheskie"
+    },
+    {
+        "url": "https://isteels.kz/catalog/kruglye-rentgenozashitnye-stekla/",
+        "slug": "kruglye-rentgenozashitnye-stekla"
+    },
+    {
+        "url": "https://isteels.kz/catalog/pryamougolnye-rentgenozashitnye-stekla/",
+        "slug": "pryamougolnye-rentgenozashitnye-stekla"
+    },
+    {
+        "url": "https://isteels.kz/catalog/dorozhnoe-ograzhdenie-11do/",
+        "slug": "dorozhnoe-ograzhdenie-11do"
+    },
+    {
+        "url": "https://isteels.kz/catalog/dorozhnoe-ograzhdenie-21do/",
+        "slug": "dorozhnoe-ograzhdenie-21do"
+    },
+    {
+        "url": "https://isteels.kz/catalog/alyuminievaya-pudra/",
+        "slug": "alyuminievaya-pudra"
+    },
+    {
+        "url": "https://isteels.kz/catalog/bronzovaya-pudra/",
+        "slug": "bronzovaya-pudra"
+    },
+    {
+        "url": "https://isteels.kz/catalog/latunnaya-pudra/",
+        "slug": "latunnaya-pudra"
+    },
+    {
+        "url": "https://isteels.kz/catalog/mednaya-pudra/",
+        "slug": "mednaya-pudra"
+    },
+    {
+        "url": "https://isteels.kz/catalog/alyuminievaya-krupka/",
+        "slug": "alyuminievaya-krupka"
+    },
+    {
+        "url": "https://isteels.kz/catalog/cinkovaya-krupka/",
+        "slug": "cinkovaya-krupka"
+    },
+    {
+        "url": "https://isteels.kz/catalog/listy-iz-stekloplastika/",
+        "slug": "listy-iz-stekloplastika"
+    },
+    {
+        "url": "https://isteels.kz/catalog/rulony-iz-stekloplastika/",
+        "slug": "rulony-iz-stekloplastika"
+    },
+    {
+        "url": "https://isteels.kz/catalog/sterzhni-iz-stekloplastika/",
+        "slug": "sterzhni-iz-stekloplastika"
+    },
+    {
+        "url": "https://isteels.kz/catalog/truby-iz-stekloplastika/",
+        "slug": "truby-iz-stekloplastika"
+    },
+    {
+        "url": "https://isteels.kz/catalog/listy-iz-paronita/",
+        "slug": "listy-iz-paronita"
+    },
+    {
+        "url": "https://isteels.kz/catalog/prokladki-iz-paronita/",
+        "slug": "prokladki-iz-paronita"
+    },
+    {
+        "url": "https://isteels.kz/catalog/polipropilenovye-listy/",
+        "slug": "polipropilenovye-listy"
+    },
+    {
+        "url": "https://isteels.kz/catalog/polipropilenovye-truby/",
+        "slug": "polipropilenovye-truby"
+    },
+    {
+        "url": "https://isteels.kz/catalog/polipropilenovye-rulony/",
+        "slug": "polipropilenovye-rulony"
+    },
+    {
+        "url": "https://isteels.kz/catalog/polipropilenovye-sterzhni/",
+        "slug": "polipropilenovye-sterzhni"
+    },
+    {
+        "url": "https://isteels.kz/catalog/vtulki-iz-tekstolita/",
+        "slug": "vtulki-iz-tekstolita"
+    },
+    {
+        "url": "https://isteels.kz/catalog/listy-tekstolita/",
+        "slug": "listy-tekstolita"
+    },
+    {
+        "url": "https://isteels.kz/catalog/sterzhni-iz-tekstolita/",
+        "slug": "sterzhni-iz-tekstolita"
+    },
+    {
+        "url": "https://isteels.kz/catalog/listy-iz-ebonita/",
+        "slug": "listy-iz-ebonita"
+    },
+    {
+        "url": "https://isteels.kz/catalog/trubki-iz-ebonita/",
+        "slug": "trubki-iz-ebonita"
+    },
+    {
+        "url": "https://isteels.kz/catalog/plastiny-iz-ebonita/",
+        "slug": "plastiny-iz-ebonita"
+    },
+    {
+        "url": "https://isteels.kz/catalog/sterzhni-iz-ebonita/",
+        "slug": "sterzhni-iz-ebonita"
+    },
+    {
+        "url": "https://isteels.kz/catalog/truby-iz-steklotekstolita/",
+        "slug": "truby-iz-steklotekstolita"
+    },
+    {
+        "url": "https://isteels.kz/catalog/listy-iz-steklotekstolita/",
+        "slug": "listy-iz-steklotekstolita"
+    },
+    {
+        "url": "https://isteels.kz/catalog/sterzhni-iz-steklotekstolita/",
+        "slug": "sterzhni-iz-steklotekstolita"
+    },
+    {
+        "url": "https://isteels.kz/catalog/gibkij-mikanit/",
+        "slug": "gibkij-mikanit"
+    },
+    {
+        "url": "https://isteels.kz/catalog/prokladochnyj-mikanit/",
+        "slug": "prokladochnyj-mikanit"
+    },
+    {
+        "url": "https://isteels.kz/catalog/listy-iz-mikanita/",
+        "slug": "listy-iz-mikanita"
+    },
+    {
+        "url": "https://isteels.kz/catalog/formovochnyj-mikanit/",
+        "slug": "formovochnyj-mikanit"
+    },
+    {
+        "url": "https://isteels.kz/catalog/plastiny-iz-mikanita/",
+        "slug": "plastiny-iz-mikanita"
+    },
+    {
+        "url": "https://isteels.kz/catalog/listy-iz-polikarbonata/",
+        "slug": "listy-iz-polikarbonata"
+    },
+    {
+        "url": "https://isteels.kz/catalog/sterzhni-iz-polikarbonata/",
+        "slug": "sterzhni-iz-polikarbonata"
+    },
+    {
+        "url": "https://isteels.kz/catalog/truby-iz-polikarbonata/",
+        "slug": "truby-iz-polikarbonata"
+    },
+    {
+        "url": "https://isteels.kz/catalog/akrilovye-stekla/",
+        "slug": "akrilovye-stekla"
+    },
+    {
+        "url": "https://isteels.kz/catalog/akrilovye-truby/",
+        "slug": "akrilovye-truby"
+    },
+    {
+        "url": "https://isteels.kz/catalog/listovoj-polietilen/",
+        "slug": "listovoj-polietilen"
+    },
+    {
+        "url": "https://isteels.kz/catalog/polietilenovaya-plenka/",
+        "slug": "polietilenovaya-plenka"
+    },
+    {
+        "url": "https://isteels.kz/catalog/polietilenovye-sterzhni/",
+        "slug": "polietilenovye-sterzhni"
+    },
+    {
+        "url": "https://isteels.kz/catalog/truby-pnd/",
+        "slug": "truby-pnd"
+    },
+    {
+        "url": "https://isteels.kz/catalog/bloki-iz-orgstekla/",
+        "slug": "bloki-iz-orgstekla"
+    },
+    {
+        "url": "https://isteels.kz/catalog/listovoe-orgsteklo/",
+        "slug": "listovoe-orgsteklo"
+    },
+    {
+        "url": "https://isteels.kz/catalog/sterzhni-iz-orgstekla/",
+        "slug": "sterzhni-iz-orgstekla"
+    },
+    {
+        "url": "https://isteels.kz/catalog/truby-iz-orgstekla/",
+        "slug": "truby-iz-orgstekla"
+    },
+    {
+        "url": "https://isteels.kz/catalog/listovoj-poliuretan/",
+        "slug": "listovoj-poliuretan"
+    },
+    {
+        "url": "https://isteels.kz/catalog/plastiny-iz-poliuretana/",
+        "slug": "plastiny-iz-poliuretana"
+    },
+    {
+        "url": "https://isteels.kz/catalog/sterzhni-iz-poliuretana/",
+        "slug": "sterzhni-iz-poliuretana"
+    },
+    {
+        "url": "https://isteels.kz/catalog/listovoj-polistirol/",
+        "slug": "listovoj-polistirol"
+    },
+    {
+        "url": "https://isteels.kz/catalog/polistirol-v-granulah/",
+        "slug": "polistirol-v-granulah"
+    },
+    {
+        "url": "https://isteels.kz/catalog/blochnyj-poliamid/",
+        "slug": "blochnyj-poliamid"
+    },
+    {
+        "url": "https://isteels.kz/catalog/listovoj-poliamid/",
+        "slug": "listovoj-poliamid"
+    },
+    {
+        "url": "https://isteels.kz/catalog/litevoj-poliamid/",
+        "slug": "litevoj-poliamid"
+    },
+    {
+        "url": "https://isteels.kz/catalog/poliamid-v-granulah/",
+        "slug": "poliamid-v-granulah"
+    },
+    {
+        "url": "https://isteels.kz/catalog/sterzhni-iz-poliamida/",
+        "slug": "sterzhni-iz-poliamida"
+    },
+    {
+        "url": "https://isteels.kz/catalog/trubki-iz-poliamida/",
+        "slug": "trubki-iz-poliamida"
+    },
+    {
+        "url": "https://isteels.kz/catalog/zhguty-fum-kvadratnogo-secheniya/",
+        "slug": "zhguty-fum-kvadratnogo-secheniya"
+    },
+    {
+        "url": "https://isteels.kz/catalog/zhguty-fum-krugloe-sechenie/",
+        "slug": "zhguty-fum-krugloe-sechenie"
+    },
+    {
+        "url": "https://isteels.kz/catalog/zhguty-fum-pryamougolnogo-secheniya/",
+        "slug": "zhguty-fum-pryamougolnogo-secheniya"
+    },
+    {
+        "url": "https://isteels.kz/catalog/lenty-fum/",
+        "slug": "lenty-fum"
+    },
+    {
+        "url": "https://isteels.kz/catalog/granulirovannyj-plastik/",
+        "slug": "granulirovannyj-plastik"
+    },
+    {
+        "url": "https://isteels.kz/catalog/listovoj-plastik/",
+        "slug": "listovoj-plastik"
+    },
+    {
+        "url": "https://isteels.kz/catalog/granuly-polietilentereftalat/",
+        "slug": "granuly-polietilentereftalat"
+    },
+    {
+        "url": "https://isteels.kz/catalog/listy-polietilentereftalat/",
+        "slug": "listy-polietilentereftalat"
+    },
+    {
+        "url": "https://isteels.kz/catalog/plenka-polietilentereftalat/",
+        "slug": "plenka-polietilentereftalat"
+    },
+    {
+        "url": "https://isteels.kz/catalog/prutki-polietilentereftalat/",
+        "slug": "prutki-polietilentereftalat"
+    },
+    {
+        "url": "https://isteels.kz/catalog/vtulki-iz-poliacetalya/",
+        "slug": "vtulki-iz-poliacetalya"
+    },
+    {
+        "url": "https://isteels.kz/catalog/listovoj-poliacetal/",
+        "slug": "listovoj-poliacetal"
+    },
+    {
+        "url": "https://isteels.kz/catalog/plastiny-iz-poliacetalya/",
+        "slug": "plastiny-iz-poliacetalya"
+    },
+    {
+        "url": "https://isteels.kz/catalog/poliacetal-v-granulah/",
+        "slug": "poliacetal-v-granulah"
+    },
+    {
+        "url": "https://isteels.kz/catalog/sterzhni-iz-poliacetalya/",
+        "slug": "sterzhni-iz-poliacetalya"
+    },
+    {
+        "url": "https://isteels.kz/catalog/viniplastovye-plenki/",
+        "slug": "viniplastovye-plenki"
+    },
+    {
+        "url": "https://isteels.kz/catalog/viniplastovye-truby/",
+        "slug": "viniplastovye-truby"
+    },
+    {
+        "url": "https://isteels.kz/catalog/listovoj-viniplast/",
+        "slug": "listovoj-viniplast"
+    },
+    {
+        "url": "https://isteels.kz/catalog/sterzhnevoj-viniplast/",
+        "slug": "sterzhnevoj-viniplast"
+    },
+    {
+        "url": "https://isteels.kz/catalog/granuly-pvh-plastikat/",
+        "slug": "granuly-pvh-plastikat"
+    },
+    {
+        "url": "https://isteels.kz/catalog/lenty-pvh-plastikat/",
+        "slug": "lenty-pvh-plastikat"
+    },
+    {
+        "url": "https://isteels.kz/catalog/listy-pvh-plastikat/",
+        "slug": "listy-pvh-plastikat"
+    },
+    {
+        "url": "https://isteels.kz/catalog/rulony-pvh-plastikat/",
+        "slug": "rulony-pvh-plastikat"
+    },
+    {
+        "url": "https://isteels.kz/catalog/listovoj-polivinilidenftorid/",
+        "slug": "listovoj-polivinilidenftorid"
+    },
+    {
+        "url": "https://isteels.kz/catalog/polivinilidenftoridnye-truby/",
+        "slug": "polivinilidenftoridnye-truby"
+    },
+    {
+        "url": "https://isteels.kz/catalog/teplotrassy/",
+        "slug": "teplotrassy"
+    },
+    {
+        "url": "https://isteels.kz/catalog/betonnye-truby/",
+        "slug": "betonnye-truby"
+    },
+    {
+        "url": "https://isteels.kz/catalog/asbocementnye-truby/",
+        "slug": "asbocementnye-truby"
+    },
+    {
+        "url": "https://isteels.kz/catalog/hrizotilcementnye-truby/",
+        "slug": "hrizotilcementnye-truby"
+    },
+    {
+        "url": "https://isteels.kz/catalog/gibkie-alyuminievye-vozduhovody/",
+        "slug": "gibkie-alyuminievye-vozduhovody"
+    },
+    {
+        "url": "https://isteels.kz/catalog/vozduhovody-kruglye-dlya-dymoudaleniya/",
+        "slug": "vozduhovody-kruglye-dlya-dymoudaleniya"
+    },
+    {
+        "url": "https://isteels.kz/catalog/vozduhovody-kruglye-dlya-sistem-aspiracii/",
+        "slug": "vozduhovody-kruglye-dlya-sistem-aspiracii"
+    },
+    {
+        "url": "https://isteels.kz/catalog/nerzhaveyushie-vozduhovody/",
+        "slug": "nerzhaveyushie-vozduhovody"
+    },
+    {
+        "url": "https://isteels.kz/catalog/ocinkovannye-vozduhovody/",
+        "slug": "ocinkovannye-vozduhovody"
+    },
+    {
+        "url": "https://isteels.kz/catalog/vozduhovody-pryamougolnye-dlya-dymoudaleniya/",
+        "slug": "vozduhovody-pryamougolnye-dlya-dymoudaleniya"
+    },
+    {
+        "url": "https://isteels.kz/catalog/vozduhovody-pryamougolnye-dlya-sistem-aspiracii/",
+        "slug": "vozduhovody-pryamougolnye-dlya-sistem-aspiracii"
+    },
+    {
+        "url": "https://isteels.kz/catalog/nerzhaveyushie-pryamougolnye-vozduhovody/",
+        "slug": "nerzhaveyushie-pryamougolnye-vozduhovody"
+    },
+    {
+        "url": "https://isteels.kz/catalog/ocinkovannye-pryamougolnye-vozduhovody/",
+        "slug": "ocinkovannye-pryamougolnye-vozduhovody"
+    },
+    {
+        "url": "https://isteels.kz/catalog/nerzhaveyushie-kruglye-ventilyacionnye-vyrezki/",
+        "slug": "nerzhaveyushie-kruglye-ventilyacionnye-vyrezki"
+    },
+    {
+        "url": "https://isteels.kz/catalog/nerzhaveyushie-pryamougolnye-ventilyacionnye-vyrezki/",
+        "slug": "nerzhaveyushie-pryamougolnye-ventilyacionnye-vyrezki"
+    },
+    {
+        "url": "https://isteels.kz/catalog/ocinkovannye-kruglye-ventilyacionnye-vyrezki/",
+        "slug": "ocinkovannye-kruglye-ventilyacionnye-vyrezki"
+    },
+    {
+        "url": "https://isteels.kz/catalog/ocinkovannye-pryamougolnye-ventilyacionnye-vyrezki/",
+        "slug": "ocinkovannye-pryamougolnye-ventilyacionnye-vyrezki"
+    },
+    {
+        "url": "https://isteels.kz/catalog/nerzhaveyushie-kruglye-ventilyacionnye-zaglushki/",
+        "slug": "nerzhaveyushie-kruglye-ventilyacionnye-zaglushki"
+    },
+    {
+        "url": "https://isteels.kz/catalog/nerzhaveyushie-pryamougolnye-ventilyacionnye-zaglushki/",
+        "slug": "nerzhaveyushie-pryamougolnye-ventilyacionnye-zaglushki"
+    },
+    {
+        "url": "https://isteels.kz/catalog/ocinkovannye-kruglye-ventilyacionnye-zaglushki/",
+        "slug": "ocinkovannye-kruglye-ventilyacionnye-zaglushki"
+    },
+    {
+        "url": "https://isteels.kz/catalog/ocinkovannye-pryamougolnye-ventilyacionnye-zaglushki/",
+        "slug": "ocinkovannye-pryamougolnye-ventilyacionnye-zaglushki"
+    },
+    {
+        "url": "https://isteels.kz/catalog/nerzhaveyushie-kruglye-ventilyacionnye-otvody/",
+        "slug": "nerzhaveyushie-kruglye-ventilyacionnye-otvody"
+    },
+    {
+        "url": "https://isteels.kz/catalog/ocinkovannye-kruglye-ventilyacionnye-otvody/",
+        "slug": "ocinkovannye-kruglye-ventilyacionnye-otvody"
+    },
+    {
+        "url": "https://isteels.kz/catalog/nerzhaveyushie-pryamougolnye-ventilyacionnye-otvody/",
+        "slug": "nerzhaveyushie-pryamougolnye-ventilyacionnye-otvody"
+    },
+    {
+        "url": "https://isteels.kz/catalog/ocinkovannye-pryamougolnye-ventilyacionnye-otvody/",
+        "slug": "ocinkovannye-pryamougolnye-ventilyacionnye-otvody"
+    },
+    {
+        "url": "https://isteels.kz/catalog/nerzhaveyushie-kruglye-ventilyacionnye-trojniki/",
+        "slug": "nerzhaveyushie-kruglye-ventilyacionnye-trojniki"
+    },
+    {
+        "url": "https://isteels.kz/catalog/nerzhaveyushie-pryamougolnye-ventilyacionnye-trojniki/",
+        "slug": "nerzhaveyushie-pryamougolnye-ventilyacionnye-trojniki"
+    },
+    {
+        "url": "https://isteels.kz/catalog/ocinkovannye-kruglye-ventilyacionnye-trojniki/",
+        "slug": "ocinkovannye-kruglye-ventilyacionnye-trojniki"
+    },
+    {
+        "url": "https://isteels.kz/catalog/ocinkovannye-pryamougolnye-ventilyacionnye-trojniki/",
+        "slug": "ocinkovannye-pryamougolnye-ventilyacionnye-trojniki"
+    },
+    {
+        "url": "https://isteels.kz/catalog/drenazhnye-truby/",
+        "slug": "drenazhnye-truby"
+    },
+    {
+        "url": "https://isteels.kz/catalog/drenazhnye-gofrirovannye-truby/",
+        "slug": "drenazhnye-gofrirovannye-truby"
+    },
+    {
+        "url": "https://isteels.kz/catalog/drenazhnye-perforirovannye-truby/",
+        "slug": "drenazhnye-perforirovannye-truby"
+    },
+    {
+        "url": "https://isteels.kz/catalog/drenazhnye-keramicheskie-truby/",
+        "slug": "drenazhnye-keramicheskie-truby"
+    },
+    {
+        "url": "https://isteels.kz/catalog/drenazhnye-polimernye-truby/",
+        "slug": "drenazhnye-polimernye-truby"
+    },
+    {
+        "url": "https://isteels.kz/catalog/kanalizacionnye-plastikovye-truby/",
+        "slug": "kanalizacionnye-plastikovye-truby"
+    },
+    {
+        "url": "https://isteels.kz/catalog/elektricheskie-podvesnye-krany/",
+        "slug": "elektricheskie-podvesnye-krany"
+    },
+    {
+        "url": "https://isteels.kz/catalog/elektricheskie-opornye-krany/",
+        "slug": "elektricheskie-opornye-krany"
+    },
+    {
+        "url": "https://isteels.kz/catalog/podemnoe-oborudovanie/",
+        "slug": "podemnoe-oborudovanie"
+    },
+    {
+        "url": "https://isteels.kz/catalog/promyshlennye-ploshadki/",
+        "slug": "promyshlennye-ploshadki"
+    },
+    {
+        "url": "https://isteels.kz/catalog/perehodnye-ploshadki/",
+        "slug": "perehodnye-ploshadki"
+    },
+    {
+        "url": "https://isteels.kz/catalog/promyshlennye-lestnicy/",
+        "slug": "promyshlennye-lestnicy"
+    },
+    {
+        "url": "https://isteels.kz/catalog/marshevye-pozharnye-lestnicy/",
+        "slug": "marshevye-pozharnye-lestnicy"
+    },
+    {
+        "url": "https://isteels.kz/catalog/vertikalnye-pozharnye-lestnicy-s-ograzhdeniem/",
+        "slug": "vertikalnye-pozharnye-lestnicy-s-ograzhdeniem"
+    },
+    {
+        "url": "https://isteels.kz/catalog/vertikalnye-pozharnye-lestnicy-bez-ograzhdeniya/",
+        "slug": "vertikalnye-pozharnye-lestnicy-bez-ograzhdeniya"
+    },
+    {
+        "url": "https://isteels.kz/catalog/truby-mnogoslojnye/",
+        "slug": "truby-mnogoslojnye"
+    },
+    {
+        "url": "https://isteels.kz/catalog/polietilenovye-truby/",
+        "slug": "polietilenovye-truby"
+    },
+    {
+        "url": "https://isteels.kz/catalog/vintovye-svai/",
+        "slug": "vintovye-svai"
+    },
+    {
+        "url": "https://isteels.kz/catalog/balki-rostverka/",
+        "slug": "balki-rostverka"
+    },
+    {
+        "url": "https://isteels.kz/catalog/zabivnye-metallicheskie-svai/",
+        "slug": "zabivnye-metallicheskie-svai"
+    },
+    {
+        "url": "https://isteels.kz/catalog/nagolovniki-molota/",
+        "slug": "nagolovniki-molota"
+    },
+    {
+        "url": "https://isteels.kz/catalog/nagolovnik-svaj/",
+        "slug": "nagolovnik-svaj"
+    },
+    {
+        "url": "https://isteels.kz/catalog/rostverk/",
+        "slug": "rostverk"
+    },
+    {
+        "url": "https://isteels.kz/catalog/svajnye-fundamenty/",
+        "slug": "svajnye-fundamenty"
+    },
+    {
+        "url": "https://isteels.kz/catalog/asbocementnye-ploskie-listy/",
+        "slug": "asbocementnye-ploskie-listy"
+    },
+    {
+        "url": "https://isteels.kz/catalog/asbocementnye-volnistye-listy/",
+        "slug": "asbocementnye-volnistye-listy"
+    },
+    {
+        "url": "https://isteels.kz/catalog/asbestovye-lenty-tormoznye/",
+        "slug": "asbestovye-lenty-tormoznye"
+    },
+    {
+        "url": "https://isteels.kz/catalog/asbestovye-lenty-teploizolyacionnye/",
+        "slug": "asbestovye-lenty-teploizolyacionnye"
+    },
+    {
+        "url": "https://isteels.kz/catalog/asbolavsanovye-lenty/",
+        "slug": "asbolavsanovye-lenty"
+    },
+    {
+        "url": "https://isteels.kz/catalog/asbestovye-lenty-elektroizolyacionnye/",
+        "slug": "asbestovye-lenty-elektroizolyacionnye"
+    },
+    {
+        "url": "https://isteels.kz/catalog/sudovye-kingstony/",
+        "slug": "sudovye-kingstony"
+    },
+    {
+        "url": "https://isteels.kz/catalog/flancevye-kingstony/",
+        "slug": "flancevye-kingstony"
+    },
+    {
+        "url": "https://isteels.kz/catalog/chugunnye-kipovye-planki/",
+        "slug": "chugunnye-kipovye-planki"
+    },
+    {
+        "url": "https://isteels.kz/catalog/stalnye-kipovye-planki/",
+        "slug": "stalnye-kipovye-planki"
+    },
+    {
+        "url": "https://isteels.kz/catalog/stalnye-zheleznodorozhnye-prokladki/",
+        "slug": "stalnye-zheleznodorozhnye-prokladki"
+    },
+    {
+        "url": "https://isteels.kz/catalog/prizhimnye-planki/",
+        "slug": "prizhimnye-planki"
+    },
+    {
+        "url": "https://isteels.kz/catalog/upornye-planki/",
+        "slug": "upornye-planki"
+    },
+    {
+        "url": "https://isteels.kz/catalog/gazovye-metallicheskie-truby/",
+        "slug": "gazovye-metallicheskie-truby"
+    },
+    {
+        "url": "https://isteels.kz/catalog/gazovye-polietilenovye-truby/",
+        "slug": "gazovye-polietilenovye-truby"
+    },
+    {
+        "url": "https://isteels.kz/catalog/gazovye-gofrirovannye-truby/",
+        "slug": "gazovye-gofrirovannye-truby"
     }
 ]
